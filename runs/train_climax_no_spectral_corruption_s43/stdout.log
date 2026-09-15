@@ -1,0 +1,5 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_no_spectral_corruption_s43 method=no_spectral_corruption backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] pretrain epochs=2 start_epoch=0
+[TRAIN] stage=pretrain epoch=1/2 batch=10/87647 step=10 repair=0.04492 localization=0.3643 type=1.843 minimal=0.1525 physics=0.4391 total=0.2892

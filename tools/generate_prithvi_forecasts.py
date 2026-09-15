@@ -1,0 +1,1490 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import csv
+import gc
+import json
+import shutil
+import sys
+import time
+from collections import defaultdict
+from datetime import datetime
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+import yaml
+import zarr
+from torch.utils.data import Dataset, DataLoader
+
+
+ROOT = Path.home() / "ConserveFM"
+
+sys.path.insert(
+    0,
+    str(ROOT / "external/fcnv2_runtime"),
+)
+
+sys.path.insert(
+    0,
+    str(ROOT / "external/Prithvi-WxC"),
+)
+
+from PrithviWxC.model import PrithviWxC
+from PrithviWxC.dataloaders.merra2 import (
+    input_scalers,
+    output_scalers,
+    static_input_scalers,
+)
+
+from conservefm.data import ERA5Reader
+
+
+ERA_LEVELS = np.asarray(
+    [
+        50, 100, 150, 200, 250, 300, 400,
+        500, 600, 700, 850, 925, 1000,
+    ],
+    dtype=np.float32,
+) * 100.0
+
+SURFACE = [
+    "EFLUX",
+    "GWETROOT",
+    "HFLUX",
+    "LAI",
+    "LWGAB",
+    "LWGEM",
+    "LWTUP",
+    "PS",
+    "QV2M",
+    "SLP",
+    "SWGNT",
+    "SWTNT",
+    "T2M",
+    "TQI",
+    "TQL",
+    "TQV",
+    "TS",
+    "U10M",
+    "V10M",
+    "Z0M",
+]
+
+STATIC = [
+    "FRACI",
+    "FRLAND",
+    "FROCEAN",
+    "PHIS",
+]
+
+VERTICAL = [
+    "CLOUD",
+    "H",
+    "OMEGA",
+    "PL",
+    "QI",
+    "QL",
+    "QV",
+    "T",
+    "U",
+    "V",
+]
+
+MERRA_LEVELS = [
+    34.0, 39.0, 41.0, 43.0, 44.0, 45.0,
+    48.0, 51.0, 53.0, 56.0, 63.0, 68.0,
+    71.0, 72.0,
+]
+
+G = 9.80665
+
+
+def cli():
+    p = argparse.ArgumentParser()
+
+    p.add_argument(
+        "--era5-zarr",
+        default=str(
+            ROOT / "data/ERA5_WeatherBench2_1979_2022"
+        ),
+    )
+
+    p.add_argument(
+        "--manifest",
+        default=str(
+            ROOT / "manifests/research_v1/era5_examples.csv"
+        ),
+    )
+
+    p.add_argument(
+        "--weights",
+        default=str(
+            ROOT
+            / "models/prithvi_wxc/"
+            "prithvi.wxc.rollout.2300m.v1.pt"
+        ),
+    )
+
+    p.add_argument(
+        "--config",
+        default=str(
+            ROOT / "models/prithvi_wxc/config.yaml"
+        ),
+    )
+
+    p.add_argument(
+        "--scalers",
+        default=str(
+            ROOT / "models/prithvi_wxc/climatology"
+        ),
+    )
+
+    p.add_argument(
+        "--output",
+        default=str(
+            ROOT / "forecasts/prithvi_wxc.zarr"
+        ),
+    )
+
+    p.add_argument("--batch-size", type=int, default=4)
+    p.add_argument("--num-workers", type=int, default=2)
+    p.add_argument("--log-every", type=int, default=10)
+    p.add_argument("--max-contexts", type=int, default=0)
+    p.add_argument("--overwrite", action="store_true")
+
+    return p.parse_args()
+
+
+def requirements(path):
+    r = defaultdict(set)
+
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            lead = int(row["lead_hours"])
+
+            if lead in (6, 24, 72):
+                r[
+                    int(row["context_end_idx"])
+                ].add(lead)
+
+    return {
+        k: sorted(v)
+        for k, v in r.items()
+    }
+
+
+def store_open(path, ntime, nchan, overwrite):
+    path = Path(path)
+
+    if overwrite and path.exists():
+        shutil.rmtree(path)
+
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    z = zarr.open_group(
+        str(path),
+        mode="a",
+    )
+
+    comp = zarr.Blosc(
+        cname="zstd",
+        clevel=3,
+        shuffle=zarr.Blosc.BITSHUFFLE,
+    )
+
+    for lead in (6, 24, 72):
+        if f"lead_{lead}" not in z:
+            z.create_dataset(
+                f"lead_{lead}",
+                shape=(
+                    ntime,
+                    nchan,
+                    240,
+                    121,
+                ),
+                chunks=(
+                    1,
+                    nchan,
+                    240,
+                    121,
+                ),
+                dtype="f4",
+                compressor=comp,
+                fill_value=np.nan,
+            )
+
+        if f"_done_{lead}" not in z:
+            z.create_dataset(
+                f"_done_{lead}",
+                shape=(ntime,),
+                chunks=(4096,),
+                dtype="u1",
+                fill_value=0,
+            )
+
+    z.attrs["adapter_mode"] = (
+        "ERA5 shared-fields -> Prithvi-WxC rollout; "
+        "missing MERRA2 parameters and climate use pretrained means; "
+        "total_precipitation_6hr persisted"
+    )
+
+    return z
+
+
+def interp_levels(data, src_p, dst_p):
+    #
+    # data: [L,H,W]
+    #
+    src_p = np.asarray(
+        src_p,
+        dtype=np.float64,
+    )
+
+    dst_p = np.asarray(
+        dst_p,
+        dtype=np.float64,
+    )
+
+    order = np.argsort(src_p)
+
+    p = np.log(
+        np.maximum(
+            src_p[order],
+            1.0,
+        )
+    )
+
+    d = data[order]
+
+    target = np.log(
+        np.maximum(dst_p, 1.0)
+    )
+
+    out = []
+
+    for x in target:
+        if x <= p[0]:
+            out.append(d[0])
+            continue
+
+        if x >= p[-1]:
+            out.append(d[-1])
+            continue
+
+        hi = int(
+            np.searchsorted(p, x)
+        )
+
+        lo = hi - 1
+
+        w = (
+            (x - p[lo])
+            / (p[hi] - p[lo])
+        )
+
+        out.append(
+            d[lo] * (1.0 - w)
+            + d[hi] * w
+        )
+
+    return np.stack(
+        out,
+        axis=0,
+    ).astype(np.float32)
+
+
+def periodic_resize(x, h, w):
+    x = torch.cat(
+        [
+            x,
+            x[..., :1],
+        ],
+        dim=-1,
+    )
+
+    x = F.interpolate(
+        x,
+        size=(h, w + 1),
+        mode="bilinear",
+        align_corners=True,
+    )
+
+    return x[..., :-1]
+
+
+class ERAAdapter(Dataset):
+    def __init__(
+        self,
+        reader,
+        contexts,
+        in_mu,
+        p_merra,
+    ):
+        self.reader = reader
+        self.contexts = contexts
+
+        self.names = list(
+            reader.layout.names
+        )
+
+        self.idx = {
+            n: i
+            for i, n in enumerate(
+                self.names
+            )
+        }
+
+        self.mu = np.asarray(
+            in_mu,
+            dtype=np.float32,
+        )
+
+        self.p_merra = np.asarray(
+            p_merra,
+            dtype=np.float32,
+        )
+
+        lat = np.asarray(
+            reader.latitude
+        )
+
+        #
+        # MERRA2 source is south -> north.
+        #
+        self.flip_lat = (
+            lat[0] > lat[-1]
+        )
+
+        self.sidx = {
+            n: i
+            for i, n in enumerate(
+                SURFACE
+            )
+        }
+
+        self.vidx = {
+            n: i
+            for i, n in enumerate(
+                VERTICAL
+            )
+        }
+
+    def field(self, s, name):
+        return s[
+            self.idx[name]
+        ].T
+
+    def adapt(self, s):
+        #
+        # Default every unsupported field to
+        # pretrained MERRA2 input mean.
+        #
+        out = np.broadcast_to(
+            self.mu[:, None, None],
+            (
+                len(self.mu),
+                121,
+                240,
+            ),
+        ).copy()
+
+        si = self.sidx
+
+        out[
+            si["PS"]
+        ] = self.field(
+            s,
+            "surface_pressure",
+        )
+
+        out[
+            si["SLP"]
+        ] = self.field(
+            s,
+            "mean_sea_level_pressure",
+        )
+
+        out[
+            si["T2M"]
+        ] = self.field(
+            s,
+            "2m_temperature",
+        )
+
+        out[
+            si["TS"]
+        ] = self.field(
+            s,
+            "2m_temperature",
+        )
+
+        out[
+            si["U10M"]
+        ] = self.field(
+            s,
+            "10m_u_component_of_wind",
+        )
+
+        out[
+            si["V10M"]
+        ] = self.field(
+            s,
+            "10m_v_component_of_wind",
+        )
+
+        #
+        # Near-surface humidity proxy.
+        #
+        out[
+            si["QV2M"]
+        ] = self.field(
+            s,
+            "specific_humidity@1000hPa",
+        )
+
+        q13 = np.stack(
+            [
+                self.field(
+                    s,
+                    f"specific_humidity@{int(p/100)}hPa",
+                )
+                for p in ERA_LEVELS
+            ]
+        )
+
+        out[
+            si["TQV"]
+        ] = (
+            np.trapz(
+                q13,
+                ERA_LEVELS,
+                axis=0,
+            )
+            / G
+        )
+
+        base = len(SURFACE)
+        nl = len(MERRA_LEVELS)
+
+        def vertical_offset(v):
+            return (
+                base
+                + self.vidx[v] * nl
+            )
+
+        mappings = {
+            "H":
+                [
+                    self.field(
+                        s,
+                        f"geopotential@{int(p/100)}hPa",
+                    )
+                    / G
+                    for p in ERA_LEVELS
+                ],
+
+            "QV":
+                [
+                    self.field(
+                        s,
+                        f"specific_humidity@{int(p/100)}hPa",
+                    )
+                    for p in ERA_LEVELS
+                ],
+
+            "T":
+                [
+                    self.field(
+                        s,
+                        f"temperature@{int(p/100)}hPa",
+                    )
+                    for p in ERA_LEVELS
+                ],
+
+            "U":
+                [
+                    self.field(
+                        s,
+                        f"u_component_of_wind@{int(p/100)}hPa",
+                    )
+                    for p in ERA_LEVELS
+                ],
+
+            "V":
+                [
+                    self.field(
+                        s,
+                        f"v_component_of_wind@{int(p/100)}hPa",
+                    )
+                    for p in ERA_LEVELS
+                ],
+        }
+
+        for v, arrays in mappings.items():
+            data = np.stack(
+                arrays,
+                axis=0,
+            )
+
+            mapped = interp_levels(
+                data,
+                ERA_LEVELS,
+                self.p_merra,
+            )
+
+            start = vertical_offset(v)
+
+            out[
+                start:
+                start + nl
+            ] = mapped
+
+        if self.flip_lat:
+            out = out[
+                :,
+                ::-1,
+                :
+            ].copy()
+
+        return out
+
+    def __len__(self):
+        return len(self.contexts)
+
+    def __getitem__(self, n):
+        idx = self.contexts[n]
+
+        if idx <= 0:
+            raise RuntimeError(
+                f"No previous state for index={idx}"
+            )
+
+        previous = np.asarray(
+            self.reader.read_state(
+                idx - 1
+            ),
+            dtype=np.float32,
+        )
+
+        current = np.asarray(
+            self.reader.read_state(
+                idx
+            ),
+            dtype=np.float32,
+        )
+
+        x0 = self.adapt(previous)
+        x1 = self.adapt(current)
+
+        tp = current[
+            self.idx[
+                "total_precipitation_6hr"
+            ]
+        ].copy()
+
+        return {
+            "x": torch.from_numpy(
+                np.stack(
+                    [x0, x1],
+                    axis=0,
+                )
+            ),
+
+            "context_idx":
+                idx,
+
+            "tp":
+                torch.from_numpy(tp),
+        }
+
+
+def make_static(
+    target_times,
+    static_fill,
+    device,
+    dtype,
+):
+    """
+    Build Prithvi static/time features for a batch.
+
+    target_times: iterable of np.datetime64 values
+    returns: [B,C,360,576]
+    """
+
+    lat = torch.linspace(
+        -90.0,
+        89.5,
+        360,
+        device=device,
+        dtype=torch.float32,
+    )
+
+    lon = torch.arange(
+        576,
+        device=device,
+        dtype=torch.float32,
+    ) * 0.625 - 180.0
+
+    yy, xx = torch.meshgrid(
+        lat,
+        lon,
+        indexing="ij",
+    )
+
+    pos_lat = (
+        yy / 360.0
+        * (2.0 * np.pi)
+    )
+
+    pos_lon = (
+        xx / 360.0
+        * (2.0 * np.pi)
+    )
+
+    batches = []
+
+    for target_time in target_times:
+        ts = np.datetime64(
+            target_time,
+            "s",
+        ).astype(datetime)
+
+        doy = ts.timetuple().tm_yday
+        hod = ts.hour
+
+        scalars = [
+            np.cos(
+                2 * np.pi
+                * doy / 366.0
+            ),
+            np.sin(
+                2 * np.pi
+                * doy / 366.0
+            ),
+            np.cos(
+                2 * np.pi
+                * hod / 24.0
+            ),
+            np.sin(
+                2 * np.pi
+                * hod / 24.0
+            ),
+        ]
+
+        channels = [
+            pos_lat,
+            pos_lon,
+        ]
+
+        for value in scalars:
+            channels.append(
+                torch.full_like(
+                    pos_lat,
+                    float(value),
+                )
+            )
+
+        for value in static_fill:
+            channels.append(
+                torch.full_like(
+                    pos_lat,
+                    float(value),
+                )
+            )
+
+        batches.append(
+            torch.stack(
+                channels,
+                dim=0,
+            )
+        )
+
+    return torch.stack(
+        batches,
+        dim=0,
+    ).to(dtype)
+
+def era_to_merra_grid(x):
+    #
+    # x [B,T,C,121,240], south->north and 0..360.
+    #
+    b, t, c, h, w = x.shape
+
+    y = x.reshape(
+        b * t,
+        c,
+        h,
+        w,
+    )
+
+    #
+    # Build full 361-lat MERRA grid first.
+    #
+    y = periodic_resize(
+        y,
+        361,
+        576,
+    )
+
+    #
+    # Longitude 0..360 -> -180..180.
+    #
+    y = torch.roll(
+        y,
+        shifts=-288,
+        dims=-1,
+    )
+
+    #
+    # Official preprocessing crops one latitude.
+    #
+    y = y[
+        :,
+        :,
+        :-1,
+        :
+    ]
+
+    return y.reshape(
+        b,
+        t,
+        c,
+        360,
+        576,
+    )
+
+
+def merra_to_era_grid(x):
+    #
+    # x [B,C,360,576], -180..180.
+    #
+    x = torch.roll(
+        x,
+        shifts=288,
+        dims=-1,
+    )
+
+    #
+    # Restore cropped north pole by edge replication.
+    #
+    x = torch.cat(
+        [
+            x,
+            x[
+                :,
+                :,
+                -1:,
+                :
+            ],
+        ],
+        dim=-2,
+    )
+
+    return periodic_resize(
+        x.float(),
+        121,
+        240,
+    )
+
+
+def output_to_71(
+    x,
+    tp,
+    names,
+    p_merra,
+    flip_lat,
+):
+    #
+    # x [160,121,240]
+    #
+    if flip_lat:
+        x = x[
+            :,
+            ::-1,
+            :
+        ].copy()
+
+    ri = {
+        n: i
+        for i, n in enumerate(
+            names
+        )
+    }
+
+    si = {
+        n: i
+        for i, n in enumerate(
+            SURFACE
+        )
+    }
+
+    vi = {
+        n: i
+        for i, n in enumerate(
+            VERTICAL
+        )
+    }
+
+    result = np.empty(
+        (
+            len(names),
+            240,
+            121,
+        ),
+        dtype=np.float32,
+    )
+
+    base = len(SURFACE)
+    nl = len(MERRA_LEVELS)
+
+    def vv(name):
+        start = (
+            base
+            + vi[name] * nl
+        )
+
+        return x[
+            start:start + nl
+        ]
+
+    mapped = {
+        "geopotential":
+            interp_levels(
+                vv("H"),
+                p_merra,
+                ERA_LEVELS,
+            ) * G,
+
+        "specific_humidity":
+            interp_levels(
+                vv("QV"),
+                p_merra,
+                ERA_LEVELS,
+            ),
+
+        "temperature":
+            interp_levels(
+                vv("T"),
+                p_merra,
+                ERA_LEVELS,
+            ),
+
+        "u_component_of_wind":
+            interp_levels(
+                vv("U"),
+                p_merra,
+                ERA_LEVELS,
+            ),
+
+        "v_component_of_wind":
+            interp_levels(
+                vv("V"),
+                p_merra,
+                ERA_LEVELS,
+            ),
+    }
+
+    for v, data in mapped.items():
+        for j, p in enumerate(
+            ERA_LEVELS
+        ):
+            result[
+                ri[
+                    f"{v}@{int(p/100)}hPa"
+                ]
+            ] = data[j].T
+
+    result[
+        ri["2m_temperature"]
+    ] = x[
+        si["T2M"]
+    ].T
+
+    result[
+        ri["10m_u_component_of_wind"]
+    ] = x[
+        si["U10M"]
+    ].T
+
+    result[
+        ri["10m_v_component_of_wind"]
+    ] = x[
+        si["V10M"]
+    ].T
+
+    result[
+        ri["surface_pressure"]
+    ] = x[
+        si["PS"]
+    ].T
+
+    result[
+        ri["mean_sea_level_pressure"]
+    ] = x[
+        si["SLP"]
+    ].T
+
+    result[
+        ri["total_precipitation_6hr"]
+    ] = tp
+
+    return result
+
+
+def build_model(
+    config_path,
+    weights_path,
+    scaler_dir,
+    device,
+):
+    with open(
+        config_path,
+        "r",
+        encoding="utf-8",
+    ) as f:
+        config = yaml.safe_load(f)
+
+    p = config["params"]
+
+    scaler_dir = Path(
+        scaler_dir
+    )
+
+    in_mu, in_sig = input_scalers(
+        SURFACE,
+        VERTICAL,
+        MERRA_LEVELS,
+        scaler_dir
+        / "musigma_surface.nc",
+        scaler_dir
+        / "musigma_vertical.nc",
+    )
+
+    out_sig = output_scalers(
+        SURFACE,
+        VERTICAL,
+        MERRA_LEVELS,
+        scaler_dir
+        / "anomaly_variance_surface.nc",
+        scaler_dir
+        / "anomaly_variance_vertical.nc",
+    )
+
+    stat_mu, stat_sig = (
+        static_input_scalers(
+            scaler_dir
+            / "musigma_surface.nc",
+            STATIC,
+        )
+    )
+
+    model = PrithviWxC(
+        in_channels=p["in_channels"],
+        input_size_time=p["input_size_time"],
+        in_channels_static=p["in_channels_static"],
+
+        input_scalers_mu=in_mu,
+        input_scalers_sigma=in_sig,
+        input_scalers_epsilon=p[
+            "input_scalers_epsilon"
+        ],
+
+        static_input_scalers_mu=stat_mu,
+        static_input_scalers_sigma=stat_sig,
+        static_input_scalers_epsilon=p[
+            "static_input_scalers_epsilon"
+        ],
+
+        output_scalers=out_sig ** 0.5,
+
+        n_lats_px=p["n_lats_px"],
+        n_lons_px=p["n_lons_px"],
+        patch_size_px=p["patch_size_px"],
+        mask_unit_size_px=p["mask_unit_size_px"],
+
+        mask_ratio_inputs=0.0,
+        mask_ratio_targets=0.0,
+
+        embed_dim=p["embed_dim"],
+        n_blocks_encoder=p["n_blocks_encoder"],
+        n_blocks_decoder=p["n_blocks_decoder"],
+        mlp_multiplier=p["mlp_multiplier"],
+        n_heads=p["n_heads"],
+        dropout=p["dropout"],
+        drop_path=p["drop_path"],
+        parameter_dropout=p["parameter_dropout"],
+
+        residual="climate",
+        masking_mode="both",
+        encoder_shifting=True,
+        decoder_shifting=True,
+        positional_encoding="fourier",
+
+        checkpoint_encoder=[],
+        checkpoint_decoder=[],
+    )
+
+    print(
+        "[MODEL] loading 2.3B checkpoint with mmap",
+        flush=True,
+    )
+
+    state = torch.load(
+        weights_path,
+        map_location="cpu",
+        mmap=True,
+        weights_only=False,
+    )
+
+    if "model_state" in state:
+        state = state[
+            "model_state"
+        ]
+
+    try:
+        model.load_state_dict(
+            state,
+            strict=True,
+            assign=True,
+        )
+    except Exception:
+        model.load_state_dict(
+            state,
+            strict=True,
+        )
+
+    del state
+    gc.collect()
+
+    model.eval()
+
+    model = model.to(
+        device=device,
+        dtype=torch.bfloat16,
+    )
+
+    #
+    # Representative pressure of each MERRA model level.
+    # PL is one of the pretrained dynamic variables.
+    #
+    base = len(SURFACE)
+    pl_index = VERTICAL.index(
+        "PL"
+    )
+
+    p_merra = (
+        in_mu[
+            base
+            + pl_index
+            * len(MERRA_LEVELS):
+            base
+            + (pl_index + 1)
+            * len(MERRA_LEVELS)
+        ]
+        .cpu()
+        .numpy()
+        .astype(np.float32)
+    )
+
+    static_fill = (
+        stat_mu[-4:]
+        .cpu()
+        .numpy()
+        .astype(np.float32)
+    )
+
+    return (
+        model,
+        in_mu.cpu().numpy(),
+        p_merra,
+        static_fill,
+    )
+
+
+@torch.inference_mode()
+def main():
+    args = cli()
+
+    if not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA required"
+        )
+
+    device = torch.device(
+        "cuda"
+    )
+
+    (
+        model,
+        in_mu,
+        p_merra,
+        static_fill,
+    ) = build_model(
+        args.config,
+        args.weights,
+        args.scalers,
+        device,
+    )
+
+    print(
+        "[MODEL] representative pressures Pa:",
+        p_merra.tolist(),
+        flush=True,
+    )
+
+    reader = ERA5Reader(
+        args.era5_zarr
+    )
+
+    names = list(
+        reader.layout.names
+    )
+
+    req = requirements(
+        args.manifest
+    )
+
+    contexts = sorted(req)
+
+    if args.max_contexts:
+        contexts = contexts[
+            :args.max_contexts
+        ]
+
+    z = store_open(
+        args.output,
+        len(reader.times),
+        len(names),
+        args.overwrite,
+    )
+
+    todo = [
+        idx
+        for idx in contexts
+        if not all(
+            int(
+                z[
+                    f"_done_{lead}"
+                ][idx]
+            ) == 1
+            for lead in req[idx]
+        )
+    ]
+
+    print(
+        f"[DATA] contexts={len(contexts):,} "
+        f"remaining={len(todo):,}",
+        flush=True,
+    )
+
+    if not todo:
+        return 0
+
+    ds = ERAAdapter(
+        reader,
+        todo,
+        in_mu,
+        p_merra,
+    )
+
+    loader = DataLoader(
+        ds,
+        batch_size=args.batch_size,
+        shuffle=False,
+        num_workers=args.num_workers,
+        pin_memory=True,
+        persistent_workers=(
+            args.num_workers > 0
+        ),
+    )
+
+    climate = (
+        torch.from_numpy(
+            in_mu
+        )
+        .to(
+            device=device,
+            dtype=torch.bfloat16,
+        )
+        .view(
+            1,
+            -1,
+            1,
+            1,
+        )
+        .expand(
+            1,
+            -1,
+            360,
+            576,
+        )
+    )
+
+    started = time.time()
+    done = 0
+
+    for batch_no, batch in enumerate(
+        loader,
+        1,
+    ):
+        indices = (
+            batch["context_idx"]
+            .cpu()
+            .numpy()
+            .astype(int)
+        )
+
+        bsz = len(indices)
+
+        x = batch[
+            "x"
+        ].to(
+            device=device,
+            dtype=torch.float32,
+            non_blocking=True,
+        )
+
+        x = era_to_merra_grid(
+            x
+        ).to(
+            dtype=torch.bfloat16
+        )
+
+        tp = (
+            batch["tp"]
+            .cpu()
+            .numpy()
+        )
+
+        max_steps = max(
+            max(req[int(idx)])
+            // 6
+            for idx in indices
+        )
+
+        climate_batch = climate.expand(
+            bsz,
+            -1,
+            -1,
+            -1,
+        )
+
+        for step in range(
+            1,
+            max_steps + 1,
+        ):
+            target_times = [
+                reader.times[int(idx)]
+                + np.timedelta64(
+                    step * 6,
+                    "h",
+                )
+                for idx in indices
+            ]
+
+            static = make_static(
+                target_times,
+                static_fill,
+                device,
+                torch.bfloat16,
+            )
+
+            batch_model = {
+                "x":
+                    x,
+
+                "y":
+                    climate_batch,
+
+                "static":
+                    static,
+
+                "climate":
+                    climate_batch,
+
+                "input_time":
+                    torch.full(
+                        (bsz,),
+                        -6.0,
+                        device=device,
+                        dtype=torch.bfloat16,
+                    ),
+
+                "lead_time":
+                    torch.full(
+                        (bsz,),
+                        6.0,
+                        device=device,
+                        dtype=torch.bfloat16,
+                    ),
+            }
+
+            out = model(
+                batch_model
+            )
+
+            x = torch.cat(
+                [
+                    x[:, 1:2],
+                    out[:, None],
+                ],
+                dim=1,
+            )
+
+            lead = step * 6
+
+            wanted = [
+                bj
+                for bj, idx in enumerate(indices)
+                if lead in req[int(idx)]
+            ]
+
+            if not wanted:
+                continue
+
+            low = merra_to_era_grid(
+                out[wanted]
+            ).cpu().numpy()
+
+            for k, bj in enumerate(
+                wanted
+            ):
+                idx = int(
+                    indices[bj]
+                )
+
+                pred = output_to_71(
+                    low[k],
+                    tp[bj],
+                    names,
+                    p_merra,
+                    ds.flip_lat,
+                )
+
+                z[
+                    f"lead_{lead}"
+                ][idx] = pred
+
+                z[
+                    f"_done_{lead}"
+                ][idx] = 1
+
+        done += bsz
+
+        if (
+            batch_no == 1
+            or batch_no
+            % args.log_every == 0
+        ):
+            dt = time.time() - started
+            rate = done / max(
+                dt,
+                1e-6,
+            )
+
+            peak = (
+                torch.cuda.max_memory_reserved()
+                / 1024**3
+            )
+
+            print(
+                f"[PRITHVI] {done:,}/{len(todo):,} "
+                f"{100*done/len(todo):.2f}% "
+                f"batch={bsz} "
+                f"rate={rate:.4f} contexts/s "
+                f"ETA={(len(todo)-done)/max(rate,1e-9)/3600:.2f}h "
+                f"GPU_peak={peak:.2f}GiB",
+                flush=True,
+            )
+
+            torch.cuda.reset_peak_memory_stats()
+
+    missing = {}
+
+    for lead in (6, 24, 72):
+        ids = [
+            idx
+            for idx in contexts
+            if lead in req[idx]
+        ]
+
+        missing[
+            str(lead)
+        ] = sum(
+            int(
+                z[
+                    f"_done_{lead}"
+                ][i]
+            ) != 1
+            for i in ids
+        )
+
+    summary = {
+        "status":
+            "completed"
+            if not any(
+                missing.values()
+            )
+            else "incomplete",
+
+        "backbone":
+            "prithvi.wxc.rollout.2300m.v1",
+
+        "adapter":
+            "ERA5 shared-field / mean-imputed MERRA2 adapter",
+
+        "contexts":
+            len(contexts),
+
+        "missing":
+            missing,
+
+        "representative_pressure_pa":
+            p_merra.tolist(),
+
+        "imputation": (
+            "unsupported MERRA2 dynamic/static variables "
+            "and climate set to pretrained mean"
+        ),
+
+        "precipitation": (
+            "total_precipitation_6hr persistence"
+        ),
+    }
+
+    (
+        Path(args.output)
+        / "generation_summary.json"
+    ).write_text(
+        json.dumps(
+            summary,
+            indent=2,
+        )
+    )
+
+    print(
+        "[COMPLETE]",
+        json.dumps(
+            summary,
+            indent=2,
+        ),
+        flush=True,
+    )
+
+    return (
+        0
+        if summary["status"]
+        == "completed"
+        else 2
+    )
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

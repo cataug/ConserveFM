@@ -1,0 +1,1292 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import random
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
+
+
+ROOT = Path.home() / "ConserveFM"
+
+CLIMAX_SRC = ROOT / "external/ClimaX/src"
+sys.path.insert(0, str(CLIMAX_SRC))
+
+from climax.arch import ClimaX
+
+from conservefm.data import (
+    ERA5Reader,
+    Normalizer,
+    read_examples,
+)
+
+
+OLD_VARS = [
+    "land_sea_mask",
+    "orography",
+    "lattitude",
+
+    "2m_temperature",
+    "10m_u_component_of_wind",
+    "10m_v_component_of_wind",
+
+    "geopotential_50",
+    "geopotential_250",
+    "geopotential_500",
+    "geopotential_600",
+    "geopotential_700",
+    "geopotential_850",
+    "geopotential_925",
+
+    "u_component_of_wind_50",
+    "u_component_of_wind_250",
+    "u_component_of_wind_500",
+    "u_component_of_wind_600",
+    "u_component_of_wind_700",
+    "u_component_of_wind_850",
+    "u_component_of_wind_925",
+
+    "v_component_of_wind_50",
+    "v_component_of_wind_250",
+    "v_component_of_wind_500",
+    "v_component_of_wind_600",
+    "v_component_of_wind_700",
+    "v_component_of_wind_850",
+    "v_component_of_wind_925",
+
+    "temperature_50",
+    "temperature_250",
+    "temperature_500",
+    "temperature_600",
+    "temperature_700",
+    "temperature_850",
+    "temperature_925",
+
+    "relative_humidity_50",
+    "relative_humidity_250",
+    "relative_humidity_500",
+    "relative_humidity_600",
+    "relative_humidity_700",
+    "relative_humidity_850",
+    "relative_humidity_925",
+
+    "specific_humidity_50",
+    "specific_humidity_250",
+    "specific_humidity_500",
+    "specific_humidity_600",
+    "specific_humidity_700",
+    "specific_humidity_850",
+    "specific_humidity_925",
+]
+
+
+def args_parser():
+    p = argparse.ArgumentParser()
+
+    p.add_argument(
+        "--era5-zarr",
+        default=str(
+            ROOT / "data/ERA5_WeatherBench2_1979_2022"
+        ),
+    )
+
+    p.add_argument(
+        "--manifest",
+        default=str(
+            ROOT / "manifests/research_v1/era5_examples.csv"
+        ),
+    )
+
+    p.add_argument(
+        "--stats",
+        default=str(
+            ROOT / "manifests/research_v1/era5_channel_stats.npz"
+        ),
+    )
+
+    p.add_argument(
+        "--pretrained",
+        default=str(
+            ROOT / "models/climax/1.40625deg.ckpt"
+        ),
+    )
+
+    p.add_argument(
+        "--output-dir",
+        default=str(
+            ROOT / "models/climax_forecaster"
+        ),
+    )
+
+    p.add_argument("--epochs", type=int, default=10)
+    p.add_argument("--lr", type=float, default=5e-7)
+    p.add_argument("--weight-decay", type=float, default=1e-5)
+
+    p.add_argument("--batch-size", type=int, default=1)
+    p.add_argument("--accum", type=int, default=4)
+
+    p.add_argument("--num-workers", type=int, default=8)
+    p.add_argument("--prefetch-factor", type=int, default=1)
+
+    p.add_argument("--max-train", type=int, default=0)
+    p.add_argument("--max-val", type=int, default=512)
+
+    p.add_argument("--seed", type=int, default=42)
+
+    p.add_argument(
+        "--log-every",
+        type=int,
+        default=25,
+    )
+
+    p.add_argument("--smoke", action="store_true")
+
+    return p.parse_args()
+
+
+def seed_all(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+
+def new_to_old_name(name: str):
+    if name in {
+        "2m_temperature",
+        "10m_u_component_of_wind",
+        "10m_v_component_of_wind",
+    }:
+        return name
+
+    if "@" not in name:
+        return None
+
+    variable, level = name.split("@", 1)
+
+    level = (
+        level
+        .replace("hPa", "")
+        .strip()
+    )
+
+    candidate = f"{variable}_{level}"
+
+    if candidate in OLD_VARS:
+        return candidate
+
+    return None
+
+
+def infer_old_grid(n_patches):
+    # 1.40625 degree ClimaX uses a 2:1 global grid.
+    # We infer dimensions rather than hard-code 32x64.
+    best = None
+
+    for h in range(1, int(math.sqrt(n_patches)) + 1):
+        if n_patches % h:
+            continue
+
+        w = n_patches // h
+
+        score = abs(
+            (w / h) - 2.0
+        )
+
+        if (
+            best is None
+            or score < best[0]
+        ):
+            best = (
+                score,
+                h,
+                w,
+            )
+
+    if best is None:
+        raise RuntimeError(
+            f"Cannot factor positional grid: {n_patches}"
+        )
+
+    _, h, w = best
+
+    return h, w
+
+
+def interpolate_pos(
+    old_pos,
+    new_h,
+    new_w,
+):
+    old_n = old_pos.shape[1]
+    old_h, old_w = infer_old_grid(old_n)
+
+    print(
+        f"[PRETRAIN] positional grid "
+        f"{old_h}x{old_w} -> {new_h}x{new_w}",
+        flush=True,
+    )
+
+    x = (
+        old_pos
+        .reshape(
+            1,
+            old_h,
+            old_w,
+            old_pos.shape[-1],
+        )
+        .permute(0, 3, 1, 2)
+    )
+
+    x = F.interpolate(
+        x.float(),
+        size=(new_h, new_w),
+        mode="bicubic",
+        align_corners=False,
+    )
+
+    x = (
+        x
+        .permute(0, 2, 3, 1)
+        .reshape(
+            1,
+            new_h * new_w,
+            old_pos.shape[-1],
+        )
+    )
+
+    return x
+
+
+def load_pretrained_71(
+    model,
+    checkpoint_path,
+    new_vars,
+):
+    print(
+        "[PRETRAIN] loading",
+        checkpoint_path,
+        flush=True,
+    )
+
+    ckpt = torch.load(
+        checkpoint_path,
+        map_location="cpu",
+        weights_only=False,
+    )
+
+    raw = ckpt.get(
+        "state_dict",
+        ckpt,
+    )
+
+    old = {}
+
+    for key, value in raw.items():
+        if key.startswith("net."):
+            old[
+                key[len("net."):]
+            ] = value
+
+    state = model.state_dict()
+
+    transferred = []
+
+    #
+    # 1. Copy all architecture tensors whose
+    # shapes match directly.
+    #
+    excluded_prefixes = (
+        "token_embeds.",
+        "var_embed",
+        "pos_embed",
+        "head.4.",
+    )
+
+    for key, value in old.items():
+        if key.startswith(
+            excluded_prefixes
+        ):
+            continue
+
+        if (
+            key in state
+            and state[key].shape
+            == value.shape
+        ):
+            state[key] = value
+            transferred.append(key)
+
+    #
+    # 2. Positional embedding.
+    #
+    p = model.patch_size
+
+    new_hp = (
+        model.img_size[0] // p
+    )
+
+    new_wp = (
+        model.img_size[1] // p
+    )
+
+    if "pos_embed" in old:
+        state["pos_embed"] = interpolate_pos(
+            old["pos_embed"],
+            new_hp,
+            new_wp,
+        )
+
+    #
+    # 3. Copy shared variable-specific token embeddings
+    # and variable embeddings.
+    #
+    old_index = {
+        name: i
+        for i, name in enumerate(
+            OLD_VARS
+        )
+    }
+
+    new_index = {
+        name: i
+        for i, name in enumerate(
+            new_vars
+        )
+    }
+
+    shared = []
+
+    for new_name in new_vars:
+        old_name = new_to_old_name(
+            new_name
+        )
+
+        if (
+            old_name is None
+            or old_name not in old_index
+        ):
+            continue
+
+        oi = old_index[old_name]
+        ni = new_index[new_name]
+
+        for suffix in [
+            "proj.weight",
+            "proj.bias",
+        ]:
+            old_key = (
+                f"token_embeds.{oi}.{suffix}"
+            )
+
+            new_key = (
+                f"token_embeds.{ni}.{suffix}"
+            )
+
+            if (
+                old_key in old
+                and new_key in state
+                and old[old_key].shape
+                == state[new_key].shape
+            ):
+                state[new_key] = old[
+                    old_key
+                ]
+
+        if (
+            "var_embed" in old
+            and "var_embed" in state
+        ):
+            state["var_embed"][
+                :,
+                ni,
+                :
+            ] = old["var_embed"][
+                :,
+                oi,
+                :
+            ]
+
+        shared.append(
+            (
+                new_name,
+                old_name,
+                ni,
+                oi,
+            )
+        )
+
+    #
+    # 4. Partially transfer final output head.
+    #
+    old_w_key = "head.4.weight"
+    old_b_key = "head.4.bias"
+
+    if (
+        old_w_key in old
+        and old_b_key in old
+    ):
+        new_w = state[
+            old_w_key
+        ].clone()
+
+        new_b = state[
+            old_b_key
+        ].clone()
+
+        old_w = old[
+            old_w_key
+        ]
+
+        old_b = old[
+            old_b_key
+        ]
+
+        old_c = len(
+            OLD_VARS
+        )
+
+        new_c = len(
+            new_vars
+        )
+
+        patch_positions = (
+            model.patch_size ** 2
+        )
+
+        for (
+            _,
+            _,
+            ni,
+            oi,
+        ) in shared:
+
+            for patch_pos in range(
+                patch_positions
+            ):
+                src = (
+                    patch_pos
+                    * old_c
+                    + oi
+                )
+
+                dst = (
+                    patch_pos
+                    * new_c
+                    + ni
+                )
+
+                new_w[dst] = old_w[src]
+                new_b[dst] = old_b[src]
+
+        state[
+            old_w_key
+        ] = new_w
+
+        state[
+            old_b_key
+        ] = new_b
+
+    msg = model.load_state_dict(
+        state,
+        strict=True,
+    )
+
+    print(
+        "[PRETRAIN] load:",
+        msg,
+        flush=True,
+    )
+
+    print(
+        f"[PRETRAIN] shared variables: "
+        f"{len(shared)}/{len(new_vars)}",
+        flush=True,
+    )
+
+    for new_name, old_name, _, _ in shared:
+        print(
+            f"  {old_name:<32} -> {new_name}",
+            flush=True,
+        )
+
+    print(
+        f"[PRETRAIN] newly initialized variables: "
+        f"{len(new_vars) - len(shared)}",
+        flush=True,
+    )
+
+    return len(shared)
+
+
+class ForecastDataset(Dataset):
+    def __init__(
+        self,
+        reader,
+        normalizer,
+        rows,
+        max_examples=0,
+    ):
+        self.reader = reader
+        self.normalizer = normalizer
+
+        if max_examples:
+            self.rows = rows[
+                :max_examples
+            ]
+        else:
+            self.rows = rows
+
+    def __len__(self):
+        return len(
+            self.rows
+        )
+
+    @staticmethod
+    def spatial_prepare(x):
+        # ERA5Reader gives:
+        # [C, longitude=240, latitude=121]
+        #
+        # ClimaX expects:
+        # [C, H=latitude, W=longitude]
+
+        x = np.transpose(
+            x,
+            (0, 2, 1),
+        )
+
+        # 121 is not divisible by patch_size=4.
+        # Preserve all real grid cells and replicate
+        # pole boundaries to 124.
+        x = np.pad(
+            x,
+            (
+                (0, 0),
+                (1, 2),
+                (0, 0),
+            ),
+            mode="edge",
+        )
+
+        return np.ascontiguousarray(
+            x,
+            dtype=np.float32,
+        )
+
+    def __getitem__(
+        self,
+        index,
+    ):
+        row = self.rows[
+            index
+        ]
+
+        context_idx = int(
+            row["context_end_idx"]
+        )
+
+        target_idx = int(
+            row["target_idx"]
+        )
+
+        lead_hours = int(
+            row["lead_hours"]
+        )
+
+        x = self.reader.read_state(
+            context_idx
+        )
+
+        y = self.reader.read_state(
+            target_idx
+        )
+
+        x = self.normalizer.normalize_np(
+            x
+        )
+
+        y = self.normalizer.normalize_np(
+            y
+        )
+
+        x = self.spatial_prepare(
+            x
+        )
+
+        y = self.spatial_prepare(
+            y
+        )
+
+        return {
+            "x": torch.from_numpy(x),
+            "y": torch.from_numpy(y),
+
+            # Original ClimaX convention:
+            # hours / 100.
+            "lead": torch.tensor(
+                lead_hours / 100.0,
+                dtype=torch.float32,
+            ),
+
+            "lead_hours": lead_hours,
+        }
+
+
+def weighted_mse(
+    pred,
+    target,
+    lat_weights,
+):
+    # remove padding:
+    # actual latitudes are rows [1:122]
+    pred = pred[
+        :,
+        :,
+        1:122,
+        :,
+    ]
+
+    target = target[
+        :,
+        :,
+        1:122,
+        :,
+    ]
+
+    w = lat_weights[
+        None,
+        None,
+        :,
+        None,
+    ]
+
+    err = (
+        pred.float()
+        - target.float()
+    ) ** 2
+
+    return (
+        err * w
+    ).mean()
+
+
+@torch.no_grad()
+def validate(
+    model,
+    loader,
+    variables,
+    device,
+    lat_weights,
+):
+    model.eval()
+
+    losses = []
+
+    for batch in loader:
+        x = batch["x"].to(
+            device,
+            non_blocking=True,
+        )
+
+        y = batch["y"].to(
+            device,
+            non_blocking=True,
+        )
+
+        lead = batch["lead"].to(
+            device,
+            non_blocking=True,
+        )
+
+        with torch.autocast(
+            device_type="cuda",
+            dtype=torch.bfloat16,
+        ):
+            _, pred = model(
+                x,
+                y,
+                lead,
+                variables,
+                variables,
+                metric=None,
+                lat=None,
+            )
+
+        loss = weighted_mse(
+            pred,
+            y,
+            lat_weights,
+        )
+
+        losses.append(
+            float(loss)
+        )
+
+    model.train()
+
+    return float(
+        np.mean(losses)
+    )
+
+
+def save_checkpoint(
+    path,
+    model,
+    optimizer,
+    epoch,
+    global_step,
+    best_val,
+    variables,
+    args,
+):
+    torch.save(
+        {
+            "model": model.state_dict(),
+            "optimizer":
+                optimizer.state_dict(),
+            "epoch": epoch,
+            "global_step":
+                global_step,
+            "best_val":
+                best_val,
+            "variables":
+                variables,
+            "img_size":
+                model.img_size,
+            "patch_size":
+                model.patch_size,
+            "args":
+                vars(args),
+        },
+        path,
+    )
+
+
+def main():
+    args = args_parser()
+
+    if not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA required"
+        )
+
+    seed_all(
+        args.seed
+    )
+
+    torch.set_float32_matmul_precision("high")
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
+    torch.backends.cudnn.benchmark = True
+
+    output = Path(
+        args.output_dir
+    )
+
+    output.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    reader = ERA5Reader(
+        args.era5_zarr
+    )
+
+    normalizer = Normalizer.load(
+        args.stats
+    )
+
+    variables = list(
+        reader.layout.names
+    )
+
+    print("=" * 76)
+    print("ConserveFM ClimaX forecasting adapter")
+    print("=" * 76)
+    print(
+        "ERA5 channels :",
+        len(variables),
+    )
+    print(
+        "ERA5 grid     :",
+        (
+            len(reader.latitude),
+            len(reader.longitude),
+        ),
+    )
+    print(
+        "ClimaX grid   :",
+        (124, 240),
+    )
+    print(
+        "patch size    :",
+        4,
+    )
+    print(
+        "leads         :",
+        "6 / 24 / 72 h",
+    )
+    print("=" * 76)
+
+    model = ClimaX(
+        default_vars=variables,
+        img_size=[
+            124,
+            240,
+        ],
+        patch_size=4,
+        embed_dim=1024,
+        depth=8,
+        decoder_depth=2,
+        num_heads=16,
+        mlp_ratio=4.0,
+        drop_path=0.1,
+        drop_rate=0.1,
+        parallel_patch_embed=False,
+    )
+
+    shared = load_pretrained_71(
+        model,
+        args.pretrained,
+        variables,
+    )
+
+    device = torch.device(
+        "cuda"
+    )
+
+    model = model.to(
+        device
+    )
+
+    train_rows = read_examples(
+        args.manifest,
+        "train",
+    )
+
+    val_rows = read_examples(
+        args.manifest,
+        "val",
+    )
+
+    #
+    # Deterministic shuffle for capped runs.
+    #
+    rng = random.Random(
+        args.seed
+    )
+
+    rng.shuffle(
+        train_rows
+    )
+
+    rng.shuffle(
+        val_rows
+    )
+
+    if args.smoke:
+        args.epochs = 1
+        args.max_train = (
+            args.max_train or 4
+        )
+        args.max_val = (
+            args.max_val or 2
+        )
+        args.accum = 1
+
+    train_ds = ForecastDataset(
+        reader,
+        normalizer,
+        train_rows,
+        max_examples=args.max_train,
+    )
+
+    val_ds = ForecastDataset(
+        reader,
+        normalizer,
+        val_rows,
+        max_examples=args.max_val,
+    )
+
+    loader_extra = {}
+
+    if args.num_workers > 0:
+        loader_extra.update(
+            persistent_workers=True,
+            prefetch_factor=args.prefetch_factor,
+        )
+
+    train_loader = DataLoader(
+        train_ds,
+        batch_size=args.batch_size,
+        shuffle=True,
+        num_workers=args.num_workers,
+        pin_memory=True,
+        **loader_extra,
+    )
+
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=args.batch_size,
+        shuffle=False,
+        num_workers=args.num_workers,
+        pin_memory=True,
+        **loader_extra,
+    )
+
+    print(
+        f"[LOADER] batch={args.batch_size} "
+        f"workers={args.num_workers} "
+        f"prefetch={args.prefetch_factor}",
+        flush=True,
+    )
+
+    lat = np.asarray(
+        reader.latitude,
+        dtype=np.float32,
+    )
+
+    lat_weights = np.cos(
+        np.deg2rad(lat)
+    )
+
+    lat_weights = (
+        lat_weights
+        / lat_weights.mean()
+    )
+
+    lat_weights = torch.tensor(
+        lat_weights,
+        dtype=torch.float32,
+        device=device,
+    )
+
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=args.lr,
+        betas=(0.9, 0.99),
+        weight_decay=args.weight_decay,
+    )
+
+    start_epoch = 0
+    global_step = 0
+    best_val = float("inf")
+
+    last_path = (
+        output
+        / "checkpoint_last.pt"
+    )
+
+    best_path = (
+        output
+        / "checkpoint_best.pt"
+    )
+
+    if last_path.exists():
+        print(
+            "[RESUME]",
+            last_path,
+            flush=True,
+        )
+
+        checkpoint = torch.load(
+            last_path,
+            map_location="cpu",
+            weights_only=False,
+        )
+
+        model.load_state_dict(
+            checkpoint["model"]
+        )
+
+        optimizer.load_state_dict(
+            checkpoint["optimizer"]
+        )
+
+        start_epoch = int(
+            checkpoint["epoch"]
+        ) + 1
+
+        global_step = int(
+            checkpoint["global_step"]
+        )
+
+        best_val = float(
+            checkpoint["best_val"]
+        )
+
+    metadata = {
+        "backbone": "climax",
+        "pretrained":
+            str(args.pretrained),
+        "n_channels":
+            len(variables),
+        "shared_pretrained_channels":
+            shared,
+        "new_channels":
+            len(variables) - shared,
+        "variables":
+            variables,
+        "grid_input":
+            [121, 240],
+        "grid_model":
+            [124, 240],
+        "patch_size":
+            4,
+        "lead_hours":
+            [6, 24, 72],
+        "lead_encoding":
+            "hours/100",
+    }
+
+    (
+        output
+        / "adapter_config.json"
+    ).write_text(
+        json.dumps(
+            metadata,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    print(
+        f"[DATA] train={len(train_ds):,} "
+        f"val={len(val_ds):,}",
+        flush=True,
+    )
+
+    history_path = (
+        output
+        / "history.jsonl"
+    )
+
+    started = time.time()
+
+    for epoch in range(
+        start_epoch,
+        args.epochs,
+    ):
+        model.train()
+
+        optimizer.zero_grad(
+            set_to_none=True
+        )
+
+        running = []
+
+        for batch_idx, batch in enumerate(
+            train_loader,
+            1,
+        ):
+            x = batch["x"].to(
+                device,
+                non_blocking=True,
+            )
+
+            y = batch["y"].to(
+                device,
+                non_blocking=True,
+            )
+
+            lead = batch["lead"].to(
+                device,
+                non_blocking=True,
+            )
+
+            with torch.autocast(
+                device_type="cuda",
+                dtype=torch.bfloat16,
+            ):
+                _, pred = model(
+                    x,
+                    y,
+                    lead,
+                    variables,
+                    variables,
+                    metric=None,
+                    lat=None,
+                )
+
+                loss = weighted_mse(
+                    pred,
+                    y,
+                    lat_weights,
+                )
+
+                scaled_loss = (
+                    loss
+                    / args.accum
+                )
+
+            scaled_loss.backward()
+
+            if (
+                batch_idx % args.accum
+                == 0
+                or batch_idx
+                == len(train_loader)
+            ):
+                torch.nn.utils.clip_grad_norm_(
+                    model.parameters(),
+                    1.0,
+                )
+
+                optimizer.step()
+
+                optimizer.zero_grad(
+                    set_to_none=True
+                )
+
+                global_step += 1
+
+            running.append(
+                float(loss.detach())
+            )
+
+            if (
+                batch_idx
+                % args.log_every
+                == 0
+                or batch_idx
+                == 1
+            ):
+                print(
+                    f"[TRAIN] "
+                    f"epoch={epoch + 1}/{args.epochs} "
+                    f"batch={batch_idx}/{len(train_loader)} "
+                    f"lead={batch['lead_hours'].tolist()} "
+                    f"loss={np.mean(running[-args.log_every:]):.6f} "
+                    f"GPU_now={torch.cuda.memory_allocated()/1024**3:.2f}GiB "
+                    f"GPU_peak={torch.cuda.max_memory_reserved()/1024**3:.2f}GiB",
+                    flush=True,
+                )
+
+                torch.cuda.reset_peak_memory_stats()
+
+        train_loss = float(
+            np.mean(running)
+        )
+
+        val_loss = validate(
+            model,
+            val_loader,
+            variables,
+            device,
+            lat_weights,
+        )
+
+        record = {
+            "epoch":
+                epoch,
+            "global_step":
+                global_step,
+            "train_mse":
+                train_loss,
+            "val_mse":
+                val_loss,
+            "elapsed_seconds":
+                round(
+                    time.time()
+                    - started,
+                    2,
+                ),
+        }
+
+        print(
+            "[EPOCH]",
+            record,
+            flush=True,
+        )
+
+        with history_path.open(
+            "a",
+            encoding="utf-8",
+        ) as f:
+            f.write(
+                json.dumps(record)
+                + "\n"
+            )
+
+        save_checkpoint(
+            last_path,
+            model,
+            optimizer,
+            epoch,
+            global_step,
+            best_val,
+            variables,
+            args,
+        )
+
+        if val_loss < best_val:
+            best_val = val_loss
+
+            save_checkpoint(
+                best_path,
+                model,
+                optimizer,
+                epoch,
+                global_step,
+                best_val,
+                variables,
+                args,
+            )
+
+            print(
+                f"[BEST] val_mse="
+                f"{best_val:.6f}",
+                flush=True,
+            )
+
+    result = {
+        "status":
+            "completed",
+        "best_val_mse":
+            best_val,
+        "epochs":
+            args.epochs,
+        "global_step":
+            global_step,
+        "train_examples":
+            len(train_ds),
+        "val_examples":
+            len(val_ds),
+        "shared_pretrained_channels":
+            shared,
+        "checkpoint_best":
+            str(best_path),
+    }
+
+    (
+        output
+        / "result.json"
+    ).write_text(
+        json.dumps(
+            result,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    print(
+        "[COMPLETE]",
+        json.dumps(
+            result,
+            indent=2,
+        ),
+        flush=True,
+    )
+
+
+if __name__ == "__main__":
+    main()

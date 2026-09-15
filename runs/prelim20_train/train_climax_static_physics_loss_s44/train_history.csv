@@ -1,0 +1,2 @@
+stage,epoch,global_step,train_total,val_repair_mse,elapsed_seconds
+finetune,0,3000,0.13496700409054757,0.11506122583523393,1780.22

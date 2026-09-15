@@ -1,0 +1,450 @@
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[EVAL] device=cuda method=raw_fm backbone=prithvi_wxc
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256

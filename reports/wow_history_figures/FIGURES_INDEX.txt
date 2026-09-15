@@ -1,0 +1,41 @@
+WOW FIGURES INDEX
+================================================================================
+
+Plan CSV               : /home/tahiti/ConserveFM/manifests/experiments_v1/planned_runs.csv
+Runs dir               : /home/tahiti/ConserveFM/runs
+Final metrics dir      : /home/tahiti/ConserveFM/reports/final_metrics_s42
+Output dir             : /home/tahiti/ConserveFM/reports/wow_history_figures
+
+Plan rows              : 138
+Train rows in plan     : 66
+Eval rows in plan      : 72
+Plan status counts:
+  - planned: 107
+  - interrupted: 31
+
+Train histories found  : 34
+Top 10 deepest checkpoints:
+  - train_climax_conservefm_full_fix_s42: step=466588, best_val=0.100730
+  - train_climax_conservefm_full_fix2probe_s42: step=382941, best_val=0.107475
+  - train_climax_conservefm_full_s42: step=378941, best_val=0.099264
+  - train_climax_direct_state_prediction_s42: step=377941, best_val=0.096573
+  - train_climax_direct_state_prediction_s43: step=377941, best_val=0.097332
+  - train_climax_direct_state_prediction_s44: step=376941, best_val=0.096947
+  - train_climax_conservefm_full_s44: step=375941, best_val=0.099292
+  - train_climax_equal_constraint_weights_s42: step=374941, best_val=0.102181
+  - train_climax_conservefm_full_s43: step=373941, best_val=0.099620
+  - train_climax_equal_constraint_weights_s43: step=371941, best_val=0.103399
+
+Final bundle:
+  - final: OK
+  - corr: OK
+  - sev: OK
+  - lead: OK
+  - phys: missing
+
+Generated figures:
+  - fig01_preliminary_campaign.png
+  - fig02_training_leaderboard.png
+  - fig03_final_dashboard.png
+  - fig04_stress_breakdowns.png
+  - fig06_seed42_learning_curves.png

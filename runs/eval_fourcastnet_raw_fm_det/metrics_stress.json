@@ -1,0 +1,542 @@
+{
+  "lead6_moisture_sev0.25": {
+    "mae_phys": 11.358114387840033,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 5.8680841014790985e-05,
+    "physics_moisture": 0.0007637936786721866,
+    "physics_spectral": 0.21636459330329672,
+    "rmse_phys": 59.66802415251732,
+    "examples": 256
+  },
+  "lead6_moisture_sev0.5": {
+    "mae_phys": 11.358115658164024,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 5.8680841014790985e-05,
+    "physics_moisture": 0.0008612433170958611,
+    "physics_spectral": 0.21636459330329672,
+    "rmse_phys": 59.66802415251732,
+    "examples": 256
+  },
+  "lead6_moisture_sev1": {
+    "mae_phys": 11.358118619769812,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 5.8680841014790985e-05,
+    "physics_moisture": 0.0015210473949291425,
+    "physics_spectral": 0.21636459330329672,
+    "rmse_phys": 59.66802415251732,
+    "examples": 256
+  },
+  "lead6_moisture_sev2": {
+    "mae_phys": 11.358124490827322,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 5.8680841014790985e-05,
+    "physics_moisture": 0.0029403289805524646,
+    "physics_spectral": 0.21636459330329672,
+    "rmse_phys": 59.66802415251732,
+    "examples": 256
+  },
+  "lead6_hydrostatic_sev0.25": {
+    "mae_phys": 13.770126167684793,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 5.962621784760813e-05,
+    "physics_moisture": 0.0007577167600629764,
+    "physics_spectral": 0.22664568159962073,
+    "rmse_phys": 65.70518919825554,
+    "examples": 256
+  },
+  "lead6_hydrostatic_sev0.5": {
+    "mae_phys": 16.7799624055624,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 6.435260424098033e-05,
+    "physics_moisture": 0.0007577167600629764,
+    "physics_spectral": 0.2604603808722459,
+    "rmse_phys": 80.83724284172058,
+    "examples": 256
+  },
+  "lead6_hydrostatic_sev1": {
+    "mae_phys": 23.31841043010354,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 8.777017701078194e-05,
+    "physics_moisture": 0.0007577167600629764,
+    "physics_spectral": 0.39639249874744564,
+    "rmse_phys": 124.89035460352898,
+    "examples": 256
+  },
+  "lead6_hydrostatic_sev2": {
+    "mae_phys": 34.769246466457844,
+    "physics_advection": 4.4666223442181945,
+    "physics_hydrostatic": 0.0001817083087445326,
+    "physics_moisture": 0.0007577167600629764,
+    "physics_spectral": 0.7954331864602864,
+    "rmse_phys": 221.41095194220543,
+    "examples": 256
+  },
+  "lead6_advection_sev0.25": {
+    "mae_phys": 11.36774105206132,
+    "physics_advection": 4.3324302192777395,
+    "physics_hydrostatic": 6.090157499016868e-05,
+    "physics_moisture": 0.0007333680777321661,
+    "physics_spectral": 0.21528613416012377,
+    "rmse_phys": 59.66830883920193,
+    "examples": 256
+  },
+  "lead6_advection_sev0.5": {
+    "mae_phys": 11.368239797651768,
+    "physics_advection": 4.444034058600664,
+    "physics_hydrostatic": 6.133447117662172e-05,
+    "physics_moisture": 0.0007636954254621742,
+    "physics_spectral": 0.21762099058832973,
+    "rmse_phys": 59.66840086877346,
+    "examples": 256
+  },
+  "lead6_advection_sev1": {
+    "mae_phys": 11.370883848518133,
+    "physics_advection": 4.396414782851934,
+    "physics_hydrostatic": 6.174805157854735e-05,
+    "physics_moisture": 0.0007614938179187902,
+    "physics_spectral": 0.2151480163447559,
+    "rmse_phys": 59.668467685580254,
+    "examples": 256
+  },
+  "lead6_advection_sev2": {
+    "mae_phys": 11.385153654962778,
+    "physics_advection": 4.35610484238714,
+    "physics_hydrostatic": 6.902278123277483e-05,
+    "physics_moisture": 0.0007813245853913742,
+    "physics_spectral": 0.21362667437642813,
+    "rmse_phys": 59.669325068593025,
+    "examples": 256
+  },
+  "lead6_spectral_sev0.25": {
+    "mae_phys": 11.358113825321198,
+    "physics_advection": 4.466622373089194,
+    "physics_hydrostatic": 5.868084100768556e-05,
+    "physics_moisture": 0.0007577167936574369,
+    "physics_spectral": 0.21636459202272817,
+    "rmse_phys": 59.668024107813835,
+    "examples": 256
+  },
+  "lead6_spectral_sev0.5": {
+    "mae_phys": 11.358113817870617,
+    "physics_advection": 4.466622387059033,
+    "physics_hydrostatic": 5.868084112847782e-05,
+    "physics_moisture": 0.0007577166192049845,
+    "physics_spectral": 0.2163645927212201,
+    "rmse_phys": 59.6680241972208,
+    "examples": 256
+  },
+  "lead6_spectral_sev1": {
+    "mae_phys": 11.358113817870617,
+    "physics_advection": 4.466622379608452,
+    "physics_hydrostatic": 5.86808408371553e-05,
+    "physics_moisture": 0.0007577166506393951,
+    "physics_spectral": 0.21636459178989753,
+    "rmse_phys": 59.6680241972208,
+    "examples": 256
+  },
+  "lead6_spectral_sev2": {
+    "mae_phys": 11.358113843947649,
+    "physics_advection": 4.466622328385711,
+    "physics_hydrostatic": 5.868084092242043e-05,
+    "physics_moisture": 0.0007577167880867819,
+    "physics_spectral": 0.21636461495654657,
+    "rmse_phys": 59.668024227023125,
+    "examples": 256
+  },
+  "lead6_range_extreme_sev0.25": {
+    "mae_phys": 12.131438255310059,
+    "physics_advection": 4.533279292285442,
+    "physics_hydrostatic": 0.00010786543708718455,
+    "physics_moisture": 0.0007650503142144771,
+    "physics_spectral": 1.4196736973244697,
+    "rmse_phys": 71.94202575087547,
+    "examples": 256
+  },
+  "lead6_range_extreme_sev0.5": {
+    "mae_phys": 12.912824232131243,
+    "physics_advection": 5.068456072360277,
+    "physics_hydrostatic": 0.00025490849063203314,
+    "physics_moisture": 0.0007809286476003763,
+    "physics_spectral": 2.8672704878263175,
+    "rmse_phys": 99.19032844901085,
+    "examples": 256
+  },
+  "lead6_range_extreme_sev1": {
+    "mae_phys": 14.45932762697339,
+    "physics_advection": 6.505505066365004,
+    "physics_hydrostatic": 0.0008295058951262035,
+    "physics_moisture": 0.0008172631058869229,
+    "physics_spectral": 5.528378535062075,
+    "rmse_phys": 167.6335526406765,
+    "examples": 256
+  },
+  "lead6_range_extreme_sev2": {
+    "mae_phys": 17.670502189546824,
+    "physics_advection": 13.824187221005559,
+    "physics_hydrostatic": 0.003182080913347818,
+    "physics_moisture": 0.0009389223826019588,
+    "physics_spectral": 10.25101751089096,
+    "rmse_phys": 321.0866177678108,
+    "examples": 256
+  },
+  "lead24_moisture_sev0.25": {
+    "mae_phys": 21.6995155736804,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 5.771938800336329e-05,
+    "physics_moisture": 0.0016491470698838384,
+    "physics_spectral": 1.150941699044779,
+    "rmse_phys": 123.43226474523544,
+    "examples": 256
+  },
+  "lead24_moisture_sev0.5": {
+    "mae_phys": 21.69951644539833,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 5.771938800336329e-05,
+    "physics_moisture": 0.0017454427327905364,
+    "physics_spectral": 1.150941699044779,
+    "rmse_phys": 123.43226474523544,
+    "examples": 256
+  },
+  "lead24_moisture_sev1": {
+    "mae_phys": 21.69951929152012,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 5.771938800336329e-05,
+    "physics_moisture": 0.002310424553346735,
+    "physics_spectral": 1.150941699044779,
+    "rmse_phys": 123.43226474523544,
+    "examples": 256
+  },
+  "lead24_moisture_sev2": {
+    "mae_phys": 21.699524886906147,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 5.771938800336329e-05,
+    "physics_moisture": 0.0038121629808305357,
+    "physics_spectral": 1.150941699044779,
+    "rmse_phys": 123.43226474523544,
+    "examples": 256
+  },
+  "lead24_hydrostatic_sev0.25": {
+    "mae_phys": 23.90941546112299,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 5.861701405507347e-05,
+    "physics_moisture": 0.0016394341578234162,
+    "physics_spectral": 1.1573950159363449,
+    "rmse_phys": 126.73014405369759,
+    "examples": 256
+  },
+  "lead24_hydrostatic_sev0.5": {
+    "mae_phys": 26.891521707177162,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 6.366017732517548e-05,
+    "physics_moisture": 0.0016394341578234162,
+    "physics_spectral": 1.177864259108901,
+    "rmse_phys": 135.609090000391,
+    "examples": 256
+  },
+  "lead24_hydrostatic_sev1": {
+    "mae_phys": 32.20750993490219,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 8.48833646074354e-05,
+    "physics_moisture": 0.0016394341578234162,
+    "physics_spectral": 1.2553618133533746,
+    "rmse_phys": 162.9090059697628,
+    "examples": 256
+  },
+  "lead24_hydrostatic_sev2": {
+    "mae_phys": 43.95162498950958,
+    "physics_advection": 22.380726270377636,
+    "physics_hydrostatic": 0.00017666719716658008,
+    "physics_moisture": 0.0016394341578234162,
+    "physics_spectral": 1.5203913212753832,
+    "rmse_phys": 244.5869626402855,
+    "examples": 256
+  },
+  "lead24_advection_sev0.25": {
+    "mae_phys": 21.707633182406425,
+    "physics_advection": 27.862059999257326,
+    "physics_hydrostatic": 6.02343729596555e-05,
+    "physics_moisture": 0.001653944363397386,
+    "physics_spectral": 1.1515103350393474,
+    "rmse_phys": 123.43242526054382,
+    "examples": 256
+  },
+  "lead24_advection_sev0.5": {
+    "mae_phys": 21.707781419157982,
+    "physics_advection": 21.716035071760416,
+    "physics_hydrostatic": 5.9980850437568733e-05,
+    "physics_moisture": 0.001666287928287602,
+    "physics_spectral": 1.150195752037689,
+    "rmse_phys": 123.43240648508072,
+    "examples": 256
+  },
+  "lead24_advection_sev1": {
+    "mae_phys": 21.70918545871973,
+    "physics_advection": 21.40186608582735,
+    "physics_hydrostatic": 6.033921363268746e-05,
+    "physics_moisture": 0.001656939742360919,
+    "physics_spectral": 1.1499754937831312,
+    "rmse_phys": 123.4324426651001,
+    "examples": 256
+  },
+  "lead24_advection_sev2": {
+    "mae_phys": 21.72307950258255,
+    "physics_advection": 22.50301042571664,
+    "physics_hydrostatic": 6.745282220066429e-05,
+    "physics_moisture": 0.0016653451401680286,
+    "physics_spectral": 1.151562375947833,
+    "rmse_phys": 123.43286320567131,
+    "examples": 256
+  },
+  "lead24_spectral_sev0.25": {
+    "mae_phys": 21.699515163898468,
+    "physics_advection": 22.380726221948862,
+    "physics_hydrostatic": 5.771938801757415e-05,
+    "physics_moisture": 0.001639434410208196,
+    "physics_spectral": 1.1509416974149644,
+    "rmse_phys": 123.43226477503777,
+    "examples": 256
+  },
+  "lead24_spectral_sev0.5": {
+    "mae_phys": 21.69951517879963,
+    "physics_advection": 22.38072618097067,
+    "physics_hydrostatic": 5.771938801046872e-05,
+    "physics_moisture": 0.0016394344538639416,
+    "physics_spectral": 1.1509416981134564,
+    "rmse_phys": 123.43226498365402,
+    "examples": 256
+  },
+  "lead24_spectral_sev1": {
+    "mae_phys": 21.699515104293823,
+    "physics_advection": 22.380726292729378,
+    "physics_hydrostatic": 5.771938803889043e-05,
+    "physics_moisture": 0.0016394345077515027,
+    "physics_spectral": 1.150941706262529,
+    "rmse_phys": 123.43226486444473,
+    "examples": 256
+  },
+  "lead24_spectral_sev2": {
+    "mae_phys": 21.699515216052532,
+    "physics_advection": 22.380726501345634,
+    "physics_hydrostatic": 5.7719388045995856e-05,
+    "physics_moisture": 0.0016394341262184753,
+    "physics_spectral": 1.1509417162742466,
+    "rmse_phys": 123.43226492404938,
+    "examples": 256
+  },
+  "lead24_range_extreme_sev0.25": {
+    "mae_phys": 22.448996506631374,
+    "physics_advection": 23.42008712515235,
+    "physics_hydrostatic": 0.00010653410744509983,
+    "physics_moisture": 0.0016476601877002395,
+    "physics_spectral": 1.913804947398603,
+    "rmse_phys": 129.76014149188995,
+    "examples": 256
+  },
+  "lead24_range_extreme_sev0.5": {
+    "mae_phys": 23.335488937795162,
+    "physics_advection": 26.72364692762494,
+    "physics_hydrostatic": 0.00026553767622772284,
+    "physics_moisture": 0.0016664441611737857,
+    "physics_spectral": 3.2361997235566378,
+    "rmse_phys": 148.42065247893333,
+    "examples": 256
+  },
+  "lead24_range_extreme_sev1": {
+    "mae_phys": 24.87992897629738,
+    "physics_advection": 38.2806937135756,
+    "physics_hydrostatic": 0.000857520220506558,
+    "physics_moisture": 0.0017187157245643903,
+    "physics_spectral": 5.769347814843059,
+    "rmse_phys": 202.17618465423584,
+    "examples": 256
+  },
+  "lead24_range_extreme_sev2": {
+    "mae_phys": 27.870650812983513,
+    "physics_advection": 121.90781597048044,
+    "physics_hydrostatic": 0.003143916467706731,
+    "physics_moisture": 0.0018705138970744883,
+    "physics_spectral": 10.26391932554543,
+    "rmse_phys": 335.6054084300995,
+    "examples": 256
+  },
+  "lead72_moisture_sev0.25": {
+    "mae_phys": 47.37540800869465,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.14491679158391e-05,
+    "physics_moisture": 0.002141653294245316,
+    "physics_spectral": 3.394473002292216,
+    "rmse_phys": 265.0802542567253,
+    "examples": 256
+  },
+  "lead72_moisture_sev0.5": {
+    "mae_phys": 47.37540902197361,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.14491679158391e-05,
+    "physics_moisture": 0.002335968632252161,
+    "physics_spectral": 3.394473002292216,
+    "rmse_phys": 265.0802542567253,
+    "examples": 256
+  },
+  "lead72_moisture_sev1": {
+    "mae_phys": 47.37541130185127,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.14491679158391e-05,
+    "physics_moisture": 0.0027874608312491445,
+    "physics_spectral": 3.394473002292216,
+    "rmse_phys": 265.0802542567253,
+    "examples": 256
+  },
+  "lead72_moisture_sev2": {
+    "mae_phys": 47.375417068600655,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.14491679158391e-05,
+    "physics_moisture": 0.004741757426083272,
+    "physics_spectral": 3.394473002292216,
+    "rmse_phys": 265.0802542567253,
+    "examples": 256
+  },
+  "lead72_hydrostatic_sev0.25": {
+    "mae_phys": 49.08251017332077,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.234494371426536e-05,
+    "physics_moisture": 0.002118905285897199,
+    "physics_spectral": 3.397353108972311,
+    "rmse_phys": 266.68162643909454,
+    "examples": 256
+  },
+  "lead72_hydrostatic_sev0.5": {
+    "mae_phys": 51.86278462409973,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.7922008454957e-05,
+    "physics_moisture": 0.002118905285897199,
+    "physics_spectral": 3.4065468283370137,
+    "rmse_phys": 271.26213669776917,
+    "examples": 256
+  },
+  "lead72_hydrostatic_sev1": {
+    "mae_phys": 57.36024618148804,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 8.97501868166728e-05,
+    "physics_moisture": 0.002118905285897199,
+    "physics_spectral": 3.441129413433373,
+    "rmse_phys": 287.1798674464226,
+    "examples": 256
+  },
+  "lead72_hydrostatic_sev2": {
+    "mae_phys": 69.51539595425129,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 0.00018803785542331752,
+    "physics_moisture": 0.002118905285897199,
+    "physics_spectral": 3.5691167432814837,
+    "rmse_phys": 344.71533811092377,
+    "examples": 256
+  },
+  "lead72_advection_sev0.25": {
+    "mae_phys": 47.38144659996033,
+    "physics_advection": 94.20203115046024,
+    "physics_hydrostatic": 6.387879297875543e-05,
+    "physics_moisture": 0.0021081257299897516,
+    "physics_spectral": 3.3955059945583344,
+    "rmse_phys": 265.0803162455559,
+    "examples": 256
+  },
+  "lead72_advection_sev0.5": {
+    "mae_phys": 47.38155388832092,
+    "physics_advection": 93.72789247334003,
+    "physics_hydrostatic": 6.380631217695054e-05,
+    "physics_moisture": 0.0021328019096813478,
+    "physics_spectral": 3.3954704105854034,
+    "rmse_phys": 265.0803165435791,
+    "examples": 256
+  },
+  "lead72_advection_sev1": {
+    "mae_phys": 47.382971078157425,
+    "physics_advection": 106.67471067607403,
+    "physics_hydrostatic": 6.468698687456254e-05,
+    "physics_moisture": 0.002085931956457898,
+    "physics_spectral": 3.397245199419558,
+    "rmse_phys": 265.0803405046463,
+    "examples": 256
+  },
+  "lead72_advection_sev2": {
+    "mae_phys": 47.39734500646591,
+    "physics_advection": 111.28535592556,
+    "physics_hydrostatic": 7.34042113350597e-05,
+    "physics_moisture": 0.0022086540482746386,
+    "physics_spectral": 3.4117422997951508,
+    "rmse_phys": 265.0805670619011,
+    "examples": 256
+  },
+  "lead72_spectral_sev0.25": {
+    "mae_phys": 47.375407695770264,
+    "physics_advection": 93.57838402688503,
+    "physics_hydrostatic": 6.144916801531508e-05,
+    "physics_moisture": 0.0021189051474266307,
+    "physics_spectral": 3.3944730013608932,
+    "rmse_phys": 265.08025419712067,
+    "examples": 256
+  },
+  "lead72_spectral_sev0.5": {
+    "mae_phys": 47.375407710671425,
+    "physics_advection": 93.57838355004787,
+    "physics_hydrostatic": 6.14491679158391e-05,
+    "physics_moisture": 0.0021189049480199174,
+    "physics_spectral": 3.394472999498248,
+    "rmse_phys": 265.08025455474854,
+    "examples": 256
+  },
+  "lead72_spectral_sev1": {
+    "mae_phys": 47.37540762126446,
+    "physics_advection": 93.57838487625122,
+    "physics_hydrostatic": 6.144916798689337e-05,
+    "physics_moisture": 0.002118905390261716,
+    "physics_spectral": 3.3944729920476675,
+    "rmse_phys": 265.08025455474854,
+    "examples": 256
+  },
+  "lead72_spectral_sev2": {
+    "mae_phys": 47.375407829880714,
+    "physics_advection": 93.57838277518749,
+    "physics_hydrostatic": 6.144916797268252e-05,
+    "physics_moisture": 0.0021189051035435114,
+    "physics_spectral": 3.3944729985669255,
+    "rmse_phys": 265.08025443553925,
+    "examples": 256
+  },
+  "lead72_range_extreme_sev0.25": {
+    "mae_phys": 48.12841111421585,
+    "physics_advection": 98.47859326004982,
+    "physics_hydrostatic": 0.00011481280665748272,
+    "physics_moisture": 0.0021274442918866043,
+    "physics_spectral": 3.69973814021796,
+    "rmse_phys": 268.3224011063576,
+    "examples": 256
+  },
+  "lead72_range_extreme_sev0.5": {
+    "mae_phys": 48.914156302809715,
+    "physics_advection": 111.37101985514164,
+    "physics_hydrostatic": 0.0002672728691095472,
+    "physics_moisture": 0.002145633224586163,
+    "physics_spectral": 4.423141377978027,
+    "rmse_phys": 277.37569558620453,
+    "examples": 256
+  },
+  "lead72_range_extreme_sev1": {
+    "mae_phys": 50.52040708065033,
+    "physics_advection": 159.0391602218151,
+    "physics_hydrostatic": 0.0008720389932932449,
+    "physics_moisture": 0.0021934442097517604,
+    "physics_spectral": 6.4140100087970495,
+    "rmse_phys": 310.7648357152939,
+    "examples": 256
+  },
+  "lead72_range_extreme_sev2": {
+    "mae_phys": 53.80360174179077,
+    "physics_advection": 546.6779501736164,
+    "physics_hydrostatic": 0.00337463753294287,
+    "physics_moisture": 0.002367680278211992,
+    "physics_spectral": 10.70795869641006,
+    "rmse_phys": 417.9096894264221,
+    "examples": 256
+  }
+}

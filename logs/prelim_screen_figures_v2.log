@@ -1,0 +1,18 @@
+====================================================================================================
+PRELIMINARY SCREEN DATA
+====================================================================================================
+ClimaX runs : 60
+Methods     : 20
+Seeds/method:
+n
+3    20
+
+====================================================================================================
+ADDED TO WOW V2
+====================================================================================================
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig09_preliminary_20method_ranking.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig10_preliminary_performance_stability.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig11_preliminary_ablation_family_heatmap.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig12_preliminary_to_final_funnel.png
+
+OUTPUT: /home/tahiti/ConserveFM/reports/wow_history_figures_v2

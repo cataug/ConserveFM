@@ -1,0 +1,40 @@
+============================================================================
+ERA5 CHANNEL STATISTICS REBUILD
+============================================================================
+channels : 71
+samples  : 256
+grid     : 240 x 121
+unique train states available: 58436
+[STATS]   1/256 time_index=71128
+[STATS]  16/256 time_index=56874
+[STATS]  32/256 time_index=43669
+[STATS]  48/256 time_index=79259
+[STATS]  64/256 time_index=37403
+[STATS]  80/256 time_index=72559
+[STATS]  96/256 time_index=53483
+[STATS] 112/256 time_index=59517
+[STATS] 128/256 time_index=81982
+[STATS] 144/256 time_index=59294
+[STATS] 160/256 time_index=38288
+[STATS] 176/256 time_index=54439
+[STATS] 192/256 time_index=46709
+[STATS] 208/256 time_index=40931
+[STATS] 224/256 time_index=63980
+[STATS] 240/256 time_index=66405
+[STATS] 256/256 time_index=46593
+existing NPZ keys: ['channel_names', 'levels', 'mean', 'std']
+mean key: mean
+std key : std
+[VALIDATE] Normalizer.load: OK
+
+============================================================================
+STATS COMPLETE
+============================================================================
+saved : /home/tahiti/ConserveFM/manifests/research_v1/era5_channel_stats.npz
+backup: /home/tahiti/ConserveFM/manifests/research_v1/era5_channel_stats.FOUR_STATE_SMOKE.npz
+states: 256
+cells/channel: 7434240 .. 7434240
+mean finite: True
+std finite : True
+std range  : 1e-06 .. 9599.360248791432
+STATUS     : OK

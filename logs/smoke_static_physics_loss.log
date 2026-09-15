@@ -1,0 +1,20 @@
+[SETUP] device=cuda
+[SETUP] run_id=smoke_static_physics_loss method=static_physics_loss backbone=climax
+[FORECAST] WARNING: /home/tahiti/ConserveFM/forecasts/climax.zarr missing; smoke mode uses persistence only
+[STAGE] finetune epochs=1 start_epoch=0
+[TRAIN] stage=finetune epoch=1/1 batch=1/1 step=1 repair=0.1556 localization=0 type=0 minimal=0 physics=1.343 total=0.2227
+[EPOCH] {'stage': 'finetune', 'epoch': 0, 'global_step': 1, 'train_total': 0.22270061075687408, 'val_repair_mse': 0.16385027766227722, 'elapsed_seconds': 1.54}
+[BEST] val_repair_mse=0.16385
+[TRAIN COMPLETE] {
+  "run_id": "smoke_static_physics_loss",
+  "status": "completed",
+  "method": "static_physics_loss",
+  "backbone": "climax",
+  "seed": 42,
+  "forecast_provider": "persistence_smoke_only",
+  "best_val_repair_mse": 0.16385027766227722,
+  "global_step": 1,
+  "elapsed_seconds": 1.55,
+  "checkpoint_best": "/home/tahiti/ConserveFM/runs_smoke_real/all_methods/static_physics_loss/checkpoint_best.pt",
+  "checkpoint_last": "/home/tahiti/ConserveFM/runs_smoke_real/all_methods/static_physics_loss/checkpoint_last.pt"
+}

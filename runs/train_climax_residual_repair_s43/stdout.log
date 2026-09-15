@@ -1,0 +1,25 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_residual_repair_s43 method=residual_repair backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] finetune epochs=6 start_epoch=0
+[TRAIN] stage=finetune epoch=1/6 batch=10/87647 step=10 repair=0.1421 localization=0 type=0 minimal=0.04977 physics=0 total=0.1426
+[TRAIN] stage=finetune epoch=1/6 batch=20/87647 step=20 repair=0.08727 localization=0 type=0 minimal=0.02647 physics=0 total=0.08753
+[TRAIN] stage=finetune epoch=1/6 batch=30/87647 step=30 repair=0.08525 localization=0 type=0 minimal=0.02699 physics=0 total=0.08552
+[TRAIN] stage=finetune epoch=1/6 batch=40/87647 step=40 repair=0.09045 localization=0 type=0 minimal=0.02513 physics=0 total=0.0907
+[TRAIN] stage=finetune epoch=1/6 batch=50/87647 step=50 repair=0.1245 localization=0 type=0 minimal=0.02315 physics=0 total=0.1248
+[TRAIN] stage=finetune epoch=1/6 batch=60/87647 step=60 repair=0.08631 localization=0 type=0 minimal=0.02217 physics=0 total=0.08654
+[TRAIN] stage=finetune epoch=1/6 batch=70/87647 step=70 repair=0.08546 localization=0 type=0 minimal=0.02396 physics=0 total=0.0857
+[TRAIN] stage=finetune epoch=1/6 batch=80/87647 step=80 repair=0.1232 localization=0 type=0 minimal=0.02225 physics=0 total=0.1234
+[TRAIN] stage=finetune epoch=1/6 batch=90/87647 step=90 repair=0.07405 localization=0 type=0 minimal=0.02458 physics=0 total=0.0743
+[TRAIN] stage=finetune epoch=1/6 batch=100/87647 step=100 repair=0.1197 localization=0 type=0 minimal=0.02528 physics=0 total=0.12
+[TRAIN] stage=finetune epoch=1/6 batch=110/87647 step=110 repair=0.1315 localization=0 type=0 minimal=0.02374 physics=0 total=0.1317
+[TRAIN] stage=finetune epoch=1/6 batch=120/87647 step=120 repair=0.1577 localization=0 type=0 minimal=0.02606 physics=0 total=0.158
+[TRAIN] stage=finetune epoch=1/6 batch=130/87647 step=130 repair=0.1155 localization=0 type=0 minimal=0.02553 physics=0 total=0.1157
+[TRAIN] stage=finetune epoch=1/6 batch=140/87647 step=140 repair=0.1239 localization=0 type=0 minimal=0.02631 physics=0 total=0.1241
+[TRAIN] stage=finetune epoch=1/6 batch=150/87647 step=150 repair=0.07448 localization=0 type=0 minimal=0.0296 physics=0 total=0.07478
+[TRAIN] stage=finetune epoch=1/6 batch=160/87647 step=160 repair=0.08211 localization=0 type=0 minimal=0.02881 physics=0 total=0.0824
+[TRAIN] stage=finetune epoch=1/6 batch=170/87647 step=170 repair=0.1204 localization=0 type=0 minimal=0.0295 physics=0 total=0.1206
+[TRAIN] stage=finetune epoch=1/6 batch=180/87647 step=180 repair=0.1176 localization=0 type=0 minimal=0.02919 physics=0 total=0.1179
+[TRAIN] stage=finetune epoch=1/6 batch=190/87647 step=190 repair=0.1583 localization=0 type=0 minimal=0.03156 physics=0 total=0.1586
+[TRAIN] stage=finetune epoch=1/6 batch=200/87647 step=200 repair=0.08983 localization=0 type=0 minimal=0.03046 physics=0 total=0.09013
+[TRAIN] stage=finetune epoch=1/6 batch=210/87647 step=210 repair=0.07948 localization=0 type=0 minimal=0.02881 physics=0 total=0.07977

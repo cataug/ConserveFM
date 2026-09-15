@@ -1,0 +1,12 @@
+variable,expected_chunks,present_chunks,missing_chunks,coverage_percent,present_bytes,present_size,partial_files,complete
+geopotential,8036,8036,0,100.0,61546477150,57.32 GiB,0,True
+temperature,8036,8036,0,100.0,62818795647,58.50 GiB,0,True
+specific_humidity,8036,8036,0,100.0,78488619602,73.10 GiB,0,True
+u_component_of_wind,8036,8036,0,100.0,83105461197,77.40 GiB,0,True
+v_component_of_wind,8036,8036,0,100.0,84478405240,78.68 GiB,0,True
+2m_temperature,8036,8036,0,100.0,4932896107,4.59 GiB,0,True
+10m_u_component_of_wind,8036,8036,0,100.0,6564674764,6.11 GiB,0,True
+10m_v_component_of_wind,8036,8036,0,100.0,6577535317,6.13 GiB,0,True
+mean_sea_level_pressure,8036,8036,0,100.0,4456551701,4.15 GiB,0,True
+surface_pressure,8036,8036,0,100.0,4900807031,4.56 GiB,0,True
+total_precipitation_6hr,8036,8036,0,100.0,6657301040,6.20 GiB,0,True

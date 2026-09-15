@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Main clean and stress-test results on ClimaX, seed 42.}
+\label{tab:main_results}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method & Clean NRMSE ↓ & Clean ACC ↑ & Stress NRMSE ↓ & Stress ACC ↑ & Loc. IoU ↑ & Type Acc. ↑ & |Δx| ↓ \\
+\midrule
+No corruption pretraining & 0.3070 & 0.9530 & 0.3008 & 0.9503 & 0.0893 & 0.2000 & 0.1031 \\
+Direct state prediction & 0.3130 & 0.9510 & 0.3071 & 0.9487 & 0.1027 & 0.2000 & 0.1122 \\
+ConserveFM (smart-final) & 0.3193 & 0.9487 & 0.3159 & 0.9458 & 0.0752 & 0.2141 & 0.1036 \\
+ConserveFM (original) & 0.3164 & 0.9498 & 0.3339 & 0.9401 & 0.1135 & 0.2000 & 0.0986 \\
+\bottomrule
+\end{tabular}
+\end{table}

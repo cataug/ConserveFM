@@ -1,0 +1,5 @@
+Method,stress_condition_wins
+No corruption pretraining,56
+Direct state prediction,4
+ConserveFM (smart-final),0
+ConserveFM (original),0

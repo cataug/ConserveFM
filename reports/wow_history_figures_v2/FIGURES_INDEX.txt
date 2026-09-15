@@ -1,0 +1,14 @@
+
+ADDITIONAL PRELIMINARY-SCREEN FIGURES
+================================================================================
+fig09_preliminary_20method_ranking
+  20 ClimaX variants, mean +/- std over 3 preliminary seeds.
+
+fig10_preliminary_performance_stability
+  Mean stress screening performance versus cross-seed variability.
+
+fig11_preliminary_ablation_family_heatmap
+  Relative within-column scores across ablation families.
+
+fig12_preliminary_to_final_funnel
+  138-job campaign -> 66 learned runs -> 20 variants -> 4 finalists -> 3 Pareto modes.

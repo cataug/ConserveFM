@@ -1,0 +1,238 @@
+2026-07-14 11:36:36 [ERA5] ========================================================================
+2026-07-14 11:36:36 [ERA5] Parallel raw WeatherBench2 ERA5 downloader
+2026-07-14 11:36:36 [ERA5] Period: 1979–2022
+2026-07-14 11:36:36 [ERA5] Workers: 32
+2026-07-14 11:36:36 [ERA5] No decompression or recompression
+2026-07-14 11:36:36 [ERA5] ========================================================================
+2026-07-14 11:36:36 [ERA5] Opening remote metadata
+2026-07-14 11:36:55 [ERA5] Selected time indices: 29,220..93,503
+2026-07-14 11:36:55 [ERA5] Selected timestamps: 64,284
+2026-07-14 11:36:55 [ERA5] Copying Zarr metadata and coordinates
+2026-07-14 11:36:55 [ERA5] metadata 1/39: .zgroup | exists | 24.00 B
+2026-07-14 11:36:55 [ERA5] metadata 2/39: .zattrs | exists | 2.00 B
+2026-07-14 11:36:55 [ERA5] metadata 3/39: .zarray | exists | 320.00 B
+2026-07-14 11:36:55 [ERA5] metadata 4/39: .zattrs | exists | 129.00 B
+2026-07-14 11:36:55 [ERA5] metadata 5/39: 0 | exists | 3.25 KiB
+2026-07-14 11:36:55 [ERA5] metadata 6/39: 1 | exists | 3.29 KiB
+2026-07-14 11:36:55 [ERA5] metadata 7/39: 2 | exists | 3.00 KiB
+2026-07-14 11:36:55 [ERA5] metadata 8/39: 3 | exists | 3.29 KiB
+2026-07-14 11:36:55 [ERA5] metadata 9/39: .zarray | exists | 314.00 B
+2026-07-14 11:36:55 [ERA5] metadata 10/39: .zattrs | exists | 52.00 B
+2026-07-14 11:36:55 [ERA5] metadata 11/39: 0 | exists | 120.00 B
+2026-07-14 11:36:55 [ERA5] metadata 12/39: .zarray | exists | 317.00 B
+2026-07-14 11:36:55 [ERA5] metadata 13/39: .zattrs | exists | 56.00 B
+2026-07-14 11:36:55 [ERA5] metadata 14/39: 0 | exists | 845.00 B
+2026-07-14 11:36:55 [ERA5] metadata 15/39: .zarray | exists | 317.00 B
+2026-07-14 11:36:55 [ERA5] metadata 16/39: .zattrs | exists | 55.00 B
+2026-07-14 11:36:55 [ERA5] metadata 17/39: 0 | exists | 528.00 B
+2026-07-14 11:36:55 [ERA5] metadata 18/39: .zarray | exists | 393.00 B
+2026-07-14 11:36:55 [ERA5] metadata 19/39: .zattrs | exists | 229.00 B
+2026-07-14 11:36:55 [ERA5] metadata 20/39: .zarray | exists | 393.00 B
+2026-07-14 11:36:55 [ERA5] metadata 21/39: .zattrs | exists | 222.00 B
+2026-07-14 11:36:55 [ERA5] metadata 22/39: .zarray | exists | 393.00 B
+2026-07-14 11:36:55 [ERA5] metadata 23/39: .zattrs | exists | 238.00 B
+2026-07-14 11:36:55 [ERA5] metadata 24/39: .zarray | exists | 393.00 B
+2026-07-14 11:36:55 [ERA5] metadata 25/39: .zattrs | exists | 234.00 B
+2026-07-14 11:36:55 [ERA5] metadata 26/39: .zarray | exists | 393.00 B
+2026-07-14 11:36:55 [ERA5] metadata 27/39: .zattrs | exists | 235.00 B
+2026-07-14 11:36:55 [ERA5] metadata 28/39: .zarray | exists | 369.00 B
+2026-07-14 11:36:55 [ERA5] metadata 29/39: .zattrs | exists | 175.00 B
+2026-07-14 11:36:55 [ERA5] metadata 30/39: .zarray | exists | 369.00 B
+2026-07-14 11:36:55 [ERA5] metadata 31/39: .zattrs | exists | 187.00 B
+2026-07-14 11:36:55 [ERA5] metadata 32/39: .zarray | exists | 369.00 B
+2026-07-14 11:36:55 [ERA5] metadata 33/39: .zattrs | exists | 187.00 B
+2026-07-14 11:36:55 [ERA5] metadata 34/39: .zarray | exists | 369.00 B
+2026-07-14 11:36:55 [ERA5] metadata 35/39: .zattrs | exists | 235.00 B
+2026-07-14 11:36:55 [ERA5] metadata 36/39: .zarray | exists | 369.00 B
+2026-07-14 11:36:55 [ERA5] metadata 37/39: .zattrs | exists | 217.00 B
+2026-07-14 11:36:55 [ERA5] metadata 38/39: .zarray | exists | 369.00 B
+2026-07-14 11:36:55 [ERA5] metadata 39/39: .zattrs | exists | 174.00 B
+2026-07-14 11:36:55 [ERA5] geopotential: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:36:56 [ERA5] temperature: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:36:56 [ERA5] specific_humidity: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:36:58 [ERA5] u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:36:58 [ERA5] v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:36:58 [ERA5] 2m_temperature: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:37:00 [ERA5] 10m_u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:37:00 [ERA5] 10m_v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:37:00 [ERA5] mean_sea_level_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:37:00 [ERA5] surface_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:37:01 [ERA5] total_precipitation_6hr: source chunks 3652..11687 | objects=8,036
+2026-07-14 11:37:01 [ERA5] Starting raw-object copy with 32 workers
+2026-07-14 11:37:01 [ERA5] Total ERA5 chunk objects: 88,396
+2026-07-14 11:37:01 [ERA5] Destination: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022
+2026-07-14 11:37:01 [ERA5] progress=92/88,396 (0.10%) | new=0.00 B | skipped=92 | average=0.00 B/s | ETA≈0.0 h
+2026-07-14 11:37:33 [ERA5] progress=27,034/88,396 (30.58%) | new=63.91 MiB | skipped=27,025 | average=1.97 MiB/s | ETA≈61.4 h
+2026-07-14 11:38:04 [ERA5] progress=27,044/88,396 (30.59%) | new=132.54 MiB | skipped=27,025 | average=2.10 MiB/s | ETA≈56.6 h
+2026-07-14 11:38:38 [ERA5] progress=27,056/88,396 (30.61%) | new=223.14 MiB | skipped=27,025 | average=2.31 MiB/s | ETA≈53.2 h
+2026-07-14 11:38:39 [ERA5] retry 1/30: ['u_component_of_wind', '6626.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:39:02 [ERA5] retry 1/30: ['u_component_of_wind', '6634.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:39:12 [ERA5] progress=27,062/88,396 (30.61%) | new=259.06 MiB | skipped=27,025 | average=1.98 MiB/s | ETA≈60.2 h
+2026-07-14 11:39:40 [ERA5] retry 1/30: ['u_component_of_wind', '6641.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:39:42 [ERA5] progress=27,070/88,396 (30.62%) | new=310.85 MiB | skipped=27,025 | average=1.92 MiB/s | ETA≈61.1 h
+2026-07-14 11:40:01 [ERA5] retry 1/30: ['u_component_of_wind', '6645.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:40:15 [ERA5] progress=27,077/88,396 (30.63%) | new=370.39 MiB | skipped=27,025 | average=1.91 MiB/s | ETA≈63.6 h
+2026-07-14 11:40:20 [ERA5] retry 1/30: ['u_component_of_wind', '6650.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:40:46 [ERA5] progress=27,085/88,396 (30.64%) | new=433.18 MiB | skipped=27,025 | average=1.92 MiB/s | ETA≈63.9 h
+2026-07-14 11:41:17 [ERA5] progress=27,094/88,396 (30.65%) | new=495.68 MiB | skipped=27,025 | average=1.94 MiB/s | ETA≈63.2 h
+2026-07-14 11:41:51 [ERA5] progress=27,103/88,396 (30.66%) | new=571.22 MiB | skipped=27,025 | average=1.97 MiB/s | ETA≈63.3 h
+2026-07-14 11:42:06 [ERA5] retry 1/30: ['u_component_of_wind', '6675.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:42:23 [ERA5] progress=27,110/88,396 (30.67%) | new=612.75 MiB | skipped=27,025 | average=1.90 MiB/s | ETA≈64.4 h
+2026-07-14 11:42:37 [ERA5] retry 1/30: ['u_component_of_wind', '6682.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:42:53 [ERA5] progress=27,117/88,396 (30.68%) | new=670.49 MiB | skipped=27,025 | average=1.90 MiB/s | ETA≈65.1 h
+2026-07-14 11:43:23 [ERA5] progress=27,127/88,396 (30.69%) | new=757.44 MiB | skipped=27,025 | average=1.98 MiB/s | ETA≈63.8 h
+2026-07-14 11:43:56 [ERA5] progress=27,138/88,396 (30.70%) | new=850.06 MiB | skipped=27,025 | average=2.04 MiB/s | ETA≈62.6 h
+2026-07-14 11:44:32 [ERA5] progress=27,149/88,396 (30.71%) | new=931.83 MiB | skipped=27,025 | average=2.07 MiB/s | ETA≈61.9 h
+2026-07-14 11:45:05 [ERA5] progress=27,160/88,396 (30.73%) | new=1,013.44 MiB | skipped=27,025 | average=2.09 MiB/s | ETA≈61.0 h
+2026-07-14 11:45:39 [ERA5] progress=27,168/88,396 (30.73%) | new=1.06 GiB | skipped=27,025 | average=2.10 MiB/s | ETA≈61.7 h
+2026-07-14 11:46:12 [ERA5] progress=27,178/88,396 (30.75%) | new=1.13 GiB | skipped=27,025 | average=2.10 MiB/s | ETA≈61.2 h
+2026-07-14 11:46:43 [ERA5] progress=27,187/88,396 (30.76%) | new=1.18 GiB | skipped=27,025 | average=2.07 MiB/s | ETA≈61.1 h
+2026-07-14 11:47:15 [ERA5] progress=27,196/88,396 (30.77%) | new=1.27 GiB | skipped=27,025 | average=2.11 MiB/s | ETA≈61.1 h
+2026-07-14 11:47:25 [ERA5] retry 1/30: ['u_component_of_wind', '6773.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:47:46 [ERA5] progress=27,204/88,396 (30.78%) | new=1.34 GiB | skipped=27,025 | average=2.13 MiB/s | ETA≈61.3 h
+2026-07-14 11:47:57 [ERA5] retry 1/30: ['u_component_of_wind', '6782.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:48:10 [ERA5] retry 1/30: ['u_component_of_wind', '6783.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:48:19 [ERA5] progress=27,213/88,396 (30.79%) | new=1.42 GiB | skipped=27,025 | average=2.14 MiB/s | ETA≈61.3 h
+2026-07-14 11:48:30 [ERA5] retry 1/30: ['u_component_of_wind', '6786.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:48:51 [ERA5] progress=27,219/88,396 (30.79%) | new=1.47 GiB | skipped=27,025 | average=2.12 MiB/s | ETA≈62.2 h
+2026-07-14 11:48:55 [ERA5] retry 1/30: ['u_component_of_wind', '6600.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:49:23 [ERA5] progress=27,231/88,396 (30.81%) | new=1.56 GiB | skipped=27,025 | average=2.16 MiB/s | ETA≈61.2 h
+2026-07-14 11:49:55 [ERA5] progress=27,242/88,396 (30.82%) | new=1.66 GiB | skipped=27,025 | average=2.19 MiB/s | ETA≈60.6 h
+2026-07-14 11:50:15 [ERA5] retry 1/30: ['u_component_of_wind', '6814.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:50:27 [ERA5] progress=27,251/88,396 (30.83%) | new=1.74 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈60.6 h
+2026-07-14 11:50:34 [ERA5] retry 1/30: ['u_component_of_wind', '6487.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:50:38 [ERA5] retry 1/30: ['u_component_of_wind', '6824.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:50:57 [ERA5] progress=27,259/88,396 (30.84%) | new=1.79 GiB | skipped=27,025 | average=2.19 MiB/s | ETA≈60.7 h
+2026-07-14 11:51:30 [ERA5] progress=27,271/88,396 (30.85%) | new=1.89 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.0 h
+2026-07-14 11:52:04 [ERA5] progress=27,281/88,396 (30.86%) | new=1.96 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.9 h
+2026-07-14 11:52:34 [ERA5] progress=27,292/88,396 (30.87%) | new=2.06 GiB | skipped=27,025 | average=2.26 MiB/s | ETA≈59.3 h
+2026-07-14 11:53:06 [ERA5] progress=27,304/88,396 (30.89%) | new=2.15 GiB | skipped=27,025 | average=2.28 MiB/s | ETA≈58.7 h
+2026-07-14 11:53:38 [ERA5] progress=27,313/88,396 (30.90%) | new=2.22 GiB | skipped=27,025 | average=2.28 MiB/s | ETA≈58.7 h
+2026-07-14 11:53:52 [ERA5] retry 1/30: ['u_component_of_wind', '6887.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:54:09 [ERA5] progress=27,321/88,396 (30.91%) | new=2.29 GiB | skipped=27,025 | average=2.28 MiB/s | ETA≈58.9 h
+2026-07-14 11:54:14 [ERA5] retry 1/30: ['u_component_of_wind', '6891.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:54:31 [ERA5] retry 1/30: ['u_component_of_wind', '6897.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:54:46 [ERA5] retry 1/30: ['u_component_of_wind', '6900.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:54:55 [ERA5] progress=27,326/88,396 (30.91%) | new=2.33 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈60.5 h
+2026-07-14 11:55:11 [ERA5] retry 1/30: ['u_component_of_wind', '6902.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:55:30 [ERA5] progress=27,338/88,396 (30.93%) | new=2.45 GiB | skipped=27,025 | average=2.26 MiB/s | ETA≈60.1 h
+2026-07-14 11:55:56 [ERA5] retry 1/30: ['u_component_of_wind', '6915.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:56:08 [ERA5] progress=27,345/88,396 (30.93%) | new=2.49 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.8 h
+2026-07-14 11:56:42 [ERA5] progress=27,355/88,396 (30.95%) | new=2.58 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.7 h
+2026-07-14 11:56:49 [ERA5] retry 1/30: ['u_component_of_wind', '6927.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:57:14 [ERA5] progress=27,364/88,396 (30.96%) | new=2.64 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.7 h
+2026-07-14 11:57:25 [ERA5] retry 1/30: ['u_component_of_wind', '6936.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:57:37 [ERA5] retry 1/30: ['u_component_of_wind', '6945.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:57:50 [ERA5] progress=27,372/88,396 (30.97%) | new=2.71 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈61.0 h
+2026-07-14 11:57:54 [ERA5] retry 1/30: ['u_component_of_wind', '6943.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:58:20 [ERA5] retry 1/30: ['u_component_of_wind', '6948.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 11:58:24 [ERA5] progress=27,380/88,396 (30.97%) | new=2.77 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈61.3 h
+2026-07-14 11:58:57 [ERA5] progress=27,390/88,396 (30.99%) | new=2.85 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈61.1 h
+2026-07-14 11:59:31 [ERA5] progress=27,401/88,396 (31.00%) | new=2.95 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.9 h
+2026-07-14 12:00:03 [ERA5] progress=27,412/88,396 (31.01%) | new=3.04 GiB | skipped=27,025 | average=2.25 MiB/s | ETA≈60.5 h
+2026-07-14 12:00:32 [ERA5] retry 1/30: ['u_component_of_wind', '6990.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:00:36 [ERA5] progress=27,421/88,396 (31.02%) | new=3.10 GiB | skipped=27,025 | average=2.24 MiB/s | ETA≈60.5 h
+2026-07-14 12:01:07 [ERA5] progress=27,430/88,396 (31.03%) | new=3.16 GiB | skipped=27,025 | average=2.24 MiB/s | ETA≈60.5 h
+2026-07-14 12:01:24 [ERA5] retry 1/30: ['u_component_of_wind', '7004.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:01:39 [ERA5] progress=27,438/88,396 (31.04%) | new=3.22 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.6 h
+2026-07-14 12:01:41 [ERA5] retry 1/30: ['u_component_of_wind', '7010.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:02:09 [ERA5] progress=27,447/88,396 (31.05%) | new=3.29 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.5 h
+2026-07-14 12:02:40 [ERA5] progress=27,456/88,396 (31.06%) | new=3.35 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.5 h
+2026-07-14 12:03:12 [ERA5] progress=27,467/88,396 (31.07%) | new=3.42 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.2 h
+2026-07-14 12:03:44 [ERA5] progress=27,477/88,396 (31.08%) | new=3.49 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈60.0 h
+2026-07-14 12:04:03 [ERA5] retry 1/30: ['u_component_of_wind', '7055.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:04:11 [ERA5] retry 2/30: ['u_component_of_wind', '7055.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:04:18 [ERA5] progress=27,483/88,396 (31.09%) | new=3.53 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈60.5 h
+2026-07-14 12:04:48 [ERA5] progress=27,494/88,396 (31.10%) | new=3.60 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈60.1 h
+2026-07-14 12:05:18 [ERA5] progress=27,504/88,396 (31.11%) | new=3.68 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.9 h
+2026-07-14 12:05:51 [ERA5] progress=27,514/88,396 (31.13%) | new=3.75 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.8 h
+2026-07-14 12:06:23 [ERA5] progress=27,525/88,396 (31.14%) | new=3.84 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.6 h
+2026-07-14 12:06:56 [ERA5] progress=27,536/88,396 (31.15%) | new=3.92 GiB | skipped=27,025 | average=2.24 MiB/s | ETA≈59.4 h
+2026-07-14 12:07:29 [ERA5] progress=27,546/88,396 (31.16%) | new=3.99 GiB | skipped=27,025 | average=2.24 MiB/s | ETA≈59.3 h
+2026-07-14 12:07:50 [ERA5] retry 1/30: ['u_component_of_wind', '7125.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:08:01 [ERA5] progress=27,553/88,396 (31.17%) | new=4.04 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.5 h
+2026-07-14 12:08:03 [ERA5] retry 2/30: ['u_component_of_wind', '7125.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:08:22 [ERA5] retry 1/30: ['u_component_of_wind', '7132.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:08:23 [ERA5] retry 1/30: ['u_component_of_wind', '7130.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:08:31 [ERA5] progress=27,558/88,396 (31.18%) | new=4.08 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.9 h
+2026-07-14 12:08:42 [ERA5] retry 1/30: ['u_component_of_wind', '7135.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:09:02 [ERA5] progress=27,565/88,396 (31.18%) | new=4.13 GiB | skipped=27,025 | average=2.20 MiB/s | ETA≈60.1 h
+2026-07-14 12:09:11 [ERA5] retry 1/30: ['u_component_of_wind', '7136.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:09:34 [ERA5] progress=27,574/88,396 (31.19%) | new=4.20 GiB | skipped=27,025 | average=2.20 MiB/s | ETA≈60.1 h
+2026-07-14 12:10:06 [ERA5] progress=27,585/88,396 (31.21%) | new=4.29 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.9 h
+2026-07-14 12:10:38 [ERA5] progress=27,595/88,396 (31.22%) | new=4.36 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.8 h
+2026-07-14 12:11:10 [ERA5] progress=27,605/88,396 (31.23%) | new=4.43 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.7 h
+2026-07-14 12:11:41 [ERA5] progress=27,616/88,396 (31.24%) | new=4.52 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.4 h
+2026-07-14 12:12:13 [ERA5] progress=27,626/88,396 (31.25%) | new=4.60 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.3 h
+2026-07-14 12:12:28 [ERA5] retry 1/30: ['u_component_of_wind', '7198.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:12:48 [ERA5] progress=27,633/88,396 (31.26%) | new=4.63 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.6 h
+2026-07-14 12:13:16 [ERA5] retry 1/30: ['u_component_of_wind', '7210.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:13:25 [ERA5] progress=27,643/88,396 (31.27%) | new=4.70 GiB | skipped=27,025 | average=2.20 MiB/s | ETA≈59.6 h
+2026-07-14 12:13:55 [ERA5] progress=27,655/88,396 (31.29%) | new=4.80 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.3 h
+2026-07-14 12:14:27 [ERA5] retry 1/30: ['u_component_of_wind', '7239.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:14:28 [ERA5] progress=27,665/88,396 (31.30%) | new=4.87 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.2 h
+2026-07-14 12:14:59 [ERA5] progress=27,676/88,396 (31.31%) | new=4.97 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.0 h
+2026-07-14 12:15:35 [ERA5] progress=27,686/88,396 (31.32%) | new=5.05 GiB | skipped=27,025 | average=2.24 MiB/s | ETA≈59.0 h
+2026-07-14 12:16:08 [ERA5] progress=27,692/88,396 (31.33%) | new=5.10 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.3 h
+2026-07-14 12:16:11 [ERA5] retry 1/30: ['u_component_of_wind', '7264.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:16:46 [ERA5] progress=27,700/88,396 (31.34%) | new=5.15 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.6 h
+2026-07-14 12:17:18 [ERA5] progress=27,709/88,396 (31.35%) | new=5.22 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.6 h
+2026-07-14 12:17:49 [ERA5] progress=27,714/88,396 (31.35%) | new=5.26 GiB | skipped=27,025 | average=2.20 MiB/s | ETA≈59.9 h
+2026-07-14 12:18:21 [ERA5] progress=27,721/88,396 (31.36%) | new=5.31 GiB | skipped=27,025 | average=2.19 MiB/s | ETA≈60.1 h
+2026-07-14 12:18:53 [ERA5] progress=27,728/88,396 (31.37%) | new=5.36 GiB | skipped=27,025 | average=2.18 MiB/s | ETA≈60.2 h
+2026-07-14 12:19:23 [ERA5] progress=27,736/88,396 (31.38%) | new=5.42 GiB | skipped=27,025 | average=2.18 MiB/s | ETA≈60.2 h
+2026-07-14 12:19:55 [ERA5] progress=27,748/88,396 (31.39%) | new=5.52 GiB | skipped=27,025 | average=2.20 MiB/s | ETA≈60.0 h
+2026-07-14 12:20:27 [ERA5] progress=27,760/88,396 (31.40%) | new=5.62 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.7 h
+2026-07-14 12:21:01 [ERA5] progress=27,774/88,396 (31.42%) | new=5.72 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.4 h
+2026-07-14 12:21:36 [ERA5] progress=27,783/88,396 (31.43%) | new=5.78 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.4 h
+2026-07-14 12:22:08 [ERA5] progress=27,792/88,396 (31.44%) | new=5.86 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.4 h
+2026-07-14 12:22:40 [ERA5] progress=27,802/88,396 (31.45%) | new=5.94 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.3 h
+2026-07-14 12:23:10 [ERA5] progress=27,814/88,396 (31.47%) | new=6.04 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.1 h
+2026-07-14 12:23:42 [ERA5] progress=27,823/88,396 (31.48%) | new=6.12 GiB | skipped=27,025 | average=2.24 MiB/s | ETA≈59.1 h
+2026-07-14 12:24:17 [ERA5] progress=27,833/88,396 (31.49%) | new=6.18 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.0 h
+2026-07-14 12:24:49 [ERA5] progress=27,843/88,396 (31.50%) | new=6.24 GiB | skipped=27,025 | average=2.23 MiB/s | ETA≈59.0 h
+2026-07-14 12:25:22 [ERA5] progress=27,852/88,396 (31.51%) | new=6.30 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.0 h
+2026-07-14 12:25:57 [ERA5] progress=27,861/88,396 (31.52%) | new=6.35 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.1 h
+2026-07-14 12:26:28 [ERA5] progress=27,870/88,396 (31.53%) | new=6.42 GiB | skipped=27,025 | average=2.22 MiB/s | ETA≈59.0 h
+2026-07-14 12:27:00 [ERA5] progress=27,878/88,396 (31.54%) | new=6.47 GiB | skipped=27,025 | average=2.21 MiB/s | ETA≈59.1 h
+2026-07-14 12:27:10 [ERA5] retry 1/30: ['u_component_of_wind', '7452.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:27:27 [ERA5] retry 1/30: ['u_component_of_wind', '7457.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:27:36 [ERA5] retry 1/30: ['u_component_of_wind', '7458.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:27:36 [ERA5] progress=27,884/88,396 (31.54%) | new=6.52 GiB | skipped=27,025 | average=2.20 MiB/s | ETA≈59.4 h
+2026-07-14 12:27:51 [ERA5] retry 1/30: ['u_component_of_wind', '7459.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:28:01 [ERA5] retry 1/30: ['u_component_of_wind', '7463.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:28:08 [ERA5] progress=27,889/88,396 (31.55%) | new=6.57 GiB | skipped=27,025 | average=2.19 MiB/s | ETA≈59.7 h
+2026-07-14 12:28:08 [ERA5] retry 1/30: ['u_component_of_wind', '7462.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:28:17 [ERA5] retry 1/30: ['u_component_of_wind', '7465.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:28:40 [ERA5] progress=27,898/88,396 (31.56%) | new=6.63 GiB | skipped=27,027 | average=2.19 MiB/s | ETA≈59.8 h
+2026-07-14 12:28:45 [ERA5] retry 1/30: ['u_component_of_wind', '7468.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:29:01 [ERA5] retry 1/30: ['u_component_of_wind', '7474.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:29:11 [ERA5] progress=27,904/88,396 (31.57%) | new=6.67 GiB | skipped=27,027 | average=2.18 MiB/s | ETA≈60.0 h
+2026-07-14 12:29:48 [ERA5] progress=27,915/88,396 (31.58%) | new=6.77 GiB | skipped=27,027 | average=2.19 MiB/s | ETA≈59.9 h
+2026-07-14 12:29:53 [ERA5] retry 1/30: ['u_component_of_wind', '7487.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:30:11 [ERA5] retry 1/30: ['u_component_of_wind', '7493.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:30:20 [ERA5] progress=27,920/88,396 (31.59%) | new=6.82 GiB | skipped=27,027 | average=2.18 MiB/s | ETA≈60.2 h
+2026-07-14 12:30:31 [ERA5] retry 1/30: ['u_component_of_wind', '7497.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:30:33 [ERA5] retry 2/30: ['u_component_of_wind', '7493.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:30:50 [ERA5] progress=27,927/88,396 (31.59%) | new=6.85 GiB | skipped=27,030 | average=2.17 MiB/s | ETA≈60.5 h
+2026-07-14 12:31:21 [ERA5] progress=27,936/88,396 (31.60%) | new=6.93 GiB | skipped=27,030 | average=2.18 MiB/s | ETA≈60.4 h
+2026-07-14 12:31:55 [ERA5] progress=27,947/88,396 (31.62%) | new=7.00 GiB | skipped=27,030 | average=2.18 MiB/s | ETA≈60.3 h
+2026-07-14 12:32:14 [ERA5] retry 1/30: ['u_component_of_wind', '7524.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:32:26 [ERA5] progress=27,953/88,396 (31.62%) | new=7.03 GiB | skipped=27,030 | average=2.16 MiB/s | ETA≈60.5 h
+2026-07-14 12:32:33 [ERA5] retry 1/30: ['u_component_of_wind', '7528.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:32:43 [ERA5] retry 1/30: ['u_component_of_wind', '7529.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:32:59 [ERA5] progress=27,962/88,396 (31.63%) | new=7.10 GiB | skipped=27,031 | average=2.16 MiB/s | ETA≈60.6 h
+2026-07-14 12:33:32 [ERA5] progress=27,970/88,396 (31.64%) | new=7.15 GiB | skipped=27,031 | average=2.16 MiB/s | ETA≈60.6 h
+2026-07-14 12:34:03 [ERA5] retry 1/30: ['u_component_of_wind', '7548.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 12:34:05 [ERA5] progress=27,977/88,396 (31.65%) | new=7.20 GiB | skipped=27,031 | average=2.15 MiB/s | ETA≈60.8 h
+2026-07-14 12:34:37 [ERA5] progress=27,988/88,396 (31.66%) | new=7.30 GiB | skipped=27,031 | average=2.16 MiB/s | ETA≈60.6 h
+2026-07-14 12:35:09 [ERA5] progress=27,999/88,396 (31.67%) | new=7.40 GiB | skipped=27,031 | average=2.17 MiB/s | ETA≈60.5 h
+2026-07-14 12:35:39 [ERA5] progress=28,011/88,396 (31.69%) | new=7.52 GiB | skipped=27,031 | average=2.19 MiB/s | ETA≈60.2 h
+2026-07-14 12:36:12 [ERA5] progress=28,024/88,396 (31.70%) | new=7.65 GiB | skipped=27,031 | average=2.20 MiB/s | ETA≈60.0 h
+2026-07-14 12:36:44 [ERA5] progress=28,035/88,396 (31.72%) | new=7.75 GiB | skipped=27,031 | average=2.22 MiB/s | ETA≈59.8 h
+2026-07-14 12:37:15 [ERA5] progress=28,042/88,396 (31.72%) | new=7.82 GiB | skipped=27,031 | average=2.22 MiB/s | ETA≈59.9 h
+2026-07-14 12:59:09 [ERA5] progress=28,043/88,396 (31.72%) | new=7.82 GiB | skipped=27,031 | average=1.63 MiB/s | ETA≈81.6 h
+2026-07-14 13:05:15 [ERA5] retry 1/30: ['u_component_of_wind', '7619.0.0.0'] | RuntimeError: temporary file was not created
+2026-07-14 13:14:56 [ERA5] progress=28,045/88,396 (31.73%) | new=7.83 GiB | skipped=27,032 | average=1.36 MiB/s | ETA≈97.2 h
+2026-07-14 13:25:58 [ERA5] progress=28,046/88,396 (31.73%) | new=7.84 GiB | skipped=27,032 | average=1.23 MiB/s | ETA≈108.1 h
+2026-07-14 13:32:37 [ERA5] progress=28,047/88,396 (31.73%) | new=7.85 GiB | skipped=27,032 | average=1.16 MiB/s | ETA≈114.6 h

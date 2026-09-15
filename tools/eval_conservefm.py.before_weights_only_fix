@@ -1,0 +1,780 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import math
+import os
+import random
+import sys
+from collections import defaultdict
+from datetime import date
+from pathlib import Path
+
+import numpy as np
+import torch
+
+ROOT = Path.home() / "ConserveFM"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from conservefm.corruptions import PhysicsCorruptor
+from conservefm.data import ERA5Reader, Normalizer, make_forecast_provider, read_examples
+from conservefm.model import ConserveRepair
+from conservefm.physics import compute_physics_losses, hard_project
+from conservefm.registry import CORRUPTION_TYPES, resolve_method
+
+GHCN_ELEMENTS = ["TAVG", "TMAX", "TMIN", "PRCP", "AWND", "ASLP", "ASTP"]
+
+
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--run-id", required=True)
+    p.add_argument("--backbone", required=True)
+    p.add_argument("--family", required=True)
+    p.add_argument("--method", required=True)
+    p.add_argument("--seed", required=True)
+    p.add_argument("--research-manifest", required=True, type=Path)
+    p.add_argument("--output-dir", required=True, type=Path)
+    p.add_argument("--checkpoint-dir", type=Path, default=None)
+    p.add_argument("--lead-hours", default="6,24,72")
+    p.add_argument("--stress-types", default="moisture,hydrostatic,advection,spectral,range_extreme")
+    p.add_argument("--severities", default="0.25,0.5,1.0,2.0")
+    p.add_argument("--eval-clean", action="store_true")
+    p.add_argument("--eval-stress", action="store_true")
+    p.add_argument("--eval-ghcn", action="store_true")
+    p.add_argument("--era5-zarr", type=Path, default=ROOT / "data/ERA5_WeatherBench2_1979_2022")
+    p.add_argument("--forecast-root", type=Path, default=ROOT / "forecasts")
+    p.add_argument("--stats-path", type=Path, default=None)
+    p.add_argument("--max-clean-examples", type=int, default=int(os.environ.get("CONSERVEFM_EVAL_EXAMPLES", "0")))
+    p.add_argument("--stress-examples", type=int, default=int(os.environ.get("CONSERVEFM_STRESS_EXAMPLES", "256")))
+    p.add_argument("--eval-batch-size", type=int, default=int(os.environ.get("CONSERVEFM_EVAL_BATCH_SIZE", "16")))
+    p.add_argument("--smoke", action="store_true")
+    return p.parse_args()
+
+
+def atomic_json(path: Path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(obj, indent=2), encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def parse_ints(x):
+    return [int(v) for v in x.split(",") if v.strip()]
+
+
+def parse_floats(x):
+    return [float(v) for v in x.split(",") if v.strip()]
+
+
+def parse_strs(x):
+    return [v.strip() for v in x.split(",") if v.strip()]
+
+
+def load_model(args, reader, device):
+    if args.method in {"raw_fm", "hard_projection"}:
+        return None, None
+    if args.checkpoint_dir is None:
+        raise ValueError("Trained method requires --checkpoint-dir")
+    ck_path = args.checkpoint_dir / "checkpoint_best.pt"
+    if not ck_path.exists():
+        raise FileNotFoundError(ck_path)
+    ck = torch.load(ck_path, map_location=device)
+    resolved = ck.get("resolved_config", {})
+    cfg = resolve_method(args.method)
+    tr = resolved.get("training", {})
+    model = ConserveRepair(
+        reader.layout.n_channels,
+        cfg,
+        width=int(tr.get("width", 64)),
+        depth=int(tr.get("depth", 4)),
+    ).to(device)
+    model.load_state_dict(ck["model"])
+    model.eval()
+    return model, cfg
+
+
+def predict(
+    raw_phys,
+    previous_phys,
+    lead,
+    model,
+    cfg,
+    method,
+    normalizer,
+    layout,
+    device,
+):
+    raw_phys = raw_phys.to(device)
+    previous_phys = previous_phys.to(device)
+    if method == "raw_fm":
+        return raw_phys, None
+    if method == "hard_projection":
+        return hard_project(raw_phys, layout), None
+
+    raw_norm = normalizer.normalize_torch(raw_phys)
+    previous_norm = normalizer.normalize_torch(previous_phys)
+    lead_t = torch.full((raw_phys.shape[0],), float(lead), device=device)
+    with torch.no_grad(), torch.autocast(
+        device_type="cuda", dtype=torch.float16, enabled=device.type == "cuda"
+    ):
+        out = model(raw_norm, previous_norm, lead_t)
+    pred_phys = normalizer.denormalize_torch(out.state_norm.float())
+    return pred_phys, out
+
+
+def acc_from_norm(pred_norm, target_norm):
+    num = (pred_norm * target_norm).sum(dim=(-2, -1))
+    den = torch.sqrt(
+        pred_norm.square().sum(dim=(-2, -1))
+        * target_norm.square().sum(dim=(-2, -1))
+    ).clamp_min(1e-8)
+    return (num / den).mean()
+
+
+def metric_accumulator():
+    return defaultdict(float), defaultdict(int)
+
+
+def add_metric(sums, counts, key, value, n=1):
+    sums[key] += float(value) * n
+    counts[key] += n
+
+
+def finish_metrics(sums, counts):
+    return {k: sums[k] / max(counts[k], 1) for k in sorted(sums)}
+
+
+def evaluate_clean(args, rows, reader, provider, model, cfg, normalizer, device, leads):
+    sums, counts = metric_accumulator()
+    latitude = torch.as_tensor(
+        reader.latitude,
+        device=device,
+        dtype=torch.float32,
+    )
+
+    eligible = [
+        r for r in rows
+        if int(r["lead_hours"]) in leads
+    ]
+
+    if args.max_clean_examples:
+        eligible = eligible[:args.max_clean_examples]
+
+    n_done = 0
+    batch_size = max(1, int(args.eval_batch_size))
+
+    if model is not None:
+        model.eval()
+
+    for lead in leads:
+        lead_rows = [
+            r for r in eligible
+            if int(r["lead_hours"]) == lead
+        ]
+
+        for off in range(0, len(lead_rows), batch_size):
+            chunk = lead_rows[off:off + batch_size]
+            if not chunk:
+                continue
+
+            previous = torch.stack([
+                torch.from_numpy(
+                    reader.read_state(
+                        int(r["context_end_idx"])
+                    )
+                )
+                for r in chunk
+            ]).to(device)
+
+            target = torch.stack([
+                torch.from_numpy(
+                    reader.read_state(
+                        int(r["target_idx"])
+                    )
+                )
+                for r in chunk
+            ]).to(device)
+
+            raw = torch.stack([
+                torch.from_numpy(
+                    provider.get(
+                        int(r["context_end_idx"]),
+                        lead,
+                    )
+                )
+                for r in chunk
+            ]).to(device)
+
+            b = len(chunk)
+
+            with torch.inference_mode():
+                pred, out = predict(
+                    raw,
+                    previous,
+                    lead,
+                    model,
+                    cfg,
+                    args.method,
+                    normalizer,
+                    reader.layout,
+                    device,
+                )
+
+                err = pred - target
+                dims = tuple(range(1, err.ndim))
+
+                rmse_each = torch.sqrt(
+                    err.square().mean(dim=dims)
+                )
+                mae_each = err.abs().mean(dim=dims)
+
+                pred_norm = normalizer.normalize_torch(pred)
+                target_norm = normalizer.normalize_torch(target)
+                acc = acc_from_norm(
+                    pred_norm,
+                    target_norm,
+                )
+
+                prefix = f"lead_{lead}h"
+
+                add_metric(
+                    sums, counts,
+                    f"{prefix}/rmse_phys",
+                    rmse_each.mean().item(),
+                    n=b,
+                )
+                add_metric(
+                    sums, counts,
+                    f"{prefix}/mae_phys",
+                    mae_each.mean().item(),
+                    n=b,
+                )
+                add_metric(
+                    sums, counts,
+                    f"{prefix}/acc_trainmean",
+                    acc.item(),
+                    n=b,
+                )
+
+                if out is not None:
+                    repair_each = (
+                        out.delta_norm
+                        .abs()
+                        .flatten(1)
+                        .mean(dim=1)
+                    )
+                    add_metric(
+                        sums, counts,
+                        f"{prefix}/repair_l1_norm",
+                        repair_each.mean().item(),
+                        n=b,
+                    )
+
+                enabled_constraints = (
+                    cfg.enabled_constraints
+                    if cfg is not None
+                    else [
+                        "moisture",
+                        "hydrostatic",
+                        "advection",
+                        "spectral",
+                    ]
+                )
+
+                phys = compute_physics_losses(
+                    pred,
+                    previous,
+                    reader.layout,
+                    torch.full(
+                        (b,),
+                        float(lead),
+                        device=device,
+                        dtype=torch.float32,
+                    ),
+                    enabled_constraints,
+                    latitude_deg=latitude,
+                )
+
+                for name, value in phys.items():
+                    add_metric(
+                        sums, counts,
+                        f"{prefix}/physics_{name}",
+                        value.item(),
+                        n=b,
+                    )
+
+            old_done = n_done
+            n_done += b
+
+            if n_done // 50 > old_done // 50:
+                print(
+                    f"[CLEAN] {n_done} examples",
+                    flush=True,
+                )
+
+    out = finish_metrics(sums, counts)
+    out["examples"] = n_done
+    return out
+
+
+def sample_rows_for_stress(rows, lead, n, seed):
+    selected = [r for r in rows if int(r["lead_hours"]) == lead]
+    rng = random.Random(seed + lead)
+    if n > 0 and len(selected) > n:
+        selected = rng.sample(selected, n)
+    return selected
+
+
+def evaluate_stress(args, rows, reader, provider, model, cfg, normalizer, device, leads, stress_types, severities):
+    results = {}
+
+    latitude = torch.as_tensor(
+        reader.latitude,
+        device=device,
+        dtype=torch.float32,
+    )
+
+    corruptor = PhysicsCorruptor(
+        reader.layout,
+        stress_types,
+        seed=(
+            int(args.seed)
+            if str(args.seed).isdigit()
+            else 42
+        ),
+    )
+
+    batch_size = max(1, int(args.eval_batch_size))
+
+    if model is not None:
+        model.eval()
+
+    for lead in leads:
+        selected = sample_rows_for_stress(
+            rows,
+            lead,
+            args.stress_examples,
+            12345,
+        )
+
+        for ctype in stress_types:
+            for severity in severities:
+                sums, counts = metric_accumulator()
+
+                for off in range(
+                    0,
+                    len(selected),
+                    batch_size,
+                ):
+                    chunk = selected[
+                        off:off + batch_size
+                    ]
+
+                    if not chunk:
+                        continue
+
+                    previous = torch.stack([
+                        torch.from_numpy(
+                            reader.read_state(
+                                int(r["context_end_idx"])
+                            )
+                        )
+                        for r in chunk
+                    ]).to(device)
+
+                    target = torch.stack([
+                        torch.from_numpy(
+                            reader.read_state(
+                                int(r["target_idx"])
+                            )
+                        )
+                        for r in chunk
+                    ]).to(device)
+
+                    raw_states = []
+                    corr_masks = []
+                    corr_types = []
+
+                    # Keep exact serial corruption RNG semantics.
+                    for r in chunk:
+                        raw_one = torch.from_numpy(
+                            provider.get(
+                                int(r["context_end_idx"]),
+                                lead,
+                            )
+                        )[None].to(device)
+
+                        with torch.inference_mode():
+                            corr_one = corruptor.corrupt(
+                                raw_one,
+                                severity=severity,
+                                force_type=ctype,
+                            )
+
+                        raw_states.append(
+                            corr_one.state
+                        )
+                        corr_masks.append(
+                            corr_one.mask
+                        )
+                        corr_types.append(
+                            corr_one.type_index
+                        )
+
+                    corr_state = torch.cat(
+                        raw_states,
+                        dim=0,
+                    )
+                    corr_mask = torch.cat(
+                        corr_masks,
+                        dim=0,
+                    )
+                    corr_type = torch.cat(
+                        corr_types,
+                        dim=0,
+                    )
+
+                    b = len(chunk)
+
+                    with torch.inference_mode():
+                        pred, repair_out = predict(
+                            corr_state,
+                            previous,
+                            lead,
+                            model,
+                            cfg,
+                            args.method,
+                            normalizer,
+                            reader.layout,
+                            device,
+                        )
+
+                        err = pred - target
+                        dims = tuple(
+                            range(1, err.ndim)
+                        )
+
+                        rmse_each = torch.sqrt(
+                            err.square().mean(
+                                dim=dims
+                            )
+                        )
+                        mae_each = (
+                            err.abs().mean(
+                                dim=dims
+                            )
+                        )
+
+                        add_metric(
+                            sums,
+                            counts,
+                            "rmse_phys",
+                            rmse_each.mean().item(),
+                            n=b,
+                        )
+                        add_metric(
+                            sums,
+                            counts,
+                            "mae_phys",
+                            mae_each.mean().item(),
+                            n=b,
+                        )
+
+                        if repair_out is not None:
+                            repair_each = (
+                                repair_out.delta_norm
+                                .abs()
+                                .flatten(1)
+                                .mean(dim=1)
+                            )
+                            add_metric(
+                                sums,
+                                counts,
+                                "repair_l1_norm",
+                                repair_each.mean().item(),
+                                n=b,
+                            )
+
+                            if (
+                                repair_out.localization_logits
+                                is not None
+                            ):
+                                pmask = (
+                                    torch.sigmoid(
+                                        repair_out.localization_logits
+                                    )
+                                    >= 0.5
+                                )
+                                tmask = corr_mask >= 0.5
+
+                                pf = pmask.flatten(1)
+                                tf = tmask.flatten(1)
+
+                                inter = (
+                                    pf & tf
+                                ).float().sum(dim=1)
+
+                                union = (
+                                    pf | tf
+                                ).float().sum(
+                                    dim=1
+                                ).clamp_min(1.0)
+
+                                iou_each = (
+                                    inter / union
+                                )
+
+                                add_metric(
+                                    sums,
+                                    counts,
+                                    "localization_iou",
+                                    iou_each.mean().item(),
+                                    n=b,
+                                )
+
+                            if (
+                                repair_out.type_logits
+                                is not None
+                            ):
+                                pred_type = (
+                                    repair_out.type_logits
+                                    .argmax(dim=1)
+                                )
+
+                                type_acc = (
+                                    pred_type
+                                    == corr_type
+                                ).float().mean()
+
+                                add_metric(
+                                    sums,
+                                    counts,
+                                    "type_accuracy",
+                                    type_acc.item(),
+                                    n=b,
+                                )
+
+                        enabled_constraints = (
+                            cfg.enabled_constraints
+                            if cfg is not None
+                            else [
+                                "moisture",
+                                "hydrostatic",
+                                "advection",
+                                "spectral",
+                            ]
+                        )
+
+                        phys = compute_physics_losses(
+                            pred,
+                            previous,
+                            reader.layout,
+                            torch.full(
+                                (b,),
+                                float(lead),
+                                device=device,
+                                dtype=torch.float32,
+                            ),
+                            enabled_constraints,
+                            latitude_deg=latitude,
+                        )
+
+                        for name, value in phys.items():
+                            add_metric(
+                                sums,
+                                counts,
+                                f"physics_{name}",
+                                value.item(),
+                                n=b,
+                            )
+
+                key = (
+                    f"lead{lead}_{ctype}"
+                    f"_sev{severity:g}"
+                )
+
+                results[key] = finish_metrics(
+                    sums,
+                    counts,
+                )
+                results[key]["examples"] = len(
+                    selected
+                )
+
+                print(
+                    f"[STRESS] {key} done "
+                    f"n={len(selected)} "
+                    f"batch={batch_size}",
+                    flush=True,
+                )
+
+    return results
+
+
+def day_ordinal_from_timestamp(ts: str):
+    return date.fromisoformat(ts[:10]).toordinal()
+
+
+def daily_fields(states, layout):
+    # states [T,C,H,W], normally four 6-hourly valid times.
+    t2 = layout.one("2m_temperature")
+    u = layout.one("10m_u_component_of_wind")
+    v = layout.one("10m_v_component_of_wind")
+    mslp = layout.one("mean_sea_level_pressure")
+    sp = layout.one("surface_pressure")
+    tp = layout.one("total_precipitation_6hr")
+    t = states[:, t2] - 273.15
+    wind = torch.sqrt(states[:, u].square() + states[:, v].square())
+    return {
+        "TAVG": t.mean(dim=0),
+        "TMAX": t.max(dim=0).values,
+        "TMIN": t.min(dim=0).values,
+        "PRCP": states[:, tp].clamp_min(0.0).sum(dim=0) * 1000.0,
+        "AWND": wind.mean(dim=0),
+        "ASLP": states[:, mslp].mean(dim=0) / 100.0,
+        "ASTP": states[:, sp].mean(dim=0) / 100.0,
+    }
+
+
+def load_ghcn_cache(path):
+    d = np.load(path, allow_pickle=True)
+    by_day = defaultdict(list)
+    for i in range(len(d["day"])):
+        by_day[int(d["day"][i])].append(
+            (
+                int(d["lat_idx"][i]),
+                int(d["lon_idx"][i]),
+                int(d["element"][i]),
+                float(d["value"][i]),
+                int(d["station_count"][i]),
+            )
+        )
+    names = [str(x) for x in d["element_names"]]
+    return by_day, names
+
+
+def evaluate_ghcn(args, rows, reader, provider, model, cfg, normalizer, device):
+    cache_path = args.research_manifest / "ghcn_grid_eval_2019_2022.npz"
+    if not cache_path.exists():
+        raise FileNotFoundError(
+            f"Missing {cache_path}. Build ghcn_val_test_observations.csv.gz first, then run tools/build_ghcn_eval_cache.py"
+        )
+    obs_by_day, element_names = load_ghcn_cache(cache_path)
+    rows24 = sorted(
+        [r for r in rows if int(r["lead_hours"]) == 24],
+        key=lambda r: int(r["target_idx"]),
+    )
+    # Test only: the input rows already come from split=test.
+    sums, counts = metric_accumulator()
+    states = []
+    current_day = None
+    evaluated_days = 0
+
+    def flush(day_ord, state_list):
+        nonlocal evaluated_days
+        if day_ord is None or len(state_list) == 0 or day_ord not in obs_by_day:
+            return
+        stack = torch.cat(state_list, dim=0)
+        fields = daily_fields(stack, reader.layout)
+        for lat_idx, lon_idx, elem_id, obs, station_count in obs_by_day[day_ord]:
+            name = element_names[elem_id]
+            pred_value = float(fields[name][lon_idx, lat_idx].detach().cpu())
+            err = pred_value - obs
+            # Weight aggregated grid observation by one grid-cell record, not station count,
+            # so dense station networks do not dominate entire continents.
+            add_metric(sums, counts, f"{name}/mae", abs(err))
+            add_metric(sums, counts, f"{name}/mse", err * err)
+        evaluated_days += 1
+
+    for i, row in enumerate(rows24, 1):
+        day_ord = day_ordinal_from_timestamp(row["target_time"])
+        if current_day is None:
+            current_day = day_ord
+        if day_ord != current_day:
+            flush(current_day, states)
+            states = []
+            current_day = day_ord
+        context_idx = int(row["context_end_idx"])
+        previous = torch.from_numpy(reader.read_state(context_idx))[None]
+        raw = torch.from_numpy(provider.get(context_idx, 24))[None]
+        pred, _ = predict(
+            raw, previous, 24, model, cfg, args.method, normalizer, reader.layout, device
+        )
+        states.append(pred.detach())
+        if args.smoke and i >= 16:
+            break
+        if i % 200 == 0:
+            print(f"[GHCN] processed {i}/{len(rows24)} 24h forecasts", flush=True)
+    flush(current_day, states)
+
+    metrics = finish_metrics(sums, counts)
+    for e in GHCN_ELEMENTS:
+        k = f"{e}/mse"
+        if k in metrics:
+            metrics[f"{e}/rmse"] = math.sqrt(metrics[k])
+            del metrics[k]
+    metrics["evaluated_days"] = evaluated_days
+    return metrics
+
+
+def main():
+    args = parse_args()
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    leads = parse_ints(args.lead_hours)
+    stress_types = parse_strs(args.stress_types)
+    severities = parse_floats(args.severities)
+    if args.smoke:
+        args.max_clean_examples = args.max_clean_examples or 12
+        args.stress_examples = min(args.stress_examples, 2)
+        stress_types = stress_types[:2]
+        severities = severities[:1]
+
+    print(f"[EVAL] device={device} method={args.method} backbone={args.backbone}", flush=True)
+    reader = ERA5Reader(args.era5_zarr)
+    stats_path = args.stats_path or (args.research_manifest / "era5_channel_stats.npz")
+    if not stats_path.exists():
+        raise FileNotFoundError(f"Training stats missing: {stats_path}")
+    normalizer = Normalizer.load(stats_path)
+    provider, provider_mode = make_forecast_provider(
+        args.backbone, reader, args.forecast_root, smoke=args.smoke
+    )
+    model, cfg = load_model(args, reader, device)
+    test_rows = read_examples(args.research_manifest / "era5_examples.csv", "test")
+
+    result = {
+        "run_id": args.run_id,
+        "backbone": args.backbone,
+        "method": args.method,
+        "forecast_provider": provider_mode,
+        "lead_hours": leads,
+        "clean": None,
+        "stress": None,
+        "ghcn": None,
+    }
+    if args.eval_clean:
+        result["clean"] = evaluate_clean(
+            args, test_rows, reader, provider, model, cfg, normalizer, device, leads
+        )
+        atomic_json(args.output_dir / "metrics_clean.json", result["clean"])
+    if args.eval_stress:
+        result["stress"] = evaluate_stress(
+            args, test_rows, reader, provider, model, cfg, normalizer, device,
+            leads, stress_types, severities
+        )
+        atomic_json(args.output_dir / "metrics_stress.json", result["stress"])
+    if args.eval_ghcn:
+        result["ghcn"] = evaluate_ghcn(
+            args, test_rows, reader, provider, model, cfg, normalizer, device
+        )
+        atomic_json(args.output_dir / "metrics_ghcn.json", result["ghcn"])
+
+    atomic_json(args.output_dir / "result.json", result)
+    print("[EVAL COMPLETE]", json.dumps(result, indent=2)[:12000], flush=True)
+
+
+if __name__ == "__main__":
+    main()

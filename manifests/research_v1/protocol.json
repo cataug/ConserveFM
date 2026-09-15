@@ -1,0 +1,43 @@
+{
+  "name": "ConserveFM research manifest v1",
+  "generated_at": "2026-08-11T20:06:22",
+  "era5": {
+    "period": "1979-01-01/2022-12-31",
+    "resolution": "6-hourly",
+    "grid": "240x121, 1.5 degree",
+    "variables": 11,
+    "pressure_levels": 13
+  },
+  "splits": {
+    "train": "1979-01-01/2018-12-31",
+    "val": "2019-01-01/2020-12-31",
+    "test": "2021-01-01/2022-12-31"
+  },
+  "forecast_examples": {
+    "context_steps": 4,
+    "lead_hours": [
+      6,
+      24,
+      72
+    ]
+  },
+  "ghcn": {
+    "downloaded": "1979-2023",
+    "paired_with_era5": "1979-2022",
+    "observation_eval": "2019-2022",
+    "elements": [
+      "PRCP",
+      "TMAX",
+      "TMIN",
+      "TAVG",
+      "AWND",
+      "ASLP",
+      "ASTP"
+    ]
+  },
+  "isd": {
+    "downloaded": "2023",
+    "era5_overlap": false,
+    "role": "external observation set; spatially mapped now, temporal pairing requires ERA5 2023"
+  }
+}

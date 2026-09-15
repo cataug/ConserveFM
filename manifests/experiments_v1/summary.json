@@ -1,0 +1,37 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "primary_backbone": "climax",
+  "transfer_backbones": [
+    "fourcastnet",
+    "prithvi_wxc"
+  ],
+  "primary_trainable_configs": 20,
+  "transfer_trainable_configs": 2,
+  "unique_trainable_configs": 22,
+  "training_runs": 66,
+  "deterministic_eval_baselines": 6,
+  "evaluation_jobs": 72,
+  "total_scheduler_jobs": 138,
+  "lead_hours": [
+    6,
+    24,
+    72
+  ],
+  "stress_types": [
+    "moisture",
+    "hydrostatic",
+    "advection",
+    "spectral",
+    "range_extreme"
+  ],
+  "severity_levels": [
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ]
+}

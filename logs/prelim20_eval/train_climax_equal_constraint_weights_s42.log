@@ -1,0 +1,389 @@
+[EVAL train_climax_equal_constraint_weights_s42] [EVAL] device=cuda method=equal_constraint_weights backbone=climax
+[EVAL train_climax_equal_constraint_weights_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_advection_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_advection_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead6_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_advection_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_advection_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead24_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_advection_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_advection_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [STRESS] lead72_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_equal_constraint_weights_s42] [EVAL COMPLETE] {
+[EVAL train_climax_equal_constraint_weights_s42]   "run_id": "prelim20_eval_train_climax_equal_constraint_weights_s42",
+[EVAL train_climax_equal_constraint_weights_s42]   "backbone": "climax",
+[EVAL train_climax_equal_constraint_weights_s42]   "method": "equal_constraint_weights",
+[EVAL train_climax_equal_constraint_weights_s42]   "forecast_provider": "zarr_frozen_fm",
+[EVAL train_climax_equal_constraint_weights_s42]   "lead_hours": [
+[EVAL train_climax_equal_constraint_weights_s42]     6,
+[EVAL train_climax_equal_constraint_weights_s42]     24,
+[EVAL train_climax_equal_constraint_weights_s42]     72
+[EVAL train_climax_equal_constraint_weights_s42]   ],
+[EVAL train_climax_equal_constraint_weights_s42]   "clean": null,
+[EVAL train_climax_equal_constraint_weights_s42]   "stress": {
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_moisture_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.05800832435488701,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.04475784301758,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15680533647537231,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010675692465156317,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00032274608383886516,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.024786334484815598,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1220703125,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 119.0533676147461,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_moisture_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.04523039609193802,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.11003494262695,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.1572171300649643,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010682436550268903,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003286552964709699,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.024783087894320488,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1224365234375,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 119.24707794189453,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_moisture_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.06106182187795639,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.15602111816406,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15741080045700073,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010719208512455225,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00032439621281810105,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.0259659793227911,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1226806640625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 119.38578033447266,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_moisture_sev2": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.053691405802965164,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.900150299072266,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.16323646903038025,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010910247510764748,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0008840978844091296,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.03002779930830002,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1256103515625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 121.71112060546875,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_hydrostatic_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.061299897730350494,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 38.40816879272461,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15977978706359863,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010764971375465393,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.000399546668631956,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.02653294987976551,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.12353515625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 123.20972442626953,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_hydrostatic_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.02232857421040535,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 41.5374870300293,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.19631178677082062,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00011931569315493107,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0008642455795779824,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.038984015583992004,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1300048828125,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 144.96600341796875,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_hydrostatic_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.17594826221466064,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 120.52490234375,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 1.2669639587402344,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.0024441780988126993,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.010571513324975967,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.40260249376296997,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.388916015625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 1497.1875,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_hydrostatic_sev2": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.3775480091571808,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 231.85594177246094,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 2.277008056640625,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.008586154319345951,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.03239792585372925,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 1.5510135889053345,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.7294921875,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 2981.80615234375,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.4375,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_advection_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.08219830691814423,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.190425872802734,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.1584782749414444,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010863632633117959,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00032564919092692435,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.025475678965449333,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.122314453125,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 119.60145568847656,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_advection_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.03313213586807251,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.10702896118164,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15752460062503815,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.0001079943758668378,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00033683539368212223,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.025189228355884552,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.122314453125,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 119.4455337524414,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_advection_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.08719316124916077,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.27534484863281,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.16033630073070526,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010960068175336346,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00032851588912308216,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.02869749628007412,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.12261962890625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 120.07748413085938,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_advection_sev2": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.07848937064409256,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.6746826171875,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.16646996140480042,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00011659097799565643,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.000329580157995224,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.027695097029209137,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1239013671875,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 121.35301971435547,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_spectral_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.06816638261079788,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.03095245361328,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15669846534729004,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010669761104509234,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003218672354705632,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.024836653843522072,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1219482421875,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 118.98199462890625,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_spectral_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.053979940712451935,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.030982971191406,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15669851005077362,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010669766925275326,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00032186080352403224,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.024843279272317886,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1219482421875,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 118.98186492919922,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_spectral_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.04128583148121834,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.030975341796875,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15669816732406616,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010669780021999031,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003218585916329175,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.024837464094161987,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1219482421875,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 118.98162841796875,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_spectral_sev2": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.04305506497621536,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.03093338012695,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15670180320739746,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010669769835658371,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003218627243768424,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.024838995188474655,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1219482421875,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 118.98158264160156,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_range_extreme_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.05670589953660965,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 37.825138092041016,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15932594239711761,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00012923721806146204,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003413757949601859,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.3725076913833618,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.12261962890625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 123.88923645019531,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 1.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_range_extreme_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.07517744600772858,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 39.21769714355469,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.18257904052734375,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.0001959390938282013,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003777912352234125,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 1.2392897605895996,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1240234375,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 136.8436279296875,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 1.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_range_extreme_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.04843127727508545,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 41.992454528808594,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.41165345907211304,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.0004466513928491622,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.000461516814539209,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 3.462312698364258,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.1270751953125,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 174.49032592773438,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 1.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead6_range_extreme_sev2": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.08706194907426834,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 48.417667388916016,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 1.6589207649230957,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.001554783433675766,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0006601093336939812,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 7.981264591217041,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.134521484375,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 280.90509033203125,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 1.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_moisture_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.010469367727637291,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 43.620906829833984,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.15554066002368927,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010752036178018898,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.00035739620216190815,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.025217821821570396,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.0872802734375,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 137.81936645507812,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_moisture_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.007996078580617905,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 43.704307556152344,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.1558874547481537,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.0001077870256267488,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003648516722023487,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.025966359302401543,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.0875244140625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 138.01588439941406,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_moisture_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.011736346408724785,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 43.87017822265625,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.1565345674753189,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.0001079557987395674,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0005198472645133734,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.026104429736733437,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.088134765625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 138.44973754882812,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_moisture_sev2": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.005815238691866398,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 44.35382843017578,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.16054858267307281,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010938230843748897,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0016199331730604172,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.030077654868364334,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.0904541015625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 139.848876953125,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_hydrostatic_sev0.25": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.01196546945720911,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 44.854705810546875,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.154920756816864,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00010862218914553523,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0003434831742197275,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.027722425758838654,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.08831787109375,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 140.79519653320312,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_hydrostatic_sev0.5": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.018398836255073547,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae_phys": 48.66301345825195,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_advection": 0.17174628376960754,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_hydrostatic": 0.00012694236647803336,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_moisture": 0.0006795242079533637,
+[EVAL train_climax_equal_constraint_weights_s42]       "physics_spectral": 0.040749482810497284,
+[EVAL train_climax_equal_constraint_weights_s42]       "repair_l1_norm": 0.0953369140625,
+[EVAL train_climax_equal_constraint_weights_s42]       "rmse_phys": 176.54266357421875,
+[EVAL train_climax_equal_constraint_weights_s42]       "type_accuracy": 0.0,
+[EVAL train_climax_equal_constraint_weights_s42]       "examples": 16
+[EVAL train_climax_equal_constraint_weights_s42]     },
+[EVAL train_climax_equal_constraint_weights_s42]     "lead24_hydrostatic_sev1": {
+[EVAL train_climax_equal_constraint_weights_s42]       "localization_iou": 0.35689038038253784,
+[EVAL train_climax_equal_constraint_weights_s42]       "mae

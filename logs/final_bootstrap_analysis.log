@@ -1,0 +1,43 @@
+No_Pretrain conditions = 60
+Direct_State conditions = 60
+Smart_Final conditions = 60
+OLD_Full conditions = 60
+Paired-condition check: OK
+
+=========================================================================================================
+FINAL RESULTS — PAIRED-CONDITION BOOTSTRAP 95% CI
+=========================================================================================================
+ConserveFM-Acc     clean=0.30703  stress=0.30076 [0.27970, 0.32145]  ACC=0.95031
+Direct state       clean=0.31302  stress=0.30707 [0.28708, 0.32672]  ACC=0.94872
+ConserveFM-Phys    clean=0.31931  stress=0.31593 [0.29683, 0.33475]  ACC=0.94580
+Original full      clean=0.31639  stress=0.33394 [0.30507, 0.36622]  ACC=0.94012
+
+=========================================================================================================
+PAIRED STRESS-NRMSE DIFFERENCES
+negative => ConserveFM-Acc is better
+=========================================================================================================
+                      Comparison  Mean NRMSE difference  95% CI low  95% CI high  Bootstrap P(diff < 0)
+   ConserveFM-Acc - Direct state              -0.006312   -0.008681    -0.003848               1.000000
+ConserveFM-Acc - ConserveFM-Phys              -0.015173   -0.017261    -0.013195               1.000000
+  ConserveFM-Acc - Original full              -0.033186   -0.059620    -0.013265               1.000000
+
+=========================================================================================================
+PHYSICS VIOLATION RATIOS — BOOTSTRAP 95% CI
+<1 = violation reduced
+=========================================================================================================
+ConserveFM-Acc     GM=0.8520 [0.8373, 0.8648] | moist=0.494 hydro=0.827 adv=1.394 spec=0.925
+Direct state       GM=0.5072 [0.4585, 0.5535] | moist=0.730 hydro=0.215 adv=1.001 spec=0.422
+ConserveFM-Phys    GM=0.3325 [0.3159, 0.3508] | moist=0.263 hydro=0.464 adv=0.168 spec=0.598
+Original full      GM=0.9592 [0.9045, 1.0308] | moist=0.635 hydro=0.982 adv=1.361 spec=0.997
+
+=========================================================================================================
+ACCURACY–PHYSICS PARETO FRONT
+=========================================================================================================
+         Method  Stress NRMSE mean  Physics GM  Pareto
+ ConserveFM-Acc            0.30076     0.85198    True
+   Direct state            0.30707     0.50724    True
+ConserveFM-Phys            0.31593     0.33245    True
+  Original full            0.33394     0.95923   False
+
+Saved:
+/home/tahiti/ConserveFM/reports/final_metrics_s42/paper

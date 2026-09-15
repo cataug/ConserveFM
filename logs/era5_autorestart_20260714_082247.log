@@ -1,0 +1,77 @@
+2026-07-14 08:22:48 [ERA5] ========================================================================
+2026-07-14 08:22:48 [ERA5] Parallel raw WeatherBench2 ERA5 downloader
+2026-07-14 08:22:48 [ERA5] Period: 1979–2022
+2026-07-14 08:22:48 [ERA5] Workers: 32
+2026-07-14 08:22:48 [ERA5] No decompression or recompression
+2026-07-14 08:22:48 [ERA5] ========================================================================
+2026-07-14 08:22:48 [ERA5] Opening remote metadata
+2026-07-14 08:23:24 [ERA5] Selected time indices: 29,220..93,503
+2026-07-14 08:23:24 [ERA5] Selected timestamps: 64,284
+2026-07-14 08:23:24 [ERA5] Copying Zarr metadata and coordinates
+2026-07-14 08:23:25 [ERA5] metadata 1/39: .zgroup | exists | 24.00 B
+2026-07-14 08:23:25 [ERA5] metadata 2/39: .zattrs | exists | 2.00 B
+2026-07-14 08:23:25 [ERA5] metadata 3/39: .zarray | exists | 320.00 B
+2026-07-14 08:23:25 [ERA5] metadata 4/39: .zattrs | exists | 129.00 B
+2026-07-14 08:23:25 [ERA5] metadata 5/39: 0 | exists | 3.25 KiB
+2026-07-14 08:23:25 [ERA5] metadata 6/39: 1 | exists | 3.29 KiB
+2026-07-14 08:23:25 [ERA5] metadata 7/39: 2 | exists | 3.00 KiB
+2026-07-14 08:23:25 [ERA5] metadata 8/39: 3 | exists | 3.29 KiB
+2026-07-14 08:23:25 [ERA5] metadata 9/39: .zarray | exists | 314.00 B
+2026-07-14 08:23:25 [ERA5] metadata 10/39: .zattrs | exists | 52.00 B
+2026-07-14 08:23:25 [ERA5] metadata 11/39: 0 | exists | 120.00 B
+2026-07-14 08:23:25 [ERA5] metadata 12/39: .zarray | exists | 317.00 B
+2026-07-14 08:23:25 [ERA5] metadata 13/39: .zattrs | exists | 56.00 B
+2026-07-14 08:23:25 [ERA5] metadata 14/39: 0 | exists | 845.00 B
+2026-07-14 08:23:25 [ERA5] metadata 15/39: .zarray | exists | 317.00 B
+2026-07-14 08:23:25 [ERA5] metadata 16/39: .zattrs | exists | 55.00 B
+2026-07-14 08:23:25 [ERA5] metadata 17/39: 0 | exists | 528.00 B
+2026-07-14 08:23:25 [ERA5] metadata 18/39: .zarray | exists | 393.00 B
+2026-07-14 08:23:25 [ERA5] metadata 19/39: .zattrs | exists | 229.00 B
+2026-07-14 08:23:25 [ERA5] metadata 20/39: .zarray | exists | 393.00 B
+2026-07-14 08:23:25 [ERA5] metadata 21/39: .zattrs | exists | 222.00 B
+2026-07-14 08:23:25 [ERA5] metadata 22/39: .zarray | exists | 393.00 B
+2026-07-14 08:23:25 [ERA5] metadata 23/39: .zattrs | exists | 238.00 B
+2026-07-14 08:23:25 [ERA5] metadata 24/39: .zarray | exists | 393.00 B
+2026-07-14 08:23:25 [ERA5] metadata 25/39: .zattrs | exists | 234.00 B
+2026-07-14 08:23:25 [ERA5] metadata 26/39: .zarray | exists | 393.00 B
+2026-07-14 08:23:25 [ERA5] metadata 27/39: .zattrs | exists | 235.00 B
+2026-07-14 08:23:25 [ERA5] metadata 28/39: .zarray | exists | 369.00 B
+2026-07-14 08:23:25 [ERA5] metadata 29/39: .zattrs | exists | 175.00 B
+2026-07-14 08:23:25 [ERA5] metadata 30/39: .zarray | exists | 369.00 B
+2026-07-14 08:23:25 [ERA5] metadata 31/39: .zattrs | exists | 187.00 B
+2026-07-14 08:23:25 [ERA5] metadata 32/39: .zarray | exists | 369.00 B
+2026-07-14 08:23:25 [ERA5] metadata 33/39: .zattrs | exists | 187.00 B
+2026-07-14 08:23:25 [ERA5] metadata 34/39: .zarray | exists | 369.00 B
+2026-07-14 08:23:25 [ERA5] metadata 35/39: .zattrs | exists | 235.00 B
+2026-07-14 08:23:25 [ERA5] metadata 36/39: .zarray | exists | 369.00 B
+2026-07-14 08:23:25 [ERA5] metadata 37/39: .zattrs | exists | 217.00 B
+2026-07-14 08:23:25 [ERA5] metadata 38/39: .zarray | exists | 369.00 B
+2026-07-14 08:23:25 [ERA5] metadata 39/39: .zattrs | exists | 174.00 B
+2026-07-14 08:23:26 [ERA5] geopotential: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:26 [ERA5] temperature: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:26 [ERA5] specific_humidity: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:26 [ERA5] u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:27 [ERA5] v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:27 [ERA5] 2m_temperature: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:27 [ERA5] 10m_u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:29 [ERA5] 10m_v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:30 [ERA5] mean_sea_level_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:30 [ERA5] surface_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:30 [ERA5] total_precipitation_6hr: source chunks 3652..11687 | objects=8,036
+2026-07-14 08:23:30 [ERA5] Starting raw-object copy with 32 workers
+2026-07-14 08:23:30 [ERA5] Total ERA5 chunk objects: 88,396
+2026-07-14 08:23:30 [ERA5] Destination: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022
+2026-07-14 08:23:30 [ERA5] progress=101/88,396 (0.11%) | new=0.00 B | skipped=101 | average=0.00 B/s | ETA≈0.0 h
+2026-07-14 08:33:20 [ERA5] progress=25,108/88,396 (28.40%) | new=9.90 MiB | skipped=25,107 | average=17.17 KiB/s | ETA≈10380.5 h
+2026-07-14 08:33:51 [ERA5] progress=25,109/88,396 (28.41%) | new=19.19 MiB | skipped=25,107 | average=31.62 KiB/s | ETA≈5462.3 h
+2026-07-14 08:34:27 [ERA5] progress=25,110/88,396 (28.41%) | new=28.48 MiB | skipped=25,107 | average=44.42 KiB/s | ETA≈3847.6 h
+2026-07-14 08:35:12 [ERA5] progress=25,111/88,396 (28.41%) | new=37.73 MiB | skipped=25,107 | average=55.03 KiB/s | ETA≈3086.1 h
+2026-07-14 08:36:22 [ERA5] progress=25,112/88,396 (28.41%) | new=47.62 MiB | skipped=25,107 | average=63.17 KiB/s | ETA≈2713.8 h
+2026-07-14 08:37:25 [ERA5] progress=25,114/88,396 (28.41%) | new=67.33 MiB | skipped=25,107 | average=82.55 KiB/s | ETA≈2097.5 h
+2026-07-14 08:38:21 [ERA5] progress=25,116/88,396 (28.41%) | new=85.85 MiB | skipped=25,107 | average=98.65 KiB/s | ETA≈1740.4 h
+2026-07-14 08:38:53 [ERA5] progress=25,117/88,396 (28.41%) | new=95.18 MiB | skipped=25,107 | average=105.65 KiB/s | ETA≈1621.6 h
+2026-07-14 08:39:26 [ERA5] progress=25,118/88,396 (28.42%) | new=105.05 MiB | skipped=25,107 | average=112.50 KiB/s | ETA≈1527.9 h
+2026-07-14 08:41:02 [ERA5] progress=25,120/88,396 (28.42%) | new=124.80 MiB | skipped=25,107 | average=121.52 KiB/s | ETA≈1421.9 h
+2026-07-14 08:41:57 [ERA5] progress=25,123/88,396 (28.42%) | new=154.45 MiB | skipped=25,107 | average=142.86 KiB/s | ETA≈1216.2 h
+2026-07-14 08:42:27 [ERA5] progress=25,124/88,396 (28.42%) | new=163.75 MiB | skipped=25,107 | average=147.44 KiB/s | ETA≈1175.8 h
+2026-07-14 08:43:56 [ERA5] progress=25,125/88,396 (28.42%) | new=173.61 MiB | skipped=25,107 | average=145.01 KiB/s | ETA≈1197.1 h

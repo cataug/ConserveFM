@@ -1,0 +1,24 @@
+[SETUP] device=cuda
+[SETUP] run_id=smoke_static_learned_weights method=static_learned_weights backbone=climax
+[FORECAST] WARNING: /home/tahiti/ConserveFM/forecasts/climax.zarr missing; smoke mode uses persistence only
+[STAGE] pretrain epochs=1 start_epoch=0
+[TRAIN] stage=pretrain epoch=1/1 batch=1/1 step=1 repair=0.06259 localization=0.602 type=1.794 minimal=0.1871 physics=1.327 total=0.3704
+[EPOCH] {'stage': 'pretrain', 'epoch': 0, 'global_step': 1, 'train_total': 0.37038952112197876, 'val_repair_mse': 0.17075112462043762, 'elapsed_seconds': 1.57}
+[BEST] val_repair_mse=0.170751
+[STAGE] finetune epochs=1 start_epoch=0
+[TRAIN] stage=finetune epoch=1/1 batch=1/1 step=2 repair=0.1556 localization=0 type=0 minimal=0.1857 physics=1.343 total=0.2246
+[EPOCH] {'stage': 'finetune', 'epoch': 0, 'global_step': 2, 'train_total': 0.22455741465091705, 'val_repair_mse': 0.16374652087688446, 'elapsed_seconds': 1.8}
+[BEST] val_repair_mse=0.163747
+[TRAIN COMPLETE] {
+  "run_id": "smoke_static_learned_weights",
+  "status": "completed",
+  "method": "static_learned_weights",
+  "backbone": "climax",
+  "seed": 42,
+  "forecast_provider": "persistence_smoke_only",
+  "best_val_repair_mse": 0.16374652087688446,
+  "global_step": 2,
+  "elapsed_seconds": 1.81,
+  "checkpoint_best": "/home/tahiti/ConserveFM/runs_smoke_real/all_methods/static_learned_weights/checkpoint_best.pt",
+  "checkpoint_last": "/home/tahiti/ConserveFM/runs_smoke_real/all_methods/static_learned_weights/checkpoint_last.pt"
+}

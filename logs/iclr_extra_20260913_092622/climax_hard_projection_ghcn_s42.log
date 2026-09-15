@@ -1,0 +1,32 @@
+[climax_hard_projection_ghcn_s42] [EVAL] device=cuda method=hard_projection backbone=climax
+[climax_hard_projection_ghcn_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[climax_hard_projection_ghcn_s42] [GHCN] processed 200/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 400/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 600/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 800/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 1000/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 1200/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 1400/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 1600/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 1800/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 2000/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 2200/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 2400/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 2600/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [GHCN] processed 2800/2913 24h forecasts
+[climax_hard_projection_ghcn_s42] [EVAL COMPLETE] {
+[climax_hard_projection_ghcn_s42]   "run_id": "climax_hard_projection_ghcn_s42",
+[climax_hard_projection_ghcn_s42]   "backbone": "climax",
+[climax_hard_projection_ghcn_s42]   "method": "hard_projection",
+[climax_hard_projection_ghcn_s42]   "forecast_provider": "zarr_frozen_fm",
+[climax_hard_projection_ghcn_s42]   "lead_hours": [
+[climax_hard_projection_ghcn_s42]     6,
+[climax_hard_projection_ghcn_s42]     24,
+[climax_hard_projection_ghcn_s42]     72
+[climax_hard_projection_ghcn_s42]   ],
+[climax_hard_projection_ghcn_s42]   "clean": null,
+[climax_hard_projection_ghcn_s42]   "stress": null,
+[climax_hard_projection_ghcn_s42]   "ghcn": {
+[climax_hard_projection_ghcn_s42]     "evaluated_days": 0
+[climax_hard_projection_ghcn_s42]   }
+[climax_hard_projection_ghcn_s42] }

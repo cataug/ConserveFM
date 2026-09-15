@@ -1,0 +1,79 @@
+2026-07-15 23:29:10 [ERA5] ========================================================================
+2026-07-15 23:29:10 [ERA5] Parallel raw WeatherBench2 ERA5 downloader
+2026-07-15 23:29:10 [ERA5] Period: 1979–2022
+2026-07-15 23:29:10 [ERA5] Workers: 24
+2026-07-15 23:29:10 [ERA5] No decompression or recompression
+2026-07-15 23:29:10 [ERA5] ========================================================================
+2026-07-15 23:29:10 [ERA5] Opening remote metadata
+2026-07-15 23:29:14 [ERA5] Selected time indices: 29,220..93,503
+2026-07-15 23:29:14 [ERA5] Selected timestamps: 64,284
+2026-07-15 23:29:14 [ERA5] Copying Zarr metadata and coordinates
+2026-07-15 23:29:15 [ERA5] metadata 1/39: .zgroup | exists | 24.00 B
+2026-07-15 23:29:15 [ERA5] metadata 2/39: .zattrs | exists | 2.00 B
+2026-07-15 23:29:15 [ERA5] metadata 3/39: .zarray | exists | 320.00 B
+2026-07-15 23:29:15 [ERA5] metadata 4/39: .zattrs | exists | 129.00 B
+2026-07-15 23:29:15 [ERA5] metadata 5/39: 0 | exists | 3.25 KiB
+2026-07-15 23:29:15 [ERA5] metadata 6/39: 1 | exists | 3.29 KiB
+2026-07-15 23:29:15 [ERA5] metadata 7/39: 2 | exists | 3.00 KiB
+2026-07-15 23:29:15 [ERA5] metadata 8/39: 3 | exists | 3.29 KiB
+2026-07-15 23:29:15 [ERA5] metadata 9/39: .zarray | exists | 314.00 B
+2026-07-15 23:29:15 [ERA5] metadata 10/39: .zattrs | exists | 52.00 B
+2026-07-15 23:29:15 [ERA5] metadata 11/39: 0 | exists | 120.00 B
+2026-07-15 23:29:15 [ERA5] metadata 12/39: .zarray | exists | 317.00 B
+2026-07-15 23:29:15 [ERA5] metadata 13/39: .zattrs | exists | 56.00 B
+2026-07-15 23:29:15 [ERA5] metadata 14/39: 0 | exists | 845.00 B
+2026-07-15 23:29:15 [ERA5] metadata 15/39: .zarray | exists | 317.00 B
+2026-07-15 23:29:15 [ERA5] metadata 16/39: .zattrs | exists | 55.00 B
+2026-07-15 23:29:15 [ERA5] metadata 17/39: 0 | exists | 528.00 B
+2026-07-15 23:29:15 [ERA5] metadata 18/39: .zarray | exists | 393.00 B
+2026-07-15 23:29:15 [ERA5] metadata 19/39: .zattrs | exists | 229.00 B
+2026-07-15 23:29:15 [ERA5] metadata 20/39: .zarray | exists | 393.00 B
+2026-07-15 23:29:15 [ERA5] metadata 21/39: .zattrs | exists | 222.00 B
+2026-07-15 23:29:15 [ERA5] metadata 22/39: .zarray | exists | 393.00 B
+2026-07-15 23:29:15 [ERA5] metadata 23/39: .zattrs | exists | 238.00 B
+2026-07-15 23:29:15 [ERA5] metadata 24/39: .zarray | exists | 393.00 B
+2026-07-15 23:29:15 [ERA5] metadata 25/39: .zattrs | exists | 234.00 B
+2026-07-15 23:29:15 [ERA5] metadata 26/39: .zarray | exists | 393.00 B
+2026-07-15 23:29:15 [ERA5] metadata 27/39: .zattrs | exists | 235.00 B
+2026-07-15 23:29:15 [ERA5] metadata 28/39: .zarray | exists | 369.00 B
+2026-07-15 23:29:15 [ERA5] metadata 29/39: .zattrs | exists | 175.00 B
+2026-07-15 23:29:15 [ERA5] metadata 30/39: .zarray | exists | 369.00 B
+2026-07-15 23:29:15 [ERA5] metadata 31/39: .zattrs | exists | 187.00 B
+2026-07-15 23:29:15 [ERA5] metadata 32/39: .zarray | exists | 369.00 B
+2026-07-15 23:29:15 [ERA5] metadata 33/39: .zattrs | exists | 187.00 B
+2026-07-15 23:29:15 [ERA5] metadata 34/39: .zarray | exists | 369.00 B
+2026-07-15 23:29:15 [ERA5] metadata 35/39: .zattrs | exists | 235.00 B
+2026-07-15 23:29:15 [ERA5] metadata 36/39: .zarray | exists | 369.00 B
+2026-07-15 23:29:15 [ERA5] metadata 37/39: .zattrs | exists | 217.00 B
+2026-07-15 23:29:15 [ERA5] metadata 38/39: .zarray | exists | 369.00 B
+2026-07-15 23:29:15 [ERA5] metadata 39/39: .zattrs | exists | 174.00 B
+2026-07-15 23:29:15 [ERA5] geopotential: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] temperature: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] specific_humidity: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] 2m_temperature: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] 10m_u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] 10m_v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] mean_sea_level_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] surface_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] total_precipitation_6hr: source chunks 3652..11687 | objects=8,036
+2026-07-15 23:29:15 [ERA5] Starting raw-object copy with 24 workers
+2026-07-15 23:29:15 [ERA5] Total ERA5 chunk objects: 88,396
+2026-07-15 23:29:15 [ERA5] Destination: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022
+2026-07-15 23:29:15 [ERA5] progress=65/88,396 (0.07%) | new=0.00 B | skipped=65 | average=0.00 B/s | ETA≈0.0 h
+2026-07-15 23:29:46 [ERA5] progress=86,949/88,396 (98.36%) | new=148.46 MiB | skipped=86,761 | average=4.89 MiB/s | ETA≈0.1 h
+2026-07-15 23:30:16 [ERA5] progress=87,218/88,396 (98.67%) | new=361.06 MiB | skipped=86,761 | average=5.95 MiB/s | ETA≈0.0 h
+2026-07-15 23:30:46 [ERA5] progress=87,447/88,396 (98.93%) | new=542.02 MiB | skipped=86,761 | average=5.95 MiB/s | ETA≈0.0 h
+2026-07-15 23:31:17 [ERA5] progress=87,691/88,396 (99.20%) | new=734.59 MiB | skipped=86,761 | average=6.06 MiB/s | ETA≈0.0 h
+2026-07-15 23:31:47 [ERA5] progress=87,922/88,396 (99.46%) | new=916.98 MiB | skipped=86,761 | average=6.06 MiB/s | ETA≈0.0 h
+2026-07-15 23:32:17 [ERA5] progress=88,150/88,396 (99.72%) | new=1.07 GiB | skipped=86,761 | average=6.04 MiB/s | ETA≈0.0 h
+2026-07-15 23:32:47 [ERA5] progress=88,361/88,396 (99.96%) | new=1.23 GiB | skipped=86,761 | average=5.97 MiB/s | ETA≈0.0 h
+2026-07-15 23:33:04 [ERA5] progress=88,396/88,396 (100.00%) | new=1.26 GiB | skipped=86,761 | average=5.64 MiB/s | ETA≈0.0 h
+2026-07-15 23:33:04 [ERA5] Creating consolidated local metadata
+2026-07-15 23:33:04 [ERA5] Validation dimensions: {'time': 64284, 'level': 13, 'longitude': 240, 'latitude': 121}
+2026-07-15 23:33:04 [ERA5] Local data check passed: first=249.7037, last=250.1854
+2026-07-15 23:33:04 [ERA5] ========================================================================
+2026-07-15 23:33:04 [ERA5] ERA5 DOWNLOAD COMPLETE
+2026-07-15 23:33:04 [ERA5] Output: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022
+2026-07-15 23:33:04 [ERA5] ========================================================================

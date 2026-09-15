@@ -1,0 +1,109 @@
+============================================================================
+ConserveFM ClimaX forecasting adapter
+============================================================================
+ERA5 channels : 71
+ERA5 grid     : (121, 240)
+ClimaX grid   : (124, 240)
+patch size    : 4
+leads         : 6 / 24 / 72 h
+============================================================================
+[PRETRAIN] loading /home/tahiti/ConserveFM/models/climax/1.40625deg.ckpt
+[PRETRAIN] positional grid 32x64 -> 31x60
+[PRETRAIN] load: <All keys matched successfully>
+[PRETRAIN] shared variables: 38/71
+  geopotential_50                  -> geopotential@50hPa
+  geopotential_250                 -> geopotential@250hPa
+  geopotential_500                 -> geopotential@500hPa
+  geopotential_600                 -> geopotential@600hPa
+  geopotential_700                 -> geopotential@700hPa
+  geopotential_850                 -> geopotential@850hPa
+  geopotential_925                 -> geopotential@925hPa
+  temperature_50                   -> temperature@50hPa
+  temperature_250                  -> temperature@250hPa
+  temperature_500                  -> temperature@500hPa
+  temperature_600                  -> temperature@600hPa
+  temperature_700                  -> temperature@700hPa
+  temperature_850                  -> temperature@850hPa
+  temperature_925                  -> temperature@925hPa
+  specific_humidity_50             -> specific_humidity@50hPa
+  specific_humidity_250            -> specific_humidity@250hPa
+  specific_humidity_500            -> specific_humidity@500hPa
+  specific_humidity_600            -> specific_humidity@600hPa
+  specific_humidity_700            -> specific_humidity@700hPa
+  specific_humidity_850            -> specific_humidity@850hPa
+  specific_humidity_925            -> specific_humidity@925hPa
+  u_component_of_wind_50           -> u_component_of_wind@50hPa
+  u_component_of_wind_250          -> u_component_of_wind@250hPa
+  u_component_of_wind_500          -> u_component_of_wind@500hPa
+  u_component_of_wind_600          -> u_component_of_wind@600hPa
+  u_component_of_wind_700          -> u_component_of_wind@700hPa
+  u_component_of_wind_850          -> u_component_of_wind@850hPa
+  u_component_of_wind_925          -> u_component_of_wind@925hPa
+  v_component_of_wind_50           -> v_component_of_wind@50hPa
+  v_component_of_wind_250          -> v_component_of_wind@250hPa
+  v_component_of_wind_500          -> v_component_of_wind@500hPa
+  v_component_of_wind_600          -> v_component_of_wind@600hPa
+  v_component_of_wind_700          -> v_component_of_wind@700hPa
+  v_component_of_wind_850          -> v_component_of_wind@850hPa
+  v_component_of_wind_925          -> v_component_of_wind@925hPa
+  2m_temperature                   -> 2m_temperature
+  10m_u_component_of_wind          -> 10m_u_component_of_wind
+  10m_v_component_of_wind          -> 10m_v_component_of_wind
+[PRETRAIN] newly initialized variables: 33
+[DATA] train=4,096 val=256
+[TRAIN] epoch=1/2 batch=1/512 lead=[6, 72, 72, 24, 72, 6, 72, 72] loss=1.082489 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=25/512 lead=[6, 72, 24, 72, 24, 24, 6, 72] loss=1.095225 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=50/512 lead=[6, 6, 6, 24, 24, 24, 24, 24] loss=1.051602 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=75/512 lead=[24, 72, 6, 24, 6, 72, 24, 6] loss=1.012921 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=100/512 lead=[72, 24, 72, 6, 72, 6, 72, 72] loss=0.992582 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=125/512 lead=[6, 6, 72, 24, 6, 72, 72, 6] loss=0.952168 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=150/512 lead=[6, 72, 24, 24, 72, 6, 24, 6] loss=0.929557 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=175/512 lead=[6, 72, 6, 6, 6, 6, 24, 6] loss=0.913191 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=200/512 lead=[24, 24, 24, 72, 24, 6, 6, 72] loss=0.891784 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=225/512 lead=[24, 72, 72, 24, 24, 72, 24, 6] loss=0.874990 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=250/512 lead=[72, 6, 6, 72, 72, 24, 6, 72] loss=0.855501 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=275/512 lead=[6, 6, 6, 6, 24, 24, 6, 24] loss=0.851942 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=300/512 lead=[72, 6, 24, 72, 24, 6, 24, 6] loss=0.836777 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=325/512 lead=[6, 6, 24, 72, 72, 24, 24, 24] loss=0.827785 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=350/512 lead=[24, 6, 6, 72, 6, 6, 6, 24] loss=0.816304 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=375/512 lead=[24, 72, 72, 6, 24, 6, 72, 6] loss=0.807190 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=400/512 lead=[6, 72, 72, 24, 24, 24, 24, 6] loss=0.795907 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=425/512 lead=[72, 24, 6, 72, 72, 6, 24, 72] loss=0.798736 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=450/512 lead=[24, 72, 24, 24, 72, 24, 6, 24] loss=0.782874 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=475/512 lead=[6, 6, 24, 72, 6, 72, 6, 6] loss=0.791794 GPU=1.42GiB
+[TRAIN] epoch=1/2 batch=500/512 lead=[72, 24, 24, 24, 24, 72, 6, 24] loss=0.784825 GPU=1.42GiB
+[EPOCH] {'epoch': 0, 'global_step': 512, 'train_mse': 0.8806613860651851, 'val_mse': 0.8021743115969002, 'elapsed_seconds': 734.61}
+[BEST] val_mse=0.802174
+[TRAIN] epoch=2/2 batch=1/512 lead=[6, 6, 6, 6, 72, 72, 72, 72] loss=0.760517 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=25/512 lead=[24, 24, 6, 24, 24, 6, 24, 72] loss=0.770833 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=50/512 lead=[6, 6, 24, 72, 24, 72, 6, 6] loss=0.767713 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=75/512 lead=[6, 24, 6, 6, 24, 24, 72, 72] loss=0.762000 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=100/512 lead=[72, 24, 6, 72, 72, 24, 24, 72] loss=0.756614 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=125/512 lead=[6, 24, 24, 6, 6, 24, 72, 24] loss=0.742686 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=150/512 lead=[72, 24, 24, 6, 72, 72, 24, 6] loss=0.758584 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=175/512 lead=[72, 6, 24, 24, 72, 6, 24, 72] loss=0.743889 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=200/512 lead=[6, 72, 6, 6, 72, 24, 72, 6] loss=0.744347 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=225/512 lead=[72, 24, 24, 72, 72, 6, 6, 24] loss=0.734592 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=250/512 lead=[24, 24, 6, 24, 72, 24, 6, 6] loss=0.739826 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=275/512 lead=[6, 6, 72, 6, 24, 24, 24, 6] loss=0.737773 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=300/512 lead=[24, 72, 6, 72, 6, 6, 72, 24] loss=0.735155 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=325/512 lead=[6, 6, 72, 24, 72, 24, 24, 6] loss=0.725337 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=350/512 lead=[24, 24, 24, 72, 24, 72, 6, 6] loss=0.726957 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=375/512 lead=[6, 6, 24, 24, 6, 6, 72, 24] loss=0.733762 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=400/512 lead=[24, 72, 6, 72, 6, 6, 24, 6] loss=0.724086 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=425/512 lead=[24, 72, 24, 72, 72, 72, 6, 72] loss=0.720972 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=450/512 lead=[6, 24, 6, 72, 24, 24, 6, 72] loss=0.720495 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=475/512 lead=[6, 72, 6, 72, 6, 72, 24, 6] loss=0.721528 GPU=1.42GiB
+[TRAIN] epoch=2/2 batch=500/512 lead=[72, 6, 24, 24, 72, 24, 24, 6] loss=0.715500 GPU=1.42GiB
+[EPOCH] {'epoch': 1, 'global_step': 1024, 'train_mse': 0.7381793702952564, 'val_mse': 0.7424595542252064, 'elapsed_seconds': 1491.77}
+[BEST] val_mse=0.742460
+[COMPLETE] {
+  "status": "completed",
+  "best_val_mse": 0.7424595542252064,
+  "epochs": 2,
+  "global_step": 1024,
+  "train_examples": 4096,
+  "val_examples": 256,
+  "shared_pretrained_channels": 38,
+  "checkpoint_best": "models/climax_forecaster_pilot/checkpoint_best.pt"
+}

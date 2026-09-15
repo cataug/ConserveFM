@@ -1,0 +1,16 @@
+{
+  "run_id": "climax_direct_state_ghcn_s42",
+  "backbone": "climax",
+  "method": "direct_state_prediction",
+  "forecast_provider": "zarr_frozen_fm",
+  "lead_hours": [
+    6,
+    24,
+    72
+  ],
+  "clean": null,
+  "stress": null,
+  "ghcn": {
+    "evaluated_days": 0
+  }
+}

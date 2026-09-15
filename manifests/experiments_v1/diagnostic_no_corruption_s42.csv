@@ -1,0 +1,3 @@
+run_id,job_type,backbone,family,method,seed,depends_on,status,eval_clean,eval_stress,eval_ghcn,lead_hours,stress_types,severity,result_path,started_at,finished_at,exit_code,attempt,last_error
+train_climax_no_corruption_pretrain_s42,train,climax,corruption,no_corruption_pretrain,42,,completed,,,,,,,,2026-08-24 12:56:51,,,6,Recovered stale running state
+eval_climax_no_corruption_pretrain_s42,eval,climax,corruption,no_corruption_pretrain,42,train_climax_no_corruption_pretrain_s42,planned,True,True,True,6|24|72,moisture|hydrostatic|advection|spectral|range_extreme,0.25|0.5|1.0|2.0,,,,,0,

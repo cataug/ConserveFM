@@ -1,0 +1,990 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import os
+import random
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+from torch.utils.data import DataLoader, Sampler
+
+ROOT = Path.home() / "ConserveFM"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from conservefm.corruptions import PhysicsCorruptor
+from conservefm.data import (
+    ERA5Reader,
+    RepairDataset,
+    build_or_load_stats,
+    make_forecast_provider,
+    read_examples,
+)
+from conservefm.model import ConserveRepair
+from conservefm.objective import compute_objective, router_supervision_loss
+from conservefm.registry import resolve_method
+
+
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--run-id", required=True)
+    p.add_argument("--backbone", required=True)
+    p.add_argument("--family", required=True)
+    p.add_argument("--method", required=True)
+    p.add_argument("--seed", required=True, type=int)
+    p.add_argument("--research-manifest", required=True, type=Path)
+    p.add_argument("--output-dir", required=True, type=Path)
+    p.add_argument(
+        "--era5-zarr",
+        type=Path,
+        default=ROOT / "data/ERA5_WeatherBench2_1979_2022",
+    )
+    p.add_argument("--forecast-root", type=Path, default=ROOT / "forecasts")
+    p.add_argument("--stats-path", type=Path, default=None)
+    p.add_argument("--batch-size", type=int, default=int(os.environ.get("CONSERVEFM_BATCH", "2")))
+    p.add_argument("--width", type=int, default=int(os.environ.get("CONSERVEFM_WIDTH", "64")))
+    p.add_argument("--depth", type=int, default=int(os.environ.get("CONSERVEFM_DEPTH", "4")))
+    p.add_argument("--lr", type=float, default=float(os.environ.get("CONSERVEFM_LR", "2e-4")))
+    p.add_argument("--weight-decay", type=float, default=1e-4)
+    p.add_argument("--pretrain-epochs", type=int, default=int(os.environ.get("CONSERVEFM_PRETRAIN_EPOCHS", "2")))
+    p.add_argument("--finetune-epochs", type=int, default=int(os.environ.get("CONSERVEFM_FINETUNE_EPOCHS", "6")))
+    p.add_argument("--stats-samples", type=int, default=int(os.environ.get("CONSERVEFM_STATS_SAMPLES", "128")))
+    p.add_argument("--max-train-examples", type=int, default=0)
+    p.add_argument("--max-val-examples", type=int, default=512)
+    p.add_argument("--save-every", type=int, default=1000)
+    p.add_argument("--log-every", type=int, default=10)
+    p.add_argument("--smoke", action="store_true")
+    return p.parse_args()
+
+
+def seed_all(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+def atomic_json(path: Path, obj):
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(obj, indent=2), encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def append_history(path: Path, row: dict):
+    exists = path.exists()
+    with path.open("a", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(row))
+        if not exists:
+            w.writeheader()
+        w.writerow(row)
+
+
+
+def _capture_corruptor_rng(corruptor):
+    if corruptor is None:
+        return None
+
+    for attr in ("rng", "_rng", "generator", "_generator"):
+        obj = getattr(corruptor, attr, None)
+
+        if isinstance(obj, np.random.Generator):
+            return {
+                "kind": "numpy_generator",
+                "attr": attr,
+                "state": obj.bit_generator.state,
+            }
+
+        if isinstance(obj, np.random.RandomState):
+            return {
+                "kind": "numpy_randomstate",
+                "attr": attr,
+                "state": obj.get_state(),
+            }
+
+        if isinstance(obj, torch.Generator):
+            return {
+                "kind": "torch_generator",
+                "attr": attr,
+                "state": obj.get_state(),
+            }
+
+        if isinstance(obj, random.Random):
+            return {
+                "kind": "python_random",
+                "attr": attr,
+                "state": obj.getstate(),
+            }
+
+    return None
+
+
+def _restore_corruptor_rng(corruptor, state):
+    if corruptor is None or not state:
+        return
+
+    obj = getattr(
+        corruptor,
+        state.get("attr", ""),
+        None,
+    )
+
+    if obj is None:
+        return
+
+    kind = state.get("kind")
+    value = state.get("state")
+
+    if kind == "numpy_generator":
+        obj.bit_generator.state = value
+    elif kind == "numpy_randomstate":
+        obj.set_state(value)
+    elif kind == "torch_generator":
+        obj.set_state(value.cpu())
+    elif kind == "python_random":
+        obj.setstate(value)
+
+
+def save_checkpoint(
+    path,
+    model,
+    optimizer,
+    scaler,
+    stage,
+    epoch,
+    global_step,
+    best_val,
+    resolved,
+    *,
+    next_batch_in_epoch=0,
+    epoch_complete=True,
+    sampler_seed=None,
+    corruptor=None,
+):
+    """
+    Crash-safe checkpoint.
+
+    next_batch_in_epoch is zero-based: it is the next batch that must
+    be processed after resume.
+    """
+
+    payload = {
+        "checkpoint_format": 2,
+
+        "model": model.state_dict(),
+        "optimizer": optimizer.state_dict(),
+        "scaler": (
+            scaler.state_dict()
+            if scaler is not None
+            else None
+        ),
+
+        "stage": stage,
+        "epoch": int(epoch),
+        "global_step": int(global_step),
+        "best_val": best_val,
+        "resolved_config": resolved,
+
+        "next_batch_in_epoch": int(next_batch_in_epoch),
+        "epoch_complete": bool(epoch_complete),
+        "sampler_seed": (
+            int(sampler_seed)
+            if sampler_seed is not None
+            else None
+        ),
+
+        # Runtime RNG states: this keeps dropout/corruption progression
+        # consistent when resuming mid-epoch.
+        "python_rng_state": random.getstate(),
+        "numpy_rng_state": np.random.get_state(),
+        "torch_rng_state": torch.get_rng_state(),
+        "cuda_rng_state_all": (
+            torch.cuda.get_rng_state_all()
+            if torch.cuda.is_available()
+            else None
+        ),
+
+        "corruptor_rng_state": _capture_corruptor_rng(
+            corruptor
+        ),
+    }
+
+    path = Path(path)
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    tmp = path.with_name(
+        path.name + ".tmp"
+    )
+
+    # Write and fsync data first.
+    with tmp.open("wb") as f:
+        torch.save(payload, f)
+        f.flush()
+        os.fsync(f.fileno())
+
+    # Atomic replacement on the same filesystem.
+    os.replace(tmp, path)
+
+    # Best-effort directory fsync so the rename itself survives
+    # an abrupt power loss.
+    try:
+        fd = os.open(
+            str(path.parent),
+            os.O_RDONLY,
+        )
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+    except Exception:
+        pass
+
+
+def load_checkpoint(
+    path,
+    model,
+    optimizer,
+    scaler,
+    device,
+):
+    ck = torch.load(
+        path,
+        map_location=device,
+        weights_only=False,
+    )
+
+    model.load_state_dict(
+        ck["model"]
+    )
+
+    if os.environ.get(
+        "CONSERVEFM_RESET_OPTIMIZER_ON_RESUME",
+        "0",
+    ) == "1":
+        print(
+            "[RESUME] optimizer state reset by environment",
+            flush=True,
+        )
+    else:
+        optimizer.load_state_dict(
+            ck["optimizer"]
+        )
+
+    if (
+        scaler is not None
+        and ck.get("scaler")
+    ):
+        scaler.load_state_dict(
+            ck["scaler"]
+        )
+
+    return ck
+
+
+def restore_runtime_rng(
+    ck,
+    corruptor=None,
+):
+    if ck.get("python_rng_state") is not None:
+        random.setstate(
+            ck["python_rng_state"]
+        )
+
+    if ck.get("numpy_rng_state") is not None:
+        np.random.set_state(
+            ck["numpy_rng_state"]
+        )
+
+    if ck.get("torch_rng_state") is not None:
+        torch.set_rng_state(
+            ck["torch_rng_state"].cpu()
+        )
+
+    if (
+        torch.cuda.is_available()
+        and ck.get("cuda_rng_state_all") is not None
+    ):
+        torch.cuda.set_rng_state_all(
+            [
+                x.cpu()
+                for x in ck[
+                    "cuda_rng_state_all"
+                ]
+            ]
+        )
+
+    _restore_corruptor_rng(
+        corruptor,
+        ck.get(
+            "corruptor_rng_state"
+        ),
+    )
+
+
+class ResumePermutationSampler(Sampler):
+    """
+    Deterministic per-epoch permutation with direct resume offset.
+
+    Crucially, skipped samples are not fetched from Dataset.
+    """
+
+    def __init__(
+        self,
+        dataset,
+        *,
+        seed,
+        start_sample=0,
+    ):
+        self.dataset = dataset
+        self.seed = int(seed)
+        self.start_sample = max(
+            0,
+            int(start_sample),
+        )
+
+    def __iter__(self):
+        g = torch.Generator()
+        g.manual_seed(self.seed)
+
+        perm = torch.randperm(
+            len(self.dataset),
+            generator=g,
+        )
+
+        if self.start_sample:
+            perm = perm[
+                self.start_sample:
+            ]
+
+        return iter(
+            perm.tolist()
+        )
+
+    def __len__(self):
+        return max(
+            0,
+            len(self.dataset)
+            - self.start_sample,
+        )
+
+
+def epoch_sampler_seed(
+    base_seed,
+    stage_index,
+    epoch,
+):
+    # Stable across Python processes/reboots; do not use hash().
+    return (
+        int(base_seed) * 1_000_003
+        + int(stage_index) * 10_007
+        + int(epoch) * 101
+        + 17
+    ) & 0x7FFFFFFFFFFFFFFF
+
+def amp_context(device):
+    if device.type == "cuda":
+        return torch.autocast(device_type="cuda", dtype=torch.float16)
+    from contextlib import nullcontext
+    return nullcontext()
+
+
+def make_scaler(device):
+    if device.type != "cuda":
+        return None
+    try:
+        return torch.amp.GradScaler("cuda")
+    except Exception:
+        return torch.cuda.amp.GradScaler()
+
+
+def to_device(batch, device):
+    out = {}
+    for k, v in batch.items():
+        out[k] = v.to(device, non_blocking=True) if torch.is_tensor(v) else v
+    return out
+
+
+def run_validation(model, loader, device, normalizer, layout, cfg, latitude, max_batches=32):
+    model.eval()
+    values = []
+    with torch.no_grad():
+        for i, batch in enumerate(loader):
+            if i >= max_batches:
+                break
+            batch = to_device(batch, device)
+            lead = batch["lead_hours"].to(torch.float32)
+            with amp_context(device):
+                out = model(batch["raw"], batch["previous"], lead)
+                total, losses = compute_objective(
+                    out,
+                    batch["target"],
+                    batch["previous_phys"],
+                    lead,
+                    cfg,
+                    layout,
+                    normalizer,
+                    latitude_deg=latitude,
+                )
+            values.append(float(losses["repair"].detach().cpu()))
+    model.train()
+    return float(np.mean(values)) if values else float("nan")
+
+
+def main():
+    args = parse_args()
+    seed_all(args.seed)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    cfg = resolve_method(args.method)
+
+    if args.smoke:
+        args.batch_size = 1
+        args.width = min(args.width, 24)
+        args.depth = min(args.depth, 2)
+        args.pretrain_epochs = 1 if cfg.corruption_pretrain else 0
+        args.finetune_epochs = 1
+        args.stats_samples = min(args.stats_samples, 4)
+        args.max_train_examples = args.max_train_examples or 16
+        args.max_val_examples = min(args.max_val_examples, 8)
+        args.log_every = 1
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"[SETUP] device={device}", flush=True)
+    print(f"[SETUP] run_id={args.run_id} method={args.method} backbone={args.backbone}", flush=True)
+
+    reader = ERA5Reader(args.era5_zarr)
+    examples_path = args.research_manifest / "era5_examples.csv"
+    train_rows = read_examples(examples_path, "train")
+    val_rows = read_examples(examples_path, "val")
+    if not train_rows:
+        raise RuntimeError("No train examples in research manifest")
+
+    stats_path = args.stats_path or (args.research_manifest / "era5_channel_stats.npz")
+    stats_candidates = [int(r["target_idx"]) for r in train_rows]
+    normalizer = build_or_load_stats(
+        reader, stats_path, stats_candidates, samples=args.stats_samples, seed=args.seed
+    )
+    provider, provider_mode = make_forecast_provider(
+        args.backbone, reader, args.forecast_root, smoke=args.smoke
+    )
+
+    max_train = args.max_train_examples or None
+    train_ds = RepairDataset(reader, normalizer, train_rows, provider, max_examples=max_train)
+    val_ds = RepairDataset(reader, normalizer, val_rows, provider, max_examples=args.max_val_examples)
+    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=0, pin_memory=device.type == "cuda")
+    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=0, pin_memory=device.type == "cuda")
+
+    model = ConserveRepair(
+        reader.layout.n_channels, cfg, width=args.width, depth=args.depth
+    ).to(device)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    scaler = make_scaler(device)
+    corruptor = PhysicsCorruptor(reader.layout, cfg.enabled_corruptions, seed=args.seed)
+    latitude = torch.as_tensor(reader.latitude, device=device, dtype=torch.float32)
+
+    resolved = {
+        "run_id": args.run_id,
+        "backbone": args.backbone,
+        "family": args.family,
+        "seed": args.seed,
+        "method_config": cfg.to_dict(),
+        "forecast_provider": provider_mode,
+        "forecast_store": str(args.forecast_root / f"{args.backbone}.zarr"),
+        "era5_zarr": str(args.era5_zarr),
+        "research_manifest": str(args.research_manifest),
+        "stats_path": str(stats_path),
+        "channels": reader.layout.to_dict(),
+        "training": {
+            "batch_size": args.batch_size,
+            "width": args.width,
+            "depth": args.depth,
+            "lr": args.lr,
+            "weight_decay": args.weight_decay,
+            "pretrain_epochs": args.pretrain_epochs,
+            "finetune_epochs": args.finetune_epochs,
+            "smoke": args.smoke,
+        },
+    }
+    atomic_json(args.output_dir / "resolved_config.json", resolved)
+
+    ck_last = args.output_dir / "checkpoint_last.pt"
+    ck_best = args.output_dir / "checkpoint_best.pt"
+    history_path = args.output_dir / "train_history.csv"
+
+    start_stage = "pretrain" if cfg.corruption_pretrain and args.pretrain_epochs > 0 else "finetune"
+    start_epoch = 0
+    start_batch = 0
+    global_step = 0
+    best_val = float("inf")
+
+    if ck_last.exists():
+        print(
+            f"[RESUME] loading {ck_last}",
+            flush=True,
+        )
+
+        ck = load_checkpoint(
+            ck_last,
+            model,
+            optimizer,
+            scaler,
+            device,
+        )
+
+        start_stage = ck.get(
+            "stage",
+            start_stage,
+        )
+
+        global_step = int(
+            ck.get(
+                "global_step",
+                0,
+            )
+        )
+
+        best_val = float(
+            ck.get(
+                "best_val",
+                best_val,
+            )
+        )
+
+        if int(
+            ck.get(
+                "checkpoint_format",
+                1,
+            )
+        ) >= 2:
+            if ck.get(
+                "epoch_complete",
+                True,
+            ):
+                start_epoch = (
+                    int(
+                        ck.get(
+                            "epoch",
+                            -1,
+                        )
+                    )
+                    + 1
+                )
+                start_batch = 0
+            else:
+                start_epoch = int(
+                    ck.get(
+                        "epoch",
+                        0,
+                    )
+                )
+                start_batch = int(
+                    ck.get(
+                        "next_batch_in_epoch",
+                        0,
+                    )
+                )
+
+            restore_runtime_rng(
+                ck,
+                corruptor,
+            )
+
+            print(
+                f"[RESUME] format=v2 "
+                f"stage={start_stage} "
+                f"epoch={start_epoch} "
+                f"next_batch={start_batch} "
+                f"global_step={global_step}",
+                flush=True,
+            )
+
+        else:
+            # Backward compatibility with old checkpoints.
+            # Old mid-epoch checkpoints stored epoch-1 and had no
+            # exact batch offset, so one final epoch-level restart
+            # may still be required for these legacy files.
+            start_epoch = (
+                int(
+                    ck.get(
+                        "epoch",
+                        -1,
+                    )
+                )
+                + 1
+            )
+            start_batch = 0
+
+            print(
+                f"[RESUME] legacy checkpoint; "
+                f"stage={start_stage} "
+                f"epoch={start_epoch} "
+                f"global_step={global_step}",
+                flush=True,
+            )
+
+    stages = []
+    if cfg.corruption_pretrain and args.pretrain_epochs > 0:
+        stages.append(("pretrain", args.pretrain_epochs))
+    stages.append(("finetune", args.finetune_epochs))
+
+    stage_names = [x[0] for x in stages]
+    if start_stage not in stage_names:
+        start_stage = stage_names[0]
+        start_epoch = 0
+    start_stage_i = stage_names.index(start_stage)
+
+    started = time.time()
+    for si, (stage, epochs) in enumerate(stages):
+        if si < start_stage_i:
+            continue
+        epoch0 = start_epoch if si == start_stage_i else 0
+        print(f"[STAGE] {stage} epochs={epochs} start_epoch={epoch0}", flush=True)
+
+        for epoch in range(epoch0, epochs):
+            model.train()
+            running = []
+
+            # Only the very first resumed epoch gets a non-zero
+            # batch offset.
+            resume_batch = (
+                start_batch
+                if (
+                    si == start_stage_i
+                    and epoch == epoch0
+                )
+                else 0
+            )
+
+            sampler_seed = epoch_sampler_seed(
+                args.seed,
+                si,
+                epoch,
+            )
+
+            start_sample = min(
+                len(train_ds),
+                resume_batch
+                * args.batch_size,
+            )
+
+            epoch_sampler = ResumePermutationSampler(
+                train_ds,
+                seed=sampler_seed,
+                start_sample=start_sample,
+            )
+
+            loader_workers = int(
+                os.environ.get(
+                    "CONSERVEFM_NUM_WORKERS",
+                    "0",
+                )
+            )
+
+            epoch_loader_kwargs = dict(
+                dataset=train_ds,
+                batch_size=args.batch_size,
+                sampler=epoch_sampler,
+                shuffle=False,
+                num_workers=loader_workers,
+                pin_memory=(
+                    device.type == "cuda"
+                ),
+            )
+
+            if loader_workers > 0:
+                epoch_loader_kwargs.update(
+                    persistent_workers=True,
+                    prefetch_factor=2,
+                )
+
+            epoch_loader = DataLoader(
+                **epoch_loader_kwargs
+            )
+
+            full_batches = (
+                len(train_ds)
+                + args.batch_size
+                - 1
+            ) // args.batch_size
+
+            if resume_batch > 0:
+                print(
+                    f"[RESUME] stage={stage} "
+                    f"epoch={epoch+1}/{epochs} "
+                    f"continuing directly at "
+                    f"batch={resume_batch+1}/{full_batches} "
+                    f"(skipping dataset reads for "
+                    f"{start_sample:,} already-processed samples)",
+                    flush=True,
+                )
+
+            max_batches_this_epoch = int(
+                os.environ.get(
+                    "CONSERVEFM_MAX_BATCHES_PER_EPOCH",
+                    "0",
+                )
+            )
+
+            for local_batch_i, batch in enumerate(
+                epoch_loader
+            ):
+                if (
+                    max_batches_this_epoch > 0
+                    and local_batch_i >= max_batches_this_epoch
+                ):
+                    print(
+                        f"[PROBE] stopping epoch after "
+                        f"{max_batches_this_epoch} batches",
+                        flush=True,
+                    )
+                    break
+                batch_i = (
+                    resume_batch
+                    + local_batch_i
+                )
+
+                batch = to_device(
+                    batch,
+                    device,
+                )
+                lead = batch["lead_hours"].to(torch.float32)
+
+                corruption_mask = None
+                corruption_type = None
+                if stage == "pretrain":
+                    corr = corruptor.corrupt(batch["target_phys"])
+                    raw_phys = corr.state
+                    raw_norm = normalizer.normalize_torch(raw_phys)
+                    corruption_mask = corr.mask
+                    corruption_type = corr.type_index
+                else:
+                    raw_norm = batch["raw"]
+
+                optimizer.zero_grad(set_to_none=True)
+                with amp_context(device):
+                    out = model(raw_norm, batch["previous"], lead)
+                    total, losses = compute_objective(
+                        out,
+                        batch["target"],
+                        batch["previous_phys"],
+                        lead,
+                        cfg,
+                        reader.layout,
+                        normalizer,
+                        corruption_mask=corruption_mask,
+                        corruption_type=corruption_type,
+                        latitude_deg=latitude,
+                    )
+
+                # Full synthetic repair auxiliary objective during
+                # ordinary forecast finetuning.
+                #
+                # Unlike the previous rescue, this trains not only the
+                # heads/router but also the actual corrupted -> clean
+                # repair mapping.
+                aux_every = int(
+                    os.environ.get(
+                        "CONSERVEFM_AUX_EVERY",
+                        "4",
+                    )
+                )
+
+                aux_weight = float(
+                    os.environ.get(
+                        "CONSERVEFM_AUX_WEIGHT",
+                        "0.5",
+                    )
+                )
+
+                if (
+                    stage == "finetune"
+                    and cfg.corruption_pretrain
+                    and aux_every > 0
+                    and batch_i % aux_every == 0
+                ):
+                    aux_corr = corruptor.corrupt(
+                        batch["target_phys"]
+                    )
+
+                    aux_raw_norm = normalizer.normalize_torch(
+                        aux_corr.state
+                    )
+
+                    with amp_context(device):
+                        aux_out = model(
+                            aux_raw_norm,
+                            batch["previous"],
+                            lead,
+                        )
+
+                        aux_total, aux_losses = compute_objective(
+                            aux_out,
+                            batch["target"],
+                            batch["previous_phys"],
+                            lead,
+                            cfg,
+                            reader.layout,
+                            normalizer,
+                            corruption_mask=aux_corr.mask,
+                            corruption_type=aux_corr.type_index,
+                            latitude_deg=latitude,
+                        )
+
+                    total = (
+                        total
+                        + aux_weight * aux_total
+                    )
+
+                    losses["aux_total"] = (
+                        aux_total.detach()
+                    )
+
+                if scaler is not None:
+                    scaler.scale(total).backward()
+                    scaler.unscale_(optimizer)
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                    scaler.step(optimizer)
+                    scaler.update()
+                else:
+                    total.backward()
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                    optimizer.step()
+
+                global_step += 1
+                running.append(float(total.detach().cpu()))
+                if global_step % args.log_every == 0:
+                    parts = " ".join(
+                        f"{k}={float(v.detach().cpu()):.4g}"
+                        for k, v in losses.items()
+                        if k in {"total", "repair", "physics", "localization", "type", "minimal"}
+                    )
+                    print(
+                        f"[TRAIN] stage={stage} epoch={epoch+1}/{epochs} "
+                        f"batch={batch_i+1}/{full_batches} step={global_step} {parts}",
+                        flush=True,
+                    )
+
+                if args.save_every > 0 and global_step % args.save_every == 0:
+                    save_checkpoint(
+                        ck_last,
+                        model,
+                        optimizer,
+                        scaler,
+                        stage,
+                        epoch,
+                        global_step,
+                        best_val,
+                        resolved,
+                        next_batch_in_epoch=(
+                            batch_i + 1
+                        ),
+                        epoch_complete=False,
+                        sampler_seed=sampler_seed,
+                        corruptor=corruptor,
+                    )
+
+            val_repair = run_validation(
+                model,
+                val_loader,
+                device,
+                normalizer,
+                reader.layout,
+                cfg,
+                latitude,
+                max_batches=2 if args.smoke else 32,
+            )
+            train_loss = float(np.mean(running)) if running else float("nan")
+            row = {
+                "stage": stage,
+                "epoch": epoch,
+                "global_step": global_step,
+                "train_total": train_loss,
+                "val_repair_mse": val_repair,
+                "elapsed_seconds": round(time.time() - started, 2),
+            }
+            append_history(history_path, row)
+            print(f"[EPOCH] {row}", flush=True)
+
+            if np.isfinite(val_repair) and val_repair < best_val:
+                best_val = val_repair
+                save_checkpoint(
+                    ck_best,
+                    model,
+                    optimizer,
+                    scaler,
+                    stage,
+                    epoch,
+                    global_step,
+                    best_val,
+                    resolved,
+                    next_batch_in_epoch=0,
+                    epoch_complete=True,
+                    sampler_seed=sampler_seed,
+                    corruptor=corruptor,
+                )
+                print(f"[BEST] val_repair_mse={best_val:.6g}", flush=True)
+
+            save_checkpoint(
+                ck_last,
+                model,
+                optimizer,
+                scaler,
+                stage,
+                epoch,
+                global_step,
+                best_val,
+                resolved,
+                next_batch_in_epoch=0,
+                epoch_complete=True,
+                sampler_seed=sampler_seed,
+                corruptor=corruptor,
+            )
+
+        start_epoch = 0
+        start_batch = 0
+
+    if not ck_best.exists():
+        save_checkpoint(
+            ck_best,
+            model,
+            optimizer,
+            scaler,
+            stages[-1][0],
+            stages[-1][1] - 1,
+            global_step,
+            best_val,
+            resolved,
+            next_batch_in_epoch=0,
+            epoch_complete=True,
+            sampler_seed=None,
+            corruptor=corruptor,
+        )
+
+    result = {
+        "run_id": args.run_id,
+        "status": "completed",
+        "method": args.method,
+        "backbone": args.backbone,
+        "seed": args.seed,
+        "forecast_provider": provider_mode,
+        "best_val_repair_mse": best_val,
+        "global_step": global_step,
+        "elapsed_seconds": round(time.time() - started, 2),
+        "checkpoint_best": str(ck_best),
+        "checkpoint_last": str(ck_last),
+    }
+    atomic_json(args.output_dir / "result.json", result)
+    print("[TRAIN COMPLETE]", json.dumps(result, indent=2), flush=True)
+
+
+if __name__ == "__main__":
+    main()

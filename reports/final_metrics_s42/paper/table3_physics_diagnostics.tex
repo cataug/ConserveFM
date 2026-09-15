@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Physical-violation repair ratios and diagnostic performance. A physics ratio below one indicates that repair reduced the corresponding violation relative to the corrupted input.}
+\label{tab:physics_diagnostics}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Method & Moisture ratio ↓ & Hydrostatic ratio ↓ & Advection ratio ↓ & Spectral ratio ↓ & Physics ratio GM ↓ & Loc. IoU ↑ & Type Acc. ↑ & |Δx| ↓ & Stress NRMSE ↓ \\
+\midrule
+No corruption pretraining & 0.4678 & 0.8869 & 1.4094 & 0.9281 & 0.8583 & 0.0893 & 0.2000 & 0.1031 & 0.3008 \\
+Direct state prediction & 0.7870 & 0.1363 & 0.8661 & 0.3951 & 0.4377 & 0.1027 & 0.2000 & 0.1122 & 0.3071 \\
+ConserveFM (smart-final) & 0.3602 & 0.6570 & 0.0927 & 0.6788 & 0.3493 & 0.0752 & 0.2141 & 0.1036 & 0.3159 \\
+ConserveFM (original) & 0.7438 & 1.0450 & 1.3442 & 0.9980 & 1.0105 & 0.1135 & 0.2000 & 0.0986 & 0.3339 \\
+\bottomrule
+\end{tabular}
+\end{table}

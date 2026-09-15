@@ -1,0 +1,400 @@
+[DET det_prithvi_wxc_hard_projection] [EVAL] device=cuda method=hard_projection backbone=prithvi_wxc
+[DET det_prithvi_wxc_hard_projection] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/prithvi_wxc.zarr
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_moisture_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_moisture_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_moisture_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_moisture_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_hydrostatic_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_hydrostatic_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_hydrostatic_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_hydrostatic_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_advection_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_advection_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_advection_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_advection_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_spectral_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_spectral_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_spectral_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_spectral_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_range_extreme_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_range_extreme_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_range_extreme_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead6_range_extreme_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_moisture_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_moisture_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_moisture_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_moisture_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_hydrostatic_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_hydrostatic_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_hydrostatic_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_hydrostatic_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_advection_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_advection_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_advection_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_advection_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_spectral_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_spectral_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_spectral_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_spectral_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_range_extreme_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_range_extreme_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_range_extreme_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead24_range_extreme_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_moisture_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_moisture_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_moisture_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_moisture_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_hydrostatic_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_hydrostatic_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_hydrostatic_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_hydrostatic_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_advection_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_advection_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_advection_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_advection_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_spectral_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_spectral_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_spectral_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_spectral_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_range_extreme_sev0.25 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_range_extreme_sev0.5 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_range_extreme_sev1 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [STRESS] lead72_range_extreme_sev2 done n=16 batch=32
+[DET det_prithvi_wxc_hard_projection] [EVAL COMPLETE] {
+[DET det_prithvi_wxc_hard_projection]   "run_id": "prelim20_eval_det_prithvi_wxc_hard_projection",
+[DET det_prithvi_wxc_hard_projection]   "backbone": "prithvi_wxc",
+[DET det_prithvi_wxc_hard_projection]   "method": "hard_projection",
+[DET det_prithvi_wxc_hard_projection]   "forecast_provider": "zarr_frozen_fm",
+[DET det_prithvi_wxc_hard_projection]   "lead_hours": [
+[DET det_prithvi_wxc_hard_projection]     6,
+[DET det_prithvi_wxc_hard_projection]     24,
+[DET det_prithvi_wxc_hard_projection]     72
+[DET det_prithvi_wxc_hard_projection]   ],
+[DET det_prithvi_wxc_hard_projection]   "clean": null,
+[DET det_prithvi_wxc_hard_projection]   "stress": {
+[DET det_prithvi_wxc_hard_projection]     "lead6_moisture_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059019609482407e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014562694355845451,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_moisture_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059019609482407e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014455357566475868,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_moisture_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059019609482407e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013424709439277649,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_moisture_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059019609482407e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.01599288173019886,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_hydrostatic_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 792.7161865234375,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.057923481086024e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255153946578503,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.599109411239624,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2079.278564453125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_hydrostatic_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 796.708740234375,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.05748112659965e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255153946578503,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.5332412719726562,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2085.65576171875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_hydrostatic_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 804.5457763671875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.056514560362879e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255153946578503,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.5825661420822144,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2100.4501953125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_hydrostatic_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 818.6270751953125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.057437758512751e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255153946578503,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.9595229625701904,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2132.92578125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_advection_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.0323486328125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5878918170928955,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058833126708739e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.01416954305022955,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7844980955123901,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.08740234375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_advection_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.8912353515625,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5907617807388306,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059034788312822e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014445066452026367,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7818700075149536,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2072.49658203125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_advection_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 787.77880859375,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.58822762966156,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058783795509891e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014028271660208702,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7842650413513184,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2070.631103515625,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_advection_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 786.4938354492188,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.584979772567749,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.05898599921506e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013355971314013004,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.8089100122451782,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2068.977783203125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_spectral_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.05898599921506e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255154877901077,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_spectral_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058723080188232e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255156740546227,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_spectral_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058278015196427e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255156740546227,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735410928726196,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_spectral_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4080810546875,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5897032022476196,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058323551687671e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014255153946578503,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.7735413312911987,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.8623046875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_range_extreme_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4060668945312,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.590151309967041,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058902515647778e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014267890714108944,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.8961284160614014,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2071.883056640625,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_range_extreme_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4270629882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5914273262023926,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.058983830810715e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014319044537842274,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.2310128211975098,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2072.00146484375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_range_extreme_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4083251953125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.5930670499801636,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059154592652881e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014399685896933079,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 3.1866188049316406,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2072.24267578125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead6_range_extreme_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 788.4903564453125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6093045473098755,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.059055388154099e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.014634191058576107,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 5.485812187194824,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2073.392333984375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_moisture_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052829357178601e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013301409780979156,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_moisture_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052829357178601e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.01246880553662777,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_moisture_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052829357178601e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.015090866945683956,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_moisture_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052829357178601e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.01362092699855566,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_hydrostatic_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 794.9921264648438,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052325203168395e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.0132858632132411,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.926725149154663,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2119.798828125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_hydrostatic_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 799.5728759765625,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.049504109115588e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.0132858632132411,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.8501416444778442,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2127.927490234375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_hydrostatic_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 806.497314453125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.053028850378338e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.0132858632132411,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 1.8725907802581787,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2141.67724609375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_hydrostatic_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 817.177001953125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.051785812587584e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.0132858632132411,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.1193013191223145,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2165.655517578125,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_advection_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.447509765625,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.627004623413086,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052744247308061e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013187129981815815,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.081469774246216,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.052734375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_advection_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.282470703125,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6278949975967407,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052833151886205e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013032572343945503,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.085430145263672,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.330810546875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_advection_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7281494140625,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6281160116195679,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052901456623071e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013515624217689037,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.0895376205444336,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.4384765625,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_advection_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.3627319335938,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6298428773880005,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.05283098348186e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013172989711165428,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.115515947341919,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.08154296875,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_spectral_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052819599359049e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013285864144563675,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_spectral_sev0.5": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.052782736485184e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.0132858632132411,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_spectral_sev1": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272163391113281,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.05148332018146e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.0132858632132411,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_spectral_sev2": {
+[DET det_prithvi_wxc_hard_projection]       "mae_phys": 791.7161254882812,
+[DET det_prithvi_wxc_hard_projection]       "physics_advection": 1.6272164583206177,
+[DET det_prithvi_wxc_hard_projection]       "physics_hydrostatic": 5.05199126889927e-13,
+[DET det_prithvi_wxc_hard_projection]       "physics_moisture": 0.013285861350595951,
+[DET det_prithvi_wxc_hard_projection]       "physics_spectral": 2.070812702178955,
+[DET det_prithvi_wxc_hard_projection]       "rmse_phys": 2114.66943359375,
+[DET det_prithvi_wxc_hard_projection]       "examples": 16
+[DET det_prithvi_wxc_hard_projection]     },
+[DET det_prithvi_wxc_hard_projection]     "lead24_range_extreme_sev0.25": {
+[DET det_prithvi_wxc_hard_projection]   

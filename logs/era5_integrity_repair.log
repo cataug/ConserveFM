@@ -1,0 +1,600 @@
+============================================================================
+ERA5 ZARR INTEGRITY CHECK
+============================================================================
+root   : /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022
+repair : True
+[INFO] geopotential                   shape=(93544, 13, 240, 121) chunks=(8, 13, 240, 121)
+[INFO] temperature                    shape=(93544, 13, 240, 121) chunks=(8, 13, 240, 121)
+[INFO] specific_humidity              shape=(93544, 13, 240, 121) chunks=(8, 13, 240, 121)
+[INFO] u_component_of_wind            shape=(93544, 13, 240, 121) chunks=(8, 13, 240, 121)
+[INFO] v_component_of_wind            shape=(93544, 13, 240, 121) chunks=(8, 13, 240, 121)
+[INFO] 2m_temperature                 shape=(93544, 240, 121) chunks=(8, 240, 121)
+[INFO] 10m_u_component_of_wind        shape=(93544, 240, 121) chunks=(8, 240, 121)
+[INFO] 10m_v_component_of_wind        shape=(93544, 240, 121) chunks=(8, 240, 121)
+[INFO] mean_sea_level_pressure        shape=(93544, 240, 121) chunks=(8, 240, 121)
+[INFO] surface_pressure               shape=(93544, 240, 121) chunks=(8, 240, 121)
+[INFO] total_precipitation_6hr        shape=(93544, 240, 121) chunks=(8, 240, 121)
+[INFO] total time chunks = 128,623
+
+[VARIABLE] geopotential chunks=11,693
+[PROGRESS] 250/128,623 0.19% bad=0 repaired=0 failed=0 speed=1613.6 chunks/s ETA=1.3 min
+[PROGRESS] 500/128,623 0.39% bad=0 repaired=0 failed=0 speed=1687.0 chunks/s ETA=1.3 min
+[PROGRESS] 750/128,623 0.58% bad=0 repaired=0 failed=0 speed=1709.2 chunks/s ETA=1.2 min
+[PROGRESS] 1,000/128,623 0.78% bad=0 repaired=0 failed=0 speed=1724.7 chunks/s ETA=1.2 min
+[PROGRESS] 1,250/128,623 0.97% bad=0 repaired=0 failed=0 speed=1728.6 chunks/s ETA=1.2 min
+[PROGRESS] 1,500/128,623 1.17% bad=0 repaired=0 failed=0 speed=1731.1 chunks/s ETA=1.2 min
+[PROGRESS] 1,750/128,623 1.36% bad=0 repaired=0 failed=0 speed=1729.9 chunks/s ETA=1.2 min
+[PROGRESS] 2,000/128,623 1.55% bad=0 repaired=0 failed=0 speed=1733.9 chunks/s ETA=1.2 min
+[PROGRESS] 2,250/128,623 1.75% bad=0 repaired=0 failed=0 speed=1733.8 chunks/s ETA=1.2 min
+[PROGRESS] 2,500/128,623 1.94% bad=0 repaired=0 failed=0 speed=1736.2 chunks/s ETA=1.2 min
+[PROGRESS] 2,750/128,623 2.14% bad=0 repaired=0 failed=0 speed=1739.1 chunks/s ETA=1.2 min
+[PROGRESS] 3,000/128,623 2.33% bad=0 repaired=0 failed=0 speed=1741.0 chunks/s ETA=1.2 min
+[PROGRESS] 3,250/128,623 2.53% bad=0 repaired=0 failed=0 speed=1742.2 chunks/s ETA=1.2 min
+[PROGRESS] 3,500/128,623 2.72% bad=0 repaired=0 failed=0 speed=1749.7 chunks/s ETA=1.2 min
+[PROGRESS] 3,750/128,623 2.92% bad=0 repaired=0 failed=0 speed=1201.9 chunks/s ETA=1.7 min
+[PROGRESS] 4,000/128,623 3.11% bad=0 repaired=0 failed=0 speed=779.3 chunks/s ETA=2.7 min
+[PROGRESS] 4,250/128,623 3.30% bad=0 repaired=0 failed=0 speed=604.3 chunks/s ETA=3.4 min
+[PROGRESS] 4,500/128,623 3.50% bad=0 repaired=0 failed=0 speed=500.7 chunks/s ETA=4.1 min
+[PROGRESS] 4,750/128,623 3.69% bad=0 repaired=0 failed=0 speed=438.5 chunks/s ETA=4.7 min
+[PROGRESS] 5,000/128,623 3.89% bad=0 repaired=0 failed=0 speed=396.9 chunks/s ETA=5.2 min
+[PROGRESS] 5,250/128,623 4.08% bad=0 repaired=0 failed=0 speed=365.4 chunks/s ETA=5.6 min
+[PROGRESS] 5,500/128,623 4.28% bad=0 repaired=0 failed=0 speed=340.6 chunks/s ETA=6.0 min
+[PROGRESS] 5,750/128,623 4.47% bad=0 repaired=0 failed=0 speed=321.5 chunks/s ETA=6.4 min
+[PROGRESS] 6,000/128,623 4.66% bad=0 repaired=0 failed=0 speed=306.1 chunks/s ETA=6.7 min
+[PROGRESS] 6,250/128,623 4.86% bad=0 repaired=0 failed=0 speed=292.1 chunks/s ETA=7.0 min
+[PROGRESS] 6,500/128,623 5.05% bad=0 repaired=0 failed=0 speed=280.9 chunks/s ETA=7.2 min
+[PROGRESS] 6,750/128,623 5.25% bad=0 repaired=0 failed=0 speed=271.6 chunks/s ETA=7.5 min
+[PROGRESS] 7,000/128,623 5.44% bad=0 repaired=0 failed=0 speed=262.9 chunks/s ETA=7.7 min
+[PROGRESS] 7,250/128,623 5.64% bad=0 repaired=0 failed=0 speed=255.3 chunks/s ETA=7.9 min
+[PROGRESS] 7,500/128,623 5.83% bad=0 repaired=0 failed=0 speed=247.6 chunks/s ETA=8.2 min
+[PROGRESS] 7,750/128,623 6.03% bad=0 repaired=0 failed=0 speed=240.9 chunks/s ETA=8.4 min
+[PROGRESS] 8,000/128,623 6.22% bad=0 repaired=0 failed=0 speed=235.1 chunks/s ETA=8.5 min
+[PROGRESS] 8,250/128,623 6.41% bad=0 repaired=0 failed=0 speed=230.1 chunks/s ETA=8.7 min
+[PROGRESS] 8,500/128,623 6.61% bad=0 repaired=0 failed=0 speed=224.6 chunks/s ETA=8.9 min
+[PROGRESS] 8,750/128,623 6.80% bad=0 repaired=0 failed=0 speed=219.9 chunks/s ETA=9.1 min
+[PROGRESS] 9,000/128,623 7.00% bad=0 repaired=0 failed=0 speed=215.2 chunks/s ETA=9.3 min
+[PROGRESS] 9,250/128,623 7.19% bad=0 repaired=0 failed=0 speed=210.7 chunks/s ETA=9.4 min
+[PROGRESS] 9,500/128,623 7.39% bad=0 repaired=0 failed=0 speed=207.7 chunks/s ETA=9.6 min
+[PROGRESS] 9,750/128,623 7.58% bad=0 repaired=0 failed=0 speed=205.1 chunks/s ETA=9.7 min
+[PROGRESS] 10,000/128,623 7.77% bad=0 repaired=0 failed=0 speed=202.7 chunks/s ETA=9.8 min
+[PROGRESS] 10,250/128,623 7.97% bad=0 repaired=0 failed=0 speed=200.0 chunks/s ETA=9.9 min
+[PROGRESS] 10,500/128,623 8.16% bad=0 repaired=0 failed=0 speed=198.0 chunks/s ETA=9.9 min
+[PROGRESS] 10,750/128,623 8.36% bad=0 repaired=0 failed=0 speed=196.2 chunks/s ETA=10.0 min
+[PROGRESS] 11,000/128,623 8.55% bad=0 repaired=0 failed=0 speed=194.3 chunks/s ETA=10.1 min
+[PROGRESS] 11,250/128,623 8.75% bad=0 repaired=0 failed=0 speed=192.3 chunks/s ETA=10.2 min
+[PROGRESS] 11,500/128,623 8.94% bad=0 repaired=0 failed=0 speed=190.5 chunks/s ETA=10.2 min
+
+[VARIABLE] temperature chunks=11,693
+[PROGRESS] 11,750/128,623 9.14% bad=0 repaired=0 failed=0 speed=189.8 chunks/s ETA=10.3 min
+[PROGRESS] 12,000/128,623 9.33% bad=0 repaired=0 failed=0 speed=193.4 chunks/s ETA=10.0 min
+[PROGRESS] 12,250/128,623 9.52% bad=0 repaired=0 failed=0 speed=197.0 chunks/s ETA=9.8 min
+[PROGRESS] 12,500/128,623 9.72% bad=0 repaired=0 failed=0 speed=200.6 chunks/s ETA=9.6 min
+[PROGRESS] 12,750/128,623 9.91% bad=0 repaired=0 failed=0 speed=204.2 chunks/s ETA=9.5 min
+[PROGRESS] 13,000/128,623 10.11% bad=0 repaired=0 failed=0 speed=207.8 chunks/s ETA=9.3 min
+[PROGRESS] 13,250/128,623 10.30% bad=0 repaired=0 failed=0 speed=211.3 chunks/s ETA=9.1 min
+[PROGRESS] 13,500/128,623 10.50% bad=0 repaired=0 failed=0 speed=214.9 chunks/s ETA=8.9 min
+[PROGRESS] 13,750/128,623 10.69% bad=0 repaired=0 failed=0 speed=218.4 chunks/s ETA=8.8 min
+[PROGRESS] 14,000/128,623 10.88% bad=0 repaired=0 failed=0 speed=221.9 chunks/s ETA=8.6 min
+[PROGRESS] 14,250/128,623 11.08% bad=0 repaired=0 failed=0 speed=225.4 chunks/s ETA=8.5 min
+[PROGRESS] 14,500/128,623 11.27% bad=0 repaired=0 failed=0 speed=228.9 chunks/s ETA=8.3 min
+[PROGRESS] 14,750/128,623 11.47% bad=0 repaired=0 failed=0 speed=232.3 chunks/s ETA=8.2 min
+[PROGRESS] 15,000/128,623 11.66% bad=0 repaired=0 failed=0 speed=235.8 chunks/s ETA=8.0 min
+[PROGRESS] 15,250/128,623 11.86% bad=0 repaired=0 failed=0 speed=239.2 chunks/s ETA=7.9 min
+[PROGRESS] 15,500/128,623 12.05% bad=0 repaired=0 failed=0 speed=238.6 chunks/s ETA=7.9 min
+[PROGRESS] 15,750/128,623 12.25% bad=0 repaired=0 failed=0 speed=235.9 chunks/s ETA=8.0 min
+[PROGRESS] 16,000/128,623 12.44% bad=0 repaired=0 failed=0 speed=233.1 chunks/s ETA=8.1 min
+[PROGRESS] 16,250/128,623 12.63% bad=0 repaired=0 failed=0 speed=230.8 chunks/s ETA=8.1 min
+[PROGRESS] 16,500/128,623 12.83% bad=0 repaired=0 failed=0 speed=228.5 chunks/s ETA=8.2 min
+[PROGRESS] 16,750/128,623 13.02% bad=0 repaired=0 failed=0 speed=226.2 chunks/s ETA=8.2 min
+[PROGRESS] 17,000/128,623 13.22% bad=0 repaired=0 failed=0 speed=224.1 chunks/s ETA=8.3 min
+[PROGRESS] 17,250/128,623 13.41% bad=0 repaired=0 failed=0 speed=221.9 chunks/s ETA=8.4 min
+[PROGRESS] 17,500/128,623 13.61% bad=0 repaired=0 failed=0 speed=220.1 chunks/s ETA=8.4 min
+[PROGRESS] 17,750/128,623 13.80% bad=0 repaired=0 failed=0 speed=218.3 chunks/s ETA=8.5 min
+[PROGRESS] 18,000/128,623 13.99% bad=0 repaired=0 failed=0 speed=216.6 chunks/s ETA=8.5 min
+[PROGRESS] 18,250/128,623 14.19% bad=0 repaired=0 failed=0 speed=215.0 chunks/s ETA=8.6 min
+[PROGRESS] 18,500/128,623 14.38% bad=0 repaired=0 failed=0 speed=213.4 chunks/s ETA=8.6 min
+[PROGRESS] 18,750/128,623 14.58% bad=0 repaired=0 failed=0 speed=211.9 chunks/s ETA=8.6 min
+[PROGRESS] 19,000/128,623 14.77% bad=0 repaired=0 failed=0 speed=210.5 chunks/s ETA=8.7 min
+[PROGRESS] 19,250/128,623 14.97% bad=0 repaired=0 failed=0 speed=209.0 chunks/s ETA=8.7 min
+[PROGRESS] 19,500/128,623 15.16% bad=0 repaired=0 failed=0 speed=207.7 chunks/s ETA=8.8 min
+[PROGRESS] 19,750/128,623 15.35% bad=0 repaired=0 failed=0 speed=206.6 chunks/s ETA=8.8 min
+[PROGRESS] 20,000/128,623 15.55% bad=0 repaired=0 failed=0 speed=205.3 chunks/s ETA=8.8 min
+[PROGRESS] 20,250/128,623 15.74% bad=0 repaired=0 failed=0 speed=204.0 chunks/s ETA=8.9 min
+[PROGRESS] 20,500/128,623 15.94% bad=0 repaired=0 failed=0 speed=202.8 chunks/s ETA=8.9 min
+[PROGRESS] 20,750/128,623 16.13% bad=0 repaired=0 failed=0 speed=201.3 chunks/s ETA=8.9 min
+[PROGRESS] 21,000/128,623 16.33% bad=0 repaired=0 failed=0 speed=199.7 chunks/s ETA=9.0 min
+[PROGRESS] 21,250/128,623 16.52% bad=0 repaired=0 failed=0 speed=198.0 chunks/s ETA=9.0 min
+[PROGRESS] 21,500/128,623 16.72% bad=0 repaired=0 failed=0 speed=196.4 chunks/s ETA=9.1 min
+[PROGRESS] 21,750/128,623 16.91% bad=0 repaired=0 failed=0 speed=195.2 chunks/s ETA=9.1 min
+[PROGRESS] 22,000/128,623 17.10% bad=0 repaired=0 failed=0 speed=194.1 chunks/s ETA=9.2 min
+[PROGRESS] 22,250/128,623 17.30% bad=0 repaired=0 failed=0 speed=193.0 chunks/s ETA=9.2 min
+[PROGRESS] 22,500/128,623 17.49% bad=0 repaired=0 failed=0 speed=191.9 chunks/s ETA=9.2 min
+[PROGRESS] 22,750/128,623 17.69% bad=0 repaired=0 failed=0 speed=191.0 chunks/s ETA=9.2 min
+[PROGRESS] 23,000/128,623 17.88% bad=0 repaired=0 failed=0 speed=190.1 chunks/s ETA=9.3 min
+[PROGRESS] 23,250/128,623 18.08% bad=0 repaired=0 failed=0 speed=189.2 chunks/s ETA=9.3 min
+
+[VARIABLE] specific_humidity chunks=11,693
+[PROGRESS] 23,500/128,623 18.27% bad=0 repaired=0 failed=0 speed=189.5 chunks/s ETA=9.2 min
+[PROGRESS] 23,750/128,623 18.46% bad=0 repaired=0 failed=0 speed=191.3 chunks/s ETA=9.1 min
+[PROGRESS] 24,000/128,623 18.66% bad=0 repaired=0 failed=0 speed=193.1 chunks/s ETA=9.0 min
+[PROGRESS] 24,250/128,623 18.85% bad=0 repaired=0 failed=0 speed=194.9 chunks/s ETA=8.9 min
+[PROGRESS] 24,500/128,623 19.05% bad=0 repaired=0 failed=0 speed=196.7 chunks/s ETA=8.8 min
+[PROGRESS] 24,750/128,623 19.24% bad=0 repaired=0 failed=0 speed=198.5 chunks/s ETA=8.7 min
+[PROGRESS] 25,000/128,623 19.44% bad=0 repaired=0 failed=0 speed=200.2 chunks/s ETA=8.6 min
+[PROGRESS] 25,250/128,623 19.63% bad=0 repaired=0 failed=0 speed=202.0 chunks/s ETA=8.5 min
+[PROGRESS] 25,500/128,623 19.83% bad=0 repaired=0 failed=0 speed=203.8 chunks/s ETA=8.4 min
+[PROGRESS] 25,750/128,623 20.02% bad=0 repaired=0 failed=0 speed=205.5 chunks/s ETA=8.3 min
+[PROGRESS] 26,000/128,623 20.21% bad=0 repaired=0 failed=0 speed=207.3 chunks/s ETA=8.3 min
+[PROGRESS] 26,250/128,623 20.41% bad=0 repaired=0 failed=0 speed=209.0 chunks/s ETA=8.2 min
+[PROGRESS] 26,500/128,623 20.60% bad=0 repaired=0 failed=0 speed=210.8 chunks/s ETA=8.1 min
+[PROGRESS] 26,750/128,623 20.80% bad=0 repaired=0 failed=0 speed=212.5 chunks/s ETA=8.0 min
+[PROGRESS] 27,000/128,623 20.99% bad=0 repaired=0 failed=0 speed=214.2 chunks/s ETA=7.9 min
+[PROGRESS] 27,250/128,623 21.19% bad=0 repaired=0 failed=0 speed=212.8 chunks/s ETA=7.9 min
+[PROGRESS] 27,500/128,623 21.38% bad=0 repaired=0 failed=0 speed=211.1 chunks/s ETA=8.0 min
+[PROGRESS] 27,750/128,623 21.57% bad=0 repaired=0 failed=0 speed=209.0 chunks/s ETA=8.0 min
+[PROGRESS] 28,000/128,623 21.77% bad=0 repaired=0 failed=0 speed=207.1 chunks/s ETA=8.1 min
+[PROGRESS] 28,250/128,623 21.96% bad=0 repaired=0 failed=0 speed=205.4 chunks/s ETA=8.1 min
+[PROGRESS] 28,500/128,623 22.16% bad=0 repaired=0 failed=0 speed=203.8 chunks/s ETA=8.2 min
+[PROGRESS] 28,750/128,623 22.35% bad=0 repaired=0 failed=0 speed=202.3 chunks/s ETA=8.2 min
+[PROGRESS] 29,000/128,623 22.55% bad=0 repaired=0 failed=0 speed=198.0 chunks/s ETA=8.4 min
+[PROGRESS] 29,250/128,623 22.74% bad=0 repaired=0 failed=0 speed=196.7 chunks/s ETA=8.4 min
+[PROGRESS] 29,500/128,623 22.94% bad=0 repaired=0 failed=0 speed=195.4 chunks/s ETA=8.5 min
+[PROGRESS] 29,750/128,623 23.13% bad=0 repaired=0 failed=0 speed=193.9 chunks/s ETA=8.5 min
+[PROGRESS] 30,000/128,623 23.32% bad=0 repaired=0 failed=0 speed=192.6 chunks/s ETA=8.5 min
+[PROGRESS] 30,250/128,623 23.52% bad=0 repaired=0 failed=0 speed=191.4 chunks/s ETA=8.6 min
+[PROGRESS] 30,500/128,623 23.71% bad=0 repaired=0 failed=0 speed=190.0 chunks/s ETA=8.6 min
+[PROGRESS] 30,750/128,623 23.91% bad=0 repaired=0 failed=0 speed=188.8 chunks/s ETA=8.6 min
+[PROGRESS] 31,000/128,623 24.10% bad=0 repaired=0 failed=0 speed=187.3 chunks/s ETA=8.7 min
+[PROGRESS] 31,250/128,623 24.30% bad=0 repaired=0 failed=0 speed=185.7 chunks/s ETA=8.7 min
+[PROGRESS] 31,500/128,623 24.49% bad=0 repaired=0 failed=0 speed=183.5 chunks/s ETA=8.8 min
+[PROGRESS] 31,750/128,623 24.68% bad=0 repaired=0 failed=0 speed=182.3 chunks/s ETA=8.9 min
+[PROGRESS] 32,000/128,623 24.88% bad=0 repaired=0 failed=0 speed=181.3 chunks/s ETA=8.9 min
+[PROGRESS] 32,250/128,623 25.07% bad=0 repaired=0 failed=0 speed=180.3 chunks/s ETA=8.9 min
+[PROGRESS] 32,500/128,623 25.27% bad=0 repaired=0 failed=0 speed=179.1 chunks/s ETA=8.9 min
+[PROGRESS] 32,750/128,623 25.46% bad=0 repaired=0 failed=0 speed=178.2 chunks/s ETA=9.0 min
+[PROGRESS] 33,000/128,623 25.66% bad=0 repaired=0 failed=0 speed=177.0 chunks/s ETA=9.0 min
+[PROGRESS] 33,250/128,623 25.85% bad=0 repaired=0 failed=0 speed=176.0 chunks/s ETA=9.0 min
+[PROGRESS] 33,500/128,623 26.05% bad=0 repaired=0 failed=0 speed=175.1 chunks/s ETA=9.1 min
+[PROGRESS] 33,750/128,623 26.24% bad=0 repaired=0 failed=0 speed=174.3 chunks/s ETA=9.1 min
+[PROGRESS] 34,000/128,623 26.43% bad=0 repaired=0 failed=0 speed=173.5 chunks/s ETA=9.1 min
+[PROGRESS] 34,250/128,623 26.63% bad=0 repaired=0 failed=0 speed=172.8 chunks/s ETA=9.1 min
+[PROGRESS] 34,500/128,623 26.82% bad=0 repaired=0 failed=0 speed=172.1 chunks/s ETA=9.1 min
+[PROGRESS] 34,750/128,623 27.02% bad=0 repaired=0 failed=0 speed=171.3 chunks/s ETA=9.1 min
+[PROGRESS] 35,000/128,623 27.21% bad=0 repaired=0 failed=0 speed=170.5 chunks/s ETA=9.1 min
+
+[VARIABLE] u_component_of_wind chunks=11,693
+[PROGRESS] 35,250/128,623 27.41% bad=0 repaired=0 failed=0 speed=171.1 chunks/s ETA=9.1 min
+[PROGRESS] 35,500/128,623 27.60% bad=0 repaired=0 failed=0 speed=172.2 chunks/s ETA=9.0 min
+[PROGRESS] 35,750/128,623 27.79% bad=0 repaired=0 failed=0 speed=173.3 chunks/s ETA=8.9 min
+[PROGRESS] 36,000/128,623 27.99% bad=0 repaired=0 failed=0 speed=174.3 chunks/s ETA=8.9 min
+[PROGRESS] 36,250/128,623 28.18% bad=0 repaired=0 failed=0 speed=175.4 chunks/s ETA=8.8 min
+[PROGRESS] 36,500/128,623 28.38% bad=0 repaired=0 failed=0 speed=176.5 chunks/s ETA=8.7 min
+[PROGRESS] 36,750/128,623 28.57% bad=0 repaired=0 failed=0 speed=177.6 chunks/s ETA=8.6 min
+[PROGRESS] 37,000/128,623 28.77% bad=0 repaired=0 failed=0 speed=178.7 chunks/s ETA=8.5 min
+[PROGRESS] 37,250/128,623 28.96% bad=0 repaired=0 failed=0 speed=179.7 chunks/s ETA=8.5 min
+[PROGRESS] 37,500/128,623 29.15% bad=0 repaired=0 failed=0 speed=180.8 chunks/s ETA=8.4 min
+[PROGRESS] 37,750/128,623 29.35% bad=0 repaired=0 failed=0 speed=181.9 chunks/s ETA=8.3 min
+[PROGRESS] 38,000/128,623 29.54% bad=0 repaired=0 failed=0 speed=183.0 chunks/s ETA=8.3 min
+[PROGRESS] 38,250/128,623 29.74% bad=0 repaired=0 failed=0 speed=184.0 chunks/s ETA=8.2 min
+[PROGRESS] 38,500/128,623 29.93% bad=0 repaired=0 failed=0 speed=185.1 chunks/s ETA=8.1 min
+[PROGRESS] 38,750/128,623 30.13% bad=0 repaired=0 failed=0 speed=186.1 chunks/s ETA=8.1 min
+[PROGRESS] 39,000/128,623 30.32% bad=0 repaired=0 failed=0 speed=185.1 chunks/s ETA=8.1 min
+[PROGRESS] 39,250/128,623 30.52% bad=0 repaired=0 failed=0 speed=184.1 chunks/s ETA=8.1 min
+[PROGRESS] 39,500/128,623 30.71% bad=0 repaired=0 failed=0 speed=183.2 chunks/s ETA=8.1 min
+[PROGRESS] 39,750/128,623 30.90% bad=0 repaired=0 failed=0 speed=182.3 chunks/s ETA=8.1 min
+[PROGRESS] 40,000/128,623 31.10% bad=0 repaired=0 failed=0 speed=180.6 chunks/s ETA=8.2 min
+[PROGRESS] 40,250/128,623 31.29% bad=0 repaired=0 failed=0 speed=179.3 chunks/s ETA=8.2 min
+[PROGRESS] 40,500/128,623 31.49% bad=0 repaired=0 failed=0 speed=178.3 chunks/s ETA=8.2 min
+
+[BAD] var=u_component_of_wind chunk=5543 indices=44344:44352 time=1989-05-09T00:00:00.000000000..1989-05-10T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REMOTE] opening public WeatherBench2 GCS
+[REPAIRED] u_component_of_wind chunk=5543
+[PROGRESS] 40,750/128,623 31.68% bad=1 repaired=1 failed=0 speed=173.1 chunks/s ETA=8.5 min
+[PROGRESS] 41,000/128,623 31.88% bad=1 repaired=1 failed=0 speed=172.4 chunks/s ETA=8.5 min
+[PROGRESS] 41,250/128,623 32.07% bad=1 repaired=1 failed=0 speed=171.8 chunks/s ETA=8.5 min
+[PROGRESS] 41,500/128,623 32.26% bad=1 repaired=1 failed=0 speed=171.2 chunks/s ETA=8.5 min
+
+[BAD] var=u_component_of_wind chunk=6478 indices=51824:51832 time=1994-06-22T00:00:00.000000000..1994-06-23T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6478
+
+[BAD] var=u_component_of_wind chunk=6491 indices=51928:51936 time=1994-07-18T00:00:00.000000000..1994-07-19T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6491
+
+[BAD] var=u_component_of_wind chunk=6496 indices=51968:51976 time=1994-07-28T00:00:00.000000000..1994-07-29T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6496
+
+[BAD] var=u_component_of_wind chunk=6502 indices=52016:52024 time=1994-08-09T00:00:00.000000000..1994-08-10T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6502
+
+[BAD] var=u_component_of_wind chunk=6599 indices=52792:52800 time=1995-02-19T00:00:00.000000000..1995-02-20T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6599
+[PROGRESS] 41,750/128,623 32.46% bad=6 repaired=6 failed=0 speed=163.9 chunks/s ETA=8.8 min
+
+[BAD] var=u_component_of_wind chunk=6722 indices=53776:53784 time=1995-10-23T00:00:00.000000000..1995-10-24T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6722
+
+[BAD] var=u_component_of_wind chunk=6838 indices=54704:54712 time=1996-06-11T00:00:00.000000000..1996-06-12T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=6838
+[PROGRESS] 42,000/128,623 32.65% bad=8 repaired=8 failed=0 speed=160.7 chunks/s ETA=9.0 min
+[PROGRESS] 42,250/128,623 32.85% bad=8 repaired=8 failed=0 speed=160.1 chunks/s ETA=9.0 min
+[PROGRESS] 42,500/128,623 33.04% bad=8 repaired=8 failed=0 speed=159.4 chunks/s ETA=9.0 min
+
+[BAD] var=u_component_of_wind chunk=7615 indices=60920:60928 time=2000-09-12T00:00:00.000000000..2000-09-13T18:00:00.000000000
+[BAD] RuntimeError: error during blosc decompression: -1
+[REPAIRED] u_component_of_wind chunk=7615
+[PROGRESS] 42,750/128,623 33.24% bad=9 repaired=9 failed=0 speed=157.5 chunks/s ETA=9.1 min
+[PROGRESS] 43,000/128,623 33.43% bad=9 repaired=9 failed=0 speed=157.0 chunks/s ETA=9.1 min
+[PROGRESS] 43,250/128,623 33.63% bad=9 repaired=9 failed=0 speed=156.4 chunks/s ETA=9.1 min
+[PROGRESS] 43,500/128,623 33.82% bad=9 repaired=9 failed=0 speed=155.8 chunks/s ETA=9.1 min
+[PROGRESS] 43,750/128,623 34.01% bad=9 repaired=9 failed=0 speed=155.4 chunks/s ETA=9.1 min
+[PROGRESS] 44,000/128,623 34.21% bad=9 repaired=9 failed=0 speed=155.0 chunks/s ETA=9.1 min
+[PROGRESS] 44,250/128,623 34.40% bad=9 repaired=9 failed=0 speed=154.5 chunks/s ETA=9.1 min
+[PROGRESS] 44,500/128,623 34.60% bad=9 repaired=9 failed=0 speed=154.1 chunks/s ETA=9.1 min
+[PROGRESS] 44,750/128,623 34.79% bad=9 repaired=9 failed=0 speed=153.6 chunks/s ETA=9.1 min
+[PROGRESS] 45,000/128,623 34.99% bad=9 repaired=9 failed=0 speed=153.2 chunks/s ETA=9.1 min
+[PROGRESS] 45,250/128,623 35.18% bad=9 repaired=9 failed=0 speed=152.6 chunks/s ETA=9.1 min
+[PROGRESS] 45,500/128,623 35.37% bad=9 repaired=9 failed=0 speed=152.2 chunks/s ETA=9.1 min
+[PROGRESS] 45,750/128,623 35.57% bad=9 repaired=9 failed=0 speed=151.9 chunks/s ETA=9.1 min
+[PROGRESS] 46,000/128,623 35.76% bad=9 repaired=9 failed=0 speed=151.5 chunks/s ETA=9.1 min
+[PROGRESS] 46,250/128,623 35.96% bad=9 repaired=9 failed=0 speed=151.1 chunks/s ETA=9.1 min
+[PROGRESS] 46,500/128,623 36.15% bad=9 repaired=9 failed=0 speed=150.8 chunks/s ETA=9.1 min
+[PROGRESS] 46,750/128,623 36.35% bad=9 repaired=9 failed=0 speed=150.4 chunks/s ETA=9.1 min
+
+[VARIABLE] v_component_of_wind chunks=11,693
+[PROGRESS] 47,000/128,623 36.54% bad=9 repaired=9 failed=0 speed=151.0 chunks/s ETA=9.0 min
+[PROGRESS] 47,250/128,623 36.74% bad=9 repaired=9 failed=0 speed=151.8 chunks/s ETA=8.9 min
+[PROGRESS] 47,500/128,623 36.93% bad=9 repaired=9 failed=0 speed=152.5 chunks/s ETA=8.9 min
+[PROGRESS] 47,750/128,623 37.12% bad=9 repaired=9 failed=0 speed=153.2 chunks/s ETA=8.8 min
+[PROGRESS] 48,000/128,623 37.32% bad=9 repaired=9 failed=0 speed=154.0 chunks/s ETA=8.7 min
+[PROGRESS] 48,250/128,623 37.51% bad=9 repaired=9 failed=0 speed=154.7 chunks/s ETA=8.7 min
+[PROGRESS] 48,500/128,623 37.71% bad=9 repaired=9 failed=0 speed=155.5 chunks/s ETA=8.6 min
+[PROGRESS] 48,750/128,623 37.90% bad=9 repaired=9 failed=0 speed=156.2 chunks/s ETA=8.5 min
+[PROGRESS] 49,000/128,623 38.10% bad=9 repaired=9 failed=0 speed=156.9 chunks/s ETA=8.5 min
+[PROGRESS] 49,250/128,623 38.29% bad=9 repaired=9 failed=0 speed=157.6 chunks/s ETA=8.4 min
+[PROGRESS] 49,500/128,623 38.48% bad=9 repaired=9 failed=0 speed=158.4 chunks/s ETA=8.3 min
+[PROGRESS] 49,750/128,623 38.68% bad=9 repaired=9 failed=0 speed=159.1 chunks/s ETA=8.3 min
+[PROGRESS] 50,000/128,623 38.87% bad=9 repaired=9 failed=0 speed=159.8 chunks/s ETA=8.2 min
+[PROGRESS] 50,250/128,623 39.07% bad=9 repaired=9 failed=0 speed=160.5 chunks/s ETA=8.1 min
+[PROGRESS] 50,500/128,623 39.26% bad=9 repaired=9 failed=0 speed=160.9 chunks/s ETA=8.1 min
+[PROGRESS] 50,750/128,623 39.46% bad=9 repaired=9 failed=0 speed=160.5 chunks/s ETA=8.1 min
+[PROGRESS] 51,000/128,623 39.65% bad=9 repaired=9 failed=0 speed=160.0 chunks/s ETA=8.1 min
+[PROGRESS] 51,250/128,623 39.85% bad=9 repaired=9 failed=0 speed=159.6 chunks/s ETA=8.1 min
+[PROGRESS] 51,500/128,623 40.04% bad=9 repaired=9 failed=0 speed=159.2 chunks/s ETA=8.1 min
+[PROGRESS] 51,750/128,623 40.23% bad=9 repaired=9 failed=0 speed=158.8 chunks/s ETA=8.1 min
+[PROGRESS] 52,000/128,623 40.43% bad=9 repaired=9 failed=0 speed=158.3 chunks/s ETA=8.1 min
+[PROGRESS] 52,250/128,623 40.62% bad=9 repaired=9 failed=0 speed=157.9 chunks/s ETA=8.1 min
+[PROGRESS] 52,500/128,623 40.82% bad=9 repaired=9 failed=0 speed=157.5 chunks/s ETA=8.1 min
+[PROGRESS] 52,750/128,623 41.01% bad=9 repaired=9 failed=0 speed=157.0 chunks/s ETA=8.1 min
+[PROGRESS] 53,000/128,623 41.21% bad=9 repaired=9 failed=0 speed=156.4 chunks/s ETA=8.1 min
+[PROGRESS] 53,250/128,623 41.40% bad=9 repaired=9 failed=0 speed=156.0 chunks/s ETA=8.1 min
+[PROGRESS] 53,500/128,623 41.59% bad=9 repaired=9 failed=0 speed=155.7 chunks/s ETA=8.0 min
+[PROGRESS] 53,750/128,623 41.79% bad=9 repaired=9 failed=0 speed=155.3 chunks/s ETA=8.0 min
+[PROGRESS] 54,000/128,623 41.98% bad=9 repaired=9 failed=0 speed=154.9 chunks/s ETA=8.0 min
+[PROGRESS] 54,250/128,623 42.18% bad=9 repaired=9 failed=0 speed=154.4 chunks/s ETA=8.0 min
+[PROGRESS] 54,500/128,623 42.37% bad=9 repaired=9 failed=0 speed=154.1 chunks/s ETA=8.0 min
+[PROGRESS] 54,750/128,623 42.57% bad=9 repaired=9 failed=0 speed=153.4 chunks/s ETA=8.0 min
+[PROGRESS] 55,000/128,623 42.76% bad=9 repaired=9 failed=0 speed=153.1 chunks/s ETA=8.0 min
+[PROGRESS] 55,250/128,623 42.95% bad=9 repaired=9 failed=0 speed=152.8 chunks/s ETA=8.0 min
+[PROGRESS] 55,500/128,623 43.15% bad=9 repaired=9 failed=0 speed=152.4 chunks/s ETA=8.0 min
+[PROGRESS] 55,750/128,623 43.34% bad=9 repaired=9 failed=0 speed=152.1 chunks/s ETA=8.0 min
+[PROGRESS] 56,000/128,623 43.54% bad=9 repaired=9 failed=0 speed=151.8 chunks/s ETA=8.0 min
+[PROGRESS] 56,250/128,623 43.73% bad=9 repaired=9 failed=0 speed=151.5 chunks/s ETA=8.0 min
+[PROGRESS] 56,500/128,623 43.93% bad=9 repaired=9 failed=0 speed=151.3 chunks/s ETA=7.9 min
+[PROGRESS] 56,750/128,623 44.12% bad=9 repaired=9 failed=0 speed=151.0 chunks/s ETA=7.9 min
+[PROGRESS] 57,000/128,623 44.32% bad=9 repaired=9 failed=0 speed=150.7 chunks/s ETA=7.9 min
+[PROGRESS] 57,250/128,623 44.51% bad=9 repaired=9 failed=0 speed=150.4 chunks/s ETA=7.9 min
+[PROGRESS] 57,500/128,623 44.70% bad=9 repaired=9 failed=0 speed=150.1 chunks/s ETA=7.9 min
+[PROGRESS] 57,750/128,623 44.90% bad=9 repaired=9 failed=0 speed=149.9 chunks/s ETA=7.9 min
+[PROGRESS] 58,000/128,623 45.09% bad=9 repaired=9 failed=0 speed=149.6 chunks/s ETA=7.9 min
+[PROGRESS] 58,250/128,623 45.29% bad=9 repaired=9 failed=0 speed=149.3 chunks/s ETA=7.9 min
+
+[VARIABLE] 2m_temperature chunks=11,693
+[PROGRESS] 58,500/128,623 45.48% bad=9 repaired=9 failed=0 speed=149.1 chunks/s ETA=7.8 min
+[PROGRESS] 58,750/128,623 45.68% bad=9 repaired=9 failed=0 speed=149.7 chunks/s ETA=7.8 min
+[PROGRESS] 59,000/128,623 45.87% bad=9 repaired=9 failed=0 speed=150.3 chunks/s ETA=7.7 min
+[PROGRESS] 59,250/128,623 46.06% bad=9 repaired=9 failed=0 speed=151.0 chunks/s ETA=7.7 min
+[PROGRESS] 59,500/128,623 46.26% bad=9 repaired=9 failed=0 speed=151.6 chunks/s ETA=7.6 min
+[PROGRESS] 59,750/128,623 46.45% bad=9 repaired=9 failed=0 speed=152.2 chunks/s ETA=7.5 min
+[PROGRESS] 60,000/128,623 46.65% bad=9 repaired=9 failed=0 speed=152.8 chunks/s ETA=7.5 min
+[PROGRESS] 60,250/128,623 46.84% bad=9 repaired=9 failed=0 speed=153.5 chunks/s ETA=7.4 min
+[PROGRESS] 60,500/128,623 47.04% bad=9 repaired=9 failed=0 speed=154.1 chunks/s ETA=7.4 min
+[PROGRESS] 60,750/128,623 47.23% bad=9 repaired=9 failed=0 speed=154.7 chunks/s ETA=7.3 min
+[PROGRESS] 61,000/128,623 47.43% bad=9 repaired=9 failed=0 speed=155.4 chunks/s ETA=7.3 min
+[PROGRESS] 61,250/128,623 47.62% bad=9 repaired=9 failed=0 speed=156.0 chunks/s ETA=7.2 min
+[PROGRESS] 61,500/128,623 47.81% bad=9 repaired=9 failed=0 speed=156.6 chunks/s ETA=7.1 min
+[PROGRESS] 61,750/128,623 48.01% bad=9 repaired=9 failed=0 speed=157.2 chunks/s ETA=7.1 min
+[PROGRESS] 62,000/128,623 48.20% bad=9 repaired=9 failed=0 speed=157.9 chunks/s ETA=7.0 min
+[PROGRESS] 62,250/128,623 48.40% bad=9 repaired=9 failed=0 speed=158.4 chunks/s ETA=7.0 min
+[PROGRESS] 62,500/128,623 48.59% bad=9 repaired=9 failed=0 speed=158.9 chunks/s ETA=6.9 min
+[PROGRESS] 62,750/128,623 48.79% bad=9 repaired=9 failed=0 speed=159.3 chunks/s ETA=6.9 min
+[PROGRESS] 63,000/128,623 48.98% bad=9 repaired=9 failed=0 speed=159.8 chunks/s ETA=6.8 min
+[PROGRESS] 63,250/128,623 49.17% bad=9 repaired=9 failed=0 speed=160.3 chunks/s ETA=6.8 min
+[PROGRESS] 63,500/128,623 49.37% bad=9 repaired=9 failed=0 speed=160.7 chunks/s ETA=6.8 min
+[PROGRESS] 63,750/128,623 49.56% bad=9 repaired=9 failed=0 speed=161.2 chunks/s ETA=6.7 min
+[PROGRESS] 64,000/128,623 49.76% bad=9 repaired=9 failed=0 speed=161.7 chunks/s ETA=6.7 min
+[PROGRESS] 64,250/128,623 49.95% bad=9 repaired=9 failed=0 speed=162.1 chunks/s ETA=6.6 min
+[PROGRESS] 64,500/128,623 50.15% bad=9 repaired=9 failed=0 speed=162.6 chunks/s ETA=6.6 min
+[PROGRESS] 64,750/128,623 50.34% bad=9 repaired=9 failed=0 speed=163.1 chunks/s ETA=6.5 min
+[PROGRESS] 65,000/128,623 50.54% bad=9 repaired=9 failed=0 speed=163.6 chunks/s ETA=6.5 min
+[PROGRESS] 65,250/128,623 50.73% bad=9 repaired=9 failed=0 speed=164.1 chunks/s ETA=6.4 min
+[PROGRESS] 65,500/128,623 50.92% bad=9 repaired=9 failed=0 speed=164.5 chunks/s ETA=6.4 min
+[PROGRESS] 65,750/128,623 51.12% bad=9 repaired=9 failed=0 speed=165.0 chunks/s ETA=6.4 min
+[PROGRESS] 66,000/128,623 51.31% bad=9 repaired=9 failed=0 speed=165.5 chunks/s ETA=6.3 min
+[PROGRESS] 66,250/128,623 51.51% bad=9 repaired=9 failed=0 speed=165.9 chunks/s ETA=6.3 min
+[PROGRESS] 66,500/128,623 51.70% bad=9 repaired=9 failed=0 speed=166.4 chunks/s ETA=6.2 min
+[PROGRESS] 66,750/128,623 51.90% bad=9 repaired=9 failed=0 speed=166.9 chunks/s ETA=6.2 min
+[PROGRESS] 67,000/128,623 52.09% bad=9 repaired=9 failed=0 speed=167.3 chunks/s ETA=6.1 min
+[PROGRESS] 67,250/128,623 52.28% bad=9 repaired=9 failed=0 speed=167.8 chunks/s ETA=6.1 min
+[PROGRESS] 67,500/128,623 52.48% bad=9 repaired=9 failed=0 speed=168.2 chunks/s ETA=6.1 min
+[PROGRESS] 67,750/128,623 52.67% bad=9 repaired=9 failed=0 speed=168.6 chunks/s ETA=6.0 min
+[PROGRESS] 68,000/128,623 52.87% bad=9 repaired=9 failed=0 speed=169.1 chunks/s ETA=6.0 min
+[PROGRESS] 68,250/128,623 53.06% bad=9 repaired=9 failed=0 speed=169.5 chunks/s ETA=5.9 min
+[PROGRESS] 68,500/128,623 53.26% bad=9 repaired=9 failed=0 speed=170.0 chunks/s ETA=5.9 min
+[PROGRESS] 68,750/128,623 53.45% bad=9 repaired=9 failed=0 speed=170.4 chunks/s ETA=5.9 min
+[PROGRESS] 69,000/128,623 53.65% bad=9 repaired=9 failed=0 speed=170.9 chunks/s ETA=5.8 min
+[PROGRESS] 69,250/128,623 53.84% bad=9 repaired=9 failed=0 speed=171.3 chunks/s ETA=5.8 min
+[PROGRESS] 69,500/128,623 54.03% bad=9 repaired=9 failed=0 speed=171.8 chunks/s ETA=5.7 min
+[PROGRESS] 69,750/128,623 54.23% bad=9 repaired=9 failed=0 speed=172.3 chunks/s ETA=5.7 min
+[PROGRESS] 70,000/128,623 54.42% bad=9 repaired=9 failed=0 speed=172.7 chunks/s ETA=5.7 min
+
+[VARIABLE] 10m_u_component_of_wind chunks=11,693
+[PROGRESS] 70,250/128,623 54.62% bad=9 repaired=9 failed=0 speed=173.2 chunks/s ETA=5.6 min
+[PROGRESS] 70,500/128,623 54.81% bad=9 repaired=9 failed=0 speed=173.8 chunks/s ETA=5.6 min
+[PROGRESS] 70,750/128,623 55.01% bad=9 repaired=9 failed=0 speed=174.4 chunks/s ETA=5.5 min
+[PROGRESS] 71,000/128,623 55.20% bad=9 repaired=9 failed=0 speed=175.0 chunks/s ETA=5.5 min
+[PROGRESS] 71,250/128,623 55.39% bad=9 repaired=9 failed=0 speed=175.7 chunks/s ETA=5.4 min
+[PROGRESS] 71,500/128,623 55.59% bad=9 repaired=9 failed=0 speed=176.3 chunks/s ETA=5.4 min
+[PROGRESS] 71,750/128,623 55.78% bad=9 repaired=9 failed=0 speed=176.9 chunks/s ETA=5.4 min
+[PROGRESS] 72,000/128,623 55.98% bad=9 repaired=9 failed=0 speed=177.5 chunks/s ETA=5.3 min
+[PROGRESS] 72,250/128,623 56.17% bad=9 repaired=9 failed=0 speed=178.1 chunks/s ETA=5.3 min
+[PROGRESS] 72,500/128,623 56.37% bad=9 repaired=9 failed=0 speed=178.7 chunks/s ETA=5.2 min
+[PROGRESS] 72,750/128,623 56.56% bad=9 repaired=9 failed=0 speed=179.3 chunks/s ETA=5.2 min
+[PROGRESS] 73,000/128,623 56.76% bad=9 repaired=9 failed=0 speed=179.9 chunks/s ETA=5.2 min
+[PROGRESS] 73,250/128,623 56.95% bad=9 repaired=9 failed=0 speed=180.5 chunks/s ETA=5.1 min
+[PROGRESS] 73,500/128,623 57.14% bad=9 repaired=9 failed=0 speed=181.1 chunks/s ETA=5.1 min
+[PROGRESS] 73,750/128,623 57.34% bad=9 repaired=9 failed=0 speed=181.7 chunks/s ETA=5.0 min
+[PROGRESS] 74,000/128,623 57.53% bad=9 repaired=9 failed=0 speed=182.1 chunks/s ETA=5.0 min
+[PROGRESS] 74,250/128,623 57.73% bad=9 repaired=9 failed=0 speed=182.5 chunks/s ETA=5.0 min
+[PROGRESS] 74,500/128,623 57.92% bad=9 repaired=9 failed=0 speed=183.0 chunks/s ETA=4.9 min
+[PROGRESS] 74,750/128,623 58.12% bad=9 repaired=9 failed=0 speed=183.4 chunks/s ETA=4.9 min
+[PROGRESS] 75,000/128,623 58.31% bad=9 repaired=9 failed=0 speed=183.8 chunks/s ETA=4.9 min
+[PROGRESS] 75,250/128,623 58.50% bad=9 repaired=9 failed=0 speed=184.2 chunks/s ETA=4.8 min
+[PROGRESS] 75,500/128,623 58.70% bad=9 repaired=9 failed=0 speed=184.6 chunks/s ETA=4.8 min
+[PROGRESS] 75,750/128,623 58.89% bad=9 repaired=9 failed=0 speed=185.0 chunks/s ETA=4.8 min
+[PROGRESS] 76,000/128,623 59.09% bad=9 repaired=9 failed=0 speed=185.4 chunks/s ETA=4.7 min
+[PROGRESS] 76,250/128,623 59.28% bad=9 repaired=9 failed=0 speed=185.8 chunks/s ETA=4.7 min
+[PROGRESS] 76,500/128,623 59.48% bad=9 repaired=9 failed=0 speed=186.2 chunks/s ETA=4.7 min
+[PROGRESS] 76,750/128,623 59.67% bad=9 repaired=9 failed=0 speed=186.6 chunks/s ETA=4.6 min
+[PROGRESS] 77,000/128,623 59.86% bad=9 repaired=9 failed=0 speed=187.0 chunks/s ETA=4.6 min
+[PROGRESS] 77,250/128,623 60.06% bad=9 repaired=9 failed=0 speed=187.4 chunks/s ETA=4.6 min
+[PROGRESS] 77,500/128,623 60.25% bad=9 repaired=9 failed=0 speed=187.8 chunks/s ETA=4.5 min
+[PROGRESS] 77,750/128,623 60.45% bad=9 repaired=9 failed=0 speed=188.2 chunks/s ETA=4.5 min
+[PROGRESS] 78,000/128,623 60.64% bad=9 repaired=9 failed=0 speed=188.6 chunks/s ETA=4.5 min
+[PROGRESS] 78,250/128,623 60.84% bad=9 repaired=9 failed=0 speed=189.0 chunks/s ETA=4.4 min
+[PROGRESS] 78,500/128,623 61.03% bad=9 repaired=9 failed=0 speed=189.4 chunks/s ETA=4.4 min
+[PROGRESS] 78,750/128,623 61.23% bad=9 repaired=9 failed=0 speed=189.8 chunks/s ETA=4.4 min
+[PROGRESS] 79,000/128,623 61.42% bad=9 repaired=9 failed=0 speed=190.3 chunks/s ETA=4.3 min
+[PROGRESS] 79,250/128,623 61.61% bad=9 repaired=9 failed=0 speed=190.7 chunks/s ETA=4.3 min
+[PROGRESS] 79,500/128,623 61.81% bad=9 repaired=9 failed=0 speed=191.1 chunks/s ETA=4.3 min
+[PROGRESS] 79,750/128,623 62.00% bad=9 repaired=9 failed=0 speed=191.5 chunks/s ETA=4.3 min
+[PROGRESS] 80,000/128,623 62.20% bad=9 repaired=9 failed=0 speed=191.9 chunks/s ETA=4.2 min
+[PROGRESS] 80,250/128,623 62.39% bad=9 repaired=9 failed=0 speed=192.3 chunks/s ETA=4.2 min
+[PROGRESS] 80,500/128,623 62.59% bad=9 repaired=9 failed=0 speed=192.6 chunks/s ETA=4.2 min
+[PROGRESS] 80,750/128,623 62.78% bad=9 repaired=9 failed=0 speed=193.0 chunks/s ETA=4.1 min
+[PROGRESS] 81,000/128,623 62.97% bad=9 repaired=9 failed=0 speed=193.4 chunks/s ETA=4.1 min
+[PROGRESS] 81,250/128,623 63.17% bad=9 repaired=9 failed=0 speed=193.9 chunks/s ETA=4.1 min
+[PROGRESS] 81,500/128,623 63.36% bad=9 repaired=9 failed=0 speed=194.3 chunks/s ETA=4.0 min
+[PROGRESS] 81,750/128,623 63.56% bad=9 repaired=9 failed=0 speed=194.7 chunks/s ETA=4.0 min
+
+[VARIABLE] 10m_v_component_of_wind chunks=11,693
+[PROGRESS] 82,000/128,623 63.75% bad=9 repaired=9 failed=0 speed=195.2 chunks/s ETA=4.0 min
+[PROGRESS] 82,250/128,623 63.95% bad=9 repaired=9 failed=0 speed=195.8 chunks/s ETA=3.9 min
+[PROGRESS] 82,500/128,623 64.14% bad=9 repaired=9 failed=0 speed=196.3 chunks/s ETA=3.9 min
+[PROGRESS] 82,750/128,623 64.34% bad=9 repaired=9 failed=0 speed=196.9 chunks/s ETA=3.9 min
+[PROGRESS] 83,000/128,623 64.53% bad=9 repaired=9 failed=0 speed=197.5 chunks/s ETA=3.8 min
+[PROGRESS] 83,250/128,623 64.72% bad=9 repaired=9 failed=0 speed=198.1 chunks/s ETA=3.8 min
+[PROGRESS] 83,500/128,623 64.92% bad=9 repaired=9 failed=0 speed=198.7 chunks/s ETA=3.8 min
+[PROGRESS] 83,750/128,623 65.11% bad=9 repaired=9 failed=0 speed=199.3 chunks/s ETA=3.8 min
+[PROGRESS] 84,000/128,623 65.31% bad=9 repaired=9 failed=0 speed=199.8 chunks/s ETA=3.7 min
+[PROGRESS] 84,250/128,623 65.50% bad=9 repaired=9 failed=0 speed=200.4 chunks/s ETA=3.7 min
+[PROGRESS] 84,500/128,623 65.70% bad=9 repaired=9 failed=0 speed=201.0 chunks/s ETA=3.7 min
+[PROGRESS] 84,750/128,623 65.89% bad=9 repaired=9 failed=0 speed=201.6 chunks/s ETA=3.6 min
+[PROGRESS] 85,000/128,623 66.08% bad=9 repaired=9 failed=0 speed=202.2 chunks/s ETA=3.6 min
+[PROGRESS] 85,250/128,623 66.28% bad=9 repaired=9 failed=0 speed=202.7 chunks/s ETA=3.6 min
+[PROGRESS] 85,500/128,623 66.47% bad=9 repaired=9 failed=0 speed=203.3 chunks/s ETA=3.5 min
+[PROGRESS] 85,750/128,623 66.67% bad=9 repaired=9 failed=0 speed=203.7 chunks/s ETA=3.5 min
+[PROGRESS] 86,000/128,623 66.86% bad=9 repaired=9 failed=0 speed=204.1 chunks/s ETA=3.5 min
+[PROGRESS] 86,250/128,623 67.06% bad=9 repaired=9 failed=0 speed=204.5 chunks/s ETA=3.5 min
+[PROGRESS] 86,500/128,623 67.25% bad=9 repaired=9 failed=0 speed=204.9 chunks/s ETA=3.4 min
+[PROGRESS] 86,750/128,623 67.45% bad=9 repaired=9 failed=0 speed=205.3 chunks/s ETA=3.4 min
+[PROGRESS] 87,000/128,623 67.64% bad=9 repaired=9 failed=0 speed=205.6 chunks/s ETA=3.4 min
+[PROGRESS] 87,250/128,623 67.83% bad=9 repaired=9 failed=0 speed=205.9 chunks/s ETA=3.3 min
+[PROGRESS] 87,500/128,623 68.03% bad=9 repaired=9 failed=0 speed=206.3 chunks/s ETA=3.3 min
+[PROGRESS] 87,750/128,623 68.22% bad=9 repaired=9 failed=0 speed=206.7 chunks/s ETA=3.3 min
+[PROGRESS] 88,000/128,623 68.42% bad=9 repaired=9 failed=0 speed=207.0 chunks/s ETA=3.3 min
+[PROGRESS] 88,250/128,623 68.61% bad=9 repaired=9 failed=0 speed=207.3 chunks/s ETA=3.2 min
+[PROGRESS] 88,500/128,623 68.81% bad=9 repaired=9 failed=0 speed=207.7 chunks/s ETA=3.2 min
+[PROGRESS] 88,750/128,623 69.00% bad=9 repaired=9 failed=0 speed=208.0 chunks/s ETA=3.2 min
+[PROGRESS] 89,000/128,623 69.19% bad=9 repaired=9 failed=0 speed=208.4 chunks/s ETA=3.2 min
+[PROGRESS] 89,250/128,623 69.39% bad=9 repaired=9 failed=0 speed=208.8 chunks/s ETA=3.1 min
+[PROGRESS] 89,500/128,623 69.58% bad=9 repaired=9 failed=0 speed=209.2 chunks/s ETA=3.1 min
+[PROGRESS] 89,750/128,623 69.78% bad=9 repaired=9 failed=0 speed=209.6 chunks/s ETA=3.1 min
+[PROGRESS] 90,000/128,623 69.97% bad=9 repaired=9 failed=0 speed=210.0 chunks/s ETA=3.1 min
+[PROGRESS] 90,250/128,623 70.17% bad=9 repaired=9 failed=0 speed=210.4 chunks/s ETA=3.0 min
+[PROGRESS] 90,500/128,623 70.36% bad=9 repaired=9 failed=0 speed=210.8 chunks/s ETA=3.0 min
+[PROGRESS] 90,750/128,623 70.56% bad=9 repaired=9 failed=0 speed=211.2 chunks/s ETA=3.0 min
+[PROGRESS] 91,000/128,623 70.75% bad=9 repaired=9 failed=0 speed=211.6 chunks/s ETA=3.0 min
+[PROGRESS] 91,250/128,623 70.94% bad=9 repaired=9 failed=0 speed=212.0 chunks/s ETA=2.9 min
+[PROGRESS] 91,500/128,623 71.14% bad=9 repaired=9 failed=0 speed=212.4 chunks/s ETA=2.9 min
+[PROGRESS] 91,750/128,623 71.33% bad=9 repaired=9 failed=0 speed=212.8 chunks/s ETA=2.9 min
+[PROGRESS] 92,000/128,623 71.53% bad=9 repaired=9 failed=0 speed=213.3 chunks/s ETA=2.9 min
+[PROGRESS] 92,250/128,623 71.72% bad=9 repaired=9 failed=0 speed=213.7 chunks/s ETA=2.8 min
+[PROGRESS] 92,500/128,623 71.92% bad=9 repaired=9 failed=0 speed=214.1 chunks/s ETA=2.8 min
+[PROGRESS] 92,750/128,623 72.11% bad=9 repaired=9 failed=0 speed=214.5 chunks/s ETA=2.8 min
+[PROGRESS] 93,000/128,623 72.30% bad=9 repaired=9 failed=0 speed=214.9 chunks/s ETA=2.8 min
+[PROGRESS] 93,250/128,623 72.50% bad=9 repaired=9 failed=0 speed=215.3 chunks/s ETA=2.7 min
+[PROGRESS] 93,500/128,623 72.69% bad=9 repaired=9 failed=0 speed=215.7 chunks/s ETA=2.7 min
+
+[VARIABLE] mean_sea_level_pressure chunks=11,693
+[PROGRESS] 93,750/128,623 72.89% bad=9 repaired=9 failed=0 speed=216.2 chunks/s ETA=2.7 min
+[PROGRESS] 94,000/128,623 73.08% bad=9 repaired=9 failed=0 speed=216.8 chunks/s ETA=2.7 min
+[PROGRESS] 94,250/128,623 73.28% bad=9 repaired=9 failed=0 speed=217.4 chunks/s ETA=2.6 min
+[PROGRESS] 94,500/128,623 73.47% bad=9 repaired=9 failed=0 speed=217.9 chunks/s ETA=2.6 min
+[PROGRESS] 94,750/128,623 73.66% bad=9 repaired=9 failed=0 speed=218.5 chunks/s ETA=2.6 min
+[PROGRESS] 95,000/128,623 73.86% bad=9 repaired=9 failed=0 speed=219.0 chunks/s ETA=2.6 min
+[PROGRESS] 95,250/128,623 74.05% bad=9 repaired=9 failed=0 speed=219.6 chunks/s ETA=2.5 min
+[PROGRESS] 95,500/128,623 74.25% bad=9 repaired=9 failed=0 speed=220.2 chunks/s ETA=2.5 min
+[PROGRESS] 95,750/128,623 74.44% bad=9 repaired=9 failed=0 speed=220.7 chunks/s ETA=2.5 min
+[PROGRESS] 96,000/128,623 74.64% bad=9 repaired=9 failed=0 speed=221.3 chunks/s ETA=2.5 min
+[PROGRESS] 96,250/128,623 74.83% bad=9 repaired=9 failed=0 speed=221.9 chunks/s ETA=2.4 min
+[PROGRESS] 96,500/128,623 75.03% bad=9 repaired=9 failed=0 speed=222.4 chunks/s ETA=2.4 min
+[PROGRESS] 96,750/128,623 75.22% bad=9 repaired=9 failed=0 speed=223.0 chunks/s ETA=2.4 min
+[PROGRESS] 97,000/128,623 75.41% bad=9 repaired=9 failed=0 speed=223.6 chunks/s ETA=2.4 min
+[PROGRESS] 97,250/128,623 75.61% bad=9 repaired=9 failed=0 speed=224.1 chunks/s ETA=2.3 min
+[PROGRESS] 97,500/128,623 75.80% bad=9 repaired=9 failed=0 speed=224.4 chunks/s ETA=2.3 min
+[PROGRESS] 97,750/128,623 76.00% bad=9 repaired=9 failed=0 speed=224.8 chunks/s ETA=2.3 min
+[PROGRESS] 98,000/128,623 76.19% bad=9 repaired=9 failed=0 speed=225.2 chunks/s ETA=2.3 min
+[PROGRESS] 98,250/128,623 76.39% bad=9 repaired=9 failed=0 speed=225.5 chunks/s ETA=2.2 min
+[PROGRESS] 98,500/128,623 76.58% bad=9 repaired=9 failed=0 speed=225.9 chunks/s ETA=2.2 min
+[PROGRESS] 98,750/128,623 76.77% bad=9 repaired=9 failed=0 speed=226.3 chunks/s ETA=2.2 min
+[PROGRESS] 99,000/128,623 76.97% bad=9 repaired=9 failed=0 speed=226.7 chunks/s ETA=2.2 min
+[PROGRESS] 99,250/128,623 77.16% bad=9 repaired=9 failed=0 speed=227.1 chunks/s ETA=2.2 min
+[PROGRESS] 99,500/128,623 77.36% bad=9 repaired=9 failed=0 speed=227.5 chunks/s ETA=2.1 min
+[PROGRESS] 99,750/128,623 77.55% bad=9 repaired=9 failed=0 speed=227.9 chunks/s ETA=2.1 min
+[PROGRESS] 100,000/128,623 77.75% bad=9 repaired=9 failed=0 speed=228.3 chunks/s ETA=2.1 min
+[PROGRESS] 100,250/128,623 77.94% bad=9 repaired=9 failed=0 speed=228.6 chunks/s ETA=2.1 min
+[PROGRESS] 100,500/128,623 78.14% bad=9 repaired=9 failed=0 speed=229.0 chunks/s ETA=2.0 min
+[PROGRESS] 100,750/128,623 78.33% bad=9 repaired=9 failed=0 speed=229.4 chunks/s ETA=2.0 min
+[PROGRESS] 101,000/128,623 78.52% bad=9 repaired=9 failed=0 speed=229.9 chunks/s ETA=2.0 min
+[PROGRESS] 101,250/128,623 78.72% bad=9 repaired=9 failed=0 speed=230.3 chunks/s ETA=2.0 min
+[PROGRESS] 101,500/128,623 78.91% bad=9 repaired=9 failed=0 speed=230.7 chunks/s ETA=2.0 min
+[PROGRESS] 101,750/128,623 79.11% bad=9 repaired=9 failed=0 speed=231.1 chunks/s ETA=1.9 min
+[PROGRESS] 102,000/128,623 79.30% bad=9 repaired=9 failed=0 speed=231.5 chunks/s ETA=1.9 min
+[PROGRESS] 102,250/128,623 79.50% bad=9 repaired=9 failed=0 speed=231.9 chunks/s ETA=1.9 min
+[PROGRESS] 102,500/128,623 79.69% bad=9 repaired=9 failed=0 speed=232.3 chunks/s ETA=1.9 min
+[PROGRESS] 102,750/128,623 79.88% bad=9 repaired=9 failed=0 speed=232.7 chunks/s ETA=1.9 min
+[PROGRESS] 103,000/128,623 80.08% bad=9 repaired=9 failed=0 speed=233.1 chunks/s ETA=1.8 min
+[PROGRESS] 103,250/128,623 80.27% bad=9 repaired=9 failed=0 speed=233.5 chunks/s ETA=1.8 min
+[PROGRESS] 103,500/128,623 80.47% bad=9 repaired=9 failed=0 speed=233.9 chunks/s ETA=1.8 min
+[PROGRESS] 103,750/128,623 80.66% bad=9 repaired=9 failed=0 speed=234.4 chunks/s ETA=1.8 min
+[PROGRESS] 104,000/128,623 80.86% bad=9 repaired=9 failed=0 speed=234.8 chunks/s ETA=1.7 min
+[PROGRESS] 104,250/128,623 81.05% bad=9 repaired=9 failed=0 speed=235.2 chunks/s ETA=1.7 min
+[PROGRESS] 104,500/128,623 81.25% bad=9 repaired=9 failed=0 speed=235.6 chunks/s ETA=1.7 min
+[PROGRESS] 104,750/128,623 81.44% bad=9 repaired=9 failed=0 speed=235.9 chunks/s ETA=1.7 min
+[PROGRESS] 105,000/128,623 81.63% bad=9 repaired=9 failed=0 speed=236.3 chunks/s ETA=1.7 min
+
+[VARIABLE] surface_pressure chunks=11,693
+[PROGRESS] 105,250/128,623 81.83% bad=9 repaired=9 failed=0 speed=236.7 chunks/s ETA=1.6 min
+[PROGRESS] 105,500/128,623 82.02% bad=9 repaired=9 failed=0 speed=237.3 chunks/s ETA=1.6 min
+[PROGRESS] 105,750/128,623 82.22% bad=9 repaired=9 failed=0 speed=237.8 chunks/s ETA=1.6 min
+[PROGRESS] 106,000/128,623 82.41% bad=9 repaired=9 failed=0 speed=238.4 chunks/s ETA=1.6 min
+[PROGRESS] 106,250/128,623 82.61% bad=9 repaired=9 failed=0 speed=238.9 chunks/s ETA=1.6 min
+[PROGRESS] 106,500/128,623 82.80% bad=9 repaired=9 failed=0 speed=239.5 chunks/s ETA=1.5 min
+[PROGRESS] 106,750/128,623 82.99% bad=9 repaired=9 failed=0 speed=240.0 chunks/s ETA=1.5 min
+[PROGRESS] 107,000/128,623 83.19% bad=9 repaired=9 failed=0 speed=240.6 chunks/s ETA=1.5 min
+[PROGRESS] 107,250/128,623 83.38% bad=9 repaired=9 failed=0 speed=241.1 chunks/s ETA=1.5 min
+[PROGRESS] 107,500/128,623 83.58% bad=9 repaired=9 failed=0 speed=241.7 chunks/s ETA=1.5 min
+[PROGRESS] 107,750/128,623 83.77% bad=9 repaired=9 failed=0 speed=242.2 chunks/s ETA=1.4 min
+[PROGRESS] 108,000/128,623 83.97% bad=9 repaired=9 failed=0 speed=242.8 chunks/s ETA=1.4 min
+[PROGRESS] 108,250/128,623 84.16% bad=9 repaired=9 failed=0 speed=243.3 chunks/s ETA=1.4 min
+[PROGRESS] 108,500/128,623 84.36% bad=9 repaired=9 failed=0 speed=243.9 chunks/s ETA=1.4 min
+[PROGRESS] 108,750/128,623 84.55% bad=9 repaired=9 failed=0 speed=244.4 chunks/s ETA=1.4 min
+[PROGRESS] 109,000/128,623 84.74% bad=9 repaired=9 failed=0 speed=244.9 chunks/s ETA=1.3 min
+[PROGRESS] 109,250/128,623 84.94% bad=9 repaired=9 failed=0 speed=245.3 chunks/s ETA=1.3 min
+[PROGRESS] 109,500/128,623 85.13% bad=9 repaired=9 failed=0 speed=245.6 chunks/s ETA=1.3 min
+[PROGRESS] 109,750/128,623 85.33% bad=9 repaired=9 failed=0 speed=246.0 chunks/s ETA=1.3 min
+[PROGRESS] 110,000/128,623 85.52% bad=9 repaired=9 failed=0 speed=246.4 chunks/s ETA=1.3 min
+[PROGRESS] 110,250/128,623 85.72% bad=9 repaired=9 failed=0 speed=246.8 chunks/s ETA=1.2 min
+[PROGRESS] 110,500/128,623 85.91% bad=9 repaired=9 failed=0 speed=247.2 chunks/s ETA=1.2 min
+[PROGRESS] 110,750/128,623 86.10% bad=9 repaired=9 failed=0 speed=247.5 chunks/s ETA=1.2 min
+[PROGRESS] 111,000/128,623 86.30% bad=9 repaired=9 failed=0 speed=247.9 chunks/s ETA=1.2 min
+[PROGRESS] 111,250/128,623 86.49% bad=9 repaired=9 failed=0 speed=248.3 chunks/s ETA=1.2 min
+[PROGRESS] 111,500/128,623 86.69% bad=9 repaired=9 failed=0 speed=248.7 chunks/s ETA=1.1 min
+[PROGRESS] 111,750/128,623 86.88% bad=9 repaired=9 failed=0 speed=248.9 chunks/s ETA=1.1 min
+[PROGRESS] 112,000/128,623 87.08% bad=9 repaired=9 failed=0 speed=249.2 chunks/s ETA=1.1 min
+[PROGRESS] 112,250/128,623 87.27% bad=9 repaired=9 failed=0 speed=249.6 chunks/s ETA=1.1 min
+[PROGRESS] 112,500/128,623 87.46% bad=9 repaired=9 failed=0 speed=249.9 chunks/s ETA=1.1 min
+[PROGRESS] 112,750/128,623 87.66% bad=9 repaired=9 failed=0 speed=250.3 chunks/s ETA=1.1 min
+[PROGRESS] 113,000/128,623 87.85% bad=9 repaired=9 failed=0 speed=250.7 chunks/s ETA=1.0 min
+[PROGRESS] 113,250/128,623 88.05% bad=9 repaired=9 failed=0 speed=251.1 chunks/s ETA=1.0 min
+[PROGRESS] 113,500/128,623 88.24% bad=9 repaired=9 failed=0 speed=251.5 chunks/s ETA=1.0 min
+[PROGRESS] 113,750/128,623 88.44% bad=9 repaired=9 failed=0 speed=251.8 chunks/s ETA=1.0 min
+[PROGRESS] 114,000/128,623 88.63% bad=9 repaired=9 failed=0 speed=252.2 chunks/s ETA=1.0 min
+[PROGRESS] 114,250/128,623 88.83% bad=9 repaired=9 failed=0 speed=252.6 chunks/s ETA=0.9 min
+[PROGRESS] 114,500/128,623 89.02% bad=9 repaired=9 failed=0 speed=252.9 chunks/s ETA=0.9 min
+[PROGRESS] 114,750/128,623 89.21% bad=9 repaired=9 failed=0 speed=253.3 chunks/s ETA=0.9 min
+[PROGRESS] 115,000/128,623 89.41% bad=9 repaired=9 failed=0 speed=253.7 chunks/s ETA=0.9 min
+[PROGRESS] 115,250/128,623 89.60% bad=9 repaired=9 failed=0 speed=254.1 chunks/s ETA=0.9 min
+[PROGRESS] 115,500/128,623 89.80% bad=9 repaired=9 failed=0 speed=254.4 chunks/s ETA=0.9 min
+[PROGRESS] 115,750/128,623 89.99% bad=9 repaired=9 failed=0 speed=254.8 chunks/s ETA=0.8 min
+[PROGRESS] 116,000/128,623 90.19% bad=9 repaired=9 failed=0 speed=255.1 chunks/s ETA=0.8 min
+[PROGRESS] 116,250/128,623 90.38% bad=9 repaired=9 failed=0 speed=255.5 chunks/s ETA=0.8 min
+[PROGRESS] 116,500/128,623 90.57% bad=9 repaired=9 failed=0 speed=255.9 chunks/s ETA=0.8 min
+[PROGRESS] 116,750/128,623 90.77% bad=9 repaired=9 failed=0 speed=256.2 chunks/s ETA=0.8 min
+
+[VARIABLE] total_precipitation_6hr chunks=11,693
+[PROGRESS] 117,000/128,623 90.96% bad=9 repaired=9 failed=0 speed=256.6 chunks/s ETA=0.8 min
+[PROGRESS] 117,250/128,623 91.16% bad=9 repaired=9 failed=0 speed=257.1 chunks/s ETA=0.7 min
+[PROGRESS] 117,500/128,623 91.35% bad=9 repaired=9 failed=0 speed=257.6 chunks/s ETA=0.7 min
+[PROGRESS] 117,750/128,623 91.55% bad=9 repaired=9 failed=0 speed=258.2 chunks/s ETA=0.7 min
+[PROGRESS] 118,000/128,623 91.74% bad=9 repaired=9 failed=0 speed=258.7 chunks/s ETA=0.7 min
+[PROGRESS] 118,250/128,623 91.94% bad=9 repaired=9 failed=0 speed=259.2 chunks/s ETA=0.7 min
+[PROGRESS] 118,500/128,623 92.13% bad=9 repaired=9 failed=0 speed=259.8 chunks/s ETA=0.6 min
+[PROGRESS] 118,750/128,623 92.32% bad=9 repaired=9 failed=0 speed=260.3 chunks/s ETA=0.6 min
+[PROGRESS] 119,000/128,623 92.52% bad=9 repaired=9 failed=0 speed=260.8 chunks/s ETA=0.6 min
+[PROGRESS] 119,250/128,623 92.71% bad=9 repaired=9 failed=0 speed=261.4 chunks/s ETA=0.6 min
+[PROGRESS] 119,500/128,623 92.91% bad=9 repaired=9 failed=0 speed=261.9 chunks/s ETA=0.6 min
+[PROGRESS] 119,750/128,623 93.10% bad=9 repaired=9 failed=0 speed=262.5 chunks/s ETA=0.6 min
+[PROGRESS] 120,000/128,623 93.30% bad=9 repaired=9 failed=0 speed=263.0 chunks/s ETA=0.5 min
+[PROGRESS] 120,250/128,623 93.49% bad=9 repaired=9 failed=0 speed=263.5 chunks/s ETA=0.5 min
+[PROGRESS] 120,500/128,623 93.68% bad=9 repaired=9 failed=0 speed=264.1 chunks/s ETA=0.5 min
+[PROGRESS] 120,750/128,623 93.88% bad=9 repaired=9 failed=0 speed=264.4 chunks/s ETA=0.5 min
+[PROGRESS] 121,000/128,623 94.07% bad=9 repaired=9 failed=0 speed=264.8 chunks/s ETA=0.5 min
+[PROGRESS] 121,250/128,623 94.27% bad=9 repaired=9 failed=0 speed=265.0 chunks/s ETA=0.5 min
+[PROGRESS] 121,500/128,623 94.46% bad=9 repaired=9 failed=0 speed=265.3 chunks/s ETA=0.4 min
+[PROGRESS] 121,750/128,623 94.66% bad=9 repaired=9 failed=0 speed=265.6 chunks/s ETA=0.4 min
+[PROGRESS] 122,000/128,623 94.85% bad=9 repaired=9 failed=0 speed=265.9 chunks/s ETA=0.4 min
+[PROGRESS] 122,250/128,623 95.05% bad=9 repaired=9 failed=0 speed=266.3 chunks/s ETA=0.4 min
+[PROGRESS] 122,500/128,623 95.24% bad=9 repaired=9 failed=0 speed=266.6 chunks/s ETA=0.4 min
+[PROGRESS] 122,750/128,623 95.43% bad=9 repaired=9 failed=0 speed=266.9 chunks/s ETA=0.4 min
+[PROGRESS] 123,000/128,623 95.63% bad=9 repaired=9 failed=0 speed=267.2 chunks/s ETA=0.4 min
+[PROGRESS] 123,250/128,623 95.82% bad=9 repaired=9 failed=0 speed=267.5 chunks/s ETA=0.3 min
+[PROGRESS] 123,500/128,623 96.02% bad=9 repaired=9 failed=0 speed=267.8 chunks/s ETA=0.3 min
+[PROGRESS] 123,750/128,623 96.21% bad=9 repaired=9 failed=0 speed=268.1 chunks/s ETA=0.3 min
+[PROGRESS] 124,000/128,623 96.41% bad=9 repaired=9 failed=0 speed=268.5 chunks/s ETA=0.3 min
+[PROGRESS] 124,250/128,623 96.60% bad=9 repaired=9 failed=0 speed=268.8 chunks/s ETA=0.3 min
+[PROGRESS] 124,500/128,623 96.79% bad=9 repaired=9 failed=0 speed=269.1 chunks/s ETA=0.3 min
+[PROGRESS] 124,750/128,623 96.99% bad=9 repaired=9 failed=0 speed=269.4 chunks/s ETA=0.2 min
+[PROGRESS] 125,000/128,623 97.18% bad=9 repaired=9 failed=0 speed=269.7 chunks/s ETA=0.2 min
+[PROGRESS] 125,250/128,623 97.38% bad=9 repaired=9 failed=0 speed=270.0 chunks/s ETA=0.2 min
+[PROGRESS] 125,500/128,623 97.57% bad=9 repaired=9 failed=0 speed=270.4 chunks/s ETA=0.2 min
+[PROGRESS] 125,750/128,623 97.77% bad=9 repaired=9 failed=0 speed=270.7 chunks/s ETA=0.2 min
+[PROGRESS] 126,000/128,623 97.96% bad=9 repaired=9 failed=0 speed=271.0 chunks/s ETA=0.2 min
+[PROGRESS] 126,250/128,623 98.16% bad=9 repaired=9 failed=0 speed=271.3 chunks/s ETA=0.1 min
+[PROGRESS] 126,500/128,623 98.35% bad=9 repaired=9 failed=0 speed=271.6 chunks/s ETA=0.1 min
+[PROGRESS] 126,750/128,623 98.54% bad=9 repaired=9 failed=0 speed=271.9 chunks/s ETA=0.1 min
+[PROGRESS] 127,000/128,623 98.74% bad=9 repaired=9 failed=0 speed=272.2 chunks/s ETA=0.1 min
+[PROGRESS] 127,250/128,623 98.93% bad=9 repaired=9 failed=0 speed=272.6 chunks/s ETA=0.1 min
+[PROGRESS] 127,500/128,623 99.13% bad=9 repaired=9 failed=0 speed=272.9 chunks/s ETA=0.1 min
+[PROGRESS] 127,750/128,623 99.32% bad=9 repaired=9 failed=0 speed=273.2 chunks/s ETA=0.1 min
+[PROGRESS] 128,000/128,623 99.52% bad=9 repaired=9 failed=0 speed=273.5 chunks/s ETA=0.0 min
+[PROGRESS] 128,250/128,623 99.71% bad=9 repaired=9 failed=0 speed=273.8 chunks/s ETA=0.0 min
+[PROGRESS] 128,500/128,623 99.90% bad=9 repaired=9 failed=0 speed=274.1 chunks/s ETA=0.0 min
+
+============================================================================
+INTEGRITY RESULT
+============================================================================
+checked  : 128,623
+bad      : 9
+repaired : 9
+failed   : 0
+elapsed  : 7.8 min
+STATUS   : OK

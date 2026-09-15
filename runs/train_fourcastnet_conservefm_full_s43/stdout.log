@@ -1,0 +1,4 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_fourcastnet_conservefm_full_s43 method=conservefm_full backbone=fourcastnet
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/fourcastnet.zarr
+[STAGE] pretrain epochs=2 start_epoch=0

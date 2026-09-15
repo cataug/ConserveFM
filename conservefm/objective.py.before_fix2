@@ -1,0 +1,197 @@
+from __future__ import annotations
+
+from typing import Dict
+
+import torch
+import torch.nn.functional as F
+
+from .channels import ChannelLayout
+from .data import Normalizer
+from .model import RepairOutput
+from .physics import compute_physics_losses
+from .registry import CORRUPTION_TYPES
+from .registry import MethodConfig
+
+
+
+def router_supervision_loss(output, cfg, corruption_type):
+    """
+    Supervise adaptive routing from synthetic corruption labels.
+
+    CORRUPTION_TYPES:
+      0 moisture
+      1 hydrostatic
+      2 advection
+      3 spectral
+      4 range_extreme
+
+    range_extreme has no corresponding physics constraint and is
+    therefore ignored for router supervision.
+    """
+    if (
+        corruption_type is None
+        or output.router_weights is None
+        or output.router_weights.numel() == 0
+    ):
+        return output.state_norm.new_zeros(())
+
+    target = torch.full_like(
+        corruption_type.long(),
+        -1,
+    )
+
+    for router_idx, name in enumerate(cfg.enabled_constraints):
+        if name not in CORRUPTION_TYPES:
+            continue
+
+        corruption_idx = CORRUPTION_TYPES.index(name)
+
+        target[
+            corruption_type.long() == corruption_idx
+        ] = router_idx
+
+    valid = target >= 0
+
+    if not valid.any():
+        return output.state_norm.new_zeros(())
+
+    probs = (
+        output.router_weights[valid]
+        .float()
+        .clamp_min(1e-12)
+    )
+
+    return F.nll_loss(
+        probs.log(),
+        target[valid],
+    )
+
+
+def balanced_physics_loss(raw_loss):
+    """
+    Scale-free relative physics penalty.
+
+    Raw constraints differ by many orders of magnitude.
+    log1p compresses those differences while retaining a
+    strong gradient for relative improvement.
+
+    Raw physics metrics themselves remain unchanged.
+    """
+    return torch.log1p(
+        raw_loss.float().clamp_min(0.0) / 1e-8
+    ) / 20.0
+
+
+def compute_objective(
+    output: RepairOutput,
+    target_norm: torch.Tensor,
+    previous_phys: torch.Tensor,
+    lead_hours: torch.Tensor,
+    cfg: MethodConfig,
+    layout: ChannelLayout,
+    normalizer: Normalizer,
+    corruption_mask: torch.Tensor | None = None,
+    corruption_type: torch.Tensor | None = None,
+    latitude_deg: torch.Tensor | None = None,
+):
+    losses: Dict[str, torch.Tensor] = {}
+    losses["repair"] = F.mse_loss(output.state_norm, target_norm)
+
+    if output.localization_logits is not None and corruption_mask is not None:
+        losses["localization"] = F.binary_cross_entropy_with_logits(
+            output.localization_logits, corruption_mask
+        )
+    else:
+        losses["localization"] = output.state_norm.new_zeros(())
+
+    if output.type_logits is not None and corruption_type is not None:
+        losses["type"] = F.cross_entropy(
+            output.type_logits,
+            corruption_type,
+        )
+    else:
+        losses["type"] = output.state_norm.new_zeros(())
+
+    losses["router"] = router_supervision_loss(
+        output,
+        cfg,
+        corruption_type,
+    )
+
+    if cfg.minimal_change:
+        losses["minimal"] = output.delta_norm.abs().mean()
+    else:
+        losses["minimal"] = output.state_norm.new_zeros(())
+
+    physics_losses: Dict[str, torch.Tensor] = {}
+    physics_total = output.state_norm.float().new_zeros(())
+
+    if cfg.use_physics_losses and cfg.enabled_constraints:
+        # Physics is evaluated explicitly in FP32.
+        # Surface pressure is around 1e5 Pa and can overflow FP16.
+        if output.state_norm.device.type == "cuda":
+            physics_context = torch.autocast(
+                device_type="cuda",
+                enabled=False,
+            )
+        else:
+            from contextlib import nullcontext
+            physics_context = nullcontext()
+
+        with physics_context:
+            pred_phys = normalizer.denormalize_torch(
+                output.state_norm.float()
+            )
+
+            previous_phys_fp32 = previous_phys.float()
+            lead_hours_fp32 = lead_hours.float()
+
+            latitude_fp32 = (
+                latitude_deg.float()
+                if latitude_deg is not None
+                else None
+            )
+
+            physics_losses = compute_physics_losses(
+                pred_phys,
+                previous_phys_fp32,
+                layout,
+                lead_hours_fp32,
+                cfg.enabled_constraints,
+                latitude_deg=latitude_fp32,
+            )
+
+            for j, name in enumerate(cfg.enabled_constraints):
+                # Router must NOT be able to lower the objective
+                # simply by assigning zero weight to a difficult
+                # constraint. Its own learning signal is the
+                # supervised router loss above.
+                weight = (
+                    output.router_weights[:, j]
+                    .float()
+                    .mean()
+                    .detach()
+                )
+
+                normalized_physics = balanced_physics_loss(
+                    physics_losses[name]
+                )
+
+                physics_total = (
+                    physics_total
+                    + weight * normalized_physics
+                )
+
+    losses.update({f"physics_{k}": v for k, v in physics_losses.items()})
+    losses["physics"] = physics_total
+
+    total = (
+        cfg.lambda_repair * losses["repair"]
+        + cfg.lambda_physics * losses["physics"]
+        + cfg.lambda_localization * losses["localization"]
+        + cfg.lambda_type * losses["type"]
+        + cfg.lambda_router * losses["router"]
+        + cfg.lambda_minimal * losses["minimal"]
+    )
+    losses["total"] = total
+    return total, losses

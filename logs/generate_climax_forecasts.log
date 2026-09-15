@@ -1,0 +1,758 @@
+==============================================================================
+ClimaX forecast-store generator
+==============================================================================
+[CHECKPOINT] models/climax_forecaster_full/checkpoint_best.pt
+[MODEL] checkpoint load: <All keys matched successfully>
+[STATS] inverse normalization mean=mean std=std channels=71
+[DATA] manifest rows=192,774
+[DATA] unique forecast jobs=192,774
+[DATA] by lead: {6: 64272, 24: 64263, 72: 64239}
+[DATA] ERA5 timestamps=93,544
+[RESUME] already done=0
+[RESUME] remaining=192,774
+[LOADER] batch=12 workers=12 prefetch=2
+[FORECAST] 12/192,774 (0.01%) rate=2.61 samples/s ETA=20.52h store=0.07GiB GPU_peak=27.85GiB
+[FORECAST] 300/192,774 (0.16%) rate=16.18 samples/s ETA=3.30h store=1.76GiB GPU_peak=33.90GiB
+[FORECAST] 600/192,774 (0.31%) rate=19.31 samples/s ETA=2.77h store=3.53GiB GPU_peak=33.90GiB
+[FORECAST] 900/192,774 (0.47%) rate=20.63 samples/s ETA=2.58h store=5.29GiB GPU_peak=33.90GiB
+[FORECAST] 1,200/192,774 (0.62%) rate=21.16 samples/s ETA=2.52h store=7.06GiB GPU_peak=33.90GiB
+[FORECAST] 1,500/192,774 (0.78%) rate=20.11 samples/s ETA=2.64h store=8.82GiB GPU_peak=33.90GiB
+[FORECAST] 1,800/192,774 (0.93%) rate=19.14 samples/s ETA=2.77h store=10.58GiB GPU_peak=33.90GiB
+[FORECAST] 2,100/192,774 (1.09%) rate=17.93 samples/s ETA=2.95h store=12.34GiB GPU_peak=33.90GiB
+[FORECAST] 2,400/192,774 (1.24%) rate=16.70 samples/s ETA=3.17h store=14.11GiB GPU_peak=33.90GiB
+[FORECAST] 2,700/192,774 (1.40%) rate=16.09 samples/s ETA=3.28h store=15.87GiB GPU_peak=33.90GiB
+[FORECAST] 3,000/192,774 (1.56%) rate=15.66 samples/s ETA=3.37h store=17.63GiB GPU_peak=33.90GiB
+[FORECAST] 3,300/192,774 (1.71%) rate=15.44 samples/s ETA=3.41h store=19.40GiB GPU_peak=33.90GiB
+[FORECAST] 3,600/192,774 (1.87%) rate=15.92 samples/s ETA=3.30h store=21.16GiB GPU_peak=33.90GiB
+[FORECAST] 3,900/192,774 (2.02%) rate=16.14 samples/s ETA=3.25h store=22.92GiB GPU_peak=33.90GiB
+[FORECAST] 4,200/192,774 (2.18%) rate=15.84 samples/s ETA=3.31h store=24.69GiB GPU_peak=33.90GiB
+[FORECAST] 4,500/192,774 (2.33%) rate=15.33 samples/s ETA=3.41h store=26.45GiB GPU_peak=33.90GiB
+[FORECAST] 4,800/192,774 (2.49%) rate=15.24 samples/s ETA=3.43h store=28.21GiB GPU_peak=33.90GiB
+[FORECAST] 5,100/192,774 (2.65%) rate=15.30 samples/s ETA=3.41h store=29.97GiB GPU_peak=33.90GiB
+[FORECAST] 5,400/192,774 (2.80%) rate=15.37 samples/s ETA=3.39h store=31.74GiB GPU_peak=33.90GiB
+[FORECAST] 5,700/192,774 (2.96%) rate=15.18 samples/s ETA=3.42h store=33.50GiB GPU_peak=33.90GiB
+[FORECAST] 6,000/192,774 (3.11%) rate=15.08 samples/s ETA=3.44h store=35.27GiB GPU_peak=33.90GiB
+[FORECAST] 6,300/192,774 (3.27%) rate=15.31 samples/s ETA=3.38h store=37.03GiB GPU_peak=33.90GiB
+[FORECAST] 6,600/192,774 (3.42%) rate=15.34 samples/s ETA=3.37h store=38.79GiB GPU_peak=33.90GiB
+[FORECAST] 6,900/192,774 (3.58%) rate=15.33 samples/s ETA=3.37h store=40.56GiB GPU_peak=33.90GiB
+[FORECAST] 7,200/192,774 (3.73%) rate=15.12 samples/s ETA=3.41h store=42.32GiB GPU_peak=33.90GiB
+[FORECAST] 7,500/192,774 (3.89%) rate=15.16 samples/s ETA=3.39h store=44.08GiB GPU_peak=33.90GiB
+[FORECAST] 7,800/192,774 (4.05%) rate=15.30 samples/s ETA=3.36h store=45.85GiB GPU_peak=33.90GiB
+[FORECAST] 8,100/192,774 (4.20%) rate=15.30 samples/s ETA=3.35h store=47.61GiB GPU_peak=33.90GiB
+[FORECAST] 8,400/192,774 (4.36%) rate=15.29 samples/s ETA=3.35h store=49.38GiB GPU_peak=33.90GiB
+[FORECAST] 8,700/192,774 (4.51%) rate=15.37 samples/s ETA=3.33h store=51.14GiB GPU_peak=33.90GiB
+[FORECAST] 9,000/192,774 (4.67%) rate=15.19 samples/s ETA=3.36h store=52.90GiB GPU_peak=33.90GiB
+[FORECAST] 9,300/192,774 (4.82%) rate=14.95 samples/s ETA=3.41h store=54.66GiB GPU_peak=33.90GiB
+[FORECAST] 9,600/192,774 (4.98%) rate=14.83 samples/s ETA=3.43h store=56.43GiB GPU_peak=33.90GiB
+[FORECAST] 9,900/192,774 (5.14%) rate=14.71 samples/s ETA=3.45h store=58.19GiB GPU_peak=33.90GiB
+[FORECAST] 10,200/192,774 (5.29%) rate=14.73 samples/s ETA=3.44h store=59.96GiB GPU_peak=33.90GiB
+[FORECAST] 10,500/192,774 (5.45%) rate=14.82 samples/s ETA=3.42h store=61.72GiB GPU_peak=33.90GiB
+[FORECAST] 10,800/192,774 (5.60%) rate=14.90 samples/s ETA=3.39h store=63.48GiB GPU_peak=33.90GiB
+[FORECAST] 11,100/192,774 (5.76%) rate=14.98 samples/s ETA=3.37h store=65.25GiB GPU_peak=33.90GiB
+[FORECAST] 11,400/192,774 (5.91%) rate=14.99 samples/s ETA=3.36h store=67.01GiB GPU_peak=33.90GiB
+[FORECAST] 11,700/192,774 (6.07%) rate=15.10 samples/s ETA=3.33h store=68.77GiB GPU_peak=33.90GiB
+[FORECAST] 12,000/192,774 (6.22%) rate=15.18 samples/s ETA=3.31h store=70.54GiB GPU_peak=33.90GiB
+[FORECAST] 12,300/192,774 (6.38%) rate=15.29 samples/s ETA=3.28h store=72.30GiB GPU_peak=33.90GiB
+[FORECAST] 12,600/192,774 (6.54%) rate=15.18 samples/s ETA=3.30h store=74.06GiB GPU_peak=33.90GiB
+[FORECAST] 12,900/192,774 (6.69%) rate=15.12 samples/s ETA=3.30h store=75.83GiB GPU_peak=33.90GiB
+[FORECAST] 13,200/192,774 (6.85%) rate=15.07 samples/s ETA=3.31h store=77.59GiB GPU_peak=33.90GiB
+[FORECAST] 13,500/192,774 (7.00%) rate=15.19 samples/s ETA=3.28h store=79.36GiB GPU_peak=33.90GiB
+[FORECAST] 13,800/192,774 (7.16%) rate=15.28 samples/s ETA=3.25h store=81.12GiB GPU_peak=33.90GiB
+[FORECAST] 14,100/192,774 (7.31%) rate=15.36 samples/s ETA=3.23h store=82.88GiB GPU_peak=33.90GiB
+[FORECAST] 14,400/192,774 (7.47%) rate=15.41 samples/s ETA=3.22h store=84.65GiB GPU_peak=33.90GiB
+[FORECAST] 14,700/192,774 (7.63%) rate=15.49 samples/s ETA=3.19h store=86.41GiB GPU_peak=33.90GiB
+[FORECAST] 15,000/192,774 (7.78%) rate=15.52 samples/s ETA=3.18h store=88.17GiB GPU_peak=33.90GiB
+[FORECAST] 15,300/192,774 (7.94%) rate=15.53 samples/s ETA=3.17h store=89.94GiB GPU_peak=33.90GiB
+[FORECAST] 15,600/192,774 (8.09%) rate=15.39 samples/s ETA=3.20h store=91.70GiB GPU_peak=33.90GiB
+[FORECAST] 15,900/192,774 (8.25%) rate=15.36 samples/s ETA=3.20h store=93.46GiB GPU_peak=33.90GiB
+[FORECAST] 16,200/192,774 (8.40%) rate=15.43 samples/s ETA=3.18h store=95.23GiB GPU_peak=33.90GiB
+[FORECAST] 16,500/192,774 (8.56%) rate=15.41 samples/s ETA=3.18h store=96.99GiB GPU_peak=33.90GiB
+[FORECAST] 16,800/192,774 (8.71%) rate=15.34 samples/s ETA=3.19h store=98.75GiB GPU_peak=33.90GiB
+[FORECAST] 17,100/192,774 (8.87%) rate=15.30 samples/s ETA=3.19h store=100.52GiB GPU_peak=33.90GiB
+[FORECAST] 17,400/192,774 (9.03%) rate=15.36 samples/s ETA=3.17h store=102.28GiB GPU_peak=33.90GiB
+[FORECAST] 17,700/192,774 (9.18%) rate=15.30 samples/s ETA=3.18h store=104.04GiB GPU_peak=33.90GiB
+[FORECAST] 18,000/192,774 (9.34%) rate=15.32 samples/s ETA=3.17h store=105.81GiB GPU_peak=33.90GiB
+[FORECAST] 18,300/192,774 (9.49%) rate=15.36 samples/s ETA=3.16h store=107.57GiB GPU_peak=33.90GiB
+[FORECAST] 18,600/192,774 (9.65%) rate=15.43 samples/s ETA=3.14h store=109.34GiB GPU_peak=33.90GiB
+[FORECAST] 18,900/192,774 (9.80%) rate=15.46 samples/s ETA=3.12h store=111.10GiB GPU_peak=33.90GiB
+[FORECAST] 19,200/192,774 (9.96%) rate=15.49 samples/s ETA=3.11h store=112.86GiB GPU_peak=33.90GiB
+[FORECAST] 19,500/192,774 (10.12%) rate=15.54 samples/s ETA=3.10h store=114.63GiB GPU_peak=33.90GiB
+[FORECAST] 19,800/192,774 (10.27%) rate=15.58 samples/s ETA=3.08h store=116.39GiB GPU_peak=33.90GiB
+[FORECAST] 20,100/192,774 (10.43%) rate=15.57 samples/s ETA=3.08h store=118.16GiB GPU_peak=33.90GiB
+[FORECAST] 20,400/192,774 (10.58%) rate=15.61 samples/s ETA=3.07h store=119.92GiB GPU_peak=33.90GiB
+[FORECAST] 20,700/192,774 (10.74%) rate=15.66 samples/s ETA=3.05h store=121.69GiB GPU_peak=33.90GiB
+[FORECAST] 21,000/192,774 (10.89%) rate=15.70 samples/s ETA=3.04h store=123.45GiB GPU_peak=33.90GiB
+[FORECAST] 21,300/192,774 (11.05%) rate=15.70 samples/s ETA=3.03h store=125.21GiB GPU_peak=33.90GiB
+[FORECAST] 21,600/192,774 (11.20%) rate=15.75 samples/s ETA=3.02h store=126.98GiB GPU_peak=33.90GiB
+[FORECAST] 21,900/192,774 (11.36%) rate=15.79 samples/s ETA=3.01h store=128.74GiB GPU_peak=33.90GiB
+[FORECAST] 22,200/192,774 (11.52%) rate=15.84 samples/s ETA=2.99h store=130.50GiB GPU_peak=33.90GiB
+[FORECAST] 22,500/192,774 (11.67%) rate=15.83 samples/s ETA=2.99h store=132.27GiB GPU_peak=33.90GiB
+[FORECAST] 22,800/192,774 (11.83%) rate=15.85 samples/s ETA=2.98h store=134.03GiB GPU_peak=33.90GiB
+[FORECAST] 23,100/192,774 (11.98%) rate=15.83 samples/s ETA=2.98h store=135.80GiB GPU_peak=33.90GiB
+[FORECAST] 23,400/192,774 (12.14%) rate=15.85 samples/s ETA=2.97h store=137.56GiB GPU_peak=33.90GiB
+[FORECAST] 23,700/192,774 (12.29%) rate=15.86 samples/s ETA=2.96h store=139.33GiB GPU_peak=33.90GiB
+[FORECAST] 24,000/192,774 (12.45%) rate=15.88 samples/s ETA=2.95h store=141.09GiB GPU_peak=33.90GiB
+[FORECAST] 24,300/192,774 (12.61%) rate=15.89 samples/s ETA=2.95h store=142.85GiB GPU_peak=33.90GiB
+[FORECAST] 24,600/192,774 (12.76%) rate=15.91 samples/s ETA=2.94h store=144.62GiB GPU_peak=33.90GiB
+[FORECAST] 24,900/192,774 (12.92%) rate=15.89 samples/s ETA=2.93h store=146.38GiB GPU_peak=33.90GiB
+[FORECAST] 25,200/192,774 (13.07%) rate=15.90 samples/s ETA=2.93h store=148.14GiB GPU_peak=33.90GiB
+[FORECAST] 25,500/192,774 (13.23%) rate=15.87 samples/s ETA=2.93h store=149.91GiB GPU_peak=33.90GiB
+[FORECAST] 25,800/192,774 (13.38%) rate=15.85 samples/s ETA=2.93h store=151.67GiB GPU_peak=33.90GiB
+[FORECAST] 26,100/192,774 (13.54%) rate=15.87 samples/s ETA=2.92h store=153.44GiB GPU_peak=33.90GiB
+[FORECAST] 26,400/192,774 (13.69%) rate=15.83 samples/s ETA=2.92h store=155.20GiB GPU_peak=33.90GiB
+[FORECAST] 26,700/192,774 (13.85%) rate=15.73 samples/s ETA=2.93h store=156.96GiB GPU_peak=33.90GiB
+[FORECAST] 27,000/192,774 (14.01%) rate=15.75 samples/s ETA=2.92h store=158.73GiB GPU_peak=33.90GiB
+[FORECAST] 27,300/192,774 (14.16%) rate=15.78 samples/s ETA=2.91h store=160.49GiB GPU_peak=33.90GiB
+[FORECAST] 27,600/192,774 (14.32%) rate=15.82 samples/s ETA=2.90h store=162.26GiB GPU_peak=33.90GiB
+[FORECAST] 27,900/192,774 (14.47%) rate=15.85 samples/s ETA=2.89h store=164.02GiB GPU_peak=33.90GiB
+[FORECAST] 28,200/192,774 (14.63%) rate=15.86 samples/s ETA=2.88h store=165.79GiB GPU_peak=33.90GiB
+[FORECAST] 28,500/192,774 (14.78%) rate=15.90 samples/s ETA=2.87h store=167.55GiB GPU_peak=33.90GiB
+[FORECAST] 28,800/192,774 (14.94%) rate=15.92 samples/s ETA=2.86h store=169.32GiB GPU_peak=33.90GiB
+[FORECAST] 29,100/192,774 (15.10%) rate=15.94 samples/s ETA=2.85h store=171.08GiB GPU_peak=33.90GiB
+[FORECAST] 29,400/192,774 (15.25%) rate=15.97 samples/s ETA=2.84h store=172.85GiB GPU_peak=33.90GiB
+[FORECAST] 29,700/192,774 (15.41%) rate=15.99 samples/s ETA=2.83h store=174.61GiB GPU_peak=33.90GiB
+[FORECAST] 30,000/192,774 (15.56%) rate=16.02 samples/s ETA=2.82h store=176.37GiB GPU_peak=33.90GiB
+[FORECAST] 30,300/192,774 (15.72%) rate=16.05 samples/s ETA=2.81h store=178.14GiB GPU_peak=33.90GiB
+[FORECAST] 30,600/192,774 (15.87%) rate=16.07 samples/s ETA=2.80h store=179.90GiB GPU_peak=33.90GiB
+[FORECAST] 30,900/192,774 (16.03%) rate=16.10 samples/s ETA=2.79h store=181.67GiB GPU_peak=33.90GiB
+[FORECAST] 31,200/192,774 (16.18%) rate=16.11 samples/s ETA=2.79h store=183.43GiB GPU_peak=33.90GiB
+[FORECAST] 31,500/192,774 (16.34%) rate=16.07 samples/s ETA=2.79h store=185.19GiB GPU_peak=33.90GiB
+[FORECAST] 31,800/192,774 (16.50%) rate=16.07 samples/s ETA=2.78h store=186.96GiB GPU_peak=33.90GiB
+[FORECAST] 32,100/192,774 (16.65%) rate=16.08 samples/s ETA=2.78h store=188.72GiB GPU_peak=33.90GiB
+[FORECAST] 32,400/192,774 (16.81%) rate=16.05 samples/s ETA=2.78h store=190.49GiB GPU_peak=33.90GiB
+[FORECAST] 32,700/192,774 (16.96%) rate=16.02 samples/s ETA=2.78h store=192.25GiB GPU_peak=33.90GiB
+[FORECAST] 33,000/192,774 (17.12%) rate=16.04 samples/s ETA=2.77h store=194.01GiB GPU_peak=33.90GiB
+[FORECAST] 33,300/192,774 (17.27%) rate=16.03 samples/s ETA=2.76h store=195.78GiB GPU_peak=33.90GiB
+[FORECAST] 33,600/192,774 (17.43%) rate=16.04 samples/s ETA=2.76h store=197.54GiB GPU_peak=33.90GiB
+[FORECAST] 33,900/192,774 (17.59%) rate=15.95 samples/s ETA=2.77h store=199.31GiB GPU_peak=33.90GiB
+[FORECAST] 34,200/192,774 (17.74%) rate=15.94 samples/s ETA=2.76h store=201.07GiB GPU_peak=33.90GiB
+[FORECAST] 34,500/192,774 (17.90%) rate=15.91 samples/s ETA=2.76h store=202.83GiB GPU_peak=33.90GiB
+[FORECAST] 34,800/192,774 (18.05%) rate=15.91 samples/s ETA=2.76h store=204.60GiB GPU_peak=33.90GiB
+[FORECAST] 35,100/192,774 (18.21%) rate=15.95 samples/s ETA=2.75h store=206.36GiB GPU_peak=33.90GiB
+[FORECAST] 35,400/192,774 (18.36%) rate=15.99 samples/s ETA=2.73h store=208.12GiB GPU_peak=33.90GiB
+[FORECAST] 35,700/192,774 (18.52%) rate=15.98 samples/s ETA=2.73h store=209.89GiB GPU_peak=33.90GiB
+[FORECAST] 36,000/192,774 (18.67%) rate=16.01 samples/s ETA=2.72h store=211.65GiB GPU_peak=33.90GiB
+[FORECAST] 36,300/192,774 (18.83%) rate=16.04 samples/s ETA=2.71h store=213.42GiB GPU_peak=33.90GiB
+[FORECAST] 36,600/192,774 (18.99%) rate=16.06 samples/s ETA=2.70h store=215.18GiB GPU_peak=33.90GiB
+[FORECAST] 36,900/192,774 (19.14%) rate=16.06 samples/s ETA=2.70h store=216.94GiB GPU_peak=33.90GiB
+[FORECAST] 37,200/192,774 (19.30%) rate=16.08 samples/s ETA=2.69h store=218.71GiB GPU_peak=33.90GiB
+[FORECAST] 37,500/192,774 (19.45%) rate=16.11 samples/s ETA=2.68h store=220.47GiB GPU_peak=33.90GiB
+[FORECAST] 37,800/192,774 (19.61%) rate=16.12 samples/s ETA=2.67h store=222.24GiB GPU_peak=33.90GiB
+[FORECAST] 38,100/192,774 (19.76%) rate=16.14 samples/s ETA=2.66h store=224.00GiB GPU_peak=33.90GiB
+[FORECAST] 38,400/192,774 (19.92%) rate=16.17 samples/s ETA=2.65h store=225.76GiB GPU_peak=33.90GiB
+[FORECAST] 38,700/192,774 (20.08%) rate=16.19 samples/s ETA=2.64h store=227.53GiB GPU_peak=33.90GiB
+[FORECAST] 39,000/192,774 (20.23%) rate=16.20 samples/s ETA=2.64h store=229.29GiB GPU_peak=33.90GiB
+[FORECAST] 39,300/192,774 (20.39%) rate=16.18 samples/s ETA=2.64h store=231.06GiB GPU_peak=33.90GiB
+[FORECAST] 39,600/192,774 (20.54%) rate=16.17 samples/s ETA=2.63h store=232.82GiB GPU_peak=33.90GiB
+[FORECAST] 39,900/192,774 (20.70%) rate=16.14 samples/s ETA=2.63h store=234.58GiB GPU_peak=33.90GiB
+[FORECAST] 40,200/192,774 (20.85%) rate=16.16 samples/s ETA=2.62h store=236.34GiB GPU_peak=33.90GiB
+[FORECAST] 40,500/192,774 (21.01%) rate=16.19 samples/s ETA=2.61h store=238.11GiB GPU_peak=33.90GiB
+[FORECAST] 40,800/192,774 (21.16%) rate=16.15 samples/s ETA=2.61h store=239.87GiB GPU_peak=33.90GiB
+[FORECAST] 41,100/192,774 (21.32%) rate=16.07 samples/s ETA=2.62h store=241.64GiB GPU_peak=33.90GiB
+[FORECAST] 41,400/192,774 (21.48%) rate=16.04 samples/s ETA=2.62h store=243.40GiB GPU_peak=33.90GiB
+[FORECAST] 41,700/192,774 (21.63%) rate=16.03 samples/s ETA=2.62h store=245.16GiB GPU_peak=33.90GiB
+[FORECAST] 42,000/192,774 (21.79%) rate=15.99 samples/s ETA=2.62h store=246.93GiB GPU_peak=33.90GiB
+[FORECAST] 42,300/192,774 (21.94%) rate=15.97 samples/s ETA=2.62h store=248.69GiB GPU_peak=33.90GiB
+[FORECAST] 42,600/192,774 (22.10%) rate=15.97 samples/s ETA=2.61h store=250.46GiB GPU_peak=33.90GiB
+[FORECAST] 42,900/192,774 (22.25%) rate=15.98 samples/s ETA=2.61h store=252.22GiB GPU_peak=33.90GiB
+[FORECAST] 43,200/192,774 (22.41%) rate=15.97 samples/s ETA=2.60h store=253.99GiB GPU_peak=33.90GiB
+[FORECAST] 43,500/192,774 (22.57%) rate=15.98 samples/s ETA=2.59h store=255.75GiB GPU_peak=33.90GiB
+[FORECAST] 43,800/192,774 (22.72%) rate=16.00 samples/s ETA=2.59h store=257.51GiB GPU_peak=33.90GiB
+[FORECAST] 44,100/192,774 (22.88%) rate=16.01 samples/s ETA=2.58h store=259.28GiB GPU_peak=33.90GiB
+[FORECAST] 44,400/192,774 (23.03%) rate=16.03 samples/s ETA=2.57h store=261.04GiB GPU_peak=33.90GiB
+[FORECAST] 44,700/192,774 (23.19%) rate=16.04 samples/s ETA=2.56h store=262.80GiB GPU_peak=33.90GiB
+[FORECAST] 45,000/192,774 (23.34%) rate=16.05 samples/s ETA=2.56h store=264.57GiB GPU_peak=33.90GiB
+[FORECAST] 45,300/192,774 (23.50%) rate=16.06 samples/s ETA=2.55h store=266.33GiB GPU_peak=33.90GiB
+[FORECAST] 45,600/192,774 (23.65%) rate=16.07 samples/s ETA=2.54h store=268.09GiB GPU_peak=33.90GiB
+[FORECAST] 45,900/192,774 (23.81%) rate=16.08 samples/s ETA=2.54h store=269.86GiB GPU_peak=33.90GiB
+[FORECAST] 46,200/192,774 (23.97%) rate=16.09 samples/s ETA=2.53h store=271.62GiB GPU_peak=33.90GiB
+[FORECAST] 46,500/192,774 (24.12%) rate=16.09 samples/s ETA=2.52h store=273.39GiB GPU_peak=33.90GiB
+[FORECAST] 46,800/192,774 (24.28%) rate=16.08 samples/s ETA=2.52h store=275.15GiB GPU_peak=33.90GiB
+[FORECAST] 47,100/192,774 (24.43%) rate=16.09 samples/s ETA=2.51h store=276.91GiB GPU_peak=33.90GiB
+[FORECAST] 47,400/192,774 (24.59%) rate=16.06 samples/s ETA=2.51h store=278.68GiB GPU_peak=33.90GiB
+[FORECAST] 47,700/192,774 (24.74%) rate=16.05 samples/s ETA=2.51h store=280.44GiB GPU_peak=33.90GiB
+[FORECAST] 48,000/192,774 (24.90%) rate=16.00 samples/s ETA=2.51h store=282.21GiB GPU_peak=33.90GiB
+[FORECAST] 48,300/192,774 (25.06%) rate=15.93 samples/s ETA=2.52h store=283.97GiB GPU_peak=33.90GiB
+[FORECAST] 48,600/192,774 (25.21%) rate=15.88 samples/s ETA=2.52h store=285.73GiB GPU_peak=33.90GiB
+[FORECAST] 48,900/192,774 (25.37%) rate=15.84 samples/s ETA=2.52h store=287.50GiB GPU_peak=33.90GiB
+[FORECAST] 49,200/192,774 (25.52%) rate=15.77 samples/s ETA=2.53h store=289.26GiB GPU_peak=33.90GiB
+[FORECAST] 49,500/192,774 (25.68%) rate=15.73 samples/s ETA=2.53h store=291.02GiB GPU_peak=33.90GiB
+[FORECAST] 49,800/192,774 (25.83%) rate=15.71 samples/s ETA=2.53h store=292.79GiB GPU_peak=33.90GiB
+[FORECAST] 50,100/192,774 (25.99%) rate=15.74 samples/s ETA=2.52h store=294.55GiB GPU_peak=33.90GiB
+[FORECAST] 50,400/192,774 (26.14%) rate=15.75 samples/s ETA=2.51h store=296.31GiB GPU_peak=33.90GiB
+[FORECAST] 50,700/192,774 (26.30%) rate=15.77 samples/s ETA=2.50h store=298.08GiB GPU_peak=33.90GiB
+[FORECAST] 51,000/192,774 (26.46%) rate=15.74 samples/s ETA=2.50h store=299.84GiB GPU_peak=33.90GiB
+[FORECAST] 51,300/192,774 (26.61%) rate=15.72 samples/s ETA=2.50h store=301.60GiB GPU_peak=33.90GiB
+[FORECAST] 51,600/192,774 (26.77%) rate=15.74 samples/s ETA=2.49h store=303.36GiB GPU_peak=33.90GiB
+[FORECAST] 51,900/192,774 (26.92%) rate=15.77 samples/s ETA=2.48h store=305.13GiB GPU_peak=33.90GiB
+[FORECAST] 52,200/192,774 (27.08%) rate=15.77 samples/s ETA=2.48h store=306.89GiB GPU_peak=33.90GiB
+[FORECAST] 52,500/192,774 (27.23%) rate=15.75 samples/s ETA=2.47h store=308.66GiB GPU_peak=33.90GiB
+[FORECAST] 52,800/192,774 (27.39%) rate=15.76 samples/s ETA=2.47h store=310.42GiB GPU_peak=33.90GiB
+[FORECAST] 53,100/192,774 (27.55%) rate=15.77 samples/s ETA=2.46h store=312.18GiB GPU_peak=33.90GiB
+[FORECAST] 53,400/192,774 (27.70%) rate=15.78 samples/s ETA=2.45h store=313.95GiB GPU_peak=33.90GiB
+[FORECAST] 53,700/192,774 (27.86%) rate=15.80 samples/s ETA=2.45h store=315.71GiB GPU_peak=33.90GiB
+[FORECAST] 54,000/192,774 (28.01%) rate=15.81 samples/s ETA=2.44h store=317.48GiB GPU_peak=33.90GiB
+[FORECAST] 54,300/192,774 (28.17%) rate=15.82 samples/s ETA=2.43h store=319.24GiB GPU_peak=33.90GiB
+[FORECAST] 54,600/192,774 (28.32%) rate=15.83 samples/s ETA=2.42h store=321.01GiB GPU_peak=33.90GiB
+[FORECAST] 54,900/192,774 (28.48%) rate=15.84 samples/s ETA=2.42h store=322.77GiB GPU_peak=33.90GiB
+[FORECAST] 55,200/192,774 (28.63%) rate=15.86 samples/s ETA=2.41h store=324.54GiB GPU_peak=33.90GiB
+[FORECAST] 55,500/192,774 (28.79%) rate=15.83 samples/s ETA=2.41h store=326.30GiB GPU_peak=33.90GiB
+[FORECAST] 55,800/192,774 (28.95%) rate=15.79 samples/s ETA=2.41h store=328.06GiB GPU_peak=33.90GiB
+[FORECAST] 56,100/192,774 (29.10%) rate=15.72 samples/s ETA=2.41h store=329.82GiB GPU_peak=33.90GiB
+[FORECAST] 56,400/192,774 (29.26%) rate=15.69 samples/s ETA=2.41h store=331.59GiB GPU_peak=33.90GiB
+[FORECAST] 56,700/192,774 (29.41%) rate=15.67 samples/s ETA=2.41h store=333.35GiB GPU_peak=33.90GiB
+[FORECAST] 57,000/192,774 (29.57%) rate=15.60 samples/s ETA=2.42h store=335.11GiB GPU_peak=33.90GiB
+[FORECAST] 57,300/192,774 (29.72%) rate=15.56 samples/s ETA=2.42h store=336.88GiB GPU_peak=33.90GiB
+[FORECAST] 57,600/192,774 (29.88%) rate=15.51 samples/s ETA=2.42h store=338.64GiB GPU_peak=33.90GiB
+[FORECAST] 57,900/192,774 (30.04%) rate=15.44 samples/s ETA=2.43h store=340.40GiB GPU_peak=33.90GiB
+[FORECAST] 58,200/192,774 (30.19%) rate=15.39 samples/s ETA=2.43h store=342.17GiB GPU_peak=33.90GiB
+[FORECAST] 58,500/192,774 (30.35%) rate=15.33 samples/s ETA=2.43h store=343.93GiB GPU_peak=33.90GiB
+[FORECAST] 58,800/192,774 (30.50%) rate=15.32 samples/s ETA=2.43h store=345.69GiB GPU_peak=33.90GiB
+[FORECAST] 59,100/192,774 (30.66%) rate=15.32 samples/s ETA=2.42h store=347.46GiB GPU_peak=33.90GiB
+[FORECAST] 59,400/192,774 (30.81%) rate=15.33 samples/s ETA=2.42h store=349.22GiB GPU_peak=33.90GiB
+[FORECAST] 59,700/192,774 (30.97%) rate=15.35 samples/s ETA=2.41h store=350.99GiB GPU_peak=33.90GiB
+[FORECAST] 60,000/192,774 (31.12%) rate=15.37 samples/s ETA=2.40h store=352.75GiB GPU_peak=33.90GiB
+[FORECAST] 60,300/192,774 (31.28%) rate=15.37 samples/s ETA=2.39h store=354.51GiB GPU_peak=33.90GiB
+[FORECAST] 60,600/192,774 (31.44%) rate=15.39 samples/s ETA=2.39h store=356.27GiB GPU_peak=33.90GiB
+[FORECAST] 60,900/192,774 (31.59%) rate=15.40 samples/s ETA=2.38h store=358.04GiB GPU_peak=33.90GiB
+[FORECAST] 61,200/192,774 (31.75%) rate=15.41 samples/s ETA=2.37h store=359.80GiB GPU_peak=33.90GiB
+[FORECAST] 61,500/192,774 (31.90%) rate=15.43 samples/s ETA=2.36h store=361.57GiB GPU_peak=33.90GiB
+[FORECAST] 61,800/192,774 (32.06%) rate=15.44 samples/s ETA=2.36h store=363.33GiB GPU_peak=33.90GiB
+[FORECAST] 62,100/192,774 (32.21%) rate=15.46 samples/s ETA=2.35h store=365.09GiB GPU_peak=33.90GiB
+[FORECAST] 62,400/192,774 (32.37%) rate=15.47 samples/s ETA=2.34h store=366.86GiB GPU_peak=33.90GiB
+[FORECAST] 62,700/192,774 (32.53%) rate=15.49 samples/s ETA=2.33h store=368.62GiB GPU_peak=33.90GiB
+[FORECAST] 63,000/192,774 (32.68%) rate=15.50 samples/s ETA=2.33h store=370.38GiB GPU_peak=33.90GiB
+[FORECAST] 63,300/192,774 (32.84%) rate=15.49 samples/s ETA=2.32h store=372.15GiB GPU_peak=33.90GiB
+[FORECAST] 63,600/192,774 (32.99%) rate=15.47 samples/s ETA=2.32h store=373.91GiB GPU_peak=33.90GiB
+[FORECAST] 63,900/192,774 (33.15%) rate=15.47 samples/s ETA=2.31h store=375.67GiB GPU_peak=33.90GiB
+[FORECAST] 64,200/192,774 (33.30%) rate=15.45 samples/s ETA=2.31h store=377.44GiB GPU_peak=33.90GiB
+[FORECAST] 64,500/192,774 (33.46%) rate=15.40 samples/s ETA=2.31h store=379.20GiB GPU_peak=33.90GiB
+[FORECAST] 64,800/192,774 (33.61%) rate=15.39 samples/s ETA=2.31h store=380.96GiB GPU_peak=33.90GiB
+[FORECAST] 65,100/192,774 (33.77%) rate=15.38 samples/s ETA=2.31h store=382.73GiB GPU_peak=33.90GiB
+[FORECAST] 65,400/192,774 (33.93%) rate=15.35 samples/s ETA=2.31h store=384.49GiB GPU_peak=33.90GiB
+[FORECAST] 65,700/192,774 (34.08%) rate=15.34 samples/s ETA=2.30h store=386.25GiB GPU_peak=33.90GiB
+[FORECAST] 66,000/192,774 (34.24%) rate=15.32 samples/s ETA=2.30h store=388.02GiB GPU_peak=33.90GiB
+[FORECAST] 66,300/192,774 (34.39%) rate=15.34 samples/s ETA=2.29h store=389.78GiB GPU_peak=33.90GiB
+[FORECAST] 66,600/192,774 (34.55%) rate=15.31 samples/s ETA=2.29h store=391.54GiB GPU_peak=33.90GiB
+[FORECAST] 66,900/192,774 (34.70%) rate=15.27 samples/s ETA=2.29h store=393.31GiB GPU_peak=33.90GiB
+[FORECAST] 67,200/192,774 (34.86%) rate=15.26 samples/s ETA=2.29h store=395.07GiB GPU_peak=33.90GiB
+[FORECAST] 67,500/192,774 (35.02%) rate=15.28 samples/s ETA=2.28h store=396.83GiB GPU_peak=33.90GiB
+[FORECAST] 67,800/192,774 (35.17%) rate=15.30 samples/s ETA=2.27h store=398.59GiB GPU_peak=33.90GiB
+[FORECAST] 68,100/192,774 (35.33%) rate=15.31 samples/s ETA=2.26h store=400.35GiB GPU_peak=33.90GiB
+[FORECAST] 68,400/192,774 (35.48%) rate=15.32 samples/s ETA=2.26h store=402.12GiB GPU_peak=33.90GiB
+[FORECAST] 68,700/192,774 (35.64%) rate=15.34 samples/s ETA=2.25h store=403.88GiB GPU_peak=33.90GiB
+[FORECAST] 69,000/192,774 (35.79%) rate=15.35 samples/s ETA=2.24h store=405.64GiB GPU_peak=33.90GiB
+[FORECAST] 69,300/192,774 (35.95%) rate=15.36 samples/s ETA=2.23h store=407.40GiB GPU_peak=33.90GiB
+[FORECAST] 69,600/192,774 (36.10%) rate=15.37 samples/s ETA=2.23h store=409.17GiB GPU_peak=33.90GiB
+[FORECAST] 69,900/192,774 (36.26%) rate=15.38 samples/s ETA=2.22h store=410.93GiB GPU_peak=33.90GiB
+[FORECAST] 70,200/192,774 (36.42%) rate=15.39 samples/s ETA=2.21h store=412.70GiB GPU_peak=33.90GiB
+[FORECAST] 70,500/192,774 (36.57%) rate=15.40 samples/s ETA=2.21h store=414.46GiB GPU_peak=33.90GiB
+[FORECAST] 70,800/192,774 (36.73%) rate=15.41 samples/s ETA=2.20h store=416.22GiB GPU_peak=33.90GiB
+[FORECAST] 71,100/192,774 (36.88%) rate=15.42 samples/s ETA=2.19h store=417.99GiB GPU_peak=33.90GiB
+[FORECAST] 71,400/192,774 (37.04%) rate=15.43 samples/s ETA=2.19h store=419.75GiB GPU_peak=33.90GiB
+[FORECAST] 71,700/192,774 (37.19%) rate=15.43 samples/s ETA=2.18h store=421.51GiB GPU_peak=33.90GiB
+[FORECAST] 72,000/192,774 (37.35%) rate=15.43 samples/s ETA=2.17h store=423.27GiB GPU_peak=33.90GiB
+[FORECAST] 72,300/192,774 (37.51%) rate=15.41 samples/s ETA=2.17h store=425.04GiB GPU_peak=33.90GiB
+[FORECAST] 72,600/192,774 (37.66%) rate=15.39 samples/s ETA=2.17h store=426.80GiB GPU_peak=33.90GiB
+[FORECAST] 72,900/192,774 (37.82%) rate=15.36 samples/s ETA=2.17h store=428.56GiB GPU_peak=33.90GiB
+[FORECAST] 73,200/192,774 (37.97%) rate=15.34 samples/s ETA=2.17h store=430.33GiB GPU_peak=33.90GiB
+[FORECAST] 73,500/192,774 (38.13%) rate=15.32 samples/s ETA=2.16h store=432.09GiB GPU_peak=33.90GiB
+[FORECAST] 73,800/192,774 (38.28%) rate=15.27 samples/s ETA=2.16h store=433.85GiB GPU_peak=33.90GiB
+[FORECAST] 74,100/192,774 (38.44%) rate=15.26 samples/s ETA=2.16h store=435.62GiB GPU_peak=33.90GiB
+[FORECAST] 74,400/192,774 (38.59%) rate=15.23 samples/s ETA=2.16h store=437.38GiB GPU_peak=33.90GiB
+[FORECAST] 74,700/192,774 (38.75%) rate=15.19 samples/s ETA=2.16h store=439.14GiB GPU_peak=33.90GiB
+[FORECAST] 75,000/192,774 (38.91%) rate=15.21 samples/s ETA=2.15h store=440.90GiB GPU_peak=33.90GiB
+[FORECAST] 75,300/192,774 (39.06%) rate=15.20 samples/s ETA=2.15h store=442.67GiB GPU_peak=33.90GiB
+[FORECAST] 75,600/192,774 (39.22%) rate=15.17 samples/s ETA=2.14h store=444.43GiB GPU_peak=33.90GiB
+[FORECAST] 75,900/192,774 (39.37%) rate=15.13 samples/s ETA=2.15h store=446.20GiB GPU_peak=33.90GiB
+[FORECAST] 76,200/192,774 (39.53%) rate=15.11 samples/s ETA=2.14h store=447.96GiB GPU_peak=33.90GiB
+[FORECAST] 76,500/192,774 (39.68%) rate=15.13 samples/s ETA=2.13h store=449.72GiB GPU_peak=33.90GiB
+[FORECAST] 76,800/192,774 (39.84%) rate=15.14 samples/s ETA=2.13h store=451.49GiB GPU_peak=33.90GiB
+[FORECAST] 77,100/192,774 (40.00%) rate=15.16 samples/s ETA=2.12h store=453.25GiB GPU_peak=33.90GiB
+[FORECAST] 77,400/192,774 (40.15%) rate=15.17 samples/s ETA=2.11h store=455.01GiB GPU_peak=33.90GiB
+[FORECAST] 77,700/192,774 (40.31%) rate=15.18 samples/s ETA=2.11h store=456.78GiB GPU_peak=33.90GiB
+[FORECAST] 78,000/192,774 (40.46%) rate=15.19 samples/s ETA=2.10h store=458.54GiB GPU_peak=33.90GiB
+[FORECAST] 78,300/192,774 (40.62%) rate=15.20 samples/s ETA=2.09h store=460.30GiB GPU_peak=33.90GiB
+[FORECAST] 78,600/192,774 (40.77%) rate=15.21 samples/s ETA=2.08h store=462.06GiB GPU_peak=33.90GiB
+[FORECAST] 78,900/192,774 (40.93%) rate=15.20 samples/s ETA=2.08h store=463.83GiB GPU_peak=33.90GiB
+[FORECAST] 79,200/192,774 (41.08%) rate=15.20 samples/s ETA=2.08h store=465.59GiB GPU_peak=33.90GiB
+[FORECAST] 79,500/192,774 (41.24%) rate=15.21 samples/s ETA=2.07h store=467.35GiB GPU_peak=33.90GiB
+[FORECAST] 79,800/192,774 (41.40%) rate=15.23 samples/s ETA=2.06h store=469.12GiB GPU_peak=33.90GiB
+[FORECAST] 80,100/192,774 (41.55%) rate=15.24 samples/s ETA=2.05h store=470.88GiB GPU_peak=33.90GiB
+[FORECAST] 80,400/192,774 (41.71%) rate=15.25 samples/s ETA=2.05h store=472.64GiB GPU_peak=33.90GiB
+[FORECAST] 80,700/192,774 (41.86%) rate=15.26 samples/s ETA=2.04h store=474.40GiB GPU_peak=33.90GiB
+[FORECAST] 81,000/192,774 (42.02%) rate=15.27 samples/s ETA=2.03h store=476.17GiB GPU_peak=33.90GiB
+[FORECAST] 81,300/192,774 (42.17%) rate=15.25 samples/s ETA=2.03h store=477.93GiB GPU_peak=33.90GiB
+[FORECAST] 81,600/192,774 (42.33%) rate=15.25 samples/s ETA=2.03h store=479.69GiB GPU_peak=33.90GiB
+[FORECAST] 81,900/192,774 (42.48%) rate=15.26 samples/s ETA=2.02h store=481.46GiB GPU_peak=33.90GiB
+[FORECAST] 82,200/192,774 (42.64%) rate=15.24 samples/s ETA=2.02h store=483.22GiB GPU_peak=33.90GiB
+[FORECAST] 82,500/192,774 (42.80%) rate=15.22 samples/s ETA=2.01h store=484.98GiB GPU_peak=33.90GiB
+[FORECAST] 82,800/192,774 (42.95%) rate=15.22 samples/s ETA=2.01h store=486.75GiB GPU_peak=33.90GiB
+[FORECAST] 83,100/192,774 (43.11%) rate=15.22 samples/s ETA=2.00h store=488.51GiB GPU_peak=33.90GiB
+[FORECAST] 83,400/192,774 (43.26%) rate=15.22 samples/s ETA=2.00h store=490.27GiB GPU_peak=33.90GiB
+[FORECAST] 83,700/192,774 (43.42%) rate=15.22 samples/s ETA=1.99h store=492.04GiB GPU_peak=33.90GiB
+[FORECAST] 84,000/192,774 (43.57%) rate=15.21 samples/s ETA=1.99h store=493.80GiB GPU_peak=33.90GiB
+[FORECAST] 84,300/192,774 (43.73%) rate=15.20 samples/s ETA=1.98h store=495.57GiB GPU_peak=33.90GiB
+[FORECAST] 84,600/192,774 (43.89%) rate=15.21 samples/s ETA=1.98h store=497.33GiB GPU_peak=33.90GiB
+[FORECAST] 84,900/192,774 (44.04%) rate=15.23 samples/s ETA=1.97h store=499.09GiB GPU_peak=33.90GiB
+[FORECAST] 85,200/192,774 (44.20%) rate=15.24 samples/s ETA=1.96h store=500.86GiB GPU_peak=33.90GiB
+[FORECAST] 85,500/192,774 (44.35%) rate=15.23 samples/s ETA=1.96h store=502.62GiB GPU_peak=33.90GiB
+[FORECAST] 85,800/192,774 (44.51%) rate=15.24 samples/s ETA=1.95h store=504.38GiB GPU_peak=33.90GiB
+[FORECAST] 86,100/192,774 (44.66%) rate=15.24 samples/s ETA=1.94h store=506.15GiB GPU_peak=33.90GiB
+[FORECAST] 86,400/192,774 (44.82%) rate=15.25 samples/s ETA=1.94h store=507.91GiB GPU_peak=33.90GiB
+[FORECAST] 86,700/192,774 (44.97%) rate=15.26 samples/s ETA=1.93h store=509.67GiB GPU_peak=33.90GiB
+[FORECAST] 87,000/192,774 (45.13%) rate=15.27 samples/s ETA=1.92h store=511.43GiB GPU_peak=33.90GiB
+[FORECAST] 87,300/192,774 (45.29%) rate=15.27 samples/s ETA=1.92h store=513.20GiB GPU_peak=33.90GiB
+[FORECAST] 87,600/192,774 (45.44%) rate=15.27 samples/s ETA=1.91h store=514.96GiB GPU_peak=33.90GiB
+[FORECAST] 87,900/192,774 (45.60%) rate=15.28 samples/s ETA=1.91h store=516.73GiB GPU_peak=33.90GiB
+[FORECAST] 88,200/192,774 (45.75%) rate=15.30 samples/s ETA=1.90h store=518.49GiB GPU_peak=33.90GiB
+[FORECAST] 88,500/192,774 (45.91%) rate=15.30 samples/s ETA=1.89h store=520.25GiB GPU_peak=33.90GiB
+[FORECAST] 88,800/192,774 (46.06%) rate=15.32 samples/s ETA=1.89h store=522.02GiB GPU_peak=33.90GiB
+[FORECAST] 89,100/192,774 (46.22%) rate=15.32 samples/s ETA=1.88h store=523.78GiB GPU_peak=33.90GiB
+[FORECAST] 89,400/192,774 (46.38%) rate=15.33 samples/s ETA=1.87h store=525.54GiB GPU_peak=33.90GiB
+[FORECAST] 89,700/192,774 (46.53%) rate=15.32 samples/s ETA=1.87h store=527.30GiB GPU_peak=33.90GiB
+[FORECAST] 90,000/192,774 (46.69%) rate=15.32 samples/s ETA=1.86h store=529.07GiB GPU_peak=33.90GiB
+[FORECAST] 90,300/192,774 (46.84%) rate=15.32 samples/s ETA=1.86h store=530.83GiB GPU_peak=33.90GiB
+[FORECAST] 90,600/192,774 (47.00%) rate=15.29 samples/s ETA=1.86h store=532.60GiB GPU_peak=33.90GiB
+[FORECAST] 90,900/192,774 (47.15%) rate=15.27 samples/s ETA=1.85h store=534.36GiB GPU_peak=33.90GiB
+[FORECAST] 91,200/192,774 (47.31%) rate=15.26 samples/s ETA=1.85h store=536.12GiB GPU_peak=33.90GiB
+[FORECAST] 91,500/192,774 (47.46%) rate=15.25 samples/s ETA=1.84h store=537.89GiB GPU_peak=33.90GiB
+[FORECAST] 91,800/192,774 (47.62%) rate=15.22 samples/s ETA=1.84h store=539.65GiB GPU_peak=33.90GiB
+[FORECAST] 92,100/192,774 (47.78%) rate=15.18 samples/s ETA=1.84h store=541.42GiB GPU_peak=33.90GiB
+[FORECAST] 92,400/192,774 (47.93%) rate=15.18 samples/s ETA=1.84h store=543.18GiB GPU_peak=33.90GiB
+[FORECAST] 92,700/192,774 (48.09%) rate=15.19 samples/s ETA=1.83h store=544.94GiB GPU_peak=33.90GiB
+[FORECAST] 93,000/192,774 (48.24%) rate=15.20 samples/s ETA=1.82h store=546.71GiB GPU_peak=33.90GiB
+[FORECAST] 93,300/192,774 (48.40%) rate=15.16 samples/s ETA=1.82h store=548.48GiB GPU_peak=33.90GiB
+[FORECAST] 93,600/192,774 (48.55%) rate=15.16 samples/s ETA=1.82h store=550.24GiB GPU_peak=33.90GiB
+[FORECAST] 93,900/192,774 (48.71%) rate=15.17 samples/s ETA=1.81h store=552.00GiB GPU_peak=33.90GiB
+[FORECAST] 94,200/192,774 (48.87%) rate=15.19 samples/s ETA=1.80h store=553.76GiB GPU_peak=33.90GiB
+[FORECAST] 94,500/192,774 (49.02%) rate=15.19 samples/s ETA=1.80h store=555.53GiB GPU_peak=33.90GiB
+[FORECAST] 94,800/192,774 (49.18%) rate=15.20 samples/s ETA=1.79h store=557.29GiB GPU_peak=33.90GiB
+[FORECAST] 95,100/192,774 (49.33%) rate=15.20 samples/s ETA=1.79h store=559.05GiB GPU_peak=33.90GiB
+[FORECAST] 95,400/192,774 (49.49%) rate=15.21 samples/s ETA=1.78h store=560.82GiB GPU_peak=33.90GiB
+[FORECAST] 95,700/192,774 (49.64%) rate=15.22 samples/s ETA=1.77h store=562.58GiB GPU_peak=33.90GiB
+[FORECAST] 96,000/192,774 (49.80%) rate=15.23 samples/s ETA=1.77h store=564.35GiB GPU_peak=33.90GiB
+[FORECAST] 96,300/192,774 (49.95%) rate=15.23 samples/s ETA=1.76h store=566.11GiB GPU_peak=33.90GiB
+[FORECAST] 96,600/192,774 (50.11%) rate=15.23 samples/s ETA=1.75h store=567.87GiB GPU_peak=33.90GiB
+[FORECAST] 96,900/192,774 (50.27%) rate=15.24 samples/s ETA=1.75h store=569.64GiB GPU_peak=33.90GiB
+[FORECAST] 97,200/192,774 (50.42%) rate=15.25 samples/s ETA=1.74h store=571.40GiB GPU_peak=33.90GiB
+[FORECAST] 97,500/192,774 (50.58%) rate=15.26 samples/s ETA=1.73h store=573.17GiB GPU_peak=33.90GiB
+[FORECAST] 97,800/192,774 (50.73%) rate=15.27 samples/s ETA=1.73h store=574.93GiB GPU_peak=33.90GiB
+[FORECAST] 98,100/192,774 (50.89%) rate=15.28 samples/s ETA=1.72h store=576.69GiB GPU_peak=33.90GiB
+[FORECAST] 98,400/192,774 (51.04%) rate=15.28 samples/s ETA=1.72h store=578.45GiB GPU_peak=33.90GiB
+[FORECAST] 98,700/192,774 (51.20%) rate=15.28 samples/s ETA=1.71h store=580.21GiB GPU_peak=33.90GiB
+[FORECAST] 99,000/192,774 (51.36%) rate=15.28 samples/s ETA=1.70h store=581.98GiB GPU_peak=33.90GiB
+[FORECAST] 99,300/192,774 (51.51%) rate=15.26 samples/s ETA=1.70h store=583.74GiB GPU_peak=33.90GiB
+[FORECAST] 99,600/192,774 (51.67%) rate=15.25 samples/s ETA=1.70h store=585.51GiB GPU_peak=33.90GiB
+[FORECAST] 99,900/192,774 (51.82%) rate=15.26 samples/s ETA=1.69h store=587.27GiB GPU_peak=33.90GiB
+[FORECAST] 100,200/192,774 (51.98%) rate=15.25 samples/s ETA=1.69h store=589.03GiB GPU_peak=33.90GiB
+[FORECAST] 100,500/192,774 (52.13%) rate=15.26 samples/s ETA=1.68h store=590.80GiB GPU_peak=33.90GiB
+[FORECAST] 100,800/192,774 (52.29%) rate=15.27 samples/s ETA=1.67h store=592.56GiB GPU_peak=33.90GiB
+[FORECAST] 101,100/192,774 (52.44%) rate=15.25 samples/s ETA=1.67h store=594.32GiB GPU_peak=33.90GiB
+[FORECAST] 101,400/192,774 (52.60%) rate=15.26 samples/s ETA=1.66h store=596.08GiB GPU_peak=33.90GiB
+[FORECAST] 101,700/192,774 (52.76%) rate=15.26 samples/s ETA=1.66h store=597.85GiB GPU_peak=33.90GiB
+[FORECAST] 102,000/192,774 (52.91%) rate=15.23 samples/s ETA=1.66h store=599.61GiB GPU_peak=33.90GiB
+[FORECAST] 102,300/192,774 (53.07%) rate=15.23 samples/s ETA=1.65h store=601.37GiB GPU_peak=33.90GiB
+[FORECAST] 102,600/192,774 (53.22%) rate=15.23 samples/s ETA=1.64h store=603.14GiB GPU_peak=33.90GiB
+[FORECAST] 102,900/192,774 (53.38%) rate=15.23 samples/s ETA=1.64h store=604.90GiB GPU_peak=33.90GiB
+[FORECAST] 103,200/192,774 (53.53%) rate=15.24 samples/s ETA=1.63h store=606.67GiB GPU_peak=33.90GiB
+[FORECAST] 103,500/192,774 (53.69%) rate=15.25 samples/s ETA=1.63h store=608.43GiB GPU_peak=33.90GiB
+[FORECAST] 103,800/192,774 (53.85%) rate=15.25 samples/s ETA=1.62h store=610.19GiB GPU_peak=33.90GiB
+[FORECAST] 104,100/192,774 (54.00%) rate=15.26 samples/s ETA=1.61h store=611.95GiB GPU_peak=33.90GiB
+[FORECAST] 104,400/192,774 (54.16%) rate=15.27 samples/s ETA=1.61h store=613.72GiB GPU_peak=33.90GiB
+[FORECAST] 104,700/192,774 (54.31%) rate=15.28 samples/s ETA=1.60h store=615.48GiB GPU_peak=33.90GiB
+[FORECAST] 105,000/192,774 (54.47%) rate=15.29 samples/s ETA=1.59h store=617.24GiB GPU_peak=33.90GiB
+[FORECAST] 105,300/192,774 (54.62%) rate=15.29 samples/s ETA=1.59h store=619.01GiB GPU_peak=33.90GiB
+[FORECAST] 105,600/192,774 (54.78%) rate=15.27 samples/s ETA=1.59h store=620.77GiB GPU_peak=33.90GiB
+[FORECAST] 105,900/192,774 (54.93%) rate=15.28 samples/s ETA=1.58h store=622.53GiB GPU_peak=33.90GiB
+[FORECAST] 106,200/192,774 (55.09%) rate=15.29 samples/s ETA=1.57h store=624.30GiB GPU_peak=33.90GiB
+[FORECAST] 106,500/192,774 (55.25%) rate=15.30 samples/s ETA=1.57h store=626.06GiB GPU_peak=33.90GiB
+[FORECAST] 106,800/192,774 (55.40%) rate=15.30 samples/s ETA=1.56h store=627.83GiB GPU_peak=33.90GiB
+[FORECAST] 107,100/192,774 (55.56%) rate=15.30 samples/s ETA=1.56h store=629.59GiB GPU_peak=33.90GiB
+[FORECAST] 107,400/192,774 (55.71%) rate=15.31 samples/s ETA=1.55h store=631.35GiB GPU_peak=33.90GiB
+[FORECAST] 107,700/192,774 (55.87%) rate=15.30 samples/s ETA=1.54h store=633.12GiB GPU_peak=33.90GiB
+[FORECAST] 108,000/192,774 (56.02%) rate=15.30 samples/s ETA=1.54h store=634.88GiB GPU_peak=33.90GiB
+[FORECAST] 108,300/192,774 (56.18%) rate=15.29 samples/s ETA=1.53h store=636.64GiB GPU_peak=33.90GiB
+[FORECAST] 108,600/192,774 (56.34%) rate=15.27 samples/s ETA=1.53h store=638.40GiB GPU_peak=33.90GiB
+[FORECAST] 108,900/192,774 (56.49%) rate=15.26 samples/s ETA=1.53h store=640.17GiB GPU_peak=33.90GiB
+[FORECAST] 109,200/192,774 (56.65%) rate=15.25 samples/s ETA=1.52h store=641.93GiB GPU_peak=33.90GiB
+[FORECAST] 109,500/192,774 (56.80%) rate=15.26 samples/s ETA=1.52h store=643.69GiB GPU_peak=33.90GiB
+[FORECAST] 109,800/192,774 (56.96%) rate=15.26 samples/s ETA=1.51h store=645.46GiB GPU_peak=33.90GiB
+[FORECAST] 110,100/192,774 (57.11%) rate=15.28 samples/s ETA=1.50h store=647.22GiB GPU_peak=33.90GiB
+[FORECAST] 110,400/192,774 (57.27%) rate=15.28 samples/s ETA=1.50h store=648.98GiB GPU_peak=33.90GiB
+[FORECAST] 110,700/192,774 (57.42%) rate=15.29 samples/s ETA=1.49h store=650.75GiB GPU_peak=33.90GiB
+[FORECAST] 111,000/192,774 (57.58%) rate=15.28 samples/s ETA=1.49h store=652.51GiB GPU_peak=33.90GiB
+[FORECAST] 111,300/192,774 (57.74%) rate=15.29 samples/s ETA=1.48h store=654.27GiB GPU_peak=33.90GiB
+[FORECAST] 111,600/192,774 (57.89%) rate=15.30 samples/s ETA=1.47h store=656.04GiB GPU_peak=33.90GiB
+[FORECAST] 111,900/192,774 (58.05%) rate=15.30 samples/s ETA=1.47h store=657.80GiB GPU_peak=33.90GiB
+[FORECAST] 112,200/192,774 (58.20%) rate=15.31 samples/s ETA=1.46h store=659.56GiB GPU_peak=33.90GiB
+[FORECAST] 112,500/192,774 (58.36%) rate=15.31 samples/s ETA=1.46h store=661.33GiB GPU_peak=33.90GiB
+[FORECAST] 112,800/192,774 (58.51%) rate=15.31 samples/s ETA=1.45h store=663.09GiB GPU_peak=33.90GiB
+[FORECAST] 113,100/192,774 (58.67%) rate=15.31 samples/s ETA=1.45h store=664.85GiB GPU_peak=33.90GiB
+[FORECAST] 113,400/192,774 (58.83%) rate=15.31 samples/s ETA=1.44h store=666.61GiB GPU_peak=33.90GiB
+[FORECAST] 113,700/192,774 (58.98%) rate=15.32 samples/s ETA=1.43h store=668.38GiB GPU_peak=33.90GiB
+[FORECAST] 114,000/192,774 (59.14%) rate=15.32 samples/s ETA=1.43h store=670.14GiB GPU_peak=33.90GiB
+[FORECAST] 114,300/192,774 (59.29%) rate=15.32 samples/s ETA=1.42h store=671.90GiB GPU_peak=33.90GiB
+[FORECAST] 114,600/192,774 (59.45%) rate=15.32 samples/s ETA=1.42h store=673.66GiB GPU_peak=33.90GiB
+[FORECAST] 114,900/192,774 (59.60%) rate=15.32 samples/s ETA=1.41h store=675.43GiB GPU_peak=33.90GiB
+[FORECAST] 115,200/192,774 (59.76%) rate=15.33 samples/s ETA=1.41h store=677.19GiB GPU_peak=33.90GiB
+[FORECAST] 115,500/192,774 (59.91%) rate=15.33 samples/s ETA=1.40h store=678.95GiB GPU_peak=33.90GiB
+[FORECAST] 115,800/192,774 (60.07%) rate=15.33 samples/s ETA=1.39h store=680.71GiB GPU_peak=33.90GiB
+[FORECAST] 116,100/192,774 (60.23%) rate=15.34 samples/s ETA=1.39h store=682.48GiB GPU_peak=33.90GiB
+[FORECAST] 116,400/192,774 (60.38%) rate=15.35 samples/s ETA=1.38h store=684.24GiB GPU_peak=33.90GiB
+[FORECAST] 116,700/192,774 (60.54%) rate=15.35 samples/s ETA=1.38h store=686.01GiB GPU_peak=33.90GiB
+[FORECAST] 117,000/192,774 (60.69%) rate=15.35 samples/s ETA=1.37h store=687.77GiB GPU_peak=33.90GiB
+[FORECAST] 117,300/192,774 (60.85%) rate=15.33 samples/s ETA=1.37h store=689.53GiB GPU_peak=33.90GiB
+[FORECAST] 117,600/192,774 (61.00%) rate=15.33 samples/s ETA=1.36h store=691.29GiB GPU_peak=33.90GiB
+[FORECAST] 117,900/192,774 (61.16%) rate=15.31 samples/s ETA=1.36h store=693.06GiB GPU_peak=33.90GiB
+[FORECAST] 118,200/192,774 (61.32%) rate=15.32 samples/s ETA=1.35h store=694.83GiB GPU_peak=33.90GiB
+[FORECAST] 118,500/192,774 (61.47%) rate=15.33 samples/s ETA=1.35h store=696.59GiB GPU_peak=33.90GiB
+[FORECAST] 118,800/192,774 (61.63%) rate=15.34 samples/s ETA=1.34h store=698.35GiB GPU_peak=33.90GiB
+[FORECAST] 119,100/192,774 (61.78%) rate=15.34 samples/s ETA=1.33h store=700.12GiB GPU_peak=33.90GiB
+[FORECAST] 119,400/192,774 (61.94%) rate=15.35 samples/s ETA=1.33h store=701.88GiB GPU_peak=33.90GiB
+[FORECAST] 119,700/192,774 (62.09%) rate=15.35 samples/s ETA=1.32h store=703.64GiB GPU_peak=33.90GiB
+[FORECAST] 120,000/192,774 (62.25%) rate=15.35 samples/s ETA=1.32h store=705.40GiB GPU_peak=33.90GiB
+[FORECAST] 120,300/192,774 (62.40%) rate=15.34 samples/s ETA=1.31h store=707.16GiB GPU_peak=33.90GiB
+[FORECAST] 120,600/192,774 (62.56%) rate=15.34 samples/s ETA=1.31h store=708.93GiB GPU_peak=33.90GiB
+[FORECAST] 120,900/192,774 (62.72%) rate=15.35 samples/s ETA=1.30h store=710.69GiB GPU_peak=33.90GiB
+[FORECAST] 121,200/192,774 (62.87%) rate=15.35 samples/s ETA=1.30h store=712.45GiB GPU_peak=33.90GiB
+[FORECAST] 121,500/192,774 (63.03%) rate=15.35 samples/s ETA=1.29h store=714.22GiB GPU_peak=33.90GiB
+[FORECAST] 121,800/192,774 (63.18%) rate=15.36 samples/s ETA=1.28h store=715.98GiB GPU_peak=33.90GiB
+[FORECAST] 122,100/192,774 (63.34%) rate=15.36 samples/s ETA=1.28h store=717.74GiB GPU_peak=33.90GiB
+[FORECAST] 122,400/192,774 (63.49%) rate=15.37 samples/s ETA=1.27h store=719.51GiB GPU_peak=33.90GiB
+[FORECAST] 122,700/192,774 (63.65%) rate=15.37 samples/s ETA=1.27h store=721.27GiB GPU_peak=33.90GiB
+[FORECAST] 123,000/192,774 (63.81%) rate=15.37 samples/s ETA=1.26h store=723.03GiB GPU_peak=33.90GiB
+[FORECAST] 123,300/192,774 (63.96%) rate=15.37 samples/s ETA=1.26h store=724.79GiB GPU_peak=33.90GiB
+[FORECAST] 123,600/192,774 (64.12%) rate=15.37 samples/s ETA=1.25h store=726.56GiB GPU_peak=33.90GiB
+[FORECAST] 123,900/192,774 (64.27%) rate=15.37 samples/s ETA=1.24h store=728.32GiB GPU_peak=33.90GiB
+[FORECAST] 124,200/192,774 (64.43%) rate=15.38 samples/s ETA=1.24h store=730.08GiB GPU_peak=33.90GiB
+[FORECAST] 124,500/192,774 (64.58%) rate=15.38 samples/s ETA=1.23h store=731.84GiB GPU_peak=33.90GiB
+[FORECAST] 124,800/192,774 (64.74%) rate=15.39 samples/s ETA=1.23h store=733.61GiB GPU_peak=33.90GiB
+[FORECAST] 125,100/192,774 (64.89%) rate=15.39 samples/s ETA=1.22h store=735.37GiB GPU_peak=33.90GiB
+[FORECAST] 125,400/192,774 (65.05%) rate=15.40 samples/s ETA=1.22h store=737.14GiB GPU_peak=33.90GiB
+[FORECAST] 125,700/192,774 (65.21%) rate=15.39 samples/s ETA=1.21h store=738.90GiB GPU_peak=33.90GiB
+[FORECAST] 126,000/192,774 (65.36%) rate=15.40 samples/s ETA=1.20h store=740.66GiB GPU_peak=33.90GiB
+[FORECAST] 126,300/192,774 (65.52%) rate=15.39 samples/s ETA=1.20h store=742.42GiB GPU_peak=33.90GiB
+[FORECAST] 126,600/192,774 (65.67%) rate=15.37 samples/s ETA=1.20h store=744.19GiB GPU_peak=33.90GiB
+[FORECAST] 126,900/192,774 (65.83%) rate=15.35 samples/s ETA=1.19h store=745.95GiB GPU_peak=33.90GiB
+[FORECAST] 127,200/192,774 (65.98%) rate=15.34 samples/s ETA=1.19h store=747.71GiB GPU_peak=33.90GiB
+[FORECAST] 127,500/192,774 (66.14%) rate=15.34 samples/s ETA=1.18h store=749.47GiB GPU_peak=33.90GiB
+[FORECAST] 127,800/192,774 (66.30%) rate=15.34 samples/s ETA=1.18h store=751.23GiB GPU_peak=33.90GiB
+[FORECAST] 128,100/192,774 (66.45%) rate=15.34 samples/s ETA=1.17h store=753.00GiB GPU_peak=33.90GiB
+[FORECAST] 128,400/192,774 (66.61%) rate=15.34 samples/s ETA=1.17h store=754.76GiB GPU_peak=33.90GiB
+[FORECAST] 128,700/192,774 (66.76%) rate=15.35 samples/s ETA=1.16h store=756.52GiB GPU_peak=33.90GiB
+[FORECAST] 129,000/192,774 (66.92%) rate=15.36 samples/s ETA=1.15h store=758.28GiB GPU_peak=33.90GiB
+[FORECAST] 129,300/192,774 (67.07%) rate=15.36 samples/s ETA=1.15h store=760.03GiB GPU_peak=33.90GiB
+[FORECAST] 129,600/192,774 (67.23%) rate=15.36 samples/s ETA=1.14h store=761.79GiB GPU_peak=33.90GiB
+[FORECAST] 129,900/192,774 (67.38%) rate=15.36 samples/s ETA=1.14h store=763.55GiB GPU_peak=33.90GiB
+[FORECAST] 130,200/192,774 (67.54%) rate=15.37 samples/s ETA=1.13h store=765.30GiB GPU_peak=33.90GiB
+[FORECAST] 130,500/192,774 (67.70%) rate=15.37 samples/s ETA=1.13h store=767.06GiB GPU_peak=33.90GiB
+[FORECAST] 130,800/192,774 (67.85%) rate=15.37 samples/s ETA=1.12h store=768.81GiB GPU_peak=33.90GiB
+[FORECAST] 131,100/192,774 (68.01%) rate=15.38 samples/s ETA=1.11h store=770.57GiB GPU_peak=33.90GiB
+[FORECAST] 131,400/192,774 (68.16%) rate=15.38 samples/s ETA=1.11h store=772.32GiB GPU_peak=33.90GiB
+[FORECAST] 131,700/192,774 (68.32%) rate=15.39 samples/s ETA=1.10h store=774.08GiB GPU_peak=33.90GiB
+[FORECAST] 132,000/192,774 (68.47%) rate=15.39 samples/s ETA=1.10h store=775.83GiB GPU_peak=33.90GiB
+[FORECAST] 132,300/192,774 (68.63%) rate=15.38 samples/s ETA=1.09h store=777.59GiB GPU_peak=33.90GiB
+[FORECAST] 132,600/192,774 (68.79%) rate=15.38 samples/s ETA=1.09h store=779.35GiB GPU_peak=33.90GiB
+[FORECAST] 132,900/192,774 (68.94%) rate=15.38 samples/s ETA=1.08h store=781.10GiB GPU_peak=33.90GiB
+[FORECAST] 133,200/192,774 (69.10%) rate=15.39 samples/s ETA=1.08h store=782.86GiB GPU_peak=33.90GiB
+[FORECAST] 133,500/192,774 (69.25%) rate=15.39 samples/s ETA=1.07h store=784.61GiB GPU_peak=33.90GiB
+[FORECAST] 133,800/192,774 (69.41%) rate=15.39 samples/s ETA=1.06h store=786.37GiB GPU_peak=33.90GiB
+[FORECAST] 134,100/192,774 (69.56%) rate=15.39 samples/s ETA=1.06h store=788.13GiB GPU_peak=33.90GiB
+[FORECAST] 134,400/192,774 (69.72%) rate=15.39 samples/s ETA=1.05h store=789.88GiB GPU_peak=33.90GiB
+[FORECAST] 134,700/192,774 (69.87%) rate=15.38 samples/s ETA=1.05h store=791.64GiB GPU_peak=33.90GiB
+[FORECAST] 135,000/192,774 (70.03%) rate=15.39 samples/s ETA=1.04h store=793.39GiB GPU_peak=33.90GiB
+[FORECAST] 135,300/192,774 (70.19%) rate=15.39 samples/s ETA=1.04h store=795.15GiB GPU_peak=33.90GiB
+[FORECAST] 135,600/192,774 (70.34%) rate=15.36 samples/s ETA=1.03h store=796.91GiB GPU_peak=33.90GiB
+[FORECAST] 135,900/192,774 (70.50%) rate=15.34 samples/s ETA=1.03h store=798.66GiB GPU_peak=33.90GiB
+[FORECAST] 136,200/192,774 (70.65%) rate=15.33 samples/s ETA=1.03h store=800.42GiB GPU_peak=33.90GiB
+[FORECAST] 136,500/192,774 (70.81%) rate=15.32 samples/s ETA=1.02h store=802.17GiB GPU_peak=33.90GiB
+[FORECAST] 136,800/192,774 (70.96%) rate=15.32 samples/s ETA=1.01h store=803.93GiB GPU_peak=33.90GiB
+[FORECAST] 137,100/192,774 (71.12%) rate=15.33 samples/s ETA=1.01h store=805.69GiB GPU_peak=33.90GiB
+[FORECAST] 137,400/192,774 (71.28%) rate=15.33 samples/s ETA=1.00h store=807.44GiB GPU_peak=33.90GiB
+[FORECAST] 137,700/192,774 (71.43%) rate=15.33 samples/s ETA=1.00h store=809.20GiB GPU_peak=33.90GiB
+[FORECAST] 138,000/192,774 (71.59%) rate=15.34 samples/s ETA=0.99h store=810.95GiB GPU_peak=33.90GiB
+[FORECAST] 138,300/192,774 (71.74%) rate=15.34 samples/s ETA=0.99h store=812.71GiB GPU_peak=33.90GiB
+[FORECAST] 138,600/192,774 (71.90%) rate=15.35 samples/s ETA=0.98h store=814.47GiB GPU_peak=33.90GiB
+[FORECAST] 138,900/192,774 (72.05%) rate=15.33 samples/s ETA=0.98h store=816.22GiB GPU_peak=33.90GiB
+[FORECAST] 139,200/192,774 (72.21%) rate=15.33 samples/s ETA=0.97h store=817.98GiB GPU_peak=33.90GiB
+[FORECAST] 139,500/192,774 (72.36%) rate=15.33 samples/s ETA=0.97h store=819.73GiB GPU_peak=33.90GiB
+[FORECAST] 139,800/192,774 (72.52%) rate=15.33 samples/s ETA=0.96h store=821.49GiB GPU_peak=33.90GiB
+[FORECAST] 140,100/192,774 (72.68%) rate=15.34 samples/s ETA=0.95h store=823.25GiB GPU_peak=33.90GiB
+[FORECAST] 140,400/192,774 (72.83%) rate=15.34 samples/s ETA=0.95h store=825.00GiB GPU_peak=33.90GiB
+[FORECAST] 140,700/192,774 (72.99%) rate=15.34 samples/s ETA=0.94h store=826.76GiB GPU_peak=33.90GiB
+[FORECAST] 141,000/192,774 (73.14%) rate=15.35 samples/s ETA=0.94h store=828.51GiB GPU_peak=33.90GiB
+[FORECAST] 141,300/192,774 (73.30%) rate=15.35 samples/s ETA=0.93h store=830.27GiB GPU_peak=33.90GiB
+[FORECAST] 141,600/192,774 (73.45%) rate=15.35 samples/s ETA=0.93h store=832.03GiB GPU_peak=33.90GiB
+[FORECAST] 141,900/192,774 (73.61%) rate=15.34 samples/s ETA=0.92h store=833.78GiB GPU_peak=33.90GiB
+[FORECAST] 142,200/192,774 (73.77%) rate=15.34 samples/s ETA=0.92h store=835.54GiB GPU_peak=33.90GiB
+[FORECAST] 142,500/192,774 (73.92%) rate=15.34 samples/s ETA=0.91h store=837.29GiB GPU_peak=33.90GiB
+[FORECAST] 142,800/192,774 (74.08%) rate=15.34 samples/s ETA=0.90h store=839.05GiB GPU_peak=33.90GiB
+[FORECAST] 143,100/192,774 (74.23%) rate=15.35 samples/s ETA=0.90h store=840.80GiB GPU_peak=33.90GiB
+[FORECAST] 143,400/192,774 (74.39%) rate=15.36 samples/s ETA=0.89h store=842.56GiB GPU_peak=33.90GiB
+[FORECAST] 143,700/192,774 (74.54%) rate=15.36 samples/s ETA=0.89h store=844.31GiB GPU_peak=33.90GiB
+[FORECAST] 144,000/192,774 (74.70%) rate=15.36 samples/s ETA=0.88h store=846.07GiB GPU_peak=33.90GiB
+[FORECAST] 144,300/192,774 (74.85%) rate=15.36 samples/s ETA=0.88h store=847.83GiB GPU_peak=33.90GiB
+[FORECAST] 144,600/192,774 (75.01%) rate=15.36 samples/s ETA=0.87h store=849.58GiB GPU_peak=33.90GiB
+[FORECAST] 144,900/192,774 (75.17%) rate=15.34 samples/s ETA=0.87h store=851.34GiB GPU_peak=33.90GiB
+[FORECAST] 145,200/192,774 (75.32%) rate=15.32 samples/s ETA=0.86h store=853.09GiB GPU_peak=33.90GiB
+[FORECAST] 145,500/192,774 (75.48%) rate=15.31 samples/s ETA=0.86h store=854.85GiB GPU_peak=33.90GiB
+[FORECAST] 145,800/192,774 (75.63%) rate=15.30 samples/s ETA=0.85h store=856.60GiB GPU_peak=33.90GiB
+[FORECAST] 146,100/192,774 (75.79%) rate=15.29 samples/s ETA=0.85h store=858.36GiB GPU_peak=33.90GiB
+[FORECAST] 146,400/192,774 (75.94%) rate=15.29 samples/s ETA=0.84h store=860.12GiB GPU_peak=33.90GiB
+[FORECAST] 146,700/192,774 (76.10%) rate=15.29 samples/s ETA=0.84h store=861.87GiB GPU_peak=33.90GiB
+[FORECAST] 147,000/192,774 (76.26%) rate=15.30 samples/s ETA=0.83h store=863.63GiB GPU_peak=33.90GiB
+[FORECAST] 147,300/192,774 (76.41%) rate=15.29 samples/s ETA=0.83h store=865.38GiB GPU_peak=33.90GiB
+[FORECAST] 147,600/192,774 (76.57%) rate=15.30 samples/s ETA=0.82h store=867.14GiB GPU_peak=33.90GiB
+[FORECAST] 147,900/192,774 (76.72%) rate=15.30 samples/s ETA=0.81h store=868.90GiB GPU_peak=33.90GiB
+[FORECAST] 148,200/192,774 (76.88%) rate=15.30 samples/s ETA=0.81h store=870.65GiB GPU_peak=33.90GiB
+[FORECAST] 148,500/192,774 (77.03%) rate=15.29 samples/s ETA=0.80h store=872.41GiB GPU_peak=33.90GiB
+[FORECAST] 148,800/192,774 (77.19%) rate=15.30 samples/s ETA=0.80h store=874.17GiB GPU_peak=33.90GiB
+[FORECAST] 149,100/192,774 (77.34%) rate=15.30 samples/s ETA=0.79h store=875.92GiB GPU_peak=33.90GiB
+[FORECAST] 149,400/192,774 (77.50%) rate=15.31 samples/s ETA=0.79h store=877.68GiB GPU_peak=33.90GiB
+[FORECAST] 149,700/192,774 (77.66%) rate=15.31 samples/s ETA=0.78h store=879.43GiB GPU_peak=33.90GiB
+[FORECAST] 150,000/192,774 (77.81%) rate=15.32 samples/s ETA=0.78h store=881.19GiB GPU_peak=33.90GiB
+[FORECAST] 150,300/192,774 (77.97%) rate=15.32 samples/s ETA=0.77h store=882.95GiB GPU_peak=33.90GiB
+[FORECAST] 150,600/192,774 (78.12%) rate=15.33 samples/s ETA=0.76h store=884.70GiB GPU_peak=33.90GiB
+[FORECAST] 150,900/192,774 (78.28%) rate=15.33 samples/s ETA=0.76h store=886.46GiB GPU_peak=33.90GiB
+[FORECAST] 151,200/192,774 (78.43%) rate=15.33 samples/s ETA=0.75h store=888.21GiB GPU_peak=33.90GiB
+[FORECAST] 151,500/192,774 (78.59%) rate=15.32 samples/s ETA=0.75h store=889.97GiB GPU_peak=33.90GiB
+[FORECAST] 151,800/192,774 (78.75%) rate=15.32 samples/s ETA=0.74h store=891.73GiB GPU_peak=33.90GiB
+[FORECAST] 152,100/192,774 (78.90%) rate=15.33 samples/s ETA=0.74h store=893.48GiB GPU_peak=33.90GiB
+[FORECAST] 152,400/192,774 (79.06%) rate=15.33 samples/s ETA=0.73h store=895.24GiB GPU_peak=33.90GiB
+[FORECAST] 152,700/192,774 (79.21%) rate=15.34 samples/s ETA=0.73h store=896.99GiB GPU_peak=33.90GiB
+[FORECAST] 153,000/192,774 (79.37%) rate=15.34 samples/s ETA=0.72h store=898.75GiB GPU_peak=33.90GiB
+[FORECAST] 153,300/192,774 (79.52%) rate=15.34 samples/s ETA=0.71h store=900.51GiB GPU_peak=33.90GiB
+[FORECAST] 153,600/192,774 (79.68%) rate=15.35 samples/s ETA=0.71h store=902.26GiB GPU_peak=33.90GiB
+[FORECAST] 153,900/192,774 (79.83%) rate=15.35 samples/s ETA=0.70h store=904.02GiB GPU_peak=33.90GiB
+[FORECAST] 154,200/192,774 (79.99%) rate=15.34 samples/s ETA=0.70h store=905.77GiB GPU_peak=33.90GiB
+[FORECAST] 154,500/192,774 (80.15%) rate=15.33 samples/s ETA=0.69h store=907.53GiB GPU_peak=33.90GiB
+[FORECAST] 154,800/192,774 (80.30%) rate=15.31 samples/s ETA=0.69h store=909.29GiB GPU_peak=33.90GiB
+[FORECAST] 155,100/192,774 (80.46%) rate=15.31 samples/s ETA=0.68h store=911.04GiB GPU_peak=33.90GiB
+[FORECAST] 155,400/192,774 (80.61%) rate=15.31 samples/s ETA=0.68h store=912.80GiB GPU_peak=33.90GiB
+[FORECAST] 155,700/192,774 (80.77%) rate=15.29 samples/s ETA=0.67h store=914.55GiB GPU_peak=33.90GiB
+[FORECAST] 156,000/192,774 (80.92%) rate=15.28 samples/s ETA=0.67h store=916.31GiB GPU_peak=33.90GiB
+[FORECAST] 156,300/192,774 (81.08%) rate=15.28 samples/s ETA=0.66h store=918.07GiB GPU_peak=33.90GiB
+[FORECAST] 156,600/192,774 (81.24%) rate=15.28 samples/s ETA=0.66h store=919.83GiB GPU_peak=33.90GiB
+[FORECAST] 156,900/192,774 (81.39%) rate=15.28 samples/s ETA=0.65h store=921.58GiB GPU_peak=33.90GiB
+[FORECAST] 157,200/192,774 (81.55%) rate=15.28 samples/s ETA=0.65h store=923.34GiB GPU_peak=33.90GiB
+[FORECAST] 157,500/192,774 (81.70%) rate=15.28 samples/s ETA=0.64h store=925.10GiB GPU_peak=33.90GiB
+[FORECAST] 157,800/192,774 (81.86%) rate=15.28 samples/s ETA=0.64h store=926.85GiB GPU_peak=33.90GiB
+[FORECAST] 158,100/192,774 (82.01%) rate=15.29 samples/s ETA=0.63h store=928.61GiB GPU_peak=33.90GiB
+[FORECAST] 158,400/192,774 (82.17%) rate=15.29 samples/s ETA=0.62h store=930.36GiB GPU_peak=33.90GiB
+[FORECAST] 158,700/192,774 (82.32%) rate=15.29 samples/s ETA=0.62h store=932.12GiB GPU_peak=33.90GiB
+[FORECAST] 159,000/192,774 (82.48%) rate=15.30 samples/s ETA=0.61h store=933.88GiB GPU_peak=33.90GiB
+[FORECAST] 159,300/192,774 (82.64%) rate=15.30 samples/s ETA=0.61h store=935.63GiB GPU_peak=33.90GiB
+[FORECAST] 159,600/192,774 (82.79%) rate=15.30 samples/s ETA=0.60h store=937.39GiB GPU_peak=33.90GiB
+[FORECAST] 159,900/192,774 (82.95%) rate=15.30 samples/s ETA=0.60h store=939.14GiB GPU_peak=33.90GiB
+[FORECAST] 160,200/192,774 (83.10%) rate=15.29 samples/s ETA=0.59h store=940.90GiB GPU_peak=33.90GiB
+[FORECAST] 160,500/192,774 (83.26%) rate=15.29 samples/s ETA=0.59h store=942.66GiB GPU_peak=33.90GiB
+[FORECAST] 160,800/192,774 (83.41%) rate=15.29 samples/s ETA=0.58h store=944.41GiB GPU_peak=33.90GiB
+[FORECAST] 161,100/192,774 (83.57%) rate=15.29 samples/s ETA=0.58h store=946.17GiB GPU_peak=33.90GiB
+[FORECAST] 161,400/192,774 (83.72%) rate=15.28 samples/s ETA=0.57h store=947.92GiB GPU_peak=33.90GiB
+[FORECAST] 161,700/192,774 (83.88%) rate=15.29 samples/s ETA=0.56h store=949.68GiB GPU_peak=33.90GiB
+[FORECAST] 162,000/192,774 (84.04%) rate=15.29 samples/s ETA=0.56h store=951.44GiB GPU_peak=33.90GiB
+[FORECAST] 162,300/192,774 (84.19%) rate=15.29 samples/s ETA=0.55h store=953.19GiB GPU_peak=33.90GiB
+[FORECAST] 162,600/192,774 (84.35%) rate=15.29 samples/s ETA=0.55h store=954.95GiB GPU_peak=33.90GiB
+[FORECAST] 162,900/192,774 (84.50%) rate=15.28 samples/s ETA=0.54h store=956.70GiB GPU_peak=33.90GiB
+[FORECAST] 163,200/192,774 (84.66%) rate=15.26 samples/s ETA=0.54h store=958.46GiB GPU_peak=33.90GiB
+[FORECAST] 163,500/192,774 (84.81%) rate=15.24 samples/s ETA=0.53h store=960.21GiB GPU_peak=33.90GiB
+[FORECAST] 163,800/192,774 (84.97%) rate=15.23 samples/s ETA=0.53h store=961.97GiB GPU_peak=33.90GiB
+[FORECAST] 164,100/192,774 (85.13%) rate=15.21 samples/s ETA=0.52h store=963.72GiB GPU_peak=33.90GiB
+[FORECAST] 164,400/192,774 (85.28%) rate=15.20 samples/s ETA=0.52h store=965.48GiB GPU_peak=33.90GiB
+[FORECAST] 164,700/192,774 (85.44%) rate=15.20 samples/s ETA=0.51h store=967.24GiB GPU_peak=33.90GiB
+[FORECAST] 165,000/192,774 (85.59%) rate=15.20 samples/s ETA=0.51h store=968.99GiB GPU_peak=33.90GiB
+[FORECAST] 165,300/192,774 (85.75%) rate=15.20 samples/s ETA=0.50h store=970.75GiB GPU_peak=33.90GiB
+[FORECAST] 165,600/192,774 (85.90%) rate=15.20 samples/s ETA=0.50h store=972.50GiB GPU_peak=33.90GiB
+[FORECAST] 165,900/192,774 (86.06%) rate=15.19 samples/s ETA=0.49h store=974.26GiB GPU_peak=33.90GiB
+[FORECAST] 166,200/192,774 (86.21%) rate=15.20 samples/s ETA=0.49h store=976.02GiB GPU_peak=33.90GiB
+[FORECAST] 166,500/192,774 (86.37%) rate=15.19 samples/s ETA=0.48h store=977.77GiB GPU_peak=33.90GiB
+[FORECAST] 166,800/192,774 (86.53%) rate=15.20 samples/s ETA=0.47h store=979.53GiB GPU_peak=33.90GiB
+[FORECAST] 167,100/192,774 (86.68%) rate=15.19 samples/s ETA=0.47h store=981.28GiB GPU_peak=33.90GiB
+[FORECAST] 167,400/192,774 (86.84%) rate=15.20 samples/s ETA=0.46h store=983.04GiB GPU_peak=33.90GiB
+[FORECAST] 167,700/192,774 (86.99%) rate=15.20 samples/s ETA=0.46h store=984.79GiB GPU_peak=33.90GiB
+[FORECAST] 168,000/192,774 (87.15%) rate=15.20 samples/s ETA=0.45h store=986.55GiB GPU_peak=33.90GiB
+[FORECAST] 168,300/192,774 (87.30%) rate=15.20 samples/s ETA=0.45h store=988.30GiB GPU_peak=33.90GiB
+[FORECAST] 168,600/192,774 (87.46%) rate=15.21 samples/s ETA=0.44h store=990.06GiB GPU_peak=33.90GiB
+[FORECAST] 168,900/192,774 (87.62%) rate=15.21 samples/s ETA=0.44h store=991.82GiB GPU_peak=33.90GiB
+[FORECAST] 169,200/192,774 (87.77%) rate=15.21 samples/s ETA=0.43h store=993.57GiB GPU_peak=33.90GiB
+[FORECAST] 169,500/192,774 (87.93%) rate=15.21 samples/s ETA=0.43h store=995.33GiB GPU_peak=33.90GiB
+[FORECAST] 169,800/192,774 (88.08%) rate=15.21 samples/s ETA=0.42h store=997.08GiB GPU_peak=33.90GiB
+[FORECAST] 170,100/192,774 (88.24%) rate=15.22 samples/s ETA=0.41h store=998.84GiB GPU_peak=33.90GiB
+[FORECAST] 170,400/192,774 (88.39%) rate=15.22 samples/s ETA=0.41h store=1000.59GiB GPU_peak=33.90GiB
+[FORECAST] 170,700/192,774 (88.55%) rate=15.22 samples/s ETA=0.40h store=1002.35GiB GPU_peak=33.90GiB
+[FORECAST] 171,000/192,774 (88.70%) rate=15.22 samples/s ETA=0.40h store=1004.11GiB GPU_peak=33.90GiB
+[FORECAST] 171,300/192,774 (88.86%) rate=15.23 samples/s ETA=0.39h store=1005.87GiB GPU_peak=33.90GiB
+[FORECAST] 171,600/192,774 (89.02%) rate=15.22 samples/s ETA=0.39h store=1007.62GiB GPU_peak=33.90GiB
+[FORECAST] 171,900/192,774 (89.17%) rate=15.22 samples/s ETA=0.38h store=1009.38GiB GPU_peak=33.90GiB
+[FORECAST] 172,200/192,774 (89.33%) rate=15.19 samples/s ETA=0.38h store=1011.13GiB GPU_peak=33.90GiB
+[FORECAST] 172,500/192,774 (89.48%) rate=15.18 samples/s ETA=0.37h store=1012.89GiB GPU_peak=33.90GiB
+[FORECAST] 172,800/192,774 (89.64%) rate=15.18 samples/s ETA=0.37h store=1014.64GiB GPU_peak=33.90GiB
+[FORECAST] 173,100/192,774 (89.79%) rate=15.18 samples/s ETA=0.36h store=1016.40GiB GPU_peak=33.90GiB
+[FORECAST] 173,400/192,774 (89.95%) rate=15.18 samples/s ETA=0.35h store=1018.15GiB GPU_peak=33.90GiB
+[FORECAST] 173,700/192,774 (90.11%) rate=15.18 samples/s ETA=0.35h store=1019.91GiB GPU_peak=33.90GiB
+[FORECAST] 174,000/192,774 (90.26%) rate=15.18 samples/s ETA=0.34h store=1021.67GiB GPU_peak=33.90GiB
+[FORECAST] 174,300/192,774 (90.42%) rate=15.19 samples/s ETA=0.34h store=1023.42GiB GPU_peak=33.90GiB
+[FORECAST] 174,600/192,774 (90.57%) rate=15.19 samples/s ETA=0.33h store=1025.18GiB GPU_peak=33.90GiB
+[FORECAST] 174,900/192,774 (90.73%) rate=15.19 samples/s ETA=0.33h store=1026.93GiB GPU_peak=33.90GiB
+[FORECAST] 175,200/192,774 (90.88%) rate=15.19 samples/s ETA=0.32h store=1028.69GiB GPU_peak=33.90GiB
+[FORECAST] 175,500/192,774 (91.04%) rate=15.20 samples/s ETA=0.32h store=1030.44GiB GPU_peak=33.90GiB
+[FORECAST] 175,800/192,774 (91.19%) rate=15.20 samples/s ETA=0.31h store=1032.20GiB GPU_peak=33.90GiB
+[FORECAST] 176,100/192,774 (91.35%) rate=15.19 samples/s ETA=0.30h store=1033.95GiB GPU_peak=33.90GiB
+[FORECAST] 176,400/192,774 (91.51%) rate=15.20 samples/s ETA=0.30h store=1035.71GiB GPU_peak=33.90GiB
+[FORECAST] 176,700/192,774 (91.66%) rate=15.20 samples/s ETA=0.29h store=1037.47GiB GPU_peak=33.90GiB
+[FORECAST] 177,000/192,774 (91.82%) rate=15.20 samples/s ETA=0.29h store=1039.22GiB GPU_peak=33.90GiB
+[FORECAST] 177,300/192,774 (91.97%) rate=15.20 samples/s ETA=0.28h store=1040.98GiB GPU_peak=33.90GiB
+[FORECAST] 177,600/192,774 (92.13%) rate=15.20 samples/s ETA=0.28h store=1042.73GiB GPU_peak=33.90GiB
+[FORECAST] 177,900/192,774 (92.28%) rate=15.19 samples/s ETA=0.27h store=1044.49GiB GPU_peak=33.90GiB
+[FORECAST] 178,200/192,774 (92.44%) rate=15.18 samples/s ETA=0.27h store=1046.24GiB GPU_peak=33.90GiB
+[FORECAST] 178,500/192,774 (92.60%) rate=15.17 samples/s ETA=0.26h store=1048.00GiB GPU_peak=33.90GiB
+[FORECAST] 178,800/192,774 (92.75%) rate=15.16 samples/s ETA=0.26h store=1049.75GiB GPU_peak=33.90GiB
+[FORECAST] 179,100/192,774 (92.91%) rate=15.15 samples/s ETA=0.25h store=1051.51GiB GPU_peak=33.90GiB
+[FORECAST] 179,400/192,774 (93.06%) rate=15.15 samples/s ETA=0.25h store=1053.27GiB GPU_peak=33.90GiB
+[FORECAST] 179,700/192,774 (93.22%) rate=15.15 samples/s ETA=0.24h store=1055.02GiB GPU_peak=33.90GiB
+[FORECAST] 180,000/192,774 (93.37%) rate=15.16 samples/s ETA=0.23h store=1056.77GiB GPU_peak=33.90GiB
+[FORECAST] 180,300/192,774 (93.53%) rate=15.15 samples/s ETA=0.23h store=1058.53GiB GPU_peak=33.90GiB
+[FORECAST] 180,600/192,774 (93.68%) rate=15.14 samples/s ETA=0.22h store=1060.29GiB GPU_peak=33.90GiB
+[FORECAST] 180,900/192,774 (93.84%) rate=15.14 samples/s ETA=0.22h store=1062.04GiB GPU_peak=33.90GiB
+[FORECAST] 181,200/192,774 (94.00%) rate=15.13 samples/s ETA=0.21h store=1063.80GiB GPU_peak=33.90GiB
+[FORECAST] 181,500/192,774 (94.15%) rate=15.11 samples/s ETA=0.21h store=1065.55GiB GPU_peak=33.90GiB
+[FORECAST] 181,800/192,774 (94.31%) rate=15.10 samples/s ETA=0.20h store=1067.31GiB GPU_peak=33.90GiB
+[FORECAST] 182,100/192,774 (94.46%) rate=15.09 samples/s ETA=0.20h store=1069.07GiB GPU_peak=33.90GiB
+[FORECAST] 182,400/192,774 (94.62%) rate=15.07 samples/s ETA=0.19h store=1070.82GiB GPU_peak=33.90GiB
+[FORECAST] 182,700/192,774 (94.77%) rate=15.07 samples/s ETA=0.19h store=1072.58GiB GPU_peak=33.90GiB
+[FORECAST] 183,000/192,774 (94.93%) rate=15.07 samples/s ETA=0.18h store=1074.33GiB GPU_peak=33.90GiB
+[FORECAST] 183,300/192,774 (95.09%) rate=15.07 samples/s ETA=0.17h store=1076.09GiB GPU_peak=33.90GiB
+[FORECAST] 183,600/192,774 (95.24%) rate=15.08 samples/s ETA=0.17h store=1077.85GiB GPU_peak=33.90GiB
+[FORECAST] 183,900/192,774 (95.40%) rate=15.08 samples/s ETA=0.16h store=1079.60GiB GPU_peak=33.90GiB
+[FORECAST] 184,200/192,774 (95.55%) rate=15.07 samples/s ETA=0.16h store=1081.36GiB GPU_peak=33.90GiB
+[FORECAST] 184,500/192,774 (95.71%) rate=15.05 samples/s ETA=0.15h store=1083.11GiB GPU_peak=33.90GiB
+[FORECAST] 184,800/192,774 (95.86%) rate=15.04 samples/s ETA=0.15h store=1084.87GiB GPU_peak=33.90GiB
+[FORECAST] 185,100/192,774 (96.02%) rate=15.04 samples/s ETA=0.14h store=1086.62GiB GPU_peak=33.90GiB
+[FORECAST] 185,400/192,774 (96.17%) rate=15.03 samples/s ETA=0.14h store=1088.38GiB GPU_peak=33.90GiB
+[FORECAST] 185,700/192,774 (96.33%) rate=15.02 samples/s ETA=0.13h store=1090.13GiB GPU_peak=33.90GiB
+[FORECAST] 186,000/192,774 (96.49%) rate=15.01 samples/s ETA=0.13h store=1091.88GiB GPU_peak=33.90GiB
+[FORECAST] 186,300/192,774 (96.64%) rate=14.99 samples/s ETA=0.12h store=1093.64GiB GPU_peak=33.90GiB
+[FORECAST] 186,600/192,774 (96.80%) rate=14.99 samples/s ETA=0.11h store=1095.40GiB GPU_peak=33.90GiB
+[FORECAST] 186,900/192,774 (96.95%) rate=14.99 samples/s ETA=0.11h store=1097.15GiB GPU_peak=33.90GiB
+[FORECAST] 187,200/192,774 (97.11%) rate=14.99 samples/s ETA=0.10h store=1098.91GiB GPU_peak=33.90GiB
+[FORECAST] 187,500/192,774 (97.26%) rate=14.99 samples/s ETA=0.10h store=1100.66GiB GPU_peak=33.90GiB
+[FORECAST] 187,800/192,774 (97.42%) rate=14.99 samples/s ETA=0.09h store=1102.42GiB GPU_peak=33.90GiB
+[FORECAST] 188,100/192,774 (97.58%) rate=14.98 samples/s ETA=0.09h store=1104.17GiB GPU_peak=33.90GiB
+[FORECAST] 188,400/192,774 (97.73%) rate=14.98 samples/s ETA=0.08h store=1105.93GiB GPU_peak=33.90GiB
+[FORECAST] 188,700/192,774 (97.89%) rate=14.99 samples/s ETA=0.08h store=1107.68GiB GPU_peak=33.90GiB
+[FORECAST] 189,000/192,774 (98.04%) rate=14.99 samples/s ETA=0.07h store=1109.44GiB GPU_peak=33.90GiB
+[FORECAST] 189,300/192,774 (98.20%) rate=14.99 samples/s ETA=0.06h store=1111.19GiB GPU_peak=33.90GiB
+[FORECAST] 189,600/192,774 (98.35%) rate=14.99 samples/s ETA=0.06h store=1112.95GiB GPU_peak=33.90GiB
+[FORECAST] 189,900/192,774 (98.51%) rate=14.99 samples/s ETA=0.05h store=1114.71GiB GPU_peak=33.90GiB
+[FORECAST] 190,200/192,774 (98.66%) rate=14.99 samples/s ETA=0.05h store=1116.46GiB GPU_peak=33.90GiB
+[FORECAST] 190,500/192,774 (98.82%) rate=14.99 samples/s ETA=0.04h store=1118.21GiB GPU_peak=33.90GiB
+[FORECAST] 190,800/192,774 (98.98%) rate=14.99 samples/s ETA=0.04h store=1119.97GiB GPU_peak=33.90GiB
+[FORECAST] 191,100/192,774 (99.13%) rate=14.99 samples/s ETA=0.03h store=1121.73GiB GPU_peak=33.90GiB
+[FORECAST] 191,400/192,774 (99.29%) rate=14.99 samples/s ETA=0.03h store=1123.48GiB GPU_peak=33.90GiB
+[FORECAST] 191,700/192,774 (99.44%) rate=15.00 samples/s ETA=0.02h store=1125.24GiB GPU_peak=33.90GiB
+[FORECAST] 192,000/192,774 (99.60%) rate=15.00 samples/s ETA=0.01h store=1126.99GiB GPU_peak=33.90GiB
+[FORECAST] 192,300/192,774 (99.75%) rate=14.98 samples/s ETA=0.01h store=1128.75GiB GPU_peak=33.90GiB
+[FORECAST] 192,600/192,774 (99.91%) rate=14.97 samples/s ETA=0.00h store=1130.50GiB GPU_peak=33.90GiB
+
+==============================================================================
+[COMPLETE] {
+  "status": "completed",
+  "checkpoint": "models/climax_forecaster_full/checkpoint_best.pt",
+  "output": "/home/tahiti/ConserveFM/forecasts/climax.zarr",
+  "variables": [
+    "geopotential@50hPa",
+    "geopotential@100hPa",
+    "geopotential@150hPa",
+    "geopotential@200hPa",
+    "geopotential@250hPa",
+    "geopotential@300hPa",
+    "geopotential@400hPa",
+    "geopotential@500hPa",
+    "geopotential@600hPa",
+    "geopotential@700hPa",
+    "geopotential@850hPa",
+    "geopotential@925hPa",
+    "geopotential@1000hPa",
+    "temperature@50hPa",
+    "temperature@100hPa",
+    "temperature@150hPa",
+    "temperature@200hPa",
+    "temperature@250hPa",
+    "temperature@300hPa",
+    "temperature@400hPa",
+    "temperature@500hPa",
+    "temperature@600hPa",
+    "temperature@700hPa",
+    "temperature@850hPa",
+    "temperature@925hPa",
+    "temperature@1000hPa",
+    "specific_humidity@50hPa",
+    "specific_humidity@100hPa",
+    "specific_humidity@150hPa",
+    "specific_humidity@200hPa",
+    "specific_humidity@250hPa",
+    "specific_humidity@300hPa",
+    "specific_humidity@400hPa",
+    "specific_humidity@500hPa",
+    "specific_humidity@600hPa",
+    "specific_humidity@700hPa",
+    "specific_humidity@850hPa",
+    "specific_humidity@925hPa",
+    "specific_humidity@1000hPa",
+    "u_component_of_wind@50hPa",
+    "u_component_of_wind@100hPa",
+    "u_component_of_wind@150hPa",
+    "u_component_of_wind@200hPa",
+    "u_component_of_wind@250hPa",
+    "u_component_of_wind@300hPa",
+    "u_component_of_wind@400hPa",
+    "u_component_of_wind@500hPa",
+    "u_component_of_wind@600hPa",
+    "u_component_of_wind@700hPa",
+    "u_component_of_wind@850hPa",
+    "u_component_of_wind@925hPa",
+    "u_component_of_wind@1000hPa",
+    "v_component_of_wind@50hPa",
+    "v_component_of_wind@100hPa",
+    "v_component_of_wind@150hPa",
+    "v_component_of_wind@200hPa",
+    "v_component_of_wind@250hPa",
+    "v_component_of_wind@300hPa",
+    "v_component_of_wind@400hPa",
+    "v_component_of_wind@500hPa",
+    "v_component_of_wind@600hPa",
+    "v_component_of_wind@700hPa",
+    "v_component_of_wind@850hPa",
+    "v_component_of_wind@925hPa",
+    "v_component_of_wind@1000hPa",
+    "2m_temperature",
+    "10m_u_component_of_wind",
+    "10m_v_component_of_wind",
+    "mean_sea_level_pressure",
+    "surface_pressure",
+    "total_precipitation_6hr"
+  ],
+  "n_variables": 71,
+  "n_times": 93544,
+  "lead_hours": [
+    6,
+    24,
+    72
+  ],
+  "forecast_jobs": 192774,
+  "written_this_run": 192774,
+  "skipped_existing": 0,
+  "missing": {
+    "6": 0,
+    "24": 0,
+    "72": 0
+  },
+  "dtype": "float32",
+  "shape": [
+    93544,
+    71,
+    240,
+    121
+  ]
+}

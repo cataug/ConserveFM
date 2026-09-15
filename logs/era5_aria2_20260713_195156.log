@@ -1,0 +1,746 @@
+
+07/13 19:52:02 [[1;32mNOTICE[0m] Downloading 83782 item(s)
+[DL:0B][#27635b 0B/0B][#e0cd73 0B/0B][#b342dd 0B/0B][#2faf57 0B/0B][#f5f0a1 0B/0B](+27)
+[DL:96KiB][#27635b 0B/7.3MiB(0%)][#e0cd73 0B/0B][#b342dd 0B/0B][#2faf57 0B/0B][#f5f0a1 0B/0B](+27)
+[DL:212KiB][#27635b 48KiB/7.3MiB(0%)][#e0cd73 0B/7.3MiB(0%)][#b342dd 0B/0B][#2faf57 0B/0B][#f5f0a1 0B/0B](+27)
+[DL:221KiB][#27635b 48KiB/7.3MiB(0%)][#e0cd73 0B/7.3MiB(0%)][#b342dd 0B/0B][#2faf57 32KiB/7.3MiB(0%)][#f5f0a1 0B/7.3MiB(0%)](+27)
+[DL:274KiB][#27635b 80KiB/7.3MiB(1%)][#e0cd73 0B/7.3MiB(0%)][#b342dd 16KiB/7.3MiB(0%)][#2faf57 32KiB/7.3MiB(0%)][#f5f0a1 48KiB/7.3MiB(0%)](+27)
+[DL:333KiB][#27635b 80KiB/7.3MiB(1%)][#e0cd73 48KiB/7.3MiB(0%)][#b342dd 16KiB/7.3MiB(0%)][#2faf57 80KiB/7.3MiB(1%)][#f5f0a1 48KiB/7.3MiB(0%)](+27)
+[DL:346KiB][#27635b 80KiB/7.3MiB(1%)][#e0cd73 48KiB/7.3MiB(0%)][#b342dd 16KiB/7.3MiB(0%)][#2faf57 80KiB/7.3MiB(1%)][#f5f0a1 64KiB/7.3MiB(0%)](+27)
+[DL:414KiB][#27635b 80KiB/7.3MiB(1%)][#e0cd73 48KiB/7.3MiB(0%)][#b342dd 48KiB/7.3MiB(0%)][#2faf57 80KiB/7.3MiB(1%)][#f5f0a1 176KiB/7.3MiB(2%)](+27)
+[DL:506KiB][#27635b 80KiB/7.3MiB(1%)][#e0cd73 48KiB/7.3MiB(0%)][#b342dd 96KiB/7.3MiB(1%)][#2faf57 80KiB/7.3MiB(1%)][#f5f0a1 320KiB/7.3MiB(4%)](+27)
+[DL:519KiB][#27635b 112KiB/7.3MiB(1%)][#e0cd73 64KiB/7.3MiB(0%)][#b342dd 128KiB/7.3MiB(1%)][#2faf57 96KiB/7.3MiB(1%)][#f5f0a1 336KiB/7.3MiB(4%)](+27)
+[DL:582KiB][#27635b 112KiB/7.3MiB(1%)][#e0cd73 64KiB/7.3MiB(0%)][#b342dd 144KiB/7.3MiB(1%)][#2faf57 128KiB/7.3MiB(1%)][#f5f0a1 336KiB/7.3MiB(4%)](+27)
+[DL:671KiB][#27635b 160KiB/7.3MiB(2%)][#e0cd73 96KiB/7.3MiB(1%)][#b342dd 144KiB/7.3MiB(1%)][#2faf57 128KiB/7.3MiB(1%)][#f5f0a1 544KiB/7.3MiB(7%)](+27)
+
+07/13 19:52:16 [[1;31mERROR[0m] CUID#15 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3665.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3665.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 906 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:16 [[1;32mNOTICE[0m] Download GID#fb7e43d1a5257366 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+[DL:786KiB][#27635b 160KiB/7.3MiB(2%)][#e0cd73 96KiB/7.3MiB(1%)][#b342dd 160KiB/7.3MiB(2%)][#2faf57 224KiB/7.3MiB(2%)][#f5f0a1 768KiB/7.3MiB(10%)](+27)
+[DL:827KiB][#27635b 208KiB/7.3MiB(2%)][#e0cd73 96KiB/7.3MiB(1%)][#b342dd 160KiB/7.3MiB(2%)][#2faf57 272KiB/7.3MiB(3%)][#f5f0a1 864KiB/7.3MiB(11%)](+27)
+[DL:836KiB][#27635b 208KiB/7.3MiB(2%)][#e0cd73 160KiB/7.3MiB(2%)][#b342dd 160KiB/7.3MiB(2%)][#2faf57 272KiB/7.3MiB(3%)][#f5f0a1 912KiB/7.3MiB(12%)](+27)
+[DL:856KiB][#27635b 256KiB/7.3MiB(3%)][#e0cd73 160KiB/7.3MiB(2%)][#b342dd 208KiB/7.3MiB(2%)][#2faf57 336KiB/7.3MiB(4%)][#f5f0a1 912KiB/7.3MiB(12%)](+27)
+[DL:837KiB][#27635b 256KiB/7.3MiB(3%)][#e0cd73 208KiB/7.3MiB(2%)][#b342dd 208KiB/7.3MiB(2%)][#2faf57 336KiB/7.3MiB(4%)][#f5f0a1 912KiB/7.3MiB(12%)](+27)
+[DL:776KiB][#27635b 288KiB/7.3MiB(3%)][#e0cd73 208KiB/7.3MiB(2%)][#b342dd 208KiB/7.3MiB(2%)][#2faf57 384KiB/7.3MiB(5%)][#f5f0a1 0.9MiB/7.3MiB(12%)](+27)
+[DL:761KiB][#27635b 288KiB/7.3MiB(3%)][#e0cd73 208KiB/7.3MiB(2%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 384KiB/7.3MiB(5%)][#f5f0a1 0.9MiB/7.3MiB(12%)](+27)
+[DL:731KiB][#27635b 336KiB/7.3MiB(4%)][#e0cd73 224KiB/7.3MiB(2%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 448KiB/7.3MiB(5%)][#f5f0a1 1.0MiB/7.3MiB(13%)](+27)
+[DL:651KiB][#27635b 336KiB/7.3MiB(4%)][#e0cd73 224KiB/7.3MiB(2%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 448KiB/7.3MiB(5%)][#f5f0a1 1.0MiB/7.3MiB(13%)](+27)
+
+07/13 19:52:25 [[1;31mERROR[0m] CUID#29 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3904.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3904.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:25 [[1;32mNOTICE[0m] Download GID#b8d45638cb7886ae not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3904.0.0.0
+[DL:552KiB][#27635b 368KiB/7.3MiB(4%)][#e0cd73 224KiB/7.3MiB(2%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 496KiB/7.3MiB(6%)][#f5f0a1 1.0MiB/7.3MiB(13%)](+27)
+
+07/13 19:52:26 [[1;31mERROR[0m] CUID#19 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3671.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3671.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:26 [[1;32mNOTICE[0m] Download GID#10e71a3d292f127b not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3671.0.0.0
+[DL:499KiB][#27635b 368KiB/7.3MiB(4%)][#e0cd73 272KiB/7.3MiB(3%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 496KiB/7.3MiB(6%)][#f5f0a1 1.0MiB/7.3MiB(14%)](+27)
+[DL:488KiB][#27635b 368KiB/7.3MiB(4%)][#e0cd73 272KiB/7.3MiB(3%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 496KiB/7.3MiB(6%)][#f5f0a1 1.0MiB/7.3MiB(14%)](+27)
+[DL:431KiB][#27635b 384KiB/7.3MiB(5%)][#e0cd73 272KiB/7.3MiB(3%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 512KiB/7.3MiB(6%)][#f5f0a1 1.0MiB/7.3MiB(14%)](+27)
+[DL:408KiB][#27635b 384KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 256KiB/7.3MiB(3%)][#2faf57 512KiB/7.3MiB(6%)][#f5f0a1 1.1MiB/7.3MiB(15%)](+27)
+[DL:396KiB][#27635b 416KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 272KiB/7.3MiB(3%)][#2faf57 560KiB/7.3MiB(7%)][#f5f0a1 1.1MiB/7.3MiB(15%)](+27)
+[DL:354KiB][#27635b 416KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 272KiB/7.3MiB(3%)][#2faf57 560KiB/7.3MiB(7%)][#f5f0a1 1.2MiB/7.3MiB(17%)](+27)
+
+07/13 19:52:32 [[1;31mERROR[0m] CUID#30 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3950.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3950.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:32 [[1;31mERROR[0m] CUID#31 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4263.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4263.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 143 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:32 [[1;31mERROR[0m] CUID#38 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/7638.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/7638.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 1004 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:32 [[1;32mNOTICE[0m] Download GID#d77d3ffea89dbe70 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3950.0.0.0
+
+07/13 19:52:32 [[1;32mNOTICE[0m] Download GID#868463cc9ca6be7f not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4263.0.0.0
+
+07/13 19:52:32 [[1;32mNOTICE[0m] Download GID#27411761852ca46a not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/7638.0.0.0
+ *** Download Progress Summary as of Mon Jul 13 19:52:33 2026 *** 
+===============================================================================
+[#27635b 416KiB/7.3MiB(5%) CN:1 DL:9.6KiB ETA:12m18s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#e0cd73 336KiB/7.3MiB(4%) CN:1 DL:13KiB ETA:8m58s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#b342dd 272KiB/7.3MiB(3%) CN:1 DL:3.0KiB ETA:39m21s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#2faf57 560KiB/7.3MiB(7%) CN:1 DL:14KiB ETA:8m1s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#f5f0a1 1.2MiB/7.3MiB(17%) CN:1 DL:32KiB ETA:3m9s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#73586f 496KiB/7.3MiB(6%) CN:1 DL:19KiB ETA:5m54s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#ab7d2f 192KiB/7.2MiB(2%) CN:1 DL:2.5KiB ETA:46m47s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#afd263 736KiB/7.2MiB(9%) CN:1 DL:23KiB ETA:4m49s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3666.0.0.0
+-------------------------------------------------------------------------------
+[#4b0d58 896KiB/7.2MiB(12%) CN:1 DL:4.1KiB ETA:26m9s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3667.0.0.0
+-------------------------------------------------------------------------------
+[#cbda53 1.1MiB/7.2MiB(15%) CN:1 DL:24KiB ETA:4m14s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3670.0.0.0
+-------------------------------------------------------------------------------
+[#e12592 352KiB/7.3MiB(4%) CN:1 DL:4.3KiB ETA:27m24s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3672.0.0.0
+-------------------------------------------------------------------------------
+[#9813b9 208KiB/7.2MiB(2%) CN:1 DL:4.8KiB ETA:25m]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3673.0.0.0
+-------------------------------------------------------------------------------
+[#c9bf14 768KiB/7.3MiB(10%) CN:1 DL:19KiB ETA:5m42s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3675.0.0.0
+-------------------------------------------------------------------------------
+[#0c4661 784KiB/7.3MiB(10%) CN:1 DL:32KiB ETA:3m24s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3676.0.0.0
+-------------------------------------------------------------------------------
+[#800b1e 448KiB/7.3MiB(5%) CN:1 DL:12KiB ETA:9m24s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3678.0.0.0
+-------------------------------------------------------------------------------
+[#c74b48 224KiB/7.3MiB(2%) CN:1 DL:10KiB ETA:11m58s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3681.0.0.0
+-------------------------------------------------------------------------------
+[#c1b08f 1.2MiB/7.3MiB(17%) CN:1 DL:54KiB ETA:1m53s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3682.0.0.0
+-------------------------------------------------------------------------------
+[#f59c00 432KiB/7.3MiB(5%) CN:1 DL:9.9KiB ETA:11m50s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3683.0.0.0
+-------------------------------------------------------------------------------
+[#2e2f08 0.9MiB/7.2MiB(12%) CN:1 DL:27KiB ETA:4m1s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3877.0.0.0
+-------------------------------------------------------------------------------
+[#1b0eb5 528KiB/7.3MiB(7%) CN:1 DL:19KiB ETA:5m55s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4280.0.0.0
+-------------------------------------------------------------------------------
+[#3ff581 416KiB/7.2MiB(5%) CN:1 DL:14KiB ETA:7m50s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4304.0.0.0
+-------------------------------------------------------------------------------
+[#1b5c36 432KiB/7.3MiB(5%) CN:1 DL:6.7KiB ETA:17m33s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4358.0.0.0
+-------------------------------------------------------------------------------
+[#24f5b4 512KiB/7.2MiB(6%) CN:1 DL:13KiB ETA:8m20s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/5222.0.0.0
+-------------------------------------------------------------------------------
+[#060d43 320KiB/7.3MiB(4%) CN:1 DL:9.9KiB ETA:12m2s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/7460.0.0.0
+-------------------------------------------------------------------------------
+[#11c5c5 496KiB/7.3MiB(6%) CN:1 DL:9.7KiB ETA:11m57s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/7465.0.0.0
+-------------------------------------------------------------------------------
+[#080d38 384KiB/7.2MiB(5%) CN:1 DL:5.4KiB ETA:21m29s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8297.0.0.0
+-------------------------------------------------------------------------------
+[#0ac1b1 176KiB/7.2MiB(2%) CN:1 DL:19KiB ETA:6m9s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8298.0.0.0
+-------------------------------------------------------------------------------
+[#6dd1d6 48KiB/7.2MiB(0%) CN:1 DL:17KiB ETA:7m10s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8299.0.0.0
+-------------------------------------------------------------------------------
+[#d1b694 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8300.0.0.0
+-------------------------------------------------------------------------------
+[#b88e86 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8301.0.0.0
+-------------------------------------------------------------------------------
+[#2745d7 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8302.0.0.0
+-------------------------------------------------------------------------------
+[#7020a5 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8303.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:393KiB][#27635b 416KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 272KiB/7.3MiB(3%)][#2faf57 560KiB/7.3MiB(7%)][#f5f0a1 1.2MiB/7.3MiB(17%)](+27)
+[DL:388KiB][#27635b 416KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 384KiB/7.3MiB(5%)][#2faf57 560KiB/7.3MiB(7%)][#f5f0a1 1.2MiB/7.3MiB(17%)](+27)
+[DL:376KiB][#27635b 448KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 384KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(18%)](+27)
+[DL:391KiB][#27635b 448KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 384KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(18%)](+27)
+
+07/13 19:52:36 [[1;31mERROR[0m] CUID#21 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3673.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3673.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 592 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:36 [[1;32mNOTICE[0m] Download GID#9813b9121b06af4b not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3673.0.0.0
+[DL:362KiB][#27635b 448KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 384KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(19%)](+27)
+
+07/13 19:52:37 [[1;31mERROR[0m] CUID#17 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3667.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3667.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:37 [[1;31mERROR[0m] CUID#39 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8297.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8297.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:37 [[1;32mNOTICE[0m] Download GID#4b0d581e809273d2 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3667.0.0.0
+
+07/13 19:52:38 [[1;32mNOTICE[0m] Download GID#080d389a5417f3c1 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8297.0.0.0
+[DL:393KiB][#27635b 448KiB/7.3MiB(5%)][#e0cd73 336KiB/7.3MiB(4%)][#b342dd 448KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(19%)](+27)
+[DL:362KiB][#27635b 496KiB/7.3MiB(6%)][#e0cd73 384KiB/7.3MiB(5%)][#b342dd 448KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(19%)](+27)
+
+07/13 19:52:40 [[1;31mERROR[0m] CUID#13 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3661.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3661.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:40 [[1;32mNOTICE[0m] Download GID#73586f3641f0ecc1 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+[DL:385KiB][#27635b 496KiB/7.3MiB(6%)][#e0cd73 384KiB/7.3MiB(5%)][#b342dd 448KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(19%)](+27)
+[DL:406KiB][#27635b 496KiB/7.3MiB(6%)][#e0cd73 384KiB/7.3MiB(5%)][#b342dd 448KiB/7.3MiB(5%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(19%)](+27)
+[DL:375KiB][#27635b 496KiB/7.3MiB(6%)][#e0cd73 384KiB/7.3MiB(5%)][#b342dd 464KiB/7.3MiB(6%)][#2faf57 624KiB/7.3MiB(8%)][#f5f0a1 1.3MiB/7.3MiB(19%)](+27)
+
+07/13 19:52:43 [[1;31mERROR[0m] CUID#16 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3666.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3666.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:43 [[1;32mNOTICE[0m] Download GID#afd26368d2574255 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3666.0.0.0
+[DL:366KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 384KiB/7.3MiB(5%)][#b342dd 464KiB/7.3MiB(6%)][#2faf57 688KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(19%)](+27)
+[DL:404KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 464KiB/7.3MiB(6%)][#2faf57 688KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(19%)](+27)
+[DL:405KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 464KiB/7.3MiB(6%)][#2faf57 688KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(19%)](+27)
+[DL:414KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 464KiB/7.3MiB(6%)][#2faf57 688KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(20%)](+27)
+[DL:404KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 480KiB/7.3MiB(6%)][#2faf57 688KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(20%)](+27)
+
+07/13 19:52:48 [[1;31mERROR[0m] CUID#25 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3681.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3681.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 803 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:48 [[1;32mNOTICE[0m] Download GID#c74b481706896529 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3681.0.0.0
+[DL:426KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 480KiB/7.3MiB(6%)][#2faf57 688KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(20%)](+27)
+[DL:413KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 480KiB/7.3MiB(6%)][#2faf57 736KiB/7.3MiB(9%)][#f5f0a1 1.4MiB/7.3MiB(20%)](+27)
+[DL:422KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 480KiB/7.3MiB(6%)][#2faf57 736KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(20%)](+27)
+[DL:417KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 480KiB/7.3MiB(6%)][#2faf57 736KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(20%)](+27)
+
+07/13 19:52:52 [[1;31mERROR[0m] CUID#14 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3662.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3662.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 725 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:52 [[1;31mERROR[0m] CUID#34 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4358.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4358.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 630 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:52 [[1;31mERROR[0m] CUID#35 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/5222.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/5222.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 870 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:52 [[1;32mNOTICE[0m] Download GID#ab7d2f40c2e079bc not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+
+07/13 19:52:52 [[1;32mNOTICE[0m] Download GID#1b5c36aa13fed447 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4358.0.0.0
+
+07/13 19:52:52 [[1;32mNOTICE[0m] Download GID#24f5b40a70eb5a00 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/5222.0.0.0
+[DL:488KiB][#27635b 528KiB/7.3MiB(7%)][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 704KiB/7.3MiB(9%)][#2faf57 736KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(20%)](+27)
+
+07/13 19:52:53 [[1;31mERROR[0m] CUID#8 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3652.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3652.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 723 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:53 [[1;32mNOTICE[0m] Download GID#27635bfe92984a51 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+[DL:474KiB][#e0cd73 448KiB/7.3MiB(5%)][#b342dd 704KiB/7.3MiB(9%)][#2faf57 736KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(20%)][#cbda53 1.4MiB/7.2MiB(19%)](+27)
+
+07/13 19:52:54 [[1;31mERROR[0m] CUID#9 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3653.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3653.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 814 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:54 [[1;32mNOTICE[0m] Download GID#e0cd73a0564d3149 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+[DL:466KiB][#b342dd 704KiB/7.3MiB(9%)][#2faf57 736KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(20%)][#cbda53 1.4MiB/7.2MiB(19%)][#e12592 752KiB/7.3MiB(10%)](+27)
+
+07/13 19:52:56 [[1;31mERROR[0m] CUID#32 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4280.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4280.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 897 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:56 [[1;32mNOTICE[0m] Download GID#1b0eb575d2d0e89e not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4280.0.0.0
+[DL:514KiB][#b342dd 704KiB/7.3MiB(9%)][#2faf57 752KiB/7.3MiB(10%)][#f5f0a1 1.5MiB/7.3MiB(20%)][#cbda53 1.5MiB/7.2MiB(21%)][#e12592 752KiB/7.3MiB(10%)](+27)
+
+07/13 19:52:57 [[1;31mERROR[0m] CUID#27 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3683.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3683.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 894 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:57 [[1;32mNOTICE[0m] Download GID#f59c0013007315ac not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3683.0.0.0
+[DL:501KiB][#b342dd 704KiB/7.3MiB(9%)][#2faf57 752KiB/7.3MiB(10%)][#f5f0a1 1.5MiB/7.3MiB(20%)][#cbda53 1.5MiB/7.2MiB(21%)][#e12592 752KiB/7.3MiB(10%)](+27)
+
+07/13 19:52:58 [[1;31mERROR[0m] CUID#33 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4304.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/4304.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 739 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:58 [[1;32mNOTICE[0m] Download GID#3ff5816240c12aa2 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/4304.0.0.0
+[DL:474KiB][#b342dd 704KiB/7.3MiB(9%)][#2faf57 752KiB/7.3MiB(10%)][#f5f0a1 1.5MiB/7.3MiB(20%)][#cbda53 1.5MiB/7.2MiB(21%)][#e12592 800KiB/7.3MiB(10%)](+27)
+
+07/13 19:52:59 [[1;31mERROR[0m] CUID#11 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3656.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3656.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 743 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:59 [[1;31mERROR[0m] CUID#36 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/7460.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/7460.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 794 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:52:59 [[1;32mNOTICE[0m] Download GID#2faf5758bc114efa not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+
+07/13 19:52:59 [[1;32mNOTICE[0m] Download GID#060d4389bdac2077 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/7460.0.0.0
+[DL:521KiB][#b342dd 720KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.5MiB/7.2MiB(21%)][#e12592 800KiB/7.3MiB(10%)][#c9bf14 1.1MiB/7.3MiB(15%)](+27)
+[DL:478KiB][#b342dd 720KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#e12592 800KiB/7.3MiB(10%)][#c9bf14 1.1MiB/7.3MiB(15%)](+27)
+[DL:499KiB][#b342dd 720KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#e12592 800KiB/7.3MiB(10%)][#c9bf14 1.1MiB/7.3MiB(15%)](+27)
+
+07/13 19:53:01 [[1;31mERROR[0m] CUID#22 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3675.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3675.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 1015 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:01 [[1;32mNOTICE[0m] Download GID#c9bf140e04913593 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3675.0.0.0
+
+07/13 19:53:04 [[1;32mNOTICE[0m] Serialized session to '/home/tahiti/ConserveFM/manifests/era5_aria2_session.txt' successfully.
+ *** Download Progress Summary as of Mon Jul 13 19:53:04 2026 *** 
+===============================================================================
+[#b342dd 720KiB/7.3MiB(9%) CN:1 DL:1.2KiB ETA:1h32m5s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#f5f0a1 1.5MiB/7.3MiB(21%) CN:1 DL:1.5KiB ETA:1h5m24s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#cbda53 1.6MiB/7.2MiB(22%) CN:1 DL:18KiB ETA:5m11s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3670.0.0.0
+-------------------------------------------------------------------------------
+[#e12592 800KiB/7.3MiB(10%) CN:1 DL:4.8KiB ETA:23m3s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3672.0.0.0
+-------------------------------------------------------------------------------
+[#0c4661 1.3MiB/7.3MiB(17%) CN:1 DL:8.8KiB ETA:11m35s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3676.0.0.0
+-------------------------------------------------------------------------------
+[#800b1e 832KiB/7.3MiB(11%) CN:1 DL:4.6KiB ETA:23m45s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3678.0.0.0
+-------------------------------------------------------------------------------
+[#c1b08f 1.8MiB/7.3MiB(25%) CN:1 DL:12KiB ETA:7m20s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3682.0.0.0
+-------------------------------------------------------------------------------
+[#2e2f08 1.7MiB/7.2MiB(24%) CN:1 DL:26KiB ETA:3m33s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3877.0.0.0
+-------------------------------------------------------------------------------
+[#11c5c5 672KiB/7.3MiB(8%) CN:1 DL:5.5KiB ETA:20m30s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/7465.0.0.0
+-------------------------------------------------------------------------------
+[#0ac1b1 352KiB/7.2MiB(4%) CN:1 DL:699B ETA:2h53m50s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8298.0.0.0
+-------------------------------------------------------------------------------
+[#6dd1d6 320KiB/7.2MiB(4%) CN:1 DL:699B ETA:2h54m15s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8299.0.0.0
+-------------------------------------------------------------------------------
+[#d1b694 448KiB/7.2MiB(5%) CN:1 DL:18KiB ETA:6m24s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8300.0.0.0
+-------------------------------------------------------------------------------
+[#b88e86 736KiB/7.3MiB(9%) CN:1 DL:41KiB ETA:2m42s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8301.0.0.0
+-------------------------------------------------------------------------------
+[#2745d7 1.1MiB/7.3MiB(16%) CN:1 DL:12KiB ETA:8m30s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8302.0.0.0
+-------------------------------------------------------------------------------
+[#7020a5 384KiB/7.3MiB(5%) CN:1 DL:4.8KiB ETA:24m33s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8303.0.0.0
+-------------------------------------------------------------------------------
+[#06a77f 224KiB/7.2MiB(2%) CN:1 DL:6.1KiB ETA:19m47s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8304.0.0.0
+-------------------------------------------------------------------------------
+[#15c924 1.0MiB/7.3MiB(14%) CN:1 DL:45KiB ETA:2m21s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8305.0.0.0
+-------------------------------------------------------------------------------
+[#edbc25 272KiB/7.2MiB(3%) CN:1 DL:3.3KiB ETA:36m14s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8306.0.0.0
+-------------------------------------------------------------------------------
+[#82ff90 384KiB/7.2MiB(5%) CN:1 DL:17KiB ETA:6m32s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8307.0.0.0
+-------------------------------------------------------------------------------
+[#5b9aa8 272KiB/7.2MiB(3%) CN:1 DL:19KiB ETA:6m8s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8308.0.0.0
+-------------------------------------------------------------------------------
+[#8695fe 208KiB/7.2MiB(2%) CN:1 DL:23KiB ETA:5m6s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8309.0.0.0
+-------------------------------------------------------------------------------
+[#bfd198 272KiB/7.2MiB(3%) CN:1 DL:38KiB ETA:3m7s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8310.0.0.0
+-------------------------------------------------------------------------------
+[#37c971 112KiB/7.2MiB(1%) CN:1 DL:16KiB ETA:7m12s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8311.0.0.0
+-------------------------------------------------------------------------------
+[#13e70d 16KiB/7.2MiB(0%) CN:1 DL:2.0KiB ETA:59m19s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8312.0.0.0
+-------------------------------------------------------------------------------
+[#b4b345 144KiB/7.2MiB(1%) CN:1 DL:21KiB ETA:5m41s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8313.0.0.0
+-------------------------------------------------------------------------------
+[#364a75 48KiB/7.2MiB(0%) CN:1 DL:10KiB ETA:11m13s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8314.0.0.0
+-------------------------------------------------------------------------------
+[#9a5c07 48KiB/7.2MiB(0%) CN:1 DL:11KiB ETA:10m46s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8315.0.0.0
+-------------------------------------------------------------------------------
+[#013f39 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8316.0.0.0
+-------------------------------------------------------------------------------
+[#85d049 16KiB/7.2MiB(0%) CN:1 DL:8.3KiB ETA:14m51s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8317.0.0.0
+-------------------------------------------------------------------------------
+[#2bd9ca 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8318.0.0.0
+-------------------------------------------------------------------------------
+[#0f916b 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8319.0.0.0
+-------------------------------------------------------------------------------
+[#ed693f 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8320.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:352KiB][#b342dd 720KiB/7.3MiB(9%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#e12592 800KiB/7.3MiB(10%)][#0c4661 1.3MiB/7.3MiB(17%)](+27)
+
+07/13 19:53:04 [[1;31mERROR[0m] CUID#42 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8298.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8298.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 838 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:04 [[1;31mERROR[0m] CUID#45 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8299.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8299.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 838 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:04 [[1;32mNOTICE[0m] Download GID#0ac1b15e0b71cad3 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8298.0.0.0
+
+07/13 19:53:04 [[1;32mNOTICE[0m] Download GID#6dd1d67838668c31 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8299.0.0.0
+[DL:536KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#e12592 800KiB/7.3MiB(10%)][#0c4661 1.3MiB/7.3MiB(17%)](+27)
+[DL:564KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#e12592 800KiB/7.3MiB(10%)][#0c4661 1.3MiB/7.3MiB(18%)](+27)
+[DL:602KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#e12592 800KiB/7.3MiB(10%)][#0c4661 1.3MiB/7.3MiB(18%)](+27)
+
+07/13 19:53:07 [[1;31mERROR[0m] CUID#20 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3672.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3672.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:07 [[1;32mNOTICE[0m] Download GID#e12592cfe6c79712 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3672.0.0.0
+[DL:650KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.5MiB/7.3MiB(21%)][#cbda53 1.6MiB/7.2MiB(22%)][#0c4661 1.3MiB/7.3MiB(18%)][#800b1e 832KiB/7.3MiB(11%)](+27)
+[DL:636KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#cbda53 1.6MiB/7.2MiB(22%)][#0c4661 1.3MiB/7.3MiB(18%)][#800b1e 880KiB/7.3MiB(11%)](+27)
+[DL:705KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#cbda53 1.6MiB/7.2MiB(22%)][#0c4661 1.3MiB/7.3MiB(18%)][#800b1e 880KiB/7.3MiB(11%)](+27)
+
+07/13 19:53:10 [[1;31mERROR[0m] CUID#18 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3670.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3670.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 976 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:10 [[1;31mERROR[0m] CUID#66 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8306.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8306.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:10 [[1;32mNOTICE[0m] Download GID#cbda53c2cd46282d not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3670.0.0.0
+
+07/13 19:53:10 [[1;32mNOTICE[0m] Download GID#edbc2541697c71c6 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8306.0.0.0
+[DL:715KiB][#b342dd 832KiB/7.3MiB(11%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.3MiB/7.3MiB(18%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 1.9MiB/7.3MiB(26%)](+27)
+[DL:898KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.3MiB/7.3MiB(18%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 1.9MiB/7.3MiB(26%)](+27)
+[DL:873KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 1.9MiB/7.3MiB(26%)](+27)
+[DL:720KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 1.9MiB/7.3MiB(26%)](+27)
+
+07/13 19:53:14 [[1;31mERROR[0m] CUID#37 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/7465.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/7465.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 872 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:14 [[1;32mNOTICE[0m] Download GID#11c5c5a8b51e55f5 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/7465.0.0.0
+[DL:745KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 2.0MiB/7.3MiB(27%)](+27)
+
+07/13 19:53:15 [[1;31mERROR[0m] CUID#65 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8305.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8305.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:15 [[1;32mNOTICE[0m] Download GID#15c924c4318c25bb not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8305.0.0.0
+[DL:711KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 2.0MiB/7.3MiB(27%)](+27)
+[DL:751KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 2.0MiB/7.3MiB(27%)](+27)
+
+07/13 19:53:17 [[1;31mERROR[0m] CUID#57 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8303.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8303.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 805 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:17 [[1;32mNOTICE[0m] Download GID#7020a5485ca985dc not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8303.0.0.0
+[DL:756KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#800b1e 880KiB/7.3MiB(11%)][#c1b08f 2.0MiB/7.3MiB(27%)](+27)
+
+07/13 19:53:18 [[1;31mERROR[0m] CUID#24 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3678.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3678.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:18 [[1;32mNOTICE[0m] Download GID#800b1ef7342d6570 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3678.0.0.0
+[DL:733KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#c1b08f 2.0MiB/7.3MiB(27%)][#2e2f08 1.9MiB/7.2MiB(26%)](+27)
+[DL:707KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#c1b08f 2.0MiB/7.3MiB(27%)][#2e2f08 1.9MiB/7.2MiB(26%)](+27)
+
+07/13 19:53:21 [[1;31mERROR[0m] CUID#82 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8310.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8310.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:21 [[1;32mNOTICE[0m] Download GID#bfd198f87fdede09 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8310.0.0.0
+[DL:736KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#c1b08f 2.2MiB/7.3MiB(30%)][#2e2f08 1.9MiB/7.2MiB(26%)](+27)
+[DL:670KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#c1b08f 2.2MiB/7.3MiB(30%)][#2e2f08 1.9MiB/7.2MiB(26%)](+27)
+[DL:649KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#0c4661 1.5MiB/7.3MiB(20%)][#c1b08f 2.2MiB/7.3MiB(30%)][#2e2f08 1.9MiB/7.2MiB(26%)](+27)
+
+07/13 19:53:24 [[1;31mERROR[0m] CUID#23 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3676.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3676.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 974 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:24 [[1;31mERROR[0m] CUID#104 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8318.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8318.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:24 [[1;32mNOTICE[0m] Download GID#0c4661c4ca869ccf not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3676.0.0.0
+
+07/13 19:53:24 [[1;32mNOTICE[0m] Download GID#2bd9cafae94f1b6c not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8318.0.0.0
+[DL:698KiB][#b342dd 0.9MiB/7.3MiB(12%)][#f5f0a1 1.6MiB/7.3MiB(22%)][#c1b08f 2.2MiB/7.3MiB(30%)][#2e2f08 1.9MiB/7.2MiB(26%)][#d1b694 720KiB/7.2MiB(9%)](+27)
+
+07/13 19:53:25 [[1;31mERROR[0m] CUID#12 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3658.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3658.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 139 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:25 [[1;31mERROR[0m] CUID#72 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8308.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8308.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:25 [[1;32mNOTICE[0m] Download GID#f5f0a186184d067a not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+
+07/13 19:53:25 [[1;32mNOTICE[0m] Download GID#5b9aa8a0ddd7b26c not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8308.0.0.0
+[DL:676KiB][#b342dd 0.9MiB/7.3MiB(12%)][#c1b08f 2.2MiB/7.3MiB(30%)][#2e2f08 1.9MiB/7.2MiB(26%)][#d1b694 720KiB/7.2MiB(9%)][#b88e86 1.1MiB/7.3MiB(16%)](+27)
+[DL:612KiB][#b342dd 0.9MiB/7.3MiB(12%)][#c1b08f 2.2MiB/7.3MiB(30%)][#2e2f08 1.9MiB/7.2MiB(26%)][#d1b694 720KiB/7.2MiB(9%)][#b88e86 1.1MiB/7.3MiB(16%)](+27)
+
+07/13 19:53:27 [[1;31mERROR[0m] CUID#28 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3877.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3877.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:27 [[1;31mERROR[0m] CUID#69 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8307.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8307.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 827 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:27 [[1;31mERROR[0m] CUID#99 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8317.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8317.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:27 [[1;32mNOTICE[0m] Download GID#2e2f0833b42faa2e not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3877.0.0.0
+
+07/13 19:53:27 [[1;32mNOTICE[0m] Download GID#82ff90c463c2ffb8 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8307.0.0.0
+
+07/13 19:53:27 [[1;32mNOTICE[0m] Download GID#85d049e63a7dc837 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8317.0.0.0
+[DL:681KiB][#b342dd 0.9MiB/7.3MiB(12%)][#c1b08f 2.2MiB/7.3MiB(30%)][#d1b694 720KiB/7.2MiB(9%)][#b88e86 1.1MiB/7.3MiB(16%)][#2745d7 1.7MiB/7.3MiB(23%)](+27)
+
+07/13 19:53:28 [[1;31mERROR[0m] CUID#48 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8300.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8300.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 960 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:28 [[1;31mERROR[0m] CUID#93 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8315.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8315.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:28 [[1;31mERROR[0m] CUID#123 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8325.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8325.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:28 [[1;32mNOTICE[0m] Download GID#d1b694957faa7326 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8300.0.0.0
+
+07/13 19:53:28 [[1;32mNOTICE[0m] Download GID#9a5c070fc2e9255d not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8315.0.0.0
+
+07/13 19:53:28 [[1;32mNOTICE[0m] Download GID#d2ada3151e8b3b74 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8325.0.0.0
+[DL:674KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#b88e86 1.1MiB/7.3MiB(16%)][#2745d7 1.7MiB/7.3MiB(23%)][#06a77f 672KiB/7.2MiB(8%)](+27)
+[DL:688KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#b88e86 1.1MiB/7.3MiB(16%)][#2745d7 1.7MiB/7.3MiB(23%)][#06a77f 672KiB/7.2MiB(8%)](+27)
+[DL:587KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#b88e86 1.1MiB/7.3MiB(16%)][#2745d7 1.7MiB/7.3MiB(23%)][#06a77f 784KiB/7.2MiB(10%)](+27)
+
+07/13 19:53:31 [[1;31mERROR[0m] CUID#55 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8301.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8301.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 413 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:31 [[1;32mNOTICE[0m] Download GID#b88e86108ec8cf33 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8301.0.0.0
+[DL:611KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#2745d7 1.7MiB/7.3MiB(23%)][#06a77f 784KiB/7.2MiB(10%)][#8695fe 1.1MiB/7.2MiB(16%)](+27)
+
+07/13 19:53:33 [[1;31mERROR[0m] CUID#122 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8324.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8324.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 143 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:33 [[1;32mNOTICE[0m] Download GID#ed98dc7a0652f7cf not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8324.0.0.0
+
+07/13 19:53:33 [[1;31mERROR[0m] CUID#105 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8319.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8319.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 143 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:33 [[1;32mNOTICE[0m] Download GID#0f916bb391e5e123 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8319.0.0.0
+[DL:619KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#2745d7 1.7MiB/7.3MiB(23%)][#06a77f 784KiB/7.2MiB(10%)][#8695fe 1.1MiB/7.2MiB(16%)](+27)
+
+07/13 19:53:34 [[1;31mERROR[0m] CUID#56 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8302.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8302.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 143 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:34 [[1;32mNOTICE[0m] Download GID#2745d78684a8a4aa not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8302.0.0.0
+ *** Download Progress Summary as of Mon Jul 13 19:53:35 2026 *** 
+===============================================================================
+[#b342dd 0.9MiB/7.3MiB(13%) CN:1 DL:3.1KiB ETA:34m31s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#c1b08f 2.4MiB/7.3MiB(33%) CN:1 DL:22KiB ETA:3m41s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3682.0.0.0
+-------------------------------------------------------------------------------
+[#06a77f 784KiB/7.2MiB(10%) CN:1 DL:11KiB ETA:9m44s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8304.0.0.0
+-------------------------------------------------------------------------------
+[#8695fe 1.1MiB/7.2MiB(16%) CN:1 DL:22KiB ETA:4m39s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8309.0.0.0
+-------------------------------------------------------------------------------
+[#37c971 3.5MiB/7.2MiB(48%) CN:1 DL:89KiB ETA:43s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8311.0.0.0
+-------------------------------------------------------------------------------
+[#13e70d 304KiB/7.2MiB(4%) CN:1 DL:5.6KiB ETA:21m16s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8312.0.0.0
+-------------------------------------------------------------------------------
+[#b4b345 1.7MiB/7.2MiB(24%) CN:1 DL:38KiB ETA:2m26s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8313.0.0.0
+-------------------------------------------------------------------------------
+[#364a75 1.9MiB/7.2MiB(26%) CN:1 DL:23KiB ETA:3m54s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8314.0.0.0
+-------------------------------------------------------------------------------
+[#013f39 1.6MiB/7.2MiB(22%) CN:1 DL:29KiB ETA:3m16s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8316.0.0.0
+-------------------------------------------------------------------------------
+[#ed693f 528KiB/7.2MiB(7%) CN:1 DL:11KiB ETA:10m16s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8320.0.0.0
+-------------------------------------------------------------------------------
+[#9b0298 608KiB/7.2MiB(8%) CN:1 DL:18KiB ETA:6m3s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8321.0.0.0
+-------------------------------------------------------------------------------
+[#c9f062 256KiB/7.2MiB(3%) CN:1 DL:13KiB ETA:8m38s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8322.0.0.0
+-------------------------------------------------------------------------------
+[#76f0c0 416KiB/7.2MiB(5%) CN:1 DL:1.2KiB ETA:1h33m13s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8323.0.0.0
+-------------------------------------------------------------------------------
+[#9a5e79 96KiB/7.2MiB(1%) CN:1 DL:4.3KiB ETA:28m6s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8326.0.0.0
+-------------------------------------------------------------------------------
+[#28d989 624KiB/7.2MiB(8%) CN:1 DL:52KiB ETA:2m9s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8327.0.0.0
+-------------------------------------------------------------------------------
+[#4228ef 480KiB/7.3MiB(6%) CN:1 DL:48KiB ETA:2m23s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8328.0.0.0
+-------------------------------------------------------------------------------
+[#53865f 336KiB/7.3MiB(4%) CN:1 DL:33KiB ETA:3m31s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8329.0.0.0
+-------------------------------------------------------------------------------
+[#002a7e 96KiB/7.3MiB(1%) CN:1 DL:11KiB ETA:10m50s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8330.0.0.0
+-------------------------------------------------------------------------------
+[#3d61f3 160KiB/7.3MiB(2%) CN:1 DL:21KiB ETA:5m38s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8331.0.0.0
+-------------------------------------------------------------------------------
+[#12bd5f 192KiB/7.2MiB(2%) CN:1 DL:26KiB ETA:4m34s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8332.0.0.0
+-------------------------------------------------------------------------------
+[#7a94af 128KiB/7.2MiB(1%) CN:1 DL:23KiB ETA:5m14s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8333.0.0.0
+-------------------------------------------------------------------------------
+[#3266b2 176KiB/7.2MiB(2%) CN:1 DL:36KiB ETA:3m18s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8334.0.0.0
+-------------------------------------------------------------------------------
+[#ea1501 48KiB/7.2MiB(0%) CN:1 DL:12KiB ETA:9m50s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8335.0.0.0
+-------------------------------------------------------------------------------
+[#dd358a 16KiB/7.3MiB(0%) CN:1 DL:11KiB ETA:10m28s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8336.0.0.0
+-------------------------------------------------------------------------------
+[#ff371b 16KiB/7.2MiB(0%) CN:1 DL:16KiB ETA:7m20s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8337.0.0.0
+-------------------------------------------------------------------------------
+[#3d1655 16KiB/7.2MiB(0%) CN:1 DL:47KiB ETA:2m35s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8338.0.0.0
+-------------------------------------------------------------------------------
+[#f569c4 48KiB/7.2MiB(0%) CN:1 DL:62KiB ETA:1m58s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8339.0.0.0
+-------------------------------------------------------------------------------
+[#c5841d 16KiB/7.3MiB(0%) CN:1 DL:15KiB ETA:8m10s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8340.0.0.0
+-------------------------------------------------------------------------------
+[#05f2eb 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8341.0.0.0
+-------------------------------------------------------------------------------
+[#ce0aeb 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8342.0.0.0
+-------------------------------------------------------------------------------
+[#e9f461 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8343.0.0.0
+-------------------------------------------------------------------------------
+[#930897 0B/0B CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8344.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:531KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 784KiB/7.2MiB(10%)][#8695fe 1.1MiB/7.2MiB(16%)][#37c971 3.5MiB/7.2MiB(48%)](+27)
+[DL:591KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 784KiB/7.2MiB(10%)][#8695fe 1.2MiB/7.2MiB(17%)][#37c971 3.5MiB/7.2MiB(48%)](+27)
+[DL:627KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 0.9MiB/7.2MiB(12%)][#8695fe 1.2MiB/7.2MiB(17%)][#37c971 3.5MiB/7.2MiB(48%)](+27)
+
+07/13 19:53:37 [[1;31mERROR[0m] CUID#83 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8311.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8311.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:37 [[1;32mNOTICE[0m] Download GID#37c9711d32678f42 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8311.0.0.0
+[DL:536KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 0.9MiB/7.2MiB(12%)][#8695fe 1.2MiB/7.2MiB(17%)][#13e70d 304KiB/7.2MiB(4%)](+27)
+[DL:552KiB][#b342dd 0.9MiB/7.3MiB(13%)][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 0.9MiB/7.2MiB(12%)][#8695fe 1.2MiB/7.2MiB(17%)][#13e70d 304KiB/7.2MiB(4%)](+27)
+
+07/13 19:53:39 [[1;31mERROR[0m] CUID#10 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3655.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/3655.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:39 [[1;31mERROR[0m] CUID#117 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8323.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8323.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:39 [[1;32mNOTICE[0m] Download GID#b342dddfbb1bd9cf not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+
+07/13 19:53:39 [[1;32mNOTICE[0m] Download GID#76f0c0a933b8eaf6 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8323.0.0.0
+[DL:652KiB][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 0.9MiB/7.2MiB(12%)][#8695fe 1.2MiB/7.2MiB(17%)][#13e70d 304KiB/7.2MiB(4%)][#b4b345 1.9MiB/7.2MiB(26%)](+27)
+[DL:681KiB][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 0.9MiB/7.2MiB(12%)][#8695fe 1.5MiB/7.2MiB(20%)][#13e70d 304KiB/7.2MiB(4%)][#b4b345 2.0MiB/7.2MiB(27%)](+27)
+[DL:675KiB][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 0.9MiB/7.2MiB(12%)][#8695fe 1.5MiB/7.2MiB(20%)][#13e70d 304KiB/7.2MiB(4%)][#b4b345 2.0MiB/7.2MiB(27%)](+27)
+[DL:664KiB][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.5MiB/7.2MiB(20%)][#13e70d 304KiB/7.2MiB(4%)][#b4b345 2.0MiB/7.2MiB(27%)](+27)
+
+07/13 19:53:43 [[1;31mERROR[0m] CUID#84 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8312.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8312.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 601 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:43 [[1;32mNOTICE[0m] Download GID#13e70d785fc8793c not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8312.0.0.0
+[DL:708KiB][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.1MiB/7.2MiB(29%)](+27)
+
+07/13 19:53:44 [[1;31mERROR[0m] CUID#113 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8321.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8321.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:44 [[1;32mNOTICE[0m] Download GID#9b0298b28f1cc08b not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8321.0.0.0
+[DL:707KiB][#c1b08f 2.4MiB/7.3MiB(33%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(31%)](+27)
+
+07/13 19:53:45 [[1;31mERROR[0m] CUID#114 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8322.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8322.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 693 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:45 [[1;32mNOTICE[0m] Download GID#c9f062e08516e579 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8322.0.0.0
+[DL:696KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(31%)](+27)
+[DL:709KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(31%)](+27)
+[DL:643KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(31%)](+27)
+[DL:548KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(31%)](+27)
+
+07/13 19:53:50 [[1;31mERROR[0m] CUID#157 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8335.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8335.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 0 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:50 [[1;32mNOTICE[0m] Download GID#ea1501dc58340ec6 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8335.0.0.0
+[DL:531KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.6MiB/7.2MiB(22%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(32%)](+27)
+
+07/13 19:53:51 [[1;31mERROR[0m] CUID#108 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8320.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8320.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 302 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:51 [[1;32mNOTICE[0m] Download GID#ed693f5cefef5685 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8320.0.0.0
+
+07/13 19:53:51 [[1;31mERROR[0m] CUID#138 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8330.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8330.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 601 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:51 [[1;32mNOTICE[0m] Download GID#002a7e9d93ab5b4a not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8330.0.0.0
+[DL:568KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.7MiB/7.2MiB(23%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(32%)](+27)
+[DL:611KiB][#c1b08f 2.5MiB/7.3MiB(34%)][#06a77f 1.0MiB/7.2MiB(14%)][#8695fe 1.7MiB/7.2MiB(23%)][#b4b345 2.0MiB/7.2MiB(27%)][#364a75 2.3MiB/7.2MiB(32%)](+27)
+
+07/13 19:53:53 [[1;31mERROR[0m] CUID#60 - Download aborted. URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8304.0.0.0
+Exception: [AbstractCommand.cc:351] errorCode=5 URI=https://storage.googleapis.com/weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr/geopotential/8304.0.0.0
+  -> [DownloadCommand.cc:309] errorCode=5 Too slow Downloading speed: 947 <= 1024(B/s), host:storage.googleapis.com
+
+07/13 19:53:53 [[1;32mNOTICE[0m] Download GID#06a77f5678681f47 not complete: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/8304.0.0.0

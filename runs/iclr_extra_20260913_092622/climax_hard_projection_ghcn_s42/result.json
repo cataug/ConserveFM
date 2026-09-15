@@ -1,0 +1,16 @@
+{
+  "run_id": "climax_hard_projection_ghcn_s42",
+  "backbone": "climax",
+  "method": "hard_projection",
+  "forecast_provider": "zarr_frozen_fm",
+  "lead_hours": [
+    6,
+    24,
+    72
+  ],
+  "clean": null,
+  "stress": null,
+  "ghcn": {
+    "evaluated_days": 0
+  }
+}

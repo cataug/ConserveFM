@@ -1,0 +1,630 @@
+2026-07-13 08:48:17 [LAUNCHER   ] ======================================================================
+2026-07-13 08:48:17 [LAUNCHER   ] Public ConserveFM dataset downloader
+2026-07-13 08:48:17 [LAUNCHER   ] No accounts, tokens or API keys
+2026-07-13 08:48:17 [LAUNCHER   ] Starting three datasets in parallel
+2026-07-13 08:48:17 [LAUNCHER   ] Free disk: 8.57 TiB
+2026-07-13 08:48:17 [LAUNCHER   ] ======================================================================
+2026-07-13 08:48:17 [LAUNCHER   ] Started ERA5, PID=1832947
+2026-07-13 08:48:17 [LAUNCHER   ] Started GHCN, PID=1832948
+2026-07-13 08:48:17 [LAUNCHER   ] Started WEATHERREAL, PID=1832949
+2026-07-13 08:48:17 [GHCN       ] Starting new download
+2026-07-13 08:48:17 [GHCN       ] URL: https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd_all.tar.gz
+2026-07-13 08:48:17 [GHCN       ] Destination: /home/tahiti/ConserveFM/data/GHCN_Daily/ghcnd_all.tar.gz
+2026-07-13 08:48:17 [WEATHERREAL] Starting new download
+2026-07-13 08:48:17 [WEATHERREAL] URL: https://media.githubusercontent.com/media/microsoft/WeatherReal/main/Data/WeatherReal-ISD-2023.nc
+2026-07-13 08:48:17 [WEATHERREAL] Destination: /home/tahiti/ConserveFM/data/WeatherReal_2023/WeatherReal-ISD-2023.nc
+2026-07-13 08:48:18 [WEATHERREAL] WORKER FAILED
+2026-07-13 08:48:18 [WEATHERREAL] Traceback (most recent call last):
+2026-07-13 08:48:18 [WEATHERREAL]   File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 440, in worker
+2026-07-13 08:48:18 [WEATHERREAL]     function()
+2026-07-13 08:48:18 [WEATHERREAL]   File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 250, in download_weatherreal
+2026-07-13 08:48:18 [WEATHERREAL]     download_http(
+2026-07-13 08:48:18 [WEATHERREAL]   File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 145, in download_http
+2026-07-13 08:48:18 [WEATHERREAL]     response = urllib.request.urlopen(
+2026-07-13 08:48:18 [WEATHERREAL]                ^^^^^^^^^^^^^^^^^^^^^^^
+2026-07-13 08:48:18 [WEATHERREAL]   File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+2026-07-13 08:48:18 [WEATHERREAL]     return opener.open(url, data, timeout)
+2026-07-13 08:48:18 [WEATHERREAL]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-07-13 08:48:18 [WEATHERREAL]   File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+2026-07-13 08:48:18 [WEATHERREAL]     response = meth(req, response)
+2026-07-13 08:48:18 [WEATHERREAL]                ^^^^^^^^^^^^^^^^^^^
+2026-07-13 08:48:18 [WEATHERREAL]   File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+2026-07-13 08:48:18 [WEATHERREAL]     response = self.parent.error(
+2026-07-13 08:48:18 [WEATHERREAL]                ^^^^^^^^^^^^^^^^^^
+2026-07-13 08:48:18 [WEATHERREAL]   File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+2026-07-13 08:48:18 [WEATHERREAL]     return self._call_chain(*args)
+2026-07-13 08:48:18 [WEATHERREAL]            ^^^^^^^^^^^^^^^^^^^^^^^
+2026-07-13 08:48:18 [WEATHERREAL]   File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+2026-07-13 08:48:18 [WEATHERREAL]     result = func(*args)
+2026-07-13 08:48:18 [WEATHERREAL]              ^^^^^^^^^^^
+2026-07-13 08:48:18 [WEATHERREAL]   File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+2026-07-13 08:48:18 [WEATHERREAL]     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+2026-07-13 08:48:18 [WEATHERREAL] urllib.error.HTTPError: HTTP Error 404: Not Found
+Process ConserveFM-WEATHERREAL:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 440, in worker
+    function()
+  File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 250, in download_weatherreal
+    download_http(
+  File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 145, in download_http
+    response = urllib.request.urlopen(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+2026-07-13 08:48:18 [ERA5       ] Opening public WeatherBench2 archive
+2026-07-13 08:48:18 [ERA5       ] Source: gs://weatherbench2/datasets/era5/1959-2023_01_10-6h-240x121_equiangular_with_poles_conservative.zarr
+2026-07-13 08:48:18 [ERA5       ] Period: 1979-01-01 to 2022-12-31
+2026-07-13 08:48:18 [ERA5       ] Resolution: 240 × 121, every 6 hours
+2026-07-13 08:48:18 [ERA5       ] Pressure levels: all 13
+2026-07-13 08:48:18 [ERA5       ] Output: one Zarr directory per year
+2026-07-13 08:48:18 [ERA5       ] Free disk: 8.57 TiB
+2026-07-13 08:48:19 [GHCN       ] Remote size: 3.45 GiB
+2026-07-13 08:48:37 [GHCN       ] 8.00 MiB / 3.45 GiB (0.2%) | 449.17 KiB/s
+2026-07-13 08:48:42 [ERA5       ] Metadata opened in 23.3 s
+2026-07-13 08:48:42 [ERA5       ] =================================================================
+2026-07-13 08:48:42 [ERA5       ] 1979: START (1/44)
+2026-07-13 08:48:42 [ERA5       ] 1979: timestamps=1460
+2026-07-13 08:48:42 [ERA5       ] 1979: uncompressed volume=11.21 GiB
+2026-07-13 08:48:42 [ERA5       ] 1979: writing to /home/tahiti/ConserveFM/data/ERA5_1p5deg_1979_2022/.era5_1979.partial.zarr
+2026-07-13 08:49:13 [GHCN       ] 16.00 MiB / 3.45 GiB (0.5%) | 300.48 KiB/s
+2026-07-13 08:49:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:49:17 [STATUS     ] ERA5=41.87 MiB | GHCN=16.00 MiB | WeatherReal=0.00 B | free=8.57 TiB
+2026-07-13 08:49:58 [GHCN       ] 24.00 MiB / 3.45 GiB (0.7%) | 248.51 KiB/s
+2026-07-13 08:50:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:50:17 [STATUS     ] ERA5=177.88 MiB | GHCN=24.00 MiB | WeatherReal=0.00 B | free=8.57 TiB
+2026-07-13 08:50:34 [GHCN       ] 32.00 MiB / 3.45 GiB (0.9%) | 241.50 KiB/s
+2026-07-13 08:51:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:51:17 [STATUS     ] ERA5=313.86 MiB | GHCN=32.00 MiB | WeatherReal=0.00 B | free=8.57 TiB
+2026-07-13 08:51:23 [GHCN       ] 40.00 MiB / 3.45 GiB (1.1%) | 222.76 KiB/s
+2026-07-13 08:52:05 [GHCN       ] 48.00 MiB / 3.45 GiB (1.4%) | 217.58 KiB/s
+2026-07-13 08:52:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:52:17 [STATUS     ] ERA5=449.81 MiB | GHCN=48.00 MiB | WeatherReal=0.00 B | free=8.57 TiB
+2026-07-13 08:52:58 [GHCN       ] 56.00 MiB / 3.45 GiB (1.6%) | 205.69 KiB/s
+2026-07-13 08:53:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:53:17 [STATUS     ] ERA5=596.15 MiB | GHCN=56.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:53:39 [GHCN       ] 64.00 MiB / 3.45 GiB (1.8%) | 204.94 KiB/s
+2026-07-13 08:54:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:54:17 [STATUS     ] ERA5=721.29 MiB | GHCN=64.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:54:21 [GHCN       ] 72.00 MiB / 3.45 GiB (2.0%) | 203.44 KiB/s
+2026-07-13 08:54:58 [GHCN       ] 80.00 MiB / 3.45 GiB (2.3%) | 204.96 KiB/s
+2026-07-13 08:55:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:55:17 [STATUS     ] ERA5=856.54 MiB | GHCN=80.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:56:10 [GHCN       ] 88.00 MiB / 3.45 GiB (2.5%) | 191.28 KiB/s
+2026-07-13 08:56:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:56:17 [STATUS     ] ERA5=1018.10 MiB | GHCN=88.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:56:59 [GHCN       ] 96.00 MiB / 3.45 GiB (2.7%) | 189.06 KiB/s
+2026-07-13 08:57:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:57:17 [STATUS     ] ERA5=1.14 GiB | GHCN=96.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:57:54 [GHCN       ] 104.00 MiB / 3.45 GiB (2.9%) | 185.13 KiB/s
+2026-07-13 08:58:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:58:17 [STATUS     ] ERA5=1.27 GiB | GHCN=104.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:58:43 [GHCN       ] 112.00 MiB / 3.45 GiB (3.2%) | 183.60 KiB/s
+2026-07-13 08:59:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 08:59:17 [STATUS     ] ERA5=1.38 GiB | GHCN=112.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 08:59:34 [GHCN       ] 120.00 MiB / 3.45 GiB (3.4%) | 181.97 KiB/s
+2026-07-13 09:00:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:00:17 [STATUS     ] ERA5=1.52 GiB | GHCN=120.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:00:32 [GHCN       ] 128.00 MiB / 3.45 GiB (3.6%) | 178.86 KiB/s
+2026-07-13 09:01:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:01:17 [STATUS     ] ERA5=1.68 GiB | GHCN=128.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:01:27 [GHCN       ] 136.00 MiB / 3.45 GiB (3.8%) | 176.71 KiB/s
+2026-07-13 09:02:04 [GHCN       ] 144.00 MiB / 3.45 GiB (4.1%) | 178.65 KiB/s
+2026-07-13 09:02:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:02:17 [STATUS     ] ERA5=1.82 GiB | GHCN=144.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:02:44 [GHCN       ] 152.00 MiB / 3.45 GiB (4.3%) | 179.98 KiB/s
+2026-07-13 09:03:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:03:17 [STATUS     ] ERA5=1.87 GiB | GHCN=152.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:03:27 [GHCN       ] 160.00 MiB / 3.45 GiB (4.5%) | 180.47 KiB/s
+2026-07-13 09:04:07 [GHCN       ] 168.00 MiB / 3.45 GiB (4.8%) | 181.35 KiB/s
+2026-07-13 09:04:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:04:17 [STATUS     ] ERA5=1.91 GiB | GHCN=168.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:05:02 [GHCN       ] 176.00 MiB / 3.45 GiB (5.0%) | 179.61 KiB/s
+2026-07-13 09:05:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:05:17 [STATUS     ] ERA5=2.04 GiB | GHCN=176.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:05:35 [GHCN       ] 184.00 MiB / 3.45 GiB (5.2%) | 181.74 KiB/s
+2026-07-13 09:06:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:06:17 [STATUS     ] ERA5=2.18 GiB | GHCN=184.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:06:38 [GHCN       ] 192.00 MiB / 3.45 GiB (5.4%) | 178.88 KiB/s
+2026-07-13 09:07:17 [GHCN       ] 200.00 MiB / 3.45 GiB (5.7%) | 179.87 KiB/s
+2026-07-13 09:07:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:07:17 [STATUS     ] ERA5=2.31 GiB | GHCN=200.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:08:03 [GHCN       ] 208.00 MiB / 3.45 GiB (5.9%) | 179.85 KiB/s
+2026-07-13 09:08:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:08:17 [STATUS     ] ERA5=2.42 GiB | GHCN=208.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:08:56 [GHCN       ] 216.00 MiB / 3.45 GiB (6.1%) | 178.80 KiB/s
+2026-07-13 09:09:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:09:17 [STATUS     ] ERA5=2.53 GiB | GHCN=216.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:09:46 [GHCN       ] 224.00 MiB / 3.45 GiB (6.3%) | 178.19 KiB/s
+2026-07-13 09:10:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:10:17 [STATUS     ] ERA5=2.63 GiB | GHCN=224.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:10:58 [GHCN       ] 232.00 MiB / 3.45 GiB (6.6%) | 174.82 KiB/s
+2026-07-13 09:11:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:11:17 [STATUS     ] ERA5=2.75 GiB | GHCN=232.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:12:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:12:17 [STATUS     ] ERA5=2.84 GiB | GHCN=232.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:12:18 [GHCN       ] 240.00 MiB / 3.45 GiB (6.8%) | 170.70 KiB/s
+2026-07-13 09:13:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:13:17 [STATUS     ] ERA5=2.93 GiB | GHCN=240.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:13:19 [GHCN       ] 248.00 MiB / 3.45 GiB (7.0%) | 169.30 KiB/s
+2026-07-13 09:14:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:14:17 [STATUS     ] ERA5=3.04 GiB | GHCN=248.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:14:42 [GHCN       ] 256.00 MiB / 3.45 GiB (7.2%) | 165.56 KiB/s
+2026-07-13 09:15:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:15:17 [STATUS     ] ERA5=3.15 GiB | GHCN=256.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:15:45 [GHCN       ] 264.00 MiB / 3.45 GiB (7.5%) | 164.21 KiB/s
+2026-07-13 09:16:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:16:17 [STATUS     ] ERA5=3.26 GiB | GHCN=264.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:16:38 [GHCN       ] 272.00 MiB / 3.45 GiB (7.7%) | 163.96 KiB/s
+2026-07-13 09:17:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:17:17 [STATUS     ] ERA5=3.36 GiB | GHCN=272.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:17:34 [GHCN       ] 280.00 MiB / 3.45 GiB (7.9%) | 163.37 KiB/s
+2026-07-13 09:18:17 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:18:18 [STATUS     ] ERA5=3.47 GiB | GHCN=280.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:18:26 [GHCN       ] 288.00 MiB / 3.45 GiB (8.1%) | 163.21 KiB/s
+2026-07-13 09:19:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:19:18 [STATUS     ] ERA5=3.54 GiB | GHCN=288.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:19:20 [GHCN       ] 296.00 MiB / 3.45 GiB (8.4%) | 162.81 KiB/s
+2026-07-13 09:20:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:20:18 [STATUS     ] ERA5=3.58 GiB | GHCN=296.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:20:37 [GHCN       ] 304.00 MiB / 3.45 GiB (8.6%) | 160.60 KiB/s
+2026-07-13 09:21:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:21:18 [STATUS     ] ERA5=3.62 GiB | GHCN=304.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:21:38 [GHCN       ] 312.00 MiB / 3.45 GiB (8.8%) | 159.77 KiB/s
+2026-07-13 09:22:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:22:18 [STATUS     ] ERA5=3.65 GiB | GHCN=312.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:22:56 [GHCN       ] 320.00 MiB / 3.45 GiB (9.1%) | 157.77 KiB/s
+2026-07-13 09:23:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:23:18 [STATUS     ] ERA5=3.70 GiB | GHCN=320.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:24:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:24:18 [STATUS     ] ERA5=3.74 GiB | GHCN=320.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:25:02 [GHCN       ] 328.00 MiB / 3.45 GiB (9.3%) | 152.47 KiB/s
+2026-07-13 09:25:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:25:18 [STATUS     ] ERA5=3.80 GiB | GHCN=328.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:26:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:26:18 [STATUS     ] ERA5=3.84 GiB | GHCN=328.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:26:57 [GHCN       ] 336.00 MiB / 3.45 GiB (9.5%) | 148.45 KiB/s
+2026-07-13 09:27:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:27:18 [STATUS     ] ERA5=3.90 GiB | GHCN=336.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:28:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:28:18 [STATUS     ] ERA5=3.96 GiB | GHCN=336.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:28:26 [GHCN       ] 344.00 MiB / 3.45 GiB (9.7%) | 146.32 KiB/s
+2026-07-13 09:29:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:29:18 [STATUS     ] ERA5=4.07 GiB | GHCN=344.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:29:22 [GHCN       ] 352.00 MiB / 3.45 GiB (10.0%) | 146.32 KiB/s
+2026-07-13 09:30:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:30:18 [STATUS     ] ERA5=4.15 GiB | GHCN=352.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:30:43 [GHCN       ] 360.00 MiB / 3.45 GiB (10.2%) | 144.87 KiB/s
+2026-07-13 09:31:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:31:18 [STATUS     ] ERA5=4.26 GiB | GHCN=360.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:31:42 [GHCN       ] 368.00 MiB / 3.45 GiB (10.4%) | 144.73 KiB/s
+2026-07-13 09:32:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:32:18 [STATUS     ] ERA5=4.36 GiB | GHCN=368.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:32:22 [GHCN       ] 376.00 MiB / 3.45 GiB (10.6%) | 145.68 KiB/s
+2026-07-13 09:33:17 [GHCN       ] 384.00 MiB / 3.45 GiB (10.9%) | 145.75 KiB/s
+2026-07-13 09:33:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:33:18 [STATUS     ] ERA5=4.50 GiB | GHCN=384.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:34:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:34:18 [STATUS     ] ERA5=4.57 GiB | GHCN=384.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:35:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:35:18 [STATUS     ] ERA5=4.58 GiB | GHCN=384.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:36:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:36:18 [STATUS     ] ERA5=4.58 GiB | GHCN=384.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:37:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=RUNNING pid=1832948 | WEATHERREAL=DONE code=1
+2026-07-13 09:37:18 [STATUS     ] ERA5=4.59 GiB | GHCN=384.00 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:37:30 [GHCN       ] 391.08 MiB / 3.45 GiB (11.1%) | 135.68 KiB/s
+2026-07-13 09:37:30 [GHCN       ] WORKER FAILED
+2026-07-13 09:37:30 [GHCN       ] Traceback (most recent call last):
+2026-07-13 09:37:30 [GHCN       ]   File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 440, in worker
+2026-07-13 09:37:30 [GHCN       ]     function()
+2026-07-13 09:37:30 [GHCN       ]   File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 241, in download_ghcn
+2026-07-13 09:37:30 [GHCN       ]     download_http(
+2026-07-13 09:37:30 [GHCN       ]   File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 226, in download_http
+2026-07-13 09:37:30 [GHCN       ]     raise RuntimeError(
+2026-07-13 09:37:30 [GHCN       ] RuntimeError: Downloaded file is unexpectedly small: 391.08 MiB
+Process ConserveFM-GHCN:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 440, in worker
+    function()
+  File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 241, in download_ghcn
+    download_http(
+  File "/home/tahiti/ConserveFM/tools/download_public_datasets.py", line 226, in download_http
+    raise RuntimeError(
+RuntimeError: Downloaded file is unexpectedly small: 391.08 MiB
+2026-07-13 09:38:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:38:18 [STATUS     ] ERA5=4.59 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:39:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:39:18 [STATUS     ] ERA5=4.59 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.56 TiB
+2026-07-13 09:40:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:40:18 [STATUS     ] ERA5=4.60 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:41:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:41:18 [STATUS     ] ERA5=4.60 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:42:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:42:18 [STATUS     ] ERA5=4.61 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:43:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:43:18 [STATUS     ] ERA5=4.62 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:44:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:44:18 [STATUS     ] ERA5=4.62 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:45:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:45:18 [STATUS     ] ERA5=4.62 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:46:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:46:18 [STATUS     ] ERA5=4.62 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:47:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:47:18 [STATUS     ] ERA5=4.63 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.55 TiB
+2026-07-13 09:48:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:48:18 [STATUS     ] ERA5=4.64 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:49:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:49:18 [STATUS     ] ERA5=4.64 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:50:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:50:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:51:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:51:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:52:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:52:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:53:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:53:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:54:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:54:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:55:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:55:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:56:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:56:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:57:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:57:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:58:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:58:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 09:59:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 09:59:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:00:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:00:18 [STATUS     ] ERA5=4.65 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:01:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:01:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:02:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:02:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:03:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:03:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:04:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:04:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:05:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:05:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:06:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:06:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:07:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:07:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:08:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:08:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:09:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:09:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:10:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:10:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:11:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:11:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:12:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:12:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:13:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:13:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:14:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:14:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:15:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:15:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:16:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:16:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:17:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:17:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:18:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:18:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:19:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:19:18 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:20:18 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:20:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:21:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:21:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:22:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:22:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:23:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:23:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:24:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:24:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:25:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:25:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:26:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:26:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:27:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:27:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:28:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:28:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:29:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:29:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:30:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:30:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:31:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:31:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:32:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:32:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:33:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:33:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:34:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:34:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:35:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:35:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:36:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:36:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:37:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:37:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:38:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:38:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:39:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:39:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:40:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:40:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:41:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:41:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:42:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:42:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:43:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:43:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:44:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:44:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:45:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:45:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:46:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:46:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:47:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:47:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:48:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:48:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:49:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:49:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:50:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:50:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:51:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:51:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:52:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:52:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:53:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:53:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:54:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:54:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:55:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:55:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:56:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:56:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:57:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:57:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:58:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:58:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 10:59:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 10:59:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:00:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:00:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:01:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:01:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:02:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:02:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:03:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:03:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:04:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:04:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:05:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:05:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:06:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:06:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:07:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:07:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:08:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:08:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:09:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:09:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:10:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:10:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:11:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:11:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:12:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:12:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:13:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:13:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:14:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:14:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:15:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:15:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:16:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:16:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:17:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:17:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:18:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:18:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:19:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:19:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:20:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:20:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:21:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:21:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:22:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:22:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:23:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:23:19 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:24:19 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:24:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:25:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:25:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:26:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:26:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:27:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:27:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:28:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:28:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:29:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:29:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:30:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:30:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:31:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:31:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:32:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:32:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:33:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:33:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:34:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:34:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:35:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:35:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:36:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:36:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:37:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:37:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:38:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:38:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:39:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:39:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:40:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:40:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:41:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:41:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:42:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:42:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:43:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:43:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:44:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:44:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:45:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:45:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:46:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:46:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:47:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:47:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:48:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:48:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:49:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:49:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:50:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:50:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:51:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:51:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:52:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:52:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:53:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:53:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:54:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:54:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:55:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:55:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:56:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:56:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:57:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:57:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:58:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:58:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 11:59:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 11:59:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:00:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:00:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:01:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:01:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:02:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:02:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:03:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:03:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:04:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:04:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:05:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:05:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:06:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:06:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:07:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:07:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:08:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:08:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:09:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:09:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:10:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:10:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:11:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:11:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:12:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:12:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:13:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:13:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:14:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:14:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:15:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:15:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:16:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:16:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:17:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:17:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:18:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:18:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:19:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:19:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:20:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:20:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:21:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:21:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:22:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:22:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:23:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:23:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:24:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:24:20 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:25:20 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:25:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:26:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:26:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:27:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:27:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:28:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:28:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:29:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:29:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:30:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:30:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:31:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:31:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:32:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:32:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:33:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:33:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:34:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:34:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:35:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:35:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:36:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:36:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:37:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:37:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:38:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:38:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:39:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:39:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:40:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:40:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:41:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:41:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:42:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:42:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:43:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:43:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB
+2026-07-13 12:44:21 [STATUS     ] ERA5=RUNNING pid=1832947 | GHCN=DONE code=1 | WEATHERREAL=DONE code=1
+2026-07-13 12:44:21 [STATUS     ] ERA5=4.66 GiB | GHCN=391.08 MiB | WeatherReal=0.00 B | free=8.54 TiB

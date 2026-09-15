@@ -1,0 +1,437 @@
+[EVAL train_climax_residual_repair_s44] [EVAL] device=cuda method=residual_repair backbone=climax
+[EVAL train_climax_residual_repair_s44] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_advection_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_advection_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead6_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_advection_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_advection_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead24_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_advection_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_advection_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [STRESS] lead72_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_residual_repair_s44] [EVAL COMPLETE] {
+[EVAL train_climax_residual_repair_s44]   "run_id": "prelim20_eval_train_climax_residual_repair_s44",
+[EVAL train_climax_residual_repair_s44]   "backbone": "climax",
+[EVAL train_climax_residual_repair_s44]   "method": "residual_repair",
+[EVAL train_climax_residual_repair_s44]   "forecast_provider": "zarr_frozen_fm",
+[EVAL train_climax_residual_repair_s44]   "lead_hours": [
+[EVAL train_climax_residual_repair_s44]     6,
+[EVAL train_climax_residual_repair_s44]     24,
+[EVAL train_climax_residual_repair_s44]     72
+[EVAL train_climax_residual_repair_s44]   ],
+[EVAL train_climax_residual_repair_s44]   "clean": null,
+[EVAL train_climax_residual_repair_s44]   "stress": {
+[EVAL train_climax_residual_repair_s44]     "lead6_moisture_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.235836029052734,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10003662109375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.98324584960938,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_moisture_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.222511291503906,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.1002197265625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.96859741210938,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_moisture_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.22922134399414,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.1005859375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 202.001220703125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_moisture_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.26664733886719,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.1014404296875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 202.14231872558594,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_hydrostatic_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 50.863800048828125,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10003662109375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 204.71444702148438,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_hydrostatic_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 53.13092041015625,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10015869140625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 210.27276611328125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_hydrostatic_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 59.08106994628906,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10040283203125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 231.58087158203125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_hydrostatic_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 72.4131088256836,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10101318359375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 302.50146484375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_advection_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.23225021362305,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10009765625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.95526123046875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_advection_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.232078552246094,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10009765625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.97296142578125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_advection_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.256282806396484,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10015869140625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 202.06527709960938,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_advection_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.31538772583008,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10028076171875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 202.25830078125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_spectral_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.22757339477539,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0999755859375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.97427368164062,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_spectral_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.22758102416992,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0999755859375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.97425842285156,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_spectral_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.227577209472656,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0999755859375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.97425842285156,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_spectral_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.227569580078125,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0999755859375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 201.97415161132812,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_range_extreme_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 49.92073440551758,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0999755859375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 205.99722290039062,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_range_extreme_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 50.82818603515625,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10003662109375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 218.3422088623047,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_range_extreme_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 52.584716796875,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.10009765625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 259.893310546875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead6_range_extreme_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 57.26536560058594,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.1004638671875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 399.30010986328125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_moisture_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.00776672363281,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0645751953125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.26995849609375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_moisture_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.02530288696289,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06475830078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.30123901367188,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_moisture_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.05617141723633,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06524658203125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.35946655273438,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_moisture_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.1778564453125,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06658935546875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.5059814453125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_hydrostatic_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 55.47825622558594,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06475830078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 217.6622314453125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_hydrostatic_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 58.133121490478516,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06488037109375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 223.44143676757812,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_hydrostatic_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 63.595298767089844,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.065185546875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 241.91900634765625,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_hydrostatic_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 73.75796508789062,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06585693359375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 299.78045654296875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_advection_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.03208541870117,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.064697265625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.30755615234375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_advection_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.02458190917969,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.2905731201172,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_advection_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.03907775878906,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.064697265625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.3025665283203,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_advection_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.08936309814453,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06488037109375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.38723754882812,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_spectral_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.01532745361328,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.2857666015625,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_spectral_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.015342712402344,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.28573608398438,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_spectral_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.01532745361328,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.285888671875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_spectral_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.01533508300781,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 215.285888671875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_range_extreme_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 54.832637786865234,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 219.866455078125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_range_extreme_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 55.34272766113281,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06463623046875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 228.30450439453125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_range_extreme_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 56.821441650390625,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.06475830078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 262.36602783203125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead24_range_extreme_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 60.721778869628906,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.065185546875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 385.2825927734375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_moisture_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.39522552490234,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.04791259765625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.375244140625,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_moisture_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.391845703125,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047760009765625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.3763427734375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_moisture_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.44627380371094,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0487060546875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.46746826171875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_moisture_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.51652526855469,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.049835205078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.5932922363281,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_hydrostatic_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 78.41517639160156,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047943115234375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 270.15185546875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_hydrostatic_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 80.57414245605469,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.04803466796875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 273.80322265625,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_hydrostatic_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 84.09895324707031,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.048126220703125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 285.946044921875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_hydrostatic_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 98.20442962646484,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0487060546875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 347.9722900390625,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_advection_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.39344787597656,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.3715515136719,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_advection_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.39781188964844,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.4058837890625,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_advection_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.40353393554688,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047943115234375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.413818359375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_advection_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.41477966308594,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.04803466796875,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.39398193359375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_spectral_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.38890838623047,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.36444091796875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_spectral_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.38890838623047,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.364501953125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_spectral_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.38893127441406,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.364501953125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_spectral_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.38893127441406,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 268.364501953125,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_range_extreme_sev0.25": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 77.93167877197266,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.047882080078125,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 271.02288818359375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_range_extreme_sev0.5": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 78.80062866210938,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.04791259765625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 280.37420654296875,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_range_extreme_sev1": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 80.64797973632812,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.048004150390625,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 317.2239990234375,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     },
+[EVAL train_climax_residual_repair_s44]     "lead72_range_extreme_sev2": {
+[EVAL train_climax_residual_repair_s44]       "mae_phys": 82.62051391601562,
+[EVAL train_climax_residual_repair_s44]       "repair_l1_norm": 0.0482177734375,
+[EVAL train_climax_residual_repair_s44]       "rmse_phys": 398.9288024902344,
+[EVAL train_climax_residual_repair_s44]       "examples": 16
+[EVAL train_climax_residual_repair_s44]     }
+[EVAL train_climax_residual_repair_s44]   },
+[EVAL train_climax_residual_repair_s44]   "ghcn": null
+[EVAL train_climax_residual_repair_s44] }

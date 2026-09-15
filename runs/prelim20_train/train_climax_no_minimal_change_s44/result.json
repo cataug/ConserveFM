@@ -1,0 +1,13 @@
+{
+  "run_id": "prelim20_train_climax_no_minimal_change_s44",
+  "status": "completed",
+  "method": "no_minimal_change",
+  "backbone": "climax",
+  "seed": 44,
+  "forecast_provider": "zarr_frozen_fm",
+  "best_val_repair_mse": 0.1150098405778408,
+  "global_step": 6000,
+  "elapsed_seconds": 3430.51,
+  "checkpoint_best": "/home/tahiti/ConserveFM/runs/prelim20_train/train_climax_no_minimal_change_s44/checkpoint_best.pt",
+  "checkpoint_last": "/home/tahiti/ConserveFM/runs/prelim20_train/train_climax_no_minimal_change_s44/checkpoint_last.pt"
+}

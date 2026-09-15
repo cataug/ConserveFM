@@ -1,0 +1,8 @@
+[SETUP] cartopy=False
+[SETUP] geo backends: cartopy=False basemap=False geopandas=False
+[CACHE] reusing /home/tahiti/ConserveFM/reports/wow_history_figures_v2/weather_atlas_cache_v2.npz
+[CASE representative +72h] L72_C91711_T91723 2021-10-12T18:00:00.000000000 {'raw_nrmse': 0.40930747985839844, 'acc_nrmse': 0.39223843812942505, 'phys_nrmse': 0.3983194828033447}
+[CASE strong Phys +72h] L72_C93210_T93222 2022-10-22T12:00:00.000000000 {'raw_nrmse': 0.4205344021320343, 'acc_nrmse': 0.40028390288352966, 'phys_nrmse': 0.405875027179718}
+[GEO] loaded Natural Earth boundaries: 289 line segments
+[FINAL REDRAW] drawing all geographical atlas figures
+[FINAL REDRAW] complete

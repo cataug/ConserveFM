@@ -1,0 +1,397 @@
+[EVAL train_climax_no_localization_head_s43] [EVAL] device=cuda method=no_localization_head backbone=climax
+[EVAL train_climax_no_localization_head_s43] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_advection_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_advection_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead6_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_advection_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_advection_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead24_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_moisture_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_moisture_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_moisture_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_moisture_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_hydrostatic_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_hydrostatic_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_hydrostatic_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_hydrostatic_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_advection_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_advection_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_advection_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_advection_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_spectral_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_spectral_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_spectral_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_spectral_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_range_extreme_sev0.25 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_range_extreme_sev0.5 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_range_extreme_sev1 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [STRESS] lead72_range_extreme_sev2 done n=16 batch=32
+[EVAL train_climax_no_localization_head_s43] [EVAL COMPLETE] {
+[EVAL train_climax_no_localization_head_s43]   "run_id": "prelim20_eval_train_climax_no_localization_head_s43",
+[EVAL train_climax_no_localization_head_s43]   "backbone": "climax",
+[EVAL train_climax_no_localization_head_s43]   "method": "no_localization_head",
+[EVAL train_climax_no_localization_head_s43]   "forecast_provider": "zarr_frozen_fm",
+[EVAL train_climax_no_localization_head_s43]   "lead_hours": [
+[EVAL train_climax_no_localization_head_s43]     6,
+[EVAL train_climax_no_localization_head_s43]     24,
+[EVAL train_climax_no_localization_head_s43]     72
+[EVAL train_climax_no_localization_head_s43]   ],
+[EVAL train_climax_no_localization_head_s43]   "clean": null,
+[EVAL train_climax_no_localization_head_s43]   "stress": {
+[EVAL train_climax_no_localization_head_s43]     "lead6_moisture_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.65226745605469,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5478854179382324,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019731880456674844,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00025764055317267776,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4699323177337646,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.66162109375,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_moisture_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.672332763671875,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5495063066482544,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019753655942622572,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0004470877756830305,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4699220657348633,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07879638671875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.68955993652344,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_moisture_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.71424865722656,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5552210807800293,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019801169401034713,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0009265987318940461,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4700453281402588,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0789794921875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.75184631347656,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_moisture_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.73625183105469,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.554236888885498,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0001983803667826578,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0021335030905902386,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4709018468856812,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0794677734375,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.77627563476562,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_hydrostatic_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 52.62605285644531,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.919959306716919,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00024456233950331807,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00030626027728430927,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.51094651222229,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.08099365234375,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 213.57870483398438,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.3125,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_hydrostatic_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 58.80265808105469,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.9498825073242188,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0004891122225672007,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00014337569882627577,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.6294277906417847,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.092529296875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 226.29469299316406,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_hydrostatic_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 61.76509475708008,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.685965657234192,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0006935843848623335,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00019338975835125893,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.7531020641326904,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.1036376953125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 233.0583038330078,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_hydrostatic_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 65.62525939941406,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.6110292673110962,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0010967585258185863,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00022785741020925343,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.9843966960906982,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.1134033203125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 242.96792602539062,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_advection_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.66713333129883,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5525331497192383,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019966506806667894,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0002712707791943103,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4712613821029663,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07879638671875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.69012451171875,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_advection_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.670387268066406,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5534882545471191,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0001987225259654224,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0002648672671057284,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4719797372817993,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.693115234375,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_advection_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.684288024902344,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5550484657287598,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00020021709497086704,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00031033653067424893,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4722847938537598,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.078857421875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.70742797851562,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_advection_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.735687255859375,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.583823561668396,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00020655263506341726,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00024371701874770224,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.472396731376648,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07891845703125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.82049560546875,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_spectral_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.65513229370117,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5483595132827759,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0001973417674889788,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00028447521617636085,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4698641300201416,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.6690673828125,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_spectral_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.655128479003906,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.548354148864746,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019734168017748743,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00028447533259168267,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4698644876480103,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.66905212402344,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_spectral_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.65511703491211,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5483579635620117,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019734154921025038,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0002844762057065964,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4698630571365356,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.6690673828125,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_spectral_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 49.6551513671875,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5483611822128296,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00019734179659280926,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0002844751870725304,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.4698654413223267,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 208.66915893554688,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_range_extreme_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 50.4234733581543,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5615878105163574,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00024836676311679184,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00028600485529750586,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 2.186938524246216,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0787353515625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 212.75946044921875,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_range_extreme_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 51.2235107421875,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.6005727052688599,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0003867086779791862,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0002930337795987725,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 3.258361339569092,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07891845703125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 223.41281127929688,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_range_extreme_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 53.285762786865234,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.8485726118087769,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0009922520257532597,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0003138141182716936,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 5.856386661529541,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.079345703125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 264.6154479980469,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead6_range_extreme_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 58.11723327636719,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 3.604870557785034,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.003536070231348276,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0004223724827170372,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 10.747543334960938,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.081298828125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 390.8543701171875,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_moisture_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 55.19184875488281,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5739312171936035,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00021440823911689222,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00012495047121774405,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.5396274328231812,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0712890625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 221.84754943847656,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_moisture_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 55.17155838012695,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5741420984268188,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00021415582159534097,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00028458653832785785,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.5396099090576172,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.0712890625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 221.8165740966797,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_moisture_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 55.174015045166016,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5774223804473877,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00021330954041332006,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0009227004484273493,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.5395410060882568,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07147216796875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 221.82382202148438,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_moisture_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 55.231903076171875,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5823805332183838,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0002130918437615037,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.0020163552835583687,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.540406584739685,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07232666015625,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 221.90994262695312,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_hydrostatic_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 57.65262222290039,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.7986894845962524,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0002444114361423999,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00014803999511059374,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.5729562044143677,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.075927734375,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 225.38821411132812,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.3125,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_hydrostatic_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 61.587806701660156,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 3.349069595336914,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0003248435095883906,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00012299454829189926,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.6940984725952148,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.08563232421875,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 235.34967041015625,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_hydrostatic_sev1": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 62.95701217651367,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 5.400066375732422,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0004497163463383913,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00017222369206137955,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.7868503332138062,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.095703125,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 239.07424926757812,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_hydrostatic_sev2": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 65.97085571289062,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 5.738279342651367,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0007319327560253441,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 0.00022787477064412087,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 2.003371477127075,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.10687255859375,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 246.49258422851562,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 1.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_advection_sev0.25": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 55.20054244995117,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.5790507793426514,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.0002162632590625435,
+[EVAL train_climax_no_localization_head_s43]       "physics_moisture": 9.964019409380853e-05,
+[EVAL train_climax_no_localization_head_s43]       "physics_spectral": 1.540740966796875,
+[EVAL train_climax_no_localization_head_s43]       "repair_l1_norm": 0.07122802734375,
+[EVAL train_climax_no_localization_head_s43]       "rmse_phys": 221.8590850830078,
+[EVAL train_climax_no_localization_head_s43]       "type_accuracy": 0.0,
+[EVAL train_climax_no_localization_head_s43]       "examples": 16
+[EVAL train_climax_no_localization_head_s43]     },
+[EVAL train_climax_no_localization_head_s43]     "lead24_advection_sev0.5": {
+[EVAL train_climax_no_localization_head_s43]       "mae_phys": 55.196651458740234,
+[EVAL train_climax_no_localization_head_s43]       "physics_advection": 1.57891845703125,
+[EVAL train_climax_no_localization_head_s43]       "physics_hydrostatic": 0.00021612044656649232,

@@ -1,0 +1,13 @@
+{
+  "run_id": "prelim20_train_fourcastnet_conservefm_full_s43",
+  "status": "completed",
+  "method": "conservefm_full",
+  "backbone": "fourcastnet",
+  "seed": 43,
+  "forecast_provider": "zarr_frozen_fm",
+  "best_val_repair_mse": 0.05819076579064131,
+  "global_step": 6000,
+  "elapsed_seconds": 4163.12,
+  "checkpoint_best": "/home/tahiti/ConserveFM/runs/prelim20_train/train_fourcastnet_conservefm_full_s43/checkpoint_best.pt",
+  "checkpoint_last": "/home/tahiti/ConserveFM/runs/prelim20_train/train_fourcastnet_conservefm_full_s43/checkpoint_last.pt"
+}

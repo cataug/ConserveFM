@@ -1,0 +1,1053 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import os
+import sys
+import time
+from collections import defaultdict
+from pathlib import Path
+
+import numpy as np
+import torch
+import zarr
+from torch.utils.data import Dataset, DataLoader
+
+
+ROOT = Path.home() / "ConserveFM"
+CLIMAX_SRC = ROOT / "external/ClimaX/src"
+sys.path.insert(0, str(CLIMAX_SRC))
+
+from climax.arch import ClimaX
+
+from conservefm.data import ERA5Reader, Normalizer
+
+
+DEFAULT_CHECKPOINT = (
+    ROOT
+    / "models/climax_forecaster_full/checkpoint_best.pt"
+)
+
+DEFAULT_ERA5 = (
+    ROOT
+    / "data/ERA5_WeatherBench2_1979_2022"
+)
+
+DEFAULT_MANIFEST = (
+    ROOT
+    / "manifests/research_v1/era5_examples.csv"
+)
+
+DEFAULT_STATS = (
+    ROOT
+    / "manifests/research_v1/era5_channel_stats.npz"
+)
+
+DEFAULT_OUTPUT = (
+    ROOT
+    / "forecasts/climax.zarr"
+)
+
+
+def parse_args():
+    p = argparse.ArgumentParser()
+
+    p.add_argument(
+        "--checkpoint",
+        default=str(DEFAULT_CHECKPOINT),
+    )
+
+    p.add_argument(
+        "--era5-zarr",
+        default=str(DEFAULT_ERA5),
+    )
+
+    p.add_argument(
+        "--manifest",
+        default=str(DEFAULT_MANIFEST),
+    )
+
+    p.add_argument(
+        "--stats",
+        default=str(DEFAULT_STATS),
+    )
+
+    p.add_argument(
+        "--output",
+        default=str(DEFAULT_OUTPUT),
+    )
+
+    p.add_argument(
+        "--batch-size",
+        type=int,
+        default=12,
+    )
+
+    p.add_argument(
+        "--num-workers",
+        type=int,
+        default=12,
+    )
+
+    p.add_argument(
+        "--prefetch-factor",
+        type=int,
+        default=2,
+    )
+
+    p.add_argument(
+        "--log-every",
+        type=int,
+        default=25,
+    )
+
+    p.add_argument(
+        "--overwrite",
+        action="store_true",
+    )
+
+    p.add_argument(
+        "--max-examples",
+        type=int,
+        default=0,
+    )
+
+    return p.parse_args()
+
+
+def load_manifest(path):
+    rows = []
+
+    with open(
+        path,
+        newline="",
+        encoding="utf-8",
+    ) as f:
+        reader = csv.DictReader(f)
+
+        for r in reader:
+            rows.append(r)
+
+    return rows
+
+
+def build_jobs(rows):
+    #
+    # One prediction is required for every
+    # (context_end_idx, lead_hours) pair.
+    #
+    # Deduplicate because manifests may contain
+    # repeated representations of the same pair.
+    #
+    jobs = {}
+
+    for r in rows:
+        lead = int(r["lead_hours"])
+
+        if lead not in {
+            6,
+            24,
+            72,
+        }:
+            continue
+
+        context_idx = int(
+            r["context_end_idx"]
+        )
+
+        target_idx = int(
+            r["target_idx"]
+        )
+
+        key = (
+            context_idx,
+            lead,
+        )
+
+        if key in jobs:
+            if (
+                jobs[key]["target_idx"]
+                != target_idx
+            ):
+                raise RuntimeError(
+                    f"Inconsistent target for {key}"
+                )
+
+            continue
+
+        jobs[key] = {
+            "context_idx":
+                context_idx,
+            "target_idx":
+                target_idx,
+            "lead_hours":
+                lead,
+            "split":
+                r.get(
+                    "split",
+                    "",
+                ),
+        }
+
+    jobs = list(
+        jobs.values()
+    )
+
+    jobs.sort(
+        key=lambda x: (
+            x["lead_hours"],
+            x["context_idx"],
+        )
+    )
+
+    return jobs
+
+
+class ForecastInputDataset(Dataset):
+    def __init__(
+        self,
+        reader,
+        normalizer,
+        jobs,
+    ):
+        self.reader = reader
+        self.normalizer = normalizer
+        self.jobs = jobs
+
+    def __len__(self):
+        return len(
+            self.jobs
+        )
+
+    @staticmethod
+    def spatial_prepare(x):
+        #
+        # ERA5Reader:
+        #   [C, longitude=240, latitude=121]
+        #
+        # ClimaX:
+        #   [C, H=latitude, W=longitude]
+        #
+        x = np.transpose(
+            x,
+            (0, 2, 1),
+        )
+
+        #
+        # ClimaX patch size 4:
+        # 121 -> 124.
+        #
+        x = np.pad(
+            x,
+            (
+                (0, 0),
+                (1, 2),
+                (0, 0),
+            ),
+            mode="edge",
+        )
+
+        return np.ascontiguousarray(
+            x,
+            dtype=np.float32,
+        )
+
+    def __getitem__(
+        self,
+        index,
+    ):
+        job = self.jobs[
+            index
+        ]
+
+        x = self.reader.read_state(
+            job["context_idx"]
+        )
+
+        x = self.normalizer.normalize_np(
+            x
+        )
+
+        x = self.spatial_prepare(
+            x
+        )
+
+        return {
+            "x":
+                torch.from_numpy(x),
+
+            "context_idx":
+                job["context_idx"],
+
+            "target_idx":
+                job["target_idx"],
+
+            "lead_hours":
+                job["lead_hours"],
+
+            #
+            # Original ClimaX convention.
+            #
+            "lead":
+                torch.tensor(
+                    job["lead_hours"]
+                    / 100.0,
+                    dtype=torch.float32,
+                ),
+        }
+
+
+def restore_spatial(
+    x,
+):
+    #
+    # model output:
+    # [B,C,124,240]
+    #
+    # remove latitude padding:
+    # [B,C,121,240]
+    #
+    x = x[
+        :,
+        :,
+        1:122,
+        :,
+    ]
+
+    #
+    # ConserveFM convention:
+    # [B,C,longitude,latitude]
+    #
+    x = x.permute(
+        0,
+        1,
+        3,
+        2,
+    )
+
+    return x.contiguous()
+
+
+def construct_model(
+    checkpoint,
+    device,
+):
+    variables = list(
+        checkpoint["variables"]
+    )
+
+    img_size = list(
+        checkpoint.get(
+            "img_size",
+            [124, 240],
+        )
+    )
+
+    patch_size = int(
+        checkpoint.get(
+            "patch_size",
+            4,
+        )
+    )
+
+    model = ClimaX(
+        default_vars=variables,
+        img_size=img_size,
+        patch_size=patch_size,
+        embed_dim=1024,
+        depth=8,
+        decoder_depth=2,
+        num_heads=16,
+        mlp_ratio=4.0,
+        drop_path=0.1,
+        drop_rate=0.1,
+        parallel_patch_embed=False,
+    )
+
+    msg = model.load_state_dict(
+        checkpoint["model"],
+        strict=True,
+    )
+
+    print(
+        "[MODEL] checkpoint load:",
+        msg,
+        flush=True,
+    )
+
+    model = model.to(
+        device
+    )
+
+    model.eval()
+
+    return (
+        model,
+        variables,
+    )
+
+
+def create_store(
+    output,
+    n_times,
+    n_channels,
+    overwrite,
+):
+    output = Path(
+        output
+    )
+
+    if (
+        overwrite
+        and output.exists()
+    ):
+        import shutil
+
+        shutil.rmtree(
+            output
+        )
+
+    output.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    root = zarr.open_group(
+        str(output),
+        mode="a",
+    )
+
+    #
+    # One time step per Zarr chunk.
+    # Compression is important: uncompressed
+    # three-lead forecasts are enormous.
+    #
+    compressor = zarr.Blosc(
+        cname="zstd",
+        clevel=3,
+        shuffle=zarr.Blosc.BITSHUFFLE,
+    )
+
+    for lead in [
+        6,
+        24,
+        72,
+    ]:
+        name = (
+            f"lead_{lead}"
+        )
+
+        if name not in root:
+            root.create_dataset(
+                name,
+                shape=(
+                    n_times,
+                    n_channels,
+                    240,
+                    121,
+                ),
+                chunks=(
+                    1,
+                    n_channels,
+                    240,
+                    121,
+                ),
+                dtype="f4",
+                compressor=compressor,
+                fill_value=np.nan,
+                overwrite=False,
+            )
+
+        mask_name = (
+            f"_done_{lead}"
+        )
+
+        if mask_name not in root:
+            root.create_dataset(
+                mask_name,
+                shape=(
+                    n_times,
+                ),
+                chunks=(
+                    4096,
+                ),
+                dtype="u1",
+                fill_value=0,
+                overwrite=False,
+            )
+
+    return root
+
+
+
+def load_denorm_stats(path):
+    with np.load(path, allow_pickle=True) as f:
+        keys = set(f.files)
+
+        mean_key = next(
+            (
+                k for k in [
+                    "mean",
+                    "means",
+                    "channel_mean",
+                    "channel_means",
+                    "mu",
+                ]
+                if k in keys
+            ),
+            None,
+        )
+
+        std_key = next(
+            (
+                k for k in [
+                    "std",
+                    "stds",
+                    "channel_std",
+                    "channel_stds",
+                    "sigma",
+                ]
+                if k in keys
+            ),
+            None,
+        )
+
+        if mean_key is None or std_key is None:
+            raise RuntimeError(
+                f"Cannot find mean/std in stats NPZ. Keys={sorted(keys)}"
+            )
+
+        mean = np.asarray(
+            f[mean_key],
+            dtype=np.float32,
+        )
+
+        std = np.asarray(
+            f[std_key],
+            dtype=np.float32,
+        )
+
+    print(
+        f"[STATS] inverse normalization "
+        f"mean={mean_key} std={std_key} "
+        f"channels={mean.shape[0]}",
+        flush=True,
+    )
+
+    return mean, std
+
+
+@torch.inference_mode()
+def main():
+    args = parse_args()
+
+    if not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA required"
+        )
+
+    torch.set_float32_matmul_precision(
+        "high"
+    )
+
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
+    torch.backends.cudnn.benchmark = True
+
+    device = torch.device(
+        "cuda"
+    )
+
+    checkpoint_path = Path(
+        args.checkpoint
+    )
+
+    if not checkpoint_path.exists():
+        raise FileNotFoundError(
+            checkpoint_path
+        )
+
+    print("=" * 78)
+    print(
+        "ClimaX forecast-store generator"
+    )
+    print("=" * 78)
+
+    print(
+        "[CHECKPOINT]",
+        checkpoint_path,
+    )
+
+    checkpoint = torch.load(
+        checkpoint_path,
+        map_location="cpu",
+        weights_only=False,
+    )
+
+    model, variables = (
+        construct_model(
+            checkpoint,
+            device,
+        )
+    )
+
+    reader = ERA5Reader(
+        args.era5_zarr
+    )
+
+    normalizer = Normalizer.load(
+        args.stats
+    )
+
+    denorm_mean, denorm_std = load_denorm_stats(
+        args.stats
+    )
+
+    if (
+        denorm_mean.shape[0] != len(variables)
+        or denorm_std.shape[0] != len(variables)
+    ):
+        raise RuntimeError(
+            f"Stats channels mismatch: "
+            f"mean={denorm_mean.shape} "
+            f"std={denorm_std.shape} "
+            f"model={len(variables)}"
+        )
+
+    rows = load_manifest(
+        args.manifest
+    )
+
+    jobs = build_jobs(
+        rows
+    )
+
+    if args.max_examples > 0:
+        jobs = jobs[
+            :args.max_examples
+        ]
+
+    print(
+        f"[DATA] manifest rows="
+        f"{len(rows):,}",
+        flush=True,
+    )
+
+    print(
+        f"[DATA] unique forecast jobs="
+        f"{len(jobs):,}",
+        flush=True,
+    )
+
+    counts = defaultdict(
+        int
+    )
+
+    for j in jobs:
+        counts[
+            j["lead_hours"]
+        ] += 1
+
+    print(
+        "[DATA] by lead:",
+        dict(counts),
+        flush=True,
+    )
+
+    n_times = len(
+        reader.times
+    )
+
+    print(
+        f"[DATA] ERA5 timestamps="
+        f"{n_times:,}",
+        flush=True,
+    )
+
+    root = create_store(
+        args.output,
+        n_times=n_times,
+        n_channels=len(
+            variables
+        ),
+        overwrite=args.overwrite,
+    )
+
+    #
+    # Resume: discard jobs already written.
+    #
+    remaining = []
+
+    skipped = 0
+
+    for j in jobs:
+        done = root[
+            f"_done_{j['lead_hours']}"
+        ]
+
+        if int(
+            done[
+                j["context_idx"]
+            ]
+        ) == 1:
+            skipped += 1
+        else:
+            remaining.append(
+                j
+            )
+
+    print(
+        f"[RESUME] already done="
+        f"{skipped:,}",
+        flush=True,
+    )
+
+    print(
+        f"[RESUME] remaining="
+        f"{len(remaining):,}",
+        flush=True,
+    )
+
+    if not remaining:
+        print(
+            "[COMPLETE] nothing left",
+            flush=True,
+        )
+        return 0
+
+    dataset = ForecastInputDataset(
+        reader,
+        normalizer,
+        remaining,
+    )
+
+    loader_extra = {}
+
+    if args.num_workers > 0:
+        loader_extra.update(
+            persistent_workers=True,
+            prefetch_factor=args.prefetch_factor,
+        )
+
+    loader = DataLoader(
+        dataset,
+        batch_size=args.batch_size,
+        shuffle=False,
+        num_workers=args.num_workers,
+        pin_memory=True,
+        **loader_extra,
+    )
+
+    print(
+        f"[LOADER] batch="
+        f"{args.batch_size} "
+        f"workers="
+        f"{args.num_workers} "
+        f"prefetch="
+        f"{args.prefetch_factor}",
+        flush=True,
+    )
+
+    started = time.time()
+    written = 0
+
+    for batch_idx, batch in enumerate(
+        loader,
+        1,
+    ):
+        x = batch[
+            "x"
+        ].to(
+            device,
+            non_blocking=True,
+        )
+
+        lead = batch[
+            "lead"
+        ].to(
+            device,
+            non_blocking=True,
+        )
+
+        #
+        # ClimaX forward() has a training-oriented
+        # signature and expects y. y is not needed
+        # for prediction itself, so use a dummy tensor.
+        #
+        dummy_y = torch.zeros_like(
+            x
+        )
+
+        with torch.autocast(
+            device_type="cuda",
+            dtype=torch.bfloat16,
+        ):
+            _, pred = model(
+                x,
+                dummy_y,
+                lead,
+                variables,
+                variables,
+                metric=None,
+                lat=None,
+            )
+
+        pred = restore_spatial(
+            pred.float()
+        )
+
+        #
+        # ConserveFM forecast cache is in physical
+        # units, not normalized units.
+        #
+        pred_np = (
+            pred
+            .cpu()
+            .numpy()
+        )
+
+        #
+        # Back to physical units.
+        # pred_np: [B,C,lon,lat]
+        #
+        pred_np = (
+            pred_np
+            * denorm_std[None, :, None, None]
+            + denorm_mean[None, :, None, None]
+        ).astype(
+            np.float32,
+            copy=False,
+        )
+
+        context_indices = (
+            batch["context_idx"]
+            .cpu()
+            .numpy()
+            .astype(int)
+        )
+
+        leads = (
+            batch["lead_hours"]
+            .cpu()
+            .numpy()
+            .astype(int)
+        )
+
+        #
+        # Batch may contain more than one lead,
+        # so route each sample individually.
+        #
+        for bi in range(
+            pred_np.shape[0]
+        ):
+            idx = int(
+                context_indices[
+                    bi
+                ]
+            )
+
+            lh = int(
+                leads[
+                    bi
+                ]
+            )
+
+            root[
+                f"lead_{lh}"
+            ][
+                idx,
+                :,
+                :,
+                :
+            ] = pred_np[
+                bi
+            ]
+
+            root[
+                f"_done_{lh}"
+            ][idx] = 1
+
+            written += 1
+
+        if (
+            batch_idx == 1
+            or batch_idx
+            % args.log_every
+            == 0
+        ):
+            elapsed = (
+                time.time()
+                - started
+            )
+
+            rate = (
+                written / elapsed
+                if elapsed > 0
+                else 0.0
+            )
+
+            remaining_count = (
+                len(remaining)
+                - written
+            )
+
+            eta = (
+                remaining_count / rate
+                if rate > 0
+                else 0
+            )
+
+            size_bytes = sum(
+                p.stat().st_size
+                for p in Path(
+                    args.output
+                ).rglob("*")
+                if p.is_file()
+            )
+
+            print(
+                f"[FORECAST] "
+                f"{written:,}/"
+                f"{len(remaining):,} "
+                f"({100*written/len(remaining):.2f}%) "
+                f"rate={rate:.2f} samples/s "
+                f"ETA={eta/3600:.2f}h "
+                f"store={size_bytes/1024**3:.2f}GiB "
+                f"GPU_peak="
+                f"{torch.cuda.max_memory_reserved()/1024**3:.2f}GiB",
+                flush=True,
+            )
+
+            torch.cuda.reset_peak_memory_stats()
+
+    #
+    # Final consistency check.
+    #
+    missing = {}
+
+    for lead_value in [
+        6,
+        24,
+        72,
+    ]:
+        expected_indices = [
+            j["context_idx"]
+            for j in jobs
+            if j["lead_hours"]
+            == lead_value
+        ]
+
+        done = root[
+            f"_done_{lead_value}"
+        ]
+
+        missing_count = sum(
+            int(done[i]) != 1
+            for i in expected_indices
+        )
+
+        missing[
+            str(lead_value)
+        ] = missing_count
+
+    metadata = {
+        "status":
+            "completed"
+            if not any(
+                missing.values()
+            )
+            else "incomplete",
+
+        "checkpoint":
+            str(checkpoint_path),
+
+        "output":
+            str(
+                Path(
+                    args.output
+                ).resolve()
+            ),
+
+        "variables":
+            variables,
+
+        "n_variables":
+            len(
+                variables
+            ),
+
+        "n_times":
+            n_times,
+
+        "lead_hours":
+            [
+                6,
+                24,
+                72,
+            ],
+
+        "forecast_jobs":
+            len(jobs),
+
+        "written_this_run":
+            written,
+
+        "skipped_existing":
+            skipped,
+
+        "missing":
+            missing,
+
+        "dtype":
+            "float32",
+
+        "shape":
+            [
+                n_times,
+                len(
+                    variables
+                ),
+                240,
+                121,
+            ],
+    }
+
+    metadata_path = (
+        Path(args.output)
+        / "generation_summary.json"
+    )
+
+    metadata_path.write_text(
+        json.dumps(
+            metadata,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    print()
+    print("=" * 78)
+    print(
+        "[COMPLETE]",
+        json.dumps(
+            metadata,
+            indent=2,
+        ),
+        flush=True,
+    )
+
+    if any(
+        missing.values()
+    ):
+        return 2
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(
+        main()
+    )

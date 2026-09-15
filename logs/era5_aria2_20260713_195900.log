@@ -1,0 +1,372 @@
+
+07/13 19:59:06 [[1;32mNOTICE[0m] Downloading 83782 item(s)
+[DL:0B][#c9fcc1 0B/0B][#00c1dc 0B/0B][#e82583 0B/0B][#b3d63f 0B/0B][#7cc5dc 0B/0B](+3)
+[DL:0B][#c9fcc1 0B/0B][#00c1dc 0B/0B][#e82583 0B/0B][#b3d63f 0B/0B][#7cc5dc 0B/0B](+3)
+[DL:0B][#c9fcc1 0B/0B][#00c1dc 448KiB/7.3MiB(5%)][#e82583 0B/0B][#b3d63f 0B/0B][#7cc5dc 0B/0B](+3)
+[DL:0B][#c9fcc1 528KiB/7.3MiB(7%)][#00c1dc 448KiB/7.3MiB(5%)][#e82583 0.9MiB/7.3MiB(13%)][#b3d63f 752KiB/7.3MiB(10%)][#7cc5dc 1.6MiB/7.3MiB(22%)](+3)
+[DL:89KiB][#c9fcc1 544KiB/7.3MiB(7%)][#00c1dc 464KiB/7.3MiB(6%)][#e82583 0.9MiB/7.3MiB(13%)][#b3d63f 752KiB/7.3MiB(10%)][#7cc5dc 1.6MiB/7.3MiB(22%)](+3)
+[DL:59KiB][#c9fcc1 544KiB/7.3MiB(7%)][#00c1dc 464KiB/7.3MiB(6%)][#e82583 0.9MiB/7.3MiB(13%)][#b3d63f 752KiB/7.3MiB(10%)][#7cc5dc 1.6MiB/7.3MiB(22%)](+3)
+[DL:78KiB][#c9fcc1 576KiB/7.3MiB(7%)][#00c1dc 464KiB/7.3MiB(6%)][#e82583 1.0MiB/7.3MiB(13%)][#b3d63f 768KiB/7.3MiB(10%)][#7cc5dc 1.6MiB/7.3MiB(22%)](+3)
+[DL:78KiB][#c9fcc1 576KiB/7.3MiB(7%)][#00c1dc 464KiB/7.3MiB(6%)][#e82583 1.0MiB/7.3MiB(13%)][#b3d63f 768KiB/7.3MiB(10%)][#7cc5dc 1.6MiB/7.3MiB(23%)](+3)
+[DL:91KiB][#c9fcc1 576KiB/7.3MiB(7%)][#00c1dc 496KiB/7.3MiB(6%)][#e82583 1.0MiB/7.3MiB(14%)][#b3d63f 768KiB/7.3MiB(10%)][#7cc5dc 1.7MiB/7.3MiB(23%)](+3)
+[DL:94KiB][#c9fcc1 624KiB/7.3MiB(8%)][#00c1dc 496KiB/7.3MiB(6%)][#e82583 1.0MiB/7.3MiB(14%)][#b3d63f 768KiB/7.3MiB(10%)][#7cc5dc 1.7MiB/7.3MiB(23%)](+3)
+[DL:110KiB][#c9fcc1 672KiB/7.3MiB(8%)][#00c1dc 496KiB/7.3MiB(6%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 816KiB/7.3MiB(10%)][#7cc5dc 1.7MiB/7.3MiB(23%)](+3)
+[DL:113KiB][#c9fcc1 704KiB/7.3MiB(9%)][#00c1dc 544KiB/7.3MiB(7%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 816KiB/7.3MiB(10%)][#7cc5dc 1.7MiB/7.3MiB(23%)](+3)
+[DL:109KiB][#c9fcc1 704KiB/7.3MiB(9%)][#00c1dc 544KiB/7.3MiB(7%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 816KiB/7.3MiB(10%)][#7cc5dc 1.7MiB/7.3MiB(23%)](+3)
+[DL:129KiB][#c9fcc1 752KiB/7.3MiB(10%)][#00c1dc 608KiB/7.3MiB(8%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.7MiB/7.3MiB(23%)](+3)
+[DL:128KiB][#c9fcc1 768KiB/7.3MiB(10%)][#00c1dc 608KiB/7.3MiB(8%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.7MiB/7.3MiB(24%)](+3)
+[DL:126KiB][#c9fcc1 784KiB/7.3MiB(10%)][#00c1dc 624KiB/7.3MiB(8%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.7MiB/7.3MiB(24%)](+3)
+[DL:122KiB][#c9fcc1 816KiB/7.3MiB(10%)][#00c1dc 624KiB/7.3MiB(8%)][#e82583 1.1MiB/7.3MiB(15%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(24%)](+3)
+[DL:138KiB][#c9fcc1 816KiB/7.3MiB(10%)][#00c1dc 624KiB/7.3MiB(8%)][#e82583 1.3MiB/7.3MiB(18%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(24%)](+3)
+[DL:134KiB][#c9fcc1 832KiB/7.3MiB(11%)][#00c1dc 656KiB/7.3MiB(8%)][#e82583 1.3MiB/7.3MiB(18%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(25%)](+3)
+[DL:128KiB][#c9fcc1 832KiB/7.3MiB(11%)][#00c1dc 656KiB/7.3MiB(8%)][#e82583 1.3MiB/7.3MiB(18%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(25%)](+3)
+[DL:124KiB][#c9fcc1 880KiB/7.3MiB(11%)][#00c1dc 704KiB/7.3MiB(9%)][#e82583 1.3MiB/7.3MiB(18%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(25%)](+3)
+[DL:117KiB][#c9fcc1 880KiB/7.3MiB(11%)][#00c1dc 704KiB/7.3MiB(9%)][#e82583 1.5MiB/7.3MiB(20%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(25%)](+3)
+[DL:110KiB][#c9fcc1 880KiB/7.3MiB(11%)][#00c1dc 736KiB/7.3MiB(9%)][#e82583 1.5MiB/7.3MiB(20%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.8MiB/7.3MiB(25%)](+3)
+[DL:124KiB][#c9fcc1 912KiB/7.3MiB(12%)][#00c1dc 736KiB/7.3MiB(9%)][#e82583 1.5MiB/7.3MiB(20%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.9MiB/7.3MiB(27%)](+3)
+ *** Download Progress Summary as of Mon Jul 13 19:59:36 2026 *** 
+===============================================================================
+[#c9fcc1 912KiB/7.3MiB(12%) CN:1 DL:12KiB ETA:8m59s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 752KiB/7.3MiB(10%) CN:1 DL:13KiB ETA:8m21s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 1.6MiB/7.3MiB(22%) CN:1 DL:32KiB ETA:2m58s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 832KiB/7.3MiB(11%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 1.9MiB/7.3MiB(27%) CN:1 DL:20KiB ETA:4m29s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 864KiB/7.3MiB(11%) CN:1 DL:11KiB ETA:9m43s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 640KiB/7.2MiB(8%) CN:1 DL:13KiB ETA:8m36s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 416KiB/7.2MiB(5%) CN:1 DL:20KiB ETA:5m40s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:111KiB][#c9fcc1 912KiB/7.3MiB(12%)][#00c1dc 752KiB/7.3MiB(10%)][#e82583 1.6MiB/7.3MiB(22%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 1.9MiB/7.3MiB(27%)](+3)
+[DL:98KiB][#c9fcc1 0.9MiB/7.3MiB(12%)][#00c1dc 752KiB/7.3MiB(10%)][#e82583 1.6MiB/7.3MiB(22%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.0MiB/7.3MiB(28%)](+3)
+[DL:120KiB][#c9fcc1 0.9MiB/7.3MiB(12%)][#00c1dc 784KiB/7.3MiB(10%)][#e82583 1.7MiB/7.3MiB(23%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.0MiB/7.3MiB(28%)](+3)
+[DL:123KiB][#c9fcc1 0.9MiB/7.3MiB(12%)][#00c1dc 784KiB/7.3MiB(10%)][#e82583 1.7MiB/7.3MiB(23%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.0MiB/7.3MiB(28%)](+3)
+[DL:107KiB][#c9fcc1 0.9MiB/7.3MiB(12%)][#00c1dc 784KiB/7.3MiB(10%)][#e82583 1.7MiB/7.3MiB(23%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.0MiB/7.3MiB(28%)](+3)
+[DL:128KiB][#c9fcc1 0.9MiB/7.3MiB(12%)][#00c1dc 832KiB/7.3MiB(11%)][#e82583 1.8MiB/7.3MiB(25%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.0MiB/7.3MiB(28%)](+3)
+[DL:119KiB][#c9fcc1 0.9MiB/7.3MiB(12%)][#00c1dc 832KiB/7.3MiB(11%)][#e82583 1.8MiB/7.3MiB(25%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.0MiB/7.3MiB(28%)](+3)
+[DL:109KiB][#c9fcc1 0.9MiB/7.3MiB(13%)][#00c1dc 832KiB/7.3MiB(11%)][#e82583 1.8MiB/7.3MiB(25%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.1MiB/7.3MiB(29%)](+3)
+[DL:109KiB][#c9fcc1 0.9MiB/7.3MiB(13%)][#00c1dc 832KiB/7.3MiB(11%)][#e82583 1.8MiB/7.3MiB(25%)][#b3d63f 832KiB/7.3MiB(11%)][#7cc5dc 2.1MiB/7.3MiB(29%)](+3)
+[DL:98KiB][#c9fcc1 0.9MiB/7.3MiB(13%)][#00c1dc 832KiB/7.3MiB(11%)][#e82583 1.9MiB/7.3MiB(26%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.1MiB/7.3MiB(29%)](+3)
+[DL:97KiB][#c9fcc1 1.0MiB/7.3MiB(13%)][#00c1dc 832KiB/7.3MiB(11%)][#e82583 1.9MiB/7.3MiB(26%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.1MiB/7.3MiB(29%)](+3)
+[DL:101KiB][#c9fcc1 1.0MiB/7.3MiB(13%)][#00c1dc 864KiB/7.3MiB(11%)][#e82583 1.9MiB/7.3MiB(26%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:77KiB][#c9fcc1 1.0MiB/7.3MiB(13%)][#00c1dc 864KiB/7.3MiB(11%)][#e82583 1.9MiB/7.3MiB(26%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:73KiB][#c9fcc1 1.0MiB/7.3MiB(13%)][#00c1dc 864KiB/7.3MiB(11%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:62KiB][#c9fcc1 1.0MiB/7.3MiB(13%)][#00c1dc 864KiB/7.3MiB(11%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:70KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 912KiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:69KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 912KiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:58KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 912KiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:48KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:53KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.2MiB/7.3MiB(30%)](+3)
+[DL:59KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(31%)](+3)
+[DL:67KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(31%)](+3)
+[DL:60KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(31%)](+3)
+[DL:45KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(31%)](+3)
+
+07/13 20:00:07 [[1;32mNOTICE[0m] Serialized session to '/home/tahiti/ConserveFM/manifests/era5_aria2_session.txt' successfully.
+ *** Download Progress Summary as of Mon Jul 13 20:00:07 2026 *** 
+===============================================================================
+[#c9fcc1 1.0MiB/7.3MiB(14%) CN:1 DL:6.3KiB ETA:16m54s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 0.9MiB/7.3MiB(12%) CN:1 DL:5.5KiB ETA:19m40s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 1.9MiB/7.3MiB(27%) CN:1 DL:142B ETA:10h58m13s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 912KiB/7.3MiB(12%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 2.3MiB/7.3MiB(31%) CN:1 DL:13KiB ETA:6m28s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 1.0MiB/7.3MiB(14%) CN:1 DL:1.0KiB ETA:1h44m]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 0.9MiB/7.2MiB(13%) CN:1 DL:1.3KiB ETA:1h19m]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 816KiB/7.2MiB(10%) CN:1 DL:11KiB ETA:9m46s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:28KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(31%)](+3)
+[DL:43KiB][#c9fcc1 1.0MiB/7.3MiB(14%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:47KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:34KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:30KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(12%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:46KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(13%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:41KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(13%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:43KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(13%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.3MiB/7.3MiB(32%)](+3)
+[DL:38KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(13%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:34KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(13%)][#e82583 1.9MiB/7.3MiB(27%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:55KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 0.9MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:64KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:66KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:59KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:62KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:70KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:68KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:41KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:39KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:28KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:29KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:26KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(32%)](+3)
+[DL:43KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:39KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:35KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+ *** Download Progress Summary as of Mon Jul 13 20:00:37 2026 *** 
+===============================================================================
+[#c9fcc1 1.1MiB/7.3MiB(15%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 1.0MiB/7.3MiB(13%) CN:1 DL:2.0KiB ETA:53m31s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 2.2MiB/7.3MiB(30%) CN:1 DL:1.8KiB ETA:46m20s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 912KiB/7.3MiB(12%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 2.4MiB/7.3MiB(34%) CN:1 DL:21KiB ETA:3m46s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 1.1MiB/7.3MiB(16%) CN:1 DL:6.4KiB ETA:16m6s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 1.3MiB/7.2MiB(18%) CN:1 DL:30KiB ETA:3m21s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 1.0MiB/7.2MiB(14%) CN:1 DL:24KiB ETA:4m15s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:36KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(13%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:45KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:40KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:46KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:40KiB][#c9fcc1 1.1MiB/7.3MiB(15%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:48KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:41KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.4MiB/7.3MiB(34%)](+3)
+[DL:37KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:33KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:34KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:31KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:31KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:31KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.2MiB/7.3MiB(30%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:19KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:17KiB][#c9fcc1 1.1MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:15KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:25KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:21KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:18KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(34%)](+3)
+[DL:21KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:39KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:39KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:47KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:42KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.0MiB/7.3MiB(14%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:63KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+ *** Download Progress Summary as of Mon Jul 13 20:01:08 2026 *** 
+===============================================================================
+[#c9fcc1 1.2MiB/7.3MiB(16%) CN:1 DL:42KiB ETA:2m27s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 1.1MiB/7.3MiB(15%) CN:1 DL:26KiB ETA:3m55s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 2.3MiB/7.3MiB(31%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 912KiB/7.3MiB(12%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 2.5MiB/7.3MiB(35%) CN:1 DL:9.4KiB ETA:8m33s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 1.2MiB/7.3MiB(17%) CN:1 DL:7.2KiB ETA:14m10s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 1.6MiB/7.2MiB(23%) CN:1 DL:28KiB ETA:3m19s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 1.1MiB/7.2MiB(16%) CN:1 DL:8.8KiB ETA:11m40s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:56KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:50KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:44KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:22KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:20KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:14KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:13KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:11KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.1MiB/7.3MiB(15%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:21KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 912KiB/7.3MiB(12%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:87KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:64KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:51KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:42KiB][#c9fcc1 1.2MiB/7.3MiB(16%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:37KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.3MiB/7.3MiB(31%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:46KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:41KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:36KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(16%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:45KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:55KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:48KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:42KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:37KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:35KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:31KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:27KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:19KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:9.0KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:30KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+ *** Download Progress Summary as of Mon Jul 13 20:01:40 2026 *** 
+===============================================================================
+[#c9fcc1 1.2MiB/7.3MiB(17%) CN:1 DL:16KiB ETA:6m7s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 1.2MiB/7.3MiB(17%) CN:1 DL:3.4KiB ETA:29m27s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 2.4MiB/7.3MiB(33%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 0.9MiB/7.3MiB(13%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 2.5MiB/7.3MiB(35%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 1.3MiB/7.3MiB(17%) CN:1 DL:5.6KiB ETA:18m13s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 1.9MiB/7.2MiB(26%) CN:1 DL:130KiB ETA:42s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 1.4MiB/7.2MiB(19%) CN:1 DL:50KiB ETA:1m58s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:46KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:41KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.4MiB/7.3MiB(33%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:86KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:71KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:61KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:53KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:47KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:32KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:17KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.2MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:17KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:15KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:13KiB][#c9fcc1 1.2MiB/7.3MiB(17%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:15KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:25KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:21KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:19KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:19KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:24KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:30KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.5MiB/7.3MiB(34%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:66KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(17%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:111KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:91KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:77KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:66KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:55KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+ *** Download Progress Summary as of Mon Jul 13 20:02:10 2026 *** 
+===============================================================================
+[#c9fcc1 1.3MiB/7.3MiB(18%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 1.3MiB/7.3MiB(18%) CN:1 DL:805B ETA:2h10m13s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 2.8MiB/7.3MiB(39%) CN:1 DL:45KiB ETA:1m39s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 0.9MiB/7.3MiB(13%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 2.5MiB/7.3MiB(35%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 1.3MiB/7.3MiB(18%) CN:1 DL:4.2KiB ETA:23m44s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 2.0MiB/7.2MiB(28%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 1.5MiB/7.2MiB(21%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+
+[DL:49KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:44KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.5MiB/7.3MiB(35%)](+3)
+[DL:11KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:57KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:40KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:30KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:25KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:21KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 0.9MiB/7.3MiB(13%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:56KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:50KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:46KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.8MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:74KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:62KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:53KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:46KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:41KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:37KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:5.7KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:12KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:17KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:61KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:43KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.3MiB/7.3MiB(18%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:59KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.4MiB/7.3MiB(20%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:49KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.4MiB/7.3MiB(20%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:42KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.4MiB/7.3MiB(20%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:37KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.4MiB/7.3MiB(20%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:33KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.4MiB/7.3MiB(20%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+[DL:30KiB][#c9fcc1 1.3MiB/7.3MiB(18%)][#00c1dc 1.4MiB/7.3MiB(20%)][#e82583 2.9MiB/7.3MiB(39%)][#b3d63f 1.2MiB/7.3MiB(17%)][#7cc5dc 2.6MiB/7.3MiB(35%)](+3)
+ *** Download Progress Summary as of Mon Jul 13 20:02:41 2026 *** 
+===============================================================================
+[#c9fcc1 1.3MiB/7.3MiB(18%) CN:1 DL:702B ETA:2h28m26s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3652.0.0.0
+-------------------------------------------------------------------------------
+[#00c1dc 1.4MiB/7.3MiB(20%) CN:1 DL:19KiB ETA:5m6s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3653.0.0.0
+-------------------------------------------------------------------------------
+[#e82583 2.9MiB/7.3MiB(39%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3655.0.0.0
+-------------------------------------------------------------------------------
+[#b3d63f 1.2MiB/7.3MiB(17%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3656.0.0.0
+-------------------------------------------------------------------------------
+[#7cc5dc 2.6MiB/7.3MiB(35%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3658.0.0.0
+-------------------------------------------------------------------------------
+[#b81448 1.4MiB/7.3MiB(19%) CN:1 DL:2.6KiB ETA:38m18s]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3661.0.0.0
+-------------------------------------------------------------------------------
+[#22a8c0 2.2MiB/7.2MiB(31%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3662.0.0.0
+-------------------------------------------------------------------------------
+[#68d92e 1.5MiB/7.2MiB(21%) CN:1 DL:0B]
+FILE: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022/geopotential/3665.0.0.0
+-------------------------------------------------------------------------------
+

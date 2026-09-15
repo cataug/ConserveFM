@@ -1,0 +1,79 @@
+============================================================================
+ConserveFM ClimaX forecasting adapter
+============================================================================
+ERA5 channels : 71
+ERA5 grid     : (121, 240)
+ClimaX grid   : (124, 240)
+patch size    : 4
+leads         : 6 / 24 / 72 h
+============================================================================
+[PRETRAIN] loading /home/tahiti/ConserveFM/models/climax/1.40625deg.ckpt
+[PRETRAIN] positional grid 32x64 -> 31x60
+[PRETRAIN] load: <All keys matched successfully>
+[PRETRAIN] shared variables: 38/71
+  geopotential_50                  -> geopotential@50hPa
+  geopotential_250                 -> geopotential@250hPa
+  geopotential_500                 -> geopotential@500hPa
+  geopotential_600                 -> geopotential@600hPa
+  geopotential_700                 -> geopotential@700hPa
+  geopotential_850                 -> geopotential@850hPa
+  geopotential_925                 -> geopotential@925hPa
+  temperature_50                   -> temperature@50hPa
+  temperature_250                  -> temperature@250hPa
+  temperature_500                  -> temperature@500hPa
+  temperature_600                  -> temperature@600hPa
+  temperature_700                  -> temperature@700hPa
+  temperature_850                  -> temperature@850hPa
+  temperature_925                  -> temperature@925hPa
+  specific_humidity_50             -> specific_humidity@50hPa
+  specific_humidity_250            -> specific_humidity@250hPa
+  specific_humidity_500            -> specific_humidity@500hPa
+  specific_humidity_600            -> specific_humidity@600hPa
+  specific_humidity_700            -> specific_humidity@700hPa
+  specific_humidity_850            -> specific_humidity@850hPa
+  specific_humidity_925            -> specific_humidity@925hPa
+  u_component_of_wind_50           -> u_component_of_wind@50hPa
+  u_component_of_wind_250          -> u_component_of_wind@250hPa
+  u_component_of_wind_500          -> u_component_of_wind@500hPa
+  u_component_of_wind_600          -> u_component_of_wind@600hPa
+  u_component_of_wind_700          -> u_component_of_wind@700hPa
+  u_component_of_wind_850          -> u_component_of_wind@850hPa
+  u_component_of_wind_925          -> u_component_of_wind@925hPa
+  v_component_of_wind_50           -> v_component_of_wind@50hPa
+  v_component_of_wind_250          -> v_component_of_wind@250hPa
+  v_component_of_wind_500          -> v_component_of_wind@500hPa
+  v_component_of_wind_600          -> v_component_of_wind@600hPa
+  v_component_of_wind_700          -> v_component_of_wind@700hPa
+  v_component_of_wind_850          -> v_component_of_wind@850hPa
+  v_component_of_wind_925          -> v_component_of_wind@925hPa
+  2m_temperature                   -> 2m_temperature
+  10m_u_component_of_wind          -> 10m_u_component_of_wind
+  10m_v_component_of_wind          -> 10m_v_component_of_wind
+[PRETRAIN] newly initialized variables: 33
+[LOADER] batch=12 workers=12 prefetch=2
+[DATA] train=1,536 val=120
+[TRAIN] epoch=1/1 batch=1/128 lead=[6, 72, 24, 6, 24, 24, 6, 6, 6, 24, 24, 72] loss=1.090986 GPU_now=1.50GiB GPU_peak=36.99GiB
+[TRAIN] epoch=1/1 batch=10/128 lead=[24, 72, 24, 6, 24, 24, 72, 72, 24, 6, 6, 72] loss=1.099430 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=20/128 lead=[24, 24, 6, 6, 72, 24, 72, 6, 72, 6, 6, 6] loss=1.102020 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=30/128 lead=[72, 6, 6, 24, 72, 72, 6, 6, 72, 72, 72, 24] loss=1.061889 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=40/128 lead=[6, 72, 24, 6, 6, 72, 72, 72, 72, 24, 6, 6] loss=1.068410 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=50/128 lead=[6, 24, 24, 6, 24, 72, 24, 24, 72, 6, 72, 24] loss=1.026292 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=60/128 lead=[6, 6, 24, 24, 6, 6, 6, 24, 24, 6, 72, 72] loss=1.037463 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=70/128 lead=[24, 6, 72, 72, 24, 24, 24, 72, 6, 72, 24, 72] loss=1.002563 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=80/128 lead=[72, 24, 6, 6, 24, 6, 72, 24, 72, 72, 6, 72] loss=0.995227 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=90/128 lead=[24, 6, 72, 6, 6, 6, 24, 24, 6, 72, 6, 6] loss=1.000300 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=100/128 lead=[24, 24, 24, 72, 72, 72, 24, 6, 24, 72, 72, 72] loss=0.976905 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=110/128 lead=[24, 24, 24, 24, 72, 6, 6, 6, 6, 6, 24, 24] loss=0.978374 GPU_now=1.50GiB GPU_peak=34.29GiB
+[TRAIN] epoch=1/1 batch=120/128 lead=[24, 6, 6, 6, 72, 24, 24, 6, 72, 72, 24, 72] loss=0.954220 GPU_now=1.50GiB GPU_peak=34.29GiB
+[EPOCH] {'epoch': 0, 'global_step': 128, 'train_mse': 1.0202352041378617, 'val_mse': 0.9849020540714264, 'elapsed_seconds': 95.36}
+[BEST] val_mse=0.984902
+[COMPLETE] {
+  "status": "completed",
+  "best_val_mse": 0.9849020540714264,
+  "epochs": 1,
+  "global_step": 128,
+  "train_examples": 1536,
+  "val_examples": 120,
+  "shared_pretrained_channels": 38,
+  "checkpoint_best": "models/climax_forecaster_speedtest/checkpoint_best.pt"
+}

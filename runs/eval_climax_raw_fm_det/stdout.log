@@ -1,0 +1,1315 @@
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[CLEAN] 2350 examples
+[CLEAN] 2400 examples
+[CLEAN] 2450 examples
+[CLEAN] 2500 examples
+[CLEAN] 2550 examples
+[CLEAN] 2600 examples
+[CLEAN] 2650 examples
+[CLEAN] 2700 examples
+[CLEAN] 2750 examples
+[CLEAN] 2800 examples
+[CLEAN] 2850 examples
+[CLEAN] 2900 examples
+[CLEAN] 2950 examples
+[CLEAN] 3000 examples
+[CLEAN] 3050 examples
+[CLEAN] 3100 examples
+[CLEAN] 3150 examples
+[CLEAN] 3200 examples
+[CLEAN] 3250 examples
+[CLEAN] 3300 examples
+[CLEAN] 3350 examples
+[CLEAN] 3400 examples
+[CLEAN] 3450 examples
+[CLEAN] 3500 examples
+[CLEAN] 3550 examples
+[CLEAN] 3600 examples
+[CLEAN] 3650 examples
+[CLEAN] 3700 examples
+[CLEAN] 3750 examples
+[CLEAN] 3800 examples
+[CLEAN] 3850 examples
+[CLEAN] 3900 examples
+[CLEAN] 3950 examples
+[CLEAN] 4000 examples
+[CLEAN] 4050 examples
+[CLEAN] 4100 examples
+[CLEAN] 4150 examples
+[CLEAN] 4200 examples
+[CLEAN] 4250 examples
+[CLEAN] 4300 examples
+[CLEAN] 4350 examples
+[CLEAN] 4400 examples
+[CLEAN] 4450 examples
+[CLEAN] 4500 examples
+[CLEAN] 4550 examples
+[CLEAN] 4600 examples
+[CLEAN] 4650 examples
+[CLEAN] 4700 examples
+[CLEAN] 4750 examples
+[CLEAN] 4800 examples
+[CLEAN] 4850 examples
+[CLEAN] 4900 examples
+[CLEAN] 4950 examples
+[CLEAN] 5000 examples
+[CLEAN] 5050 examples
+[CLEAN] 5100 examples
+[CLEAN] 5150 examples
+[CLEAN] 5200 examples
+[CLEAN] 5250 examples
+[CLEAN] 5300 examples
+[CLEAN] 5350 examples
+[CLEAN] 5400 examples
+[CLEAN] 5450 examples
+[CLEAN] 5500 examples
+[CLEAN] 5550 examples
+[CLEAN] 5600 examples
+[CLEAN] 5650 examples
+[CLEAN] 5700 examples
+[CLEAN] 5750 examples
+[CLEAN] 5800 examples
+[CLEAN] 5850 examples
+[CLEAN] 5900 examples
+[CLEAN] 5950 examples
+[CLEAN] 6000 examples
+[CLEAN] 6050 examples
+[CLEAN] 6100 examples
+[CLEAN] 6150 examples
+[CLEAN] 6200 examples
+[CLEAN] 6250 examples
+[CLEAN] 6300 examples
+[CLEAN] 6350 examples
+[CLEAN] 6400 examples
+[CLEAN] 6450 examples
+[CLEAN] 6500 examples
+[CLEAN] 6550 examples
+[CLEAN] 6600 examples
+[CLEAN] 6650 examples
+[CLEAN] 6700 examples
+[CLEAN] 6750 examples
+[CLEAN] 6800 examples
+[CLEAN] 6850 examples
+[CLEAN] 6900 examples
+[CLEAN] 6950 examples
+[CLEAN] 7000 examples
+[CLEAN] 7050 examples
+[CLEAN] 7100 examples
+[CLEAN] 7150 examples
+[CLEAN] 7200 examples
+[CLEAN] 7250 examples
+[CLEAN] 7300 examples
+[CLEAN] 7350 examples
+[CLEAN] 7400 examples
+[CLEAN] 7450 examples
+[CLEAN] 7500 examples
+[CLEAN] 7550 examples
+[CLEAN] 7600 examples
+[CLEAN] 7650 examples
+[CLEAN] 7700 examples
+[CLEAN] 7750 examples
+[CLEAN] 7800 examples
+[CLEAN] 7850 examples
+[CLEAN] 7900 examples
+[CLEAN] 7950 examples
+[CLEAN] 8000 examples
+[CLEAN] 8050 examples
+[CLEAN] 8100 examples
+[CLEAN] 8150 examples
+[CLEAN] 8200 examples
+[CLEAN] 8250 examples
+[CLEAN] 8300 examples
+[CLEAN] 8350 examples
+[CLEAN] 8400 examples
+[CLEAN] 8450 examples
+[CLEAN] 8500 examples
+[CLEAN] 8550 examples
+[CLEAN] 8600 examples
+[CLEAN] 8650 examples
+[CLEAN] 8700 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[CLEAN] 2350 examples
+[CLEAN] 2400 examples
+[CLEAN] 2450 examples
+[CLEAN] 2500 examples
+[CLEAN] 2550 examples
+[CLEAN] 2600 examples
+[CLEAN] 2650 examples
+[CLEAN] 2700 examples
+[CLEAN] 2750 examples
+[CLEAN] 2800 examples
+[CLEAN] 2850 examples
+[CLEAN] 2900 examples
+[CLEAN] 2950 examples
+[CLEAN] 3000 examples
+[CLEAN] 3050 examples
+[CLEAN] 3100 examples
+[CLEAN] 3150 examples
+[CLEAN] 3200 examples
+[CLEAN] 3250 examples
+[CLEAN] 3300 examples
+[CLEAN] 3350 examples
+[CLEAN] 3400 examples
+[CLEAN] 3450 examples
+[CLEAN] 3500 examples
+[CLEAN] 3550 examples
+[CLEAN] 3600 examples
+[CLEAN] 3650 examples
+[CLEAN] 3700 examples
+[CLEAN] 3750 examples
+[CLEAN] 3800 examples
+[CLEAN] 3850 examples
+[CLEAN] 3900 examples
+[CLEAN] 3950 examples
+[CLEAN] 4000 examples
+[CLEAN] 4050 examples
+[CLEAN] 4100 examples
+[CLEAN] 4150 examples
+[CLEAN] 4200 examples
+[CLEAN] 4250 examples
+[CLEAN] 4300 examples
+[CLEAN] 4350 examples
+[CLEAN] 4400 examples
+[CLEAN] 4450 examples
+[CLEAN] 4500 examples
+[CLEAN] 4550 examples
+[CLEAN] 4600 examples
+[CLEAN] 4650 examples
+[CLEAN] 4700 examples
+[CLEAN] 4750 examples
+[CLEAN] 4800 examples
+[CLEAN] 4850 examples
+[CLEAN] 4900 examples
+[CLEAN] 4950 examples
+[CLEAN] 5000 examples
+[CLEAN] 5050 examples
+[CLEAN] 5100 examples
+[CLEAN] 5150 examples
+[CLEAN] 5200 examples
+[CLEAN] 5250 examples
+[CLEAN] 5300 examples
+[CLEAN] 5350 examples
+[CLEAN] 5400 examples
+[CLEAN] 5450 examples
+[CLEAN] 5500 examples
+[CLEAN] 5550 examples
+[CLEAN] 5600 examples
+[CLEAN] 5650 examples
+[CLEAN] 5700 examples
+[CLEAN] 5750 examples
+[CLEAN] 5800 examples
+[CLEAN] 5850 examples
+[CLEAN] 5900 examples
+[CLEAN] 5950 examples
+[CLEAN] 6000 examples
+[CLEAN] 6050 examples
+[CLEAN] 6100 examples
+[CLEAN] 6150 examples
+[CLEAN] 6200 examples
+[CLEAN] 6250 examples
+[CLEAN] 6300 examples
+[CLEAN] 6350 examples
+[CLEAN] 6400 examples
+[CLEAN] 6450 examples
+[CLEAN] 6500 examples
+[CLEAN] 6550 examples
+[CLEAN] 6600 examples
+[CLEAN] 6650 examples
+[CLEAN] 6700 examples
+[CLEAN] 6750 examples
+[CLEAN] 6800 examples
+[CLEAN] 6850 examples
+[CLEAN] 6900 examples
+[CLEAN] 6950 examples
+[CLEAN] 7000 examples
+[CLEAN] 7050 examples
+[CLEAN] 7100 examples
+[CLEAN] 7150 examples
+[CLEAN] 7200 examples
+[CLEAN] 7250 examples
+[CLEAN] 7300 examples
+[CLEAN] 7350 examples
+[CLEAN] 7400 examples
+[CLEAN] 7450 examples
+[CLEAN] 7500 examples
+[CLEAN] 7550 examples
+[CLEAN] 7600 examples
+[CLEAN] 7650 examples
+[CLEAN] 7700 examples
+[CLEAN] 7750 examples
+[CLEAN] 7800 examples
+[CLEAN] 7850 examples
+[CLEAN] 7900 examples
+[CLEAN] 7950 examples
+[CLEAN] 8000 examples
+[CLEAN] 8050 examples
+[CLEAN] 8100 examples
+[CLEAN] 8150 examples
+[CLEAN] 8200 examples
+[CLEAN] 8250 examples
+[CLEAN] 8300 examples
+[CLEAN] 8350 examples
+[CLEAN] 8400 examples
+[CLEAN] 8450 examples
+[CLEAN] 8500 examples
+[CLEAN] 8550 examples
+[CLEAN] 8600 examples
+[CLEAN] 8650 examples
+[CLEAN] 8700 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[CLEAN] 2350 examples
+[CLEAN] 2400 examples
+[CLEAN] 2450 examples
+[CLEAN] 2500 examples
+[CLEAN] 2550 examples
+[CLEAN] 2600 examples
+[CLEAN] 2650 examples
+[CLEAN] 2700 examples
+[CLEAN] 2750 examples
+[CLEAN] 2800 examples
+[CLEAN] 2850 examples
+[CLEAN] 2900 examples
+[CLEAN] 2950 examples
+[CLEAN] 3000 examples
+[CLEAN] 3050 examples
+[CLEAN] 3100 examples
+[CLEAN] 3150 examples
+[CLEAN] 3200 examples
+[CLEAN] 3250 examples
+[CLEAN] 3300 examples
+[CLEAN] 3350 examples
+[CLEAN] 3400 examples
+[CLEAN] 3450 examples
+[CLEAN] 3500 examples
+[CLEAN] 3550 examples
+[CLEAN] 3600 examples
+[CLEAN] 3650 examples
+[CLEAN] 3700 examples
+[CLEAN] 3750 examples
+[CLEAN] 3800 examples
+[CLEAN] 3850 examples
+[CLEAN] 3900 examples
+[CLEAN] 3950 examples
+[CLEAN] 4000 examples
+[CLEAN] 4050 examples
+[CLEAN] 4100 examples
+[CLEAN] 4150 examples
+[CLEAN] 4200 examples
+[CLEAN] 4250 examples
+[CLEAN] 4300 examples
+[CLEAN] 4350 examples
+[CLEAN] 4400 examples
+[CLEAN] 4450 examples
+[CLEAN] 4500 examples
+[CLEAN] 4550 examples
+[CLEAN] 4600 examples
+[CLEAN] 4650 examples
+[CLEAN] 4700 examples
+[CLEAN] 4750 examples
+[CLEAN] 4800 examples
+[CLEAN] 4850 examples
+[CLEAN] 4900 examples
+[CLEAN] 4950 examples
+[CLEAN] 5000 examples
+[CLEAN] 5050 examples
+[CLEAN] 5100 examples
+[CLEAN] 5150 examples
+[CLEAN] 5200 examples
+[CLEAN] 5250 examples
+[CLEAN] 5300 examples
+[CLEAN] 5350 examples
+[CLEAN] 5400 examples
+[CLEAN] 5450 examples
+[CLEAN] 5500 examples
+[CLEAN] 5550 examples
+[CLEAN] 5600 examples
+[CLEAN] 5650 examples
+[CLEAN] 5700 examples
+[CLEAN] 5750 examples
+[CLEAN] 5800 examples
+[CLEAN] 5850 examples
+[CLEAN] 5900 examples
+[CLEAN] 5950 examples
+[CLEAN] 6000 examples
+[CLEAN] 6050 examples
+[CLEAN] 6100 examples
+[CLEAN] 6150 examples
+[CLEAN] 6200 examples
+[CLEAN] 6250 examples
+[CLEAN] 6300 examples
+[CLEAN] 6350 examples
+[CLEAN] 6400 examples
+[CLEAN] 6450 examples
+[CLEAN] 6500 examples
+[CLEAN] 6550 examples
+[CLEAN] 6600 examples
+[CLEAN] 6650 examples
+[CLEAN] 6700 examples
+[CLEAN] 6750 examples
+[CLEAN] 6800 examples
+[CLEAN] 6850 examples
+[CLEAN] 6900 examples
+[CLEAN] 6950 examples
+[CLEAN] 7000 examples
+[CLEAN] 7050 examples
+[CLEAN] 7100 examples
+[CLEAN] 7150 examples
+[CLEAN] 7200 examples
+[CLEAN] 7250 examples
+[CLEAN] 7300 examples
+[CLEAN] 7350 examples
+[CLEAN] 7400 examples
+[CLEAN] 7450 examples
+[CLEAN] 7500 examples
+[CLEAN] 7550 examples
+[CLEAN] 7600 examples
+[CLEAN] 7650 examples
+[CLEAN] 7700 examples
+[CLEAN] 7750 examples
+[CLEAN] 7800 examples
+[CLEAN] 7850 examples
+[CLEAN] 7900 examples
+[CLEAN] 7950 examples
+[CLEAN] 8000 examples
+[CLEAN] 8050 examples
+[CLEAN] 8100 examples
+[CLEAN] 8150 examples
+[CLEAN] 8200 examples
+[CLEAN] 8250 examples
+[CLEAN] 8300 examples
+[CLEAN] 8350 examples
+[CLEAN] 8400 examples
+[CLEAN] 8450 examples
+[CLEAN] 8500 examples
+[CLEAN] 8550 examples
+[CLEAN] 8600 examples
+[CLEAN] 8650 examples
+[CLEAN] 8700 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[CLEAN] 2350 examples
+[CLEAN] 2400 examples
+[CLEAN] 2450 examples
+[CLEAN] 2500 examples
+[CLEAN] 2550 examples
+[CLEAN] 2600 examples
+[CLEAN] 2650 examples
+[CLEAN] 2700 examples
+[CLEAN] 2750 examples
+[CLEAN] 2800 examples
+[CLEAN] 2850 examples
+[CLEAN] 2900 examples
+[CLEAN] 2950 examples
+[CLEAN] 3000 examples
+[CLEAN] 3050 examples
+[CLEAN] 3100 examples
+[CLEAN] 3150 examples
+[CLEAN] 3200 examples
+[CLEAN] 3250 examples
+[CLEAN] 3300 examples
+[CLEAN] 3350 examples
+[CLEAN] 3400 examples
+[CLEAN] 3450 examples
+[CLEAN] 3500 examples
+[CLEAN] 3550 examples
+[CLEAN] 3600 examples
+[CLEAN] 3650 examples
+[CLEAN] 3700 examples
+[CLEAN] 3750 examples
+[CLEAN] 3800 examples
+[CLEAN] 3850 examples
+[CLEAN] 3900 examples
+[CLEAN] 3950 examples
+[CLEAN] 4000 examples
+[CLEAN] 4050 examples
+[CLEAN] 4100 examples
+[CLEAN] 4150 examples
+[CLEAN] 4200 examples
+[CLEAN] 4250 examples
+[CLEAN] 4300 examples
+[CLEAN] 4350 examples
+[CLEAN] 4400 examples
+[CLEAN] 4450 examples
+[CLEAN] 4500 examples
+[CLEAN] 4550 examples
+[CLEAN] 4600 examples
+[CLEAN] 4650 examples
+[CLEAN] 4700 examples
+[CLEAN] 4750 examples
+[CLEAN] 4800 examples
+[CLEAN] 4850 examples
+[CLEAN] 4900 examples
+[CLEAN] 4950 examples
+[CLEAN] 5000 examples
+[CLEAN] 5050 examples
+[CLEAN] 5100 examples
+[CLEAN] 5150 examples
+[CLEAN] 5200 examples
+[CLEAN] 5250 examples
+[CLEAN] 5300 examples
+[CLEAN] 5350 examples
+[CLEAN] 5400 examples
+[CLEAN] 5450 examples
+[CLEAN] 5500 examples
+[CLEAN] 5550 examples
+[CLEAN] 5600 examples
+[CLEAN] 5650 examples
+[CLEAN] 5700 examples
+[CLEAN] 5750 examples
+[CLEAN] 5800 examples
+[CLEAN] 5850 examples
+[CLEAN] 5900 examples
+[CLEAN] 5950 examples
+[CLEAN] 6000 examples
+[CLEAN] 6050 examples
+[CLEAN] 6100 examples
+[CLEAN] 6150 examples
+[CLEAN] 6200 examples
+[CLEAN] 6250 examples
+[CLEAN] 6300 examples
+[CLEAN] 6350 examples
+[CLEAN] 6400 examples
+[CLEAN] 6450 examples
+[CLEAN] 6500 examples
+[CLEAN] 6550 examples
+[CLEAN] 6600 examples
+[CLEAN] 6650 examples
+[CLEAN] 6700 examples
+[CLEAN] 6750 examples
+[CLEAN] 6800 examples
+[CLEAN] 6850 examples
+[CLEAN] 6900 examples
+[CLEAN] 6950 examples
+[CLEAN] 7000 examples
+[CLEAN] 7050 examples
+[CLEAN] 7100 examples
+[CLEAN] 7150 examples
+[CLEAN] 7200 examples
+[CLEAN] 7250 examples
+[CLEAN] 7300 examples
+[CLEAN] 7350 examples
+[CLEAN] 7400 examples
+[CLEAN] 7450 examples
+[CLEAN] 7500 examples
+[CLEAN] 7550 examples
+[CLEAN] 7600 examples
+[CLEAN] 7650 examples
+[CLEAN] 7700 examples
+[CLEAN] 7750 examples
+[CLEAN] 7800 examples
+[CLEAN] 7850 examples
+[CLEAN] 7900 examples
+[CLEAN] 7950 examples
+[CLEAN] 8000 examples
+[CLEAN] 8050 examples
+[CLEAN] 8100 examples
+[CLEAN] 8150 examples
+[CLEAN] 8200 examples
+[CLEAN] 8250 examples
+[CLEAN] 8300 examples
+[CLEAN] 8350 examples
+[CLEAN] 8400 examples
+[CLEAN] 8450 examples
+[CLEAN] 8500 examples
+[CLEAN] 8550 examples
+[CLEAN] 8600 examples
+[CLEAN] 8650 examples
+[CLEAN] 8700 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[CLEAN] 2350 examples
+[CLEAN] 2400 examples
+[CLEAN] 2450 examples
+[CLEAN] 2500 examples
+[CLEAN] 2550 examples
+[CLEAN] 2600 examples
+[CLEAN] 2650 examples
+[CLEAN] 2700 examples
+[CLEAN] 2750 examples
+[CLEAN] 2800 examples
+[CLEAN] 2850 examples
+[CLEAN] 2900 examples
+[CLEAN] 2950 examples
+[CLEAN] 3000 examples
+[CLEAN] 3050 examples
+[CLEAN] 3100 examples
+[CLEAN] 3150 examples
+[CLEAN] 3200 examples
+[CLEAN] 3250 examples
+[CLEAN] 3300 examples
+[CLEAN] 3350 examples
+[CLEAN] 3400 examples
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[EVAL] device=cuda method=raw_fm backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[CLEAN] 50 examples
+[CLEAN] 100 examples
+[CLEAN] 150 examples
+[CLEAN] 200 examples
+[CLEAN] 250 examples
+[CLEAN] 300 examples
+[CLEAN] 350 examples
+[CLEAN] 400 examples
+[CLEAN] 450 examples
+[CLEAN] 500 examples
+[CLEAN] 550 examples
+[CLEAN] 600 examples
+[CLEAN] 650 examples
+[CLEAN] 700 examples
+[CLEAN] 750 examples
+[CLEAN] 800 examples
+[CLEAN] 850 examples
+[CLEAN] 900 examples
+[CLEAN] 950 examples
+[CLEAN] 1000 examples
+[CLEAN] 1050 examples
+[CLEAN] 1100 examples
+[CLEAN] 1150 examples
+[CLEAN] 1200 examples
+[CLEAN] 1250 examples
+[CLEAN] 1300 examples
+[CLEAN] 1350 examples
+[CLEAN] 1400 examples
+[CLEAN] 1450 examples
+[CLEAN] 1500 examples
+[CLEAN] 1550 examples
+[CLEAN] 1600 examples
+[CLEAN] 1650 examples
+[CLEAN] 1700 examples
+[CLEAN] 1750 examples
+[CLEAN] 1800 examples
+[CLEAN] 1850 examples
+[CLEAN] 1900 examples
+[CLEAN] 1950 examples
+[CLEAN] 2000 examples
+[CLEAN] 2050 examples
+[CLEAN] 2100 examples
+[CLEAN] 2150 examples
+[CLEAN] 2200 examples
+[CLEAN] 2250 examples
+[CLEAN] 2300 examples
+[CLEAN] 2350 examples
+[CLEAN] 2400 examples
+[CLEAN] 2450 examples
+[CLEAN] 2500 examples
+[CLEAN] 2550 examples
+[CLEAN] 2600 examples
+[CLEAN] 2650 examples
+[CLEAN] 2700 examples
+[CLEAN] 2750 examples
+[CLEAN] 2800 examples
+[CLEAN] 2850 examples
+[CLEAN] 2900 examples
+[CLEAN] 2950 examples
+[CLEAN] 3000 examples
+[CLEAN] 3050 examples
+[CLEAN] 3100 examples
+[CLEAN] 3150 examples
+[CLEAN] 3200 examples
+[CLEAN] 3250 examples
+[CLEAN] 3300 examples
+[CLEAN] 3350 examples
+[CLEAN] 3400 examples
+[CLEAN] 3450 examples
+[CLEAN] 3500 examples
+[CLEAN] 3550 examples
+[CLEAN] 3600 examples
+[CLEAN] 3650 examples
+[CLEAN] 3700 examples
+[CLEAN] 3750 examples
+[CLEAN] 3800 examples
+[CLEAN] 3850 examples
+[CLEAN] 3900 examples
+[CLEAN] 3950 examples
+[CLEAN] 4000 examples
+[CLEAN] 4050 examples
+[CLEAN] 4100 examples
+[CLEAN] 4150 examples
+[CLEAN] 4200 examples
+[CLEAN] 4250 examples
+[CLEAN] 4300 examples
+[CLEAN] 4350 examples
+[CLEAN] 4400 examples
+[CLEAN] 4450 examples
+[CLEAN] 4500 examples
+[CLEAN] 4550 examples
+[CLEAN] 4600 examples
+[CLEAN] 4650 examples
+[CLEAN] 4700 examples
+[CLEAN] 4750 examples
+[CLEAN] 4800 examples
+[CLEAN] 4850 examples
+[CLEAN] 4900 examples
+[CLEAN] 4950 examples
+[CLEAN] 5000 examples
+[CLEAN] 5050 examples
+[CLEAN] 5100 examples
+[CLEAN] 5150 examples
+[CLEAN] 5200 examples
+[CLEAN] 5250 examples
+[CLEAN] 5300 examples
+[CLEAN] 5350 examples
+[CLEAN] 5400 examples
+[CLEAN] 5450 examples
+[CLEAN] 5500 examples
+[CLEAN] 5550 examples
+[CLEAN] 5600 examples
+[CLEAN] 5650 examples
+[CLEAN] 5700 examples
+[CLEAN] 5750 examples
+[CLEAN] 5800 examples
+[CLEAN] 5850 examples
+[CLEAN] 5900 examples
+[CLEAN] 5950 examples
+[CLEAN] 6000 examples
+[CLEAN] 6050 examples
+[CLEAN] 6100 examples
+[CLEAN] 6150 examples
+[CLEAN] 6200 examples
+[CLEAN] 6250 examples
+[CLEAN] 6300 examples
+[CLEAN] 6350 examples
+[CLEAN] 6400 examples
+[CLEAN] 6450 examples
+[CLEAN] 6500 examples
+[CLEAN] 6550 examples
+[CLEAN] 6600 examples
+[CLEAN] 6650 examples
+[CLEAN] 6700 examples
+[CLEAN] 6750 examples
+[CLEAN] 6800 examples
+[CLEAN] 6850 examples
+[CLEAN] 6900 examples
+[CLEAN] 6950 examples
+[CLEAN] 7000 examples
+[CLEAN] 7050 examples
+[CLEAN] 7100 examples
+[CLEAN] 7150 examples
+[CLEAN] 7200 examples
+[CLEAN] 7250 examples
+[CLEAN] 7300 examples
+[CLEAN] 7350 examples
+[CLEAN] 7400 examples
+[CLEAN] 7450 examples
+[CLEAN] 7500 examples
+[CLEAN] 7550 examples
+[CLEAN] 7600 examples
+[CLEAN] 7650 examples
+[CLEAN] 7700 examples
+[CLEAN] 7750 examples
+[CLEAN] 7800 examples
+[CLEAN] 7850 examples
+[CLEAN] 7900 examples
+[CLEAN] 7950 examples
+[CLEAN] 8000 examples
+[CLEAN] 8050 examples
+[CLEAN] 8100 examples
+[CLEAN] 8150 examples
+[CLEAN] 8200 examples
+[CLEAN] 8250 examples
+[CLEAN] 8300 examples
+[CLEAN] 8350 examples
+[CLEAN] 8400 examples
+[CLEAN] 8450 examples
+[CLEAN] 8500 examples
+[CLEAN] 8550 examples
+[CLEAN] 8600 examples
+[CLEAN] 8650 examples
+[CLEAN] 8700 examples
+[STRESS] lead6_moisture_sev0.25 done n=256
+[STRESS] lead6_moisture_sev0.5 done n=256
+[STRESS] lead6_moisture_sev1 done n=256
+[STRESS] lead6_moisture_sev2 done n=256
+[STRESS] lead6_hydrostatic_sev0.25 done n=256
+[STRESS] lead6_hydrostatic_sev0.5 done n=256
+[STRESS] lead6_hydrostatic_sev1 done n=256
+[STRESS] lead6_hydrostatic_sev2 done n=256
+[STRESS] lead6_advection_sev0.25 done n=256
+[STRESS] lead6_advection_sev0.5 done n=256
+[STRESS] lead6_advection_sev1 done n=256
+[STRESS] lead6_advection_sev2 done n=256
+[STRESS] lead6_spectral_sev0.25 done n=256
+[STRESS] lead6_spectral_sev0.5 done n=256
+[STRESS] lead6_spectral_sev1 done n=256
+[STRESS] lead6_spectral_sev2 done n=256
+[STRESS] lead6_range_extreme_sev0.25 done n=256
+[STRESS] lead6_range_extreme_sev0.5 done n=256
+[STRESS] lead6_range_extreme_sev1 done n=256
+[STRESS] lead6_range_extreme_sev2 done n=256
+[STRESS] lead24_moisture_sev0.25 done n=256
+[STRESS] lead24_moisture_sev0.5 done n=256
+[STRESS] lead24_moisture_sev1 done n=256
+[STRESS] lead24_moisture_sev2 done n=256
+[STRESS] lead24_hydrostatic_sev0.25 done n=256
+[STRESS] lead24_hydrostatic_sev0.5 done n=256
+[STRESS] lead24_hydrostatic_sev1 done n=256
+[STRESS] lead24_hydrostatic_sev2 done n=256
+[STRESS] lead24_advection_sev0.25 done n=256
+[STRESS] lead24_advection_sev0.5 done n=256
+[STRESS] lead24_advection_sev1 done n=256
+[STRESS] lead24_advection_sev2 done n=256
+[STRESS] lead24_spectral_sev0.25 done n=256
+[STRESS] lead24_spectral_sev0.5 done n=256
+[STRESS] lead24_spectral_sev1 done n=256
+[STRESS] lead24_spectral_sev2 done n=256
+[STRESS] lead24_range_extreme_sev0.25 done n=256
+[STRESS] lead24_range_extreme_sev0.5 done n=256
+[STRESS] lead24_range_extreme_sev1 done n=256
+[STRESS] lead24_range_extreme_sev2 done n=256
+[STRESS] lead72_moisture_sev0.25 done n=256
+[STRESS] lead72_moisture_sev0.5 done n=256
+[STRESS] lead72_moisture_sev1 done n=256
+[STRESS] lead72_moisture_sev2 done n=256
+[STRESS] lead72_hydrostatic_sev0.25 done n=256
+[STRESS] lead72_hydrostatic_sev0.5 done n=256
+[STRESS] lead72_hydrostatic_sev1 done n=256
+[STRESS] lead72_hydrostatic_sev2 done n=256
+[STRESS] lead72_advection_sev0.25 done n=256
+[STRESS] lead72_advection_sev0.5 done n=256
+[STRESS] lead72_advection_sev1 done n=256
+[STRESS] lead72_advection_sev2 done n=256
+[STRESS] lead72_spectral_sev0.25 done n=256
+[STRESS] lead72_spectral_sev0.5 done n=256
+[STRESS] lead72_spectral_sev1 done n=256
+[STRESS] lead72_spectral_sev2 done n=256
+[STRESS] lead72_range_extreme_sev0.25 done n=256
+[STRESS] lead72_range_extreme_sev0.5 done n=256
+[STRESS] lead72_range_extreme_sev1 done n=256
+[STRESS] lead72_range_extreme_sev2 done n=256

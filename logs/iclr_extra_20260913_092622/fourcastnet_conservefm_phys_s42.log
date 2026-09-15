@@ -1,0 +1,570 @@
+[fourcastnet_conservefm_phys_s42] [EVAL] device=cuda method=conservefm_full backbone=fourcastnet
+[fourcastnet_conservefm_phys_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/fourcastnet.zarr
+[fourcastnet_conservefm_phys_s42] [CLEAN] 64 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 128 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 160 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 224 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 256 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 320 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 352 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 416 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 480 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 512 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 576 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 608 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 672 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 704 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 768 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 800 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 864 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 928 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 960 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1024 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1056 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1120 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1152 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1216 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1280 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1312 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1376 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1408 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1472 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1504 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1568 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1600 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1664 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1728 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1760 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1824 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1856 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1920 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 1952 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2016 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2080 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2112 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2176 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2208 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2272 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2304 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2368 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2400 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2464 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2528 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2560 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2624 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2656 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2720 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2752 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2816 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2880 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2912 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 2980 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3012 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3076 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3108 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3172 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3204 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3268 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3300 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3364 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3428 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3460 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3524 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3556 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3620 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3652 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3716 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3780 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3812 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3876 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3908 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 3972 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4004 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4068 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4100 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4164 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4228 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4260 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4324 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4356 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4420 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4452 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4516 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4580 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4612 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4676 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4708 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4772 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4804 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4868 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4900 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 4964 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5028 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5060 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5124 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5156 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5220 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5252 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5316 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5380 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5412 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5476 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5508 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5572 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5604 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5668 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5700 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5764 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5828 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5861 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5925 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 5957 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6021 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6053 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6117 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6181 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6213 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6277 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6309 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6373 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6405 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6469 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6501 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6565 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6629 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6661 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6725 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6757 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6821 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6853 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6917 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 6981 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7013 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7077 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7109 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7173 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7205 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7269 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7301 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7365 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7429 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7461 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7525 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7557 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7621 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7653 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7717 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7781 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7813 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7877 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7909 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 7973 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8005 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8069 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8101 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8165 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8229 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8261 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8325 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8357 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8421 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8453 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8517 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8581 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8613 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8677 examples
+[fourcastnet_conservefm_phys_s42] [CLEAN] 8709 examples
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_moisture_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_moisture_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_moisture_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_moisture_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_hydrostatic_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_hydrostatic_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_hydrostatic_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_hydrostatic_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_advection_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_advection_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_advection_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_advection_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_spectral_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_spectral_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_spectral_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_spectral_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_range_extreme_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_range_extreme_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_range_extreme_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead6_range_extreme_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_moisture_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_moisture_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_moisture_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_moisture_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_hydrostatic_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_hydrostatic_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_hydrostatic_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_hydrostatic_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_advection_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_advection_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_advection_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_advection_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_spectral_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_spectral_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_spectral_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_spectral_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_range_extreme_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_range_extreme_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_range_extreme_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead24_range_extreme_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_moisture_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_moisture_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_moisture_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_moisture_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_hydrostatic_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_hydrostatic_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_hydrostatic_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_hydrostatic_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_advection_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_advection_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_advection_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_advection_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_spectral_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_spectral_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_spectral_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_spectral_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_range_extreme_sev0.25 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_range_extreme_sev0.5 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_range_extreme_sev1 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [STRESS] lead72_range_extreme_sev2 done n=64 batch=32
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 200/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 400/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 600/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 800/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 1000/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 1200/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 1400/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 1600/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 1800/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 2000/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 2200/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 2400/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 2600/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [GHCN] processed 2800/2913 24h forecasts
+[fourcastnet_conservefm_phys_s42] [EVAL COMPLETE] {
+[fourcastnet_conservefm_phys_s42]   "run_id": "fourcastnet_conservefm_phys_s42",
+[fourcastnet_conservefm_phys_s42]   "backbone": "fourcastnet",
+[fourcastnet_conservefm_phys_s42]   "method": "conservefm_full",
+[fourcastnet_conservefm_phys_s42]   "forecast_provider": "zarr_frozen_fm",
+[fourcastnet_conservefm_phys_s42]   "lead_hours": [
+[fourcastnet_conservefm_phys_s42]     6,
+[fourcastnet_conservefm_phys_s42]     24,
+[fourcastnet_conservefm_phys_s42]     72
+[fourcastnet_conservefm_phys_s42]   ],
+[fourcastnet_conservefm_phys_s42]   "clean": {
+[fourcastnet_conservefm_phys_s42]     "lead_24h/acc_trainmean": 0.9164351689991491,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/mae_phys": 80.21244941656425,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/physics_advection": 16.613461650117664,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/physics_hydrostatic": 0.00020780027582646798,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/physics_moisture": 0.0036794804562544376,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/physics_spectral": 2.691352588959343,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/repair_l1_norm": 0.19590659228297716,
+[fourcastnet_conservefm_phys_s42]     "lead_24h/rmse_phys": 444.91565728179376,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/acc_trainmean": 0.9529549275079054,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/mae_phys": 48.45397596529318,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/physics_advection": 4.915672472311472,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/physics_hydrostatic": 0.00017590327505360835,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/physics_moisture": 0.0008619706918049823,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/physics_spectral": 1.8342678151176464,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/repair_l1_norm": 0.15365621517061043,
+[fourcastnet_conservefm_phys_s42]     "lead_6h/rmse_phys": 311.354851867927,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/acc_trainmean": 0.8677636156394026,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/mae_phys": 116.81718997659864,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/physics_advection": 127.42230564452285,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/physics_hydrostatic": 0.0003832900049301143,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/physics_moisture": 0.007153585043747023,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/physics_spectral": 5.082861768522279,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/repair_l1_norm": 0.2325862181986876,
+[fourcastnet_conservefm_phys_s42]     "lead_72h/rmse_phys": 642.1814186713372,
+[fourcastnet_conservefm_phys_s42]     "examples": 8734
+[fourcastnet_conservefm_phys_s42]   },
+[fourcastnet_conservefm_phys_s42]   "stress": {
+[fourcastnet_conservefm_phys_s42]     "lead6_moisture_sev0.25": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.0005758801707997918,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.34758949279785,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.171915650367737,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0001492551018600352,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007728265482001007,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.655730962753296,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15472412109375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.7599792480469,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_moisture_sev0.5": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.0006326674192678183,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.328901290893555,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.1228779554367065,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0001483926098444499,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0008586306357756257,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.651806652545929,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1546630859375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.16497802734375,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_moisture_sev1": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00016258844334515743,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.56172180175781,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.082673788070679,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00014907691365806386,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0012002649018540978,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6608268022537231,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1553955078125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 283.6221923828125,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_moisture_sev2": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00017706082144286484,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 49.3509464263916,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.260465741157532,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00015276750491466373,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0018490402144379914,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6985737681388855,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15704345703125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 288.86366271972656,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_hydrostatic_sev0.25": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.002114865113981068,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.988677978515625,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.082732677459717,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0001502665036241524,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007786127971485257,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6538686752319336,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15460205078125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.8089294433594,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_hydrostatic_sev0.5": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.02875459101051092,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 50.90225601196289,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.091239929199219,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00015602731582475826,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007889873813837767,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6716500520706177,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.155029296875,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 285.926025390625,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_hydrostatic_sev1": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.5959680378437042,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 56.19278144836426,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.080474376678467,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00017419607320334762,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0008052096236497164,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.7411369681358337,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15704345703125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 301.24867248535156,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_hydrostatic_sev2": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.9405388236045837,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 71.9388198852539,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.043395042419434,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00025476924201939255,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.000728292390704155,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 2.0328933000564575,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1663818359375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 374.08538818359375,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_advection_sev0.25": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00023485644487664104,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.45913887023926,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.04852032661438,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00015080731827765703,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007849404064472765,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6641371250152588,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1553955078125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.9063720703125,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_advection_sev0.5": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.0005110685160616413,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.40456199645996,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.06129777431488,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0001498130732215941,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007999652007129043,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6539466381072998,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15521240234375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 280.9814147949219,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_advection_sev1": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.0002456874572089873,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.5398063659668,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.279283046722412,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00015669322601752356,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007485270034521818,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.692337155342102,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15576171875,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 283.9168243408203,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_advection_sev2": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.0004492767038755119,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.82180595397949,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.1199445724487305,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0001587802398717031,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007511803996749222,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6817359328269958,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15716552734375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 284.4659423828125,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_spectral_sev0.25": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00011947885286645032,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.30862617492676,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.136427283287048,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00014843474491499364,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007690530328545719,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6508197784423828,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15472412109375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.25746154785156,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_spectral_sev0.5": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00020747068992932327,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.30863952636719,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.136259198188782,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00014843442477285862,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007690560014452785,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6508140563964844,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15472412109375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.25689697265625,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_spectral_sev1": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00014864226977806538,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.30860710144043,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.1362022161483765,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00014843286044197157,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007690496859140694,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.6508066654205322,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15472412109375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.2563781738281,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_spectral_sev2": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00027361702086636797,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 48.30865669250488,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.1360063552856445,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00014843517419649288,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007690549246035516,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 1.650820791721344,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15472412109375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 282.2569580078125,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_range_extreme_sev0.25": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00036923899097018875,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 49.113136291503906,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.153734445571899,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00019369847723282874,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007732746889814734,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 2.3730612993240356,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15509033203125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 285.2700958251953,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 1.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_range_extreme_sev0.5": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00024115816631820053,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 50.327999114990234,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.19160783290863,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0003255506744608283,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0007852398557588458,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 3.5180468559265137,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15594482421875,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 294.24485778808594,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 1.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_range_extreme_sev1": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00041956486529670656,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 52.594831466674805,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 4.367171049118042,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0007677275862079114,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0008287667296826839,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 5.693628787994385,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.15814208984375,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 322.23931884765625,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 1.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead6_range_extreme_sev2": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.0035699241561815143,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 60.79133605957031,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 6.443817138671875,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00305182789452374,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.0010674455552361906,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 10.780957221984863,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.16717529296875,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 440.80775451660156,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 1.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead24_moisture_sev0.25": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00045246609079185873,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 80.81702423095703,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 10.350831031799316,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.0002026142319664359,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.003863597405143082,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 2.748296618461609,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1964111328125,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 465.1328582763672,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead24_moisture_sev0.5": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 9.034913455252536e-05,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 80.54764556884766,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 10.298271656036377,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00020265707280486822,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.003732037730515003,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 2.745156168937683,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1959228515625,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 463.37225341796875,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead24_moisture_sev1": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00026099345996044576,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 81.13174057006836,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 10.63393259048462,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00020570847118506208,
+[fourcastnet_conservefm_phys_s42]       "physics_moisture": 0.004307162249460816,
+[fourcastnet_conservefm_phys_s42]       "physics_spectral": 2.7624017000198364,
+[fourcastnet_conservefm_phys_s42]       "repair_l1_norm": 0.1971435546875,
+[fourcastnet_conservefm_phys_s42]       "rmse_phys": 468.5005798339844,
+[fourcastnet_conservefm_phys_s42]       "type_accuracy": 0.0,
+[fourcastnet_conservefm_phys_s42]       "examples": 64
+[fourcastnet_conservefm_phys_s42]     },
+[fourcastnet_conservefm_phys_s42]     "lead24_moisture_sev2": {
+[fourcastnet_conservefm_phys_s42]       "localization_iou": 0.00027622761990642175,
+[fourcastnet_conservefm_phys_s42]       "mae_phys": 81.67884063720703,
+[fourcastnet_conservefm_phys_s42]       "physics_advection": 10.599625587463379,
+[fourcastnet_conservefm_phys_s42]       "physics_hydrostatic": 0.00020744548965012655,
+[fourcastnet_conservefm_phys_s42]       "physics_mois

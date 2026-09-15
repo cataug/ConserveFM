@@ -1,0 +1,181 @@
+2026-07-15 17:18:43 [ERA5] ========================================================================
+2026-07-15 17:18:43 [ERA5] Parallel raw WeatherBench2 ERA5 downloader
+2026-07-15 17:18:43 [ERA5] Period: 1979–2022
+2026-07-15 17:18:43 [ERA5] Workers: 32
+2026-07-15 17:18:43 [ERA5] No decompression or recompression
+2026-07-15 17:18:43 [ERA5] ========================================================================
+2026-07-15 17:18:43 [ERA5] Opening remote metadata
+2026-07-15 17:19:23 [ERA5] Selected time indices: 29,220..93,503
+2026-07-15 17:19:23 [ERA5] Selected timestamps: 64,284
+2026-07-15 17:19:23 [ERA5] Copying Zarr metadata and coordinates
+2026-07-15 17:19:28 [ERA5] metadata 1/39: .zgroup | exists | 24.00 B
+2026-07-15 17:19:28 [ERA5] metadata 2/39: .zattrs | exists | 2.00 B
+2026-07-15 17:19:28 [ERA5] metadata 3/39: .zarray | exists | 320.00 B
+2026-07-15 17:19:28 [ERA5] metadata 4/39: .zattrs | exists | 129.00 B
+2026-07-15 17:19:28 [ERA5] metadata 5/39: 0 | exists | 3.25 KiB
+2026-07-15 17:19:28 [ERA5] metadata 6/39: 1 | exists | 3.29 KiB
+2026-07-15 17:19:28 [ERA5] metadata 7/39: 2 | exists | 3.00 KiB
+2026-07-15 17:19:28 [ERA5] metadata 8/39: 3 | exists | 3.29 KiB
+2026-07-15 17:19:28 [ERA5] metadata 9/39: .zarray | exists | 314.00 B
+2026-07-15 17:19:28 [ERA5] metadata 10/39: .zattrs | exists | 52.00 B
+2026-07-15 17:19:28 [ERA5] metadata 11/39: 0 | exists | 120.00 B
+2026-07-15 17:19:28 [ERA5] metadata 12/39: .zarray | exists | 317.00 B
+2026-07-15 17:19:28 [ERA5] metadata 13/39: .zattrs | exists | 56.00 B
+2026-07-15 17:19:28 [ERA5] metadata 14/39: 0 | exists | 845.00 B
+2026-07-15 17:19:28 [ERA5] metadata 15/39: .zarray | exists | 317.00 B
+2026-07-15 17:19:28 [ERA5] metadata 16/39: .zattrs | exists | 55.00 B
+2026-07-15 17:19:28 [ERA5] metadata 17/39: 0 | exists | 528.00 B
+2026-07-15 17:19:28 [ERA5] metadata 18/39: .zarray | exists | 393.00 B
+2026-07-15 17:19:28 [ERA5] metadata 19/39: .zattrs | exists | 229.00 B
+2026-07-15 17:19:28 [ERA5] metadata 20/39: .zarray | exists | 393.00 B
+2026-07-15 17:19:28 [ERA5] metadata 21/39: .zattrs | exists | 222.00 B
+2026-07-15 17:19:28 [ERA5] metadata 22/39: .zarray | exists | 393.00 B
+2026-07-15 17:19:28 [ERA5] metadata 23/39: .zattrs | exists | 238.00 B
+2026-07-15 17:19:28 [ERA5] metadata 24/39: .zarray | exists | 393.00 B
+2026-07-15 17:19:28 [ERA5] metadata 25/39: .zattrs | exists | 234.00 B
+2026-07-15 17:19:28 [ERA5] metadata 26/39: .zarray | exists | 393.00 B
+2026-07-15 17:19:28 [ERA5] metadata 27/39: .zattrs | exists | 235.00 B
+2026-07-15 17:19:28 [ERA5] metadata 28/39: .zarray | exists | 369.00 B
+2026-07-15 17:19:28 [ERA5] metadata 29/39: .zattrs | exists | 175.00 B
+2026-07-15 17:19:28 [ERA5] metadata 30/39: .zarray | exists | 369.00 B
+2026-07-15 17:19:28 [ERA5] metadata 31/39: .zattrs | exists | 187.00 B
+2026-07-15 17:19:28 [ERA5] metadata 32/39: .zarray | exists | 369.00 B
+2026-07-15 17:19:28 [ERA5] metadata 33/39: .zattrs | exists | 187.00 B
+2026-07-15 17:19:28 [ERA5] metadata 34/39: .zarray | exists | 369.00 B
+2026-07-15 17:19:28 [ERA5] metadata 35/39: .zattrs | exists | 235.00 B
+2026-07-15 17:19:28 [ERA5] metadata 36/39: .zarray | exists | 369.00 B
+2026-07-15 17:19:28 [ERA5] metadata 37/39: .zattrs | exists | 217.00 B
+2026-07-15 17:19:28 [ERA5] metadata 38/39: .zarray | exists | 369.00 B
+2026-07-15 17:19:28 [ERA5] metadata 39/39: .zattrs | exists | 174.00 B
+2026-07-15 17:19:28 [ERA5] geopotential: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:28 [ERA5] temperature: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:29 [ERA5] specific_humidity: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:31 [ERA5] u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:31 [ERA5] v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:32 [ERA5] 2m_temperature: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:32 [ERA5] 10m_u_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:32 [ERA5] 10m_v_component_of_wind: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:32 [ERA5] mean_sea_level_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:33 [ERA5] surface_pressure: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:33 [ERA5] total_precipitation_6hr: source chunks 3652..11687 | objects=8,036
+2026-07-15 17:19:33 [ERA5] Starting raw-object copy with 32 workers
+2026-07-15 17:19:33 [ERA5] Total ERA5 chunk objects: 88,396
+2026-07-15 17:19:33 [ERA5] Destination: /home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022
+2026-07-15 17:19:33 [ERA5] progress=90/88,396 (0.10%) | new=0.00 B | skipped=90 | average=0.00 B/s | ETA≈0.0 h
+2026-07-15 17:20:05 [ERA5] progress=39,793/88,396 (45.02%) | new=80.22 MiB | skipped=39,785 | average=2.51 MiB/s | ETA≈53.9 h
+2026-07-15 17:20:39 [ERA5] progress=39,803/88,396 (45.03%) | new=180.29 MiB | skipped=39,785 | average=2.76 MiB/s | ETA≈49.1 h
+2026-07-15 17:21:09 [ERA5] progress=39,814/88,396 (45.04%) | new=290.31 MiB | skipped=39,785 | average=3.02 MiB/s | ETA≈44.7 h
+2026-07-15 17:21:43 [ERA5] progress=39,824/88,396 (45.05%) | new=390.63 MiB | skipped=39,785 | average=3.01 MiB/s | ETA≈44.9 h
+2026-07-15 17:22:18 [ERA5] progress=39,834/88,396 (45.06%) | new=490.93 MiB | skipped=39,785 | average=2.97 MiB/s | ETA≈45.5 h
+2026-07-15 17:22:50 [ERA5] progress=39,844/88,396 (45.07%) | new=591.15 MiB | skipped=39,785 | average=3.00 MiB/s | ETA≈45.0 h
+2026-07-15 17:23:25 [ERA5] progress=39,855/88,396 (45.09%) | new=701.51 MiB | skipped=39,785 | average=3.03 MiB/s | ETA≈44.6 h
+2026-07-15 17:23:56 [ERA5] progress=39,867/88,396 (45.10%) | new=821.90 MiB | skipped=39,785 | average=3.13 MiB/s | ETA≈43.2 h
+2026-07-15 17:24:32 [ERA5] progress=39,878/88,396 (45.11%) | new=932.37 MiB | skipped=39,785 | average=3.12 MiB/s | ETA≈43.2 h
+2026-07-15 17:25:02 [ERA5] progress=39,889/88,396 (45.13%) | new=1.02 GiB | skipped=39,785 | average=3.17 MiB/s | ETA≈42.6 h
+2026-07-15 17:25:33 [ERA5] progress=39,898/88,396 (45.14%) | new=1.11 GiB | skipped=39,785 | average=3.15 MiB/s | ETA≈42.9 h
+2026-07-15 17:26:08 [ERA5] progress=39,910/88,396 (45.15%) | new=1.22 GiB | skipped=39,785 | average=3.18 MiB/s | ETA≈42.5 h
+2026-07-15 17:26:39 [ERA5] progress=39,919/88,396 (45.16%) | new=1.31 GiB | skipped=39,785 | average=3.16 MiB/s | ETA≈42.8 h
+2026-07-15 17:27:09 [ERA5] progress=39,928/88,396 (45.17%) | new=1.40 GiB | skipped=39,785 | average=3.15 MiB/s | ETA≈42.9 h
+2026-07-15 17:27:45 [ERA5] progress=39,939/88,396 (45.18%) | new=1.51 GiB | skipped=39,785 | average=3.14 MiB/s | ETA≈43.0 h
+2026-07-15 17:28:16 [ERA5] progress=39,952/88,396 (45.20%) | new=1.64 GiB | skipped=39,785 | average=3.20 MiB/s | ETA≈42.1 h
+2026-07-15 17:28:49 [ERA5] progress=39,963/88,396 (45.21%) | new=1.74 GiB | skipped=39,785 | average=3.21 MiB/s | ETA≈42.0 h
+2026-07-15 17:29:19 [ERA5] progress=39,974/88,396 (45.22%) | new=1.85 GiB | skipped=39,785 | average=3.23 MiB/s | ETA≈41.7 h
+2026-07-15 17:29:53 [ERA5] progress=39,987/88,396 (45.24%) | new=1.98 GiB | skipped=39,785 | average=3.27 MiB/s | ETA≈41.2 h
+2026-07-15 17:30:23 [ERA5] progress=39,996/88,396 (45.25%) | new=2.07 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.4 h
+2026-07-15 17:30:54 [ERA5] progress=40,006/88,396 (45.26%) | new=2.16 GiB | skipped=39,785 | average=3.25 MiB/s | ETA≈41.4 h
+2026-07-15 17:31:26 [ERA5] progress=40,016/88,396 (45.27%) | new=2.26 GiB | skipped=39,785 | average=3.25 MiB/s | ETA≈41.5 h
+2026-07-15 17:31:59 [ERA5] progress=40,028/88,396 (45.28%) | new=2.38 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.3 h
+2026-07-15 17:32:31 [ERA5] progress=40,037/88,396 (45.29%) | new=2.47 GiB | skipped=39,785 | average=3.25 MiB/s | ETA≈41.5 h
+2026-07-15 17:33:02 [ERA5] progress=40,048/88,396 (45.31%) | new=2.58 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.3 h
+2026-07-15 17:33:34 [ERA5] progress=40,058/88,396 (45.32%) | new=2.67 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.3 h
+2026-07-15 17:34:07 [ERA5] progress=40,069/88,396 (45.33%) | new=2.78 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.3 h
+2026-07-15 17:34:40 [ERA5] progress=40,080/88,396 (45.34%) | new=2.89 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.3 h
+2026-07-15 17:35:14 [ERA5] progress=40,091/88,396 (45.35%) | new=3.00 GiB | skipped=39,785 | average=3.26 MiB/s | ETA≈41.3 h
+2026-07-15 17:35:49 [ERA5] progress=40,104/88,396 (45.37%) | new=3.12 GiB | skipped=39,785 | average=3.28 MiB/s | ETA≈41.0 h
+2026-07-15 17:36:21 [ERA5] progress=40,116/88,396 (45.38%) | new=3.24 GiB | skipped=39,785 | average=3.29 MiB/s | ETA≈40.8 h
+2026-07-15 17:36:52 [ERA5] progress=40,127/88,396 (45.39%) | new=3.35 GiB | skipped=39,785 | average=3.30 MiB/s | ETA≈40.7 h
+2026-07-15 17:37:23 [ERA5] progress=40,140/88,396 (45.41%) | new=3.48 GiB | skipped=39,785 | average=3.33 MiB/s | ETA≈40.4 h
+2026-07-15 17:37:53 [ERA5] progress=40,152/88,396 (45.42%) | new=3.57 GiB | skipped=39,785 | average=3.32 MiB/s | ETA≈40.2 h
+2026-07-15 17:38:24 [ERA5] progress=40,228/88,396 (45.51%) | new=3.62 GiB | skipped=39,785 | average=3.28 MiB/s | ETA≈34.2 h
+2026-07-15 17:38:54 [ERA5] progress=40,304/88,396 (45.59%) | new=3.66 GiB | skipped=39,785 | average=3.23 MiB/s | ETA≈29.9 h
+2026-07-15 17:39:25 [ERA5] progress=40,366/88,396 (45.66%) | new=3.70 GiB | skipped=39,785 | average=3.18 MiB/s | ETA≈27.4 h
+2026-07-15 17:39:57 [ERA5] progress=40,382/88,396 (45.68%) | new=3.71 GiB | skipped=39,785 | average=3.10 MiB/s | ETA≈27.3 h
+2026-07-15 17:40:27 [ERA5] progress=40,396/88,396 (45.70%) | new=3.72 GiB | skipped=39,785 | average=3.03 MiB/s | ETA≈27.4 h
+2026-07-15 17:40:59 [ERA5] progress=40,409/88,396 (45.71%) | new=3.72 GiB | skipped=39,785 | average=2.97 MiB/s | ETA≈27.5 h
+2026-07-15 17:41:30 [ERA5] progress=40,425/88,396 (45.73%) | new=3.73 GiB | skipped=39,785 | average=2.90 MiB/s | ETA≈27.4 h
+2026-07-15 17:42:01 [ERA5] progress=40,436/88,396 (45.74%) | new=3.74 GiB | skipped=39,785 | average=2.84 MiB/s | ETA≈27.6 h
+2026-07-15 17:42:33 [ERA5] progress=40,447/88,396 (45.76%) | new=3.74 GiB | skipped=39,785 | average=2.78 MiB/s | ETA≈27.8 h
+2026-07-15 17:43:03 [ERA5] progress=40,465/88,396 (45.78%) | new=3.75 GiB | skipped=39,785 | average=2.73 MiB/s | ETA≈27.6 h
+2026-07-15 17:43:34 [ERA5] progress=40,500/88,396 (45.82%) | new=3.77 GiB | skipped=39,785 | average=2.68 MiB/s | ETA≈26.8 h
+2026-07-15 17:44:05 [ERA5] progress=40,556/88,396 (45.88%) | new=3.81 GiB | skipped=39,785 | average=2.65 MiB/s | ETA≈25.4 h
+2026-07-15 17:44:35 [ERA5] progress=40,641/88,396 (45.98%) | new=3.85 GiB | skipped=39,785 | average=2.63 MiB/s | ETA≈23.3 h
+2026-07-15 17:45:05 [ERA5] progress=40,726/88,396 (46.07%) | new=3.90 GiB | skipped=39,785 | average=2.61 MiB/s | ETA≈21.6 h
+2026-07-15 17:45:35 [ERA5] progress=40,807/88,396 (46.16%) | new=3.95 GiB | skipped=39,785 | average=2.59 MiB/s | ETA≈20.2 h
+2026-07-15 17:46:06 [ERA5] progress=40,889/88,396 (46.26%) | new=4.00 GiB | skipped=39,785 | average=2.57 MiB/s | ETA≈19.0 h
+2026-07-15 17:46:37 [ERA5] progress=40,923/88,396 (46.30%) | new=4.02 GiB | skipped=39,785 | average=2.53 MiB/s | ETA≈18.8 h
+2026-07-15 17:47:07 [ERA5] progress=40,964/88,396 (46.34%) | new=4.04 GiB | skipped=39,785 | average=2.50 MiB/s | ETA≈18.5 h
+2026-07-15 17:47:37 [ERA5] progress=41,046/88,396 (46.43%) | new=4.09 GiB | skipped=39,785 | average=2.49 MiB/s | ETA≈17.6 h
+2026-07-15 17:48:07 [ERA5] progress=41,127/88,396 (46.53%) | new=4.13 GiB | skipped=39,785 | average=2.47 MiB/s | ETA≈16.8 h
+2026-07-15 17:48:37 [ERA5] progress=41,212/88,396 (46.62%) | new=4.18 GiB | skipped=39,785 | average=2.46 MiB/s | ETA≈16.0 h
+2026-07-15 17:49:07 [ERA5] progress=41,292/88,396 (46.71%) | new=4.23 GiB | skipped=39,785 | average=2.44 MiB/s | ETA≈15.4 h
+2026-07-15 17:49:37 [ERA5] progress=41,374/88,396 (46.81%) | new=4.27 GiB | skipped=39,785 | average=2.43 MiB/s | ETA≈14.8 h
+2026-07-15 17:50:07 [ERA5] progress=41,460/88,396 (46.90%) | new=4.32 GiB | skipped=39,785 | average=2.41 MiB/s | ETA≈14.3 h
+2026-07-15 17:50:38 [ERA5] progress=41,545/88,396 (47.00%) | new=4.37 GiB | skipped=39,785 | average=2.40 MiB/s | ETA≈13.8 h
+2026-07-15 17:51:08 [ERA5] progress=41,626/88,396 (47.09%) | new=4.42 GiB | skipped=39,785 | average=2.39 MiB/s | ETA≈13.4 h
+2026-07-15 17:51:38 [ERA5] progress=41,714/88,396 (47.19%) | new=4.47 GiB | skipped=39,785 | average=2.38 MiB/s | ETA≈12.9 h
+2026-07-15 17:52:08 [ERA5] progress=41,794/88,396 (47.28%) | new=4.51 GiB | skipped=39,785 | average=2.36 MiB/s | ETA≈12.6 h
+2026-07-15 17:52:38 [ERA5] progress=41,876/88,396 (47.37%) | new=4.56 GiB | skipped=39,785 | average=2.35 MiB/s | ETA≈12.3 h
+2026-07-15 17:53:08 [ERA5] progress=41,955/88,396 (47.46%) | new=4.61 GiB | skipped=39,785 | average=2.34 MiB/s | ETA≈12.0 h
+2026-07-15 17:53:39 [ERA5] progress=42,038/88,396 (47.56%) | new=4.65 GiB | skipped=39,785 | average=2.33 MiB/s | ETA≈11.7 h
+2026-07-15 17:54:09 [ERA5] progress=42,124/88,396 (47.65%) | new=4.70 GiB | skipped=39,785 | average=2.32 MiB/s | ETA≈11.4 h
+2026-07-15 17:54:39 [ERA5] progress=42,204/88,396 (47.74%) | new=4.75 GiB | skipped=39,785 | average=2.31 MiB/s | ETA≈11.2 h
+2026-07-15 17:55:09 [ERA5] progress=42,290/88,396 (47.84%) | new=4.80 GiB | skipped=39,785 | average=2.30 MiB/s | ETA≈10.9 h
+2026-07-15 17:55:39 [ERA5] progress=42,370/88,396 (47.93%) | new=4.84 GiB | skipped=39,785 | average=2.29 MiB/s | ETA≈10.7 h
+2026-07-15 17:56:10 [ERA5] progress=42,453/88,396 (48.03%) | new=4.89 GiB | skipped=39,785 | average=2.28 MiB/s | ETA≈10.5 h
+2026-07-15 17:56:40 [ERA5] progress=42,533/88,396 (48.12%) | new=4.94 GiB | skipped=39,785 | average=2.27 MiB/s | ETA≈10.3 h
+2026-07-15 17:57:11 [ERA5] progress=42,612/88,396 (48.21%) | new=4.98 GiB | skipped=39,785 | average=2.26 MiB/s | ETA≈10.2 h
+2026-07-15 17:57:41 [ERA5] progress=42,693/88,396 (48.30%) | new=5.03 GiB | skipped=39,785 | average=2.25 MiB/s | ETA≈10.0 h
+2026-07-15 17:58:11 [ERA5] progress=42,775/88,396 (48.39%) | new=5.07 GiB | skipped=39,785 | average=2.24 MiB/s | ETA≈9.8 h
+2026-07-15 17:58:41 [ERA5] progress=42,860/88,396 (48.49%) | new=5.12 GiB | skipped=39,785 | average=2.23 MiB/s | ETA≈9.7 h
+2026-07-15 17:59:11 [ERA5] progress=42,941/88,396 (48.58%) | new=5.17 GiB | skipped=39,785 | average=2.23 MiB/s | ETA≈9.5 h
+2026-07-15 17:59:41 [ERA5] progress=43,027/88,396 (48.68%) | new=5.22 GiB | skipped=39,785 | average=2.22 MiB/s | ETA≈9.4 h
+2026-07-15 18:00:12 [ERA5] progress=43,110/88,396 (48.77%) | new=5.27 GiB | skipped=39,785 | average=2.21 MiB/s | ETA≈9.2 h
+2026-07-15 18:00:42 [ERA5] progress=43,186/88,396 (48.86%) | new=5.31 GiB | skipped=39,785 | average=2.20 MiB/s | ETA≈9.1 h
+2026-07-15 18:01:12 [ERA5] progress=43,272/88,396 (48.95%) | new=5.36 GiB | skipped=39,785 | average=2.20 MiB/s | ETA≈9.0 h
+2026-07-15 18:01:42 [ERA5] progress=43,356/88,396 (49.05%) | new=5.41 GiB | skipped=39,785 | average=2.19 MiB/s | ETA≈8.9 h
+2026-07-15 18:02:13 [ERA5] progress=43,440/88,396 (49.14%) | new=5.45 GiB | skipped=39,785 | average=2.18 MiB/s | ETA≈8.7 h
+2026-07-15 18:02:43 [ERA5] progress=43,527/88,396 (49.24%) | new=5.50 GiB | skipped=39,785 | average=2.18 MiB/s | ETA≈8.6 h
+2026-07-15 18:03:14 [ERA5] progress=43,609/88,396 (49.33%) | new=5.55 GiB | skipped=39,785 | average=2.17 MiB/s | ETA≈8.5 h
+2026-07-15 18:03:44 [ERA5] progress=43,695/88,396 (49.43%) | new=5.60 GiB | skipped=39,785 | average=2.16 MiB/s | ETA≈8.4 h
+2026-07-15 18:04:14 [ERA5] progress=43,777/88,396 (49.52%) | new=5.65 GiB | skipped=39,785 | average=2.16 MiB/s | ETA≈8.3 h
+2026-07-15 18:04:44 [ERA5] progress=43,857/88,396 (49.61%) | new=5.69 GiB | skipped=39,785 | average=2.15 MiB/s | ETA≈8.2 h
+2026-07-15 18:05:14 [ERA5] progress=43,944/88,396 (49.71%) | new=5.74 GiB | skipped=39,785 | average=2.15 MiB/s | ETA≈8.1 h
+2026-07-15 18:05:45 [ERA5] progress=44,022/88,396 (49.80%) | new=5.79 GiB | skipped=39,785 | average=2.14 MiB/s | ETA≈8.1 h
+2026-07-15 18:06:15 [ERA5] progress=44,101/88,396 (49.89%) | new=5.83 GiB | skipped=39,785 | average=2.13 MiB/s | ETA≈8.0 h
+2026-07-15 18:06:45 [ERA5] progress=44,181/88,396 (49.98%) | new=5.88 GiB | skipped=39,785 | average=2.13 MiB/s | ETA≈7.9 h
+2026-07-15 18:07:16 [ERA5] progress=44,262/88,396 (50.07%) | new=5.93 GiB | skipped=39,785 | average=2.12 MiB/s | ETA≈7.8 h
+2026-07-15 18:07:46 [ERA5] progress=44,347/88,396 (50.17%) | new=5.97 GiB | skipped=39,785 | average=2.11 MiB/s | ETA≈7.8 h
+2026-07-15 18:08:16 [ERA5] progress=44,430/88,396 (50.26%) | new=6.02 GiB | skipped=39,785 | average=2.11 MiB/s | ETA≈7.7 h
+2026-07-15 18:08:47 [ERA5] progress=44,519/88,396 (50.36%) | new=6.07 GiB | skipped=39,785 | average=2.11 MiB/s | ETA≈7.6 h
+2026-07-15 18:09:17 [ERA5] progress=44,604/88,396 (50.46%) | new=6.12 GiB | skipped=39,785 | average=2.10 MiB/s | ETA≈7.5 h
+2026-07-15 18:09:47 [ERA5] progress=44,688/88,396 (50.55%) | new=6.17 GiB | skipped=39,785 | average=2.10 MiB/s | ETA≈7.5 h
+2026-07-15 18:10:17 [ERA5] progress=44,768/88,396 (50.64%) | new=6.21 GiB | skipped=39,785 | average=2.09 MiB/s | ETA≈7.4 h
+2026-07-15 18:10:47 [ERA5] progress=44,851/88,396 (50.74%) | new=6.26 GiB | skipped=39,785 | average=2.09 MiB/s | ETA≈7.3 h
+2026-07-15 18:11:18 [ERA5] progress=44,933/88,396 (50.83%) | new=6.31 GiB | skipped=39,785 | average=2.08 MiB/s | ETA≈7.3 h
+2026-07-15 18:11:48 [ERA5] progress=45,016/88,396 (50.93%) | new=6.36 GiB | skipped=39,785 | average=2.08 MiB/s | ETA≈7.2 h
+2026-07-15 18:12:28 [ERA5] progress=45,050/88,396 (50.96%) | new=6.38 GiB | skipped=39,785 | average=2.06 MiB/s | ETA≈7.3 h
+2026-07-15 18:12:58 [ERA5] progress=45,054/88,396 (50.97%) | new=6.38 GiB | skipped=39,785 | average=2.04 MiB/s | ETA≈7.3 h
+2026-07-15 18:13:33 [ERA5] progress=45,066/88,396 (50.98%) | new=6.38 GiB | skipped=39,785 | average=2.02 MiB/s | ETA≈7.4 h
+2026-07-15 18:14:08 [ERA5] progress=45,070/88,396 (50.99%) | new=6.39 GiB | skipped=39,785 | average=2.00 MiB/s | ETA≈7.5 h
+2026-07-15 18:14:38 [ERA5] progress=45,083/88,396 (51.00%) | new=6.39 GiB | skipped=39,785 | average=1.98 MiB/s | ETA≈7.5 h
+2026-07-15 18:15:09 [ERA5] progress=45,095/88,396 (51.01%) | new=6.40 GiB | skipped=39,785 | average=1.96 MiB/s | ETA≈7.6 h
+2026-07-15 18:15:41 [ERA5] progress=45,111/88,396 (51.03%) | new=6.41 GiB | skipped=39,785 | average=1.95 MiB/s | ETA≈7.6 h
+2026-07-15 18:16:13 [ERA5] progress=45,132/88,396 (51.06%) | new=6.42 GiB | skipped=39,785 | average=1.93 MiB/s | ETA≈7.6 h
+2026-07-15 18:16:48 [ERA5] progress=45,148/88,396 (51.07%) | new=6.43 GiB | skipped=39,785 | average=1.92 MiB/s | ETA≈7.7 h
+2026-07-15 18:17:21 [ERA5] progress=45,158/88,396 (51.09%) | new=6.44 GiB | skipped=39,785 | average=1.90 MiB/s | ETA≈7.8 h
+2026-07-15 18:17:52 [ERA5] progress=45,173/88,396 (51.10%) | new=6.45 GiB | skipped=39,785 | average=1.89 MiB/s | ETA≈7.8 h
+2026-07-15 18:18:23 [ERA5] progress=45,185/88,396 (51.12%) | new=6.45 GiB | skipped=39,785 | average=1.87 MiB/s | ETA≈7.8 h
+2026-07-15 18:18:53 [ERA5] progress=45,195/88,396 (51.13%) | new=6.46 GiB | skipped=39,785 | average=1.86 MiB/s | ETA≈7.9 h
+2026-07-15 18:19:26 [ERA5] progress=45,213/88,396 (51.15%) | new=6.47 GiB | skipped=39,785 | average=1.84 MiB/s | ETA≈7.9 h
+2026-07-15 18:24:09 [ERA5] progress=45,222/88,396 (51.16%) | new=6.47 GiB | skipped=39,785 | average=1.71 MiB/s | ETA≈8.5 h
+2026-07-15 18:26:59 [ERA5] progress=45,223/88,396 (51.16%) | new=6.47 GiB | skipped=39,785 | average=1.64 MiB/s | ETA≈8.9 h

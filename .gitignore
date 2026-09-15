@@ -1,0 +1,60 @@
+
+# ============================================================
+# ConserveFM large-artifact exclusions
+# ============================================================
+
+# Environments / Python
+.venv/
+.venv_*/
+venv/
+venv_*/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+
+# Large datasets
+data/
+datasets/
+
+# Foundation-model assets / weights
+models/
+external/*/models/
+external/*/checkpoints/
+external/*/weights/
+
+# Generated forecast stores
+forecasts/
+*.zarr/
+*.zarr.zip
+
+# Training checkpoints and heavy tensor artifacts
+runs/**/checkpoint_best.pt
+runs/**/checkpoint_last.pt
+runs/**/*.pt
+runs/**/*.pth
+runs/**/*.ckpt
+runs/**/*.bin
+runs/**/*.safetensors
+
+# Temporary / resume artifacts
+*.tmp
+*.lock
+*.part
+*.partial
+
+# Large caches
+reports/wow_history_figures_v2/weather_atlas_cache_v2.npz
+reports/wow_history_figures_v2/_atlas_eval_tmp/
+*_cache.npz
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large local artifacts excluded from GitHub
+logs/run_parallel_plan_138.log
+manifests/research_v1/ghcn_val_test_observations.csv.gz

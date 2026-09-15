@@ -1,0 +1,18 @@
+FINAL EXPERIMENTAL DECISION — CLIMAX SEED 42
+========================================================================
+
+Best clean NRMSE: No_Pretrain (0.30703)
+Best macro stress NRMSE: No_Pretrain (0.30076)
+Best aggregate physics repair ratio: Smart_Final (0.34932)
+
+No_Pretrain vs OLD_Full stress NRMSE: 0.30076 vs 0.33394 (+9.94% reduction)
+Smart_Final vs OLD_Full stress NRMSE: 0.31593 vs 0.33394 (+5.39% reduction)
+Smart_Final vs No_Pretrain stress NRMSE: 0.31593 vs 0.30076 (-5.05% reduction; negative means Smart_Final is worse)
+
+Smart_Final type accuracy = 0.2141; 5-class random baseline = 0.2000.
+Smart_Final localization IoU = 0.0752.
+
+RECOMMENDATION: use No_Pretrain as the primary predictive ConserveFM variant for the current ClimaX results.
+Corruption pretraining / adaptive diagnostic machinery should be reported as an ablation unless Table 3 shows a sufficiently large physics-consistency advantage to justify its NRMSE cost.
+
+Do not use mixed-unit physical RMSE as the headline metric. Use clean/stress NRMSE and ACC, with per-variable physical RMSE and constraint-specific physics residuals as supporting metrics.

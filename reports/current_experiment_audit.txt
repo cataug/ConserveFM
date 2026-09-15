@@ -1,0 +1,126 @@
+==============================================================================================================
+CONSERVEFM CURRENT EXPERIMENT AUDIT
+==============================================================================================================
+
+PLAN STATUS
+status
+planned        107
+interrupted     31
+
+ARTIFACT STATE
+artifact_state
+EVAL_NO_ARTIFACTS     66
+TRAIN_PARTIAL         55
+TRAIN_NOT_STARTED     11
+EVAL_HAS_ARTIFACTS     6
+
+TRAIN CHECKPOINTS
+train rows             : 66
+checkpoint_last        : 31
+checkpoint_best        : 31
+any completed epoch    : 31
+full train by history  : 0
+
+FINISHED EPOCH DISTRIBUTION
+finished_epochs_total
+0    35
+2     1
+3    30
+
+NOMINAL PROGRESS BANDS
+nominal_progress_pct
+0%           17
+>0-12.5%     18
+>12.5-25%     0
+>25-50%      28
+>50-75%       3
+>75-<100%     0
+100%          0
+
+TOP 30 TRAIN JOBS BY USEFUL/NOMINAL PROGRESS
+                                    run_id  finished_pretrain_epochs  finished_finetune_epochs current_stage  current_epoch  current_batch  current_batches nominal_progress_pct  checkpoint_last  checkpoint_best
+   train_climax_no_corruption_pretrain_s42                         0                         3      finetune            4.0        45449.0          87647.0                58.64             True             True
+  train_climax_no_advection_corruption_s42                         2                         1      finetune            2.0        45449.0          87647.0                43.98             True             True
+   train_climax_no_corruption_pretrain_s44                         0                         3      finetune            4.0        45279.0          87647.0                58.61             True             True
+  train_climax_no_advection_corruption_s44                         2                         1      finetune            2.0        45279.0          87647.0                43.96             True             True
+   train_climax_no_corruption_pretrain_s43                         0                         3      finetune            4.0        40499.0          87647.0                 57.7             True             True
+  train_climax_no_advection_corruption_s43                         2                         1      finetune            2.0        40499.0          87647.0                43.28             True             True
+ train_climax_equal_constraint_weights_s42                         2                         1      finetune            2.0        27899.0          87647.0                41.48             True             True
+     train_climax_manual_tuned_weights_s42                         2                         1      finetune            2.0        27899.0          87647.0                41.48             True             True
+train_climax_no_hydrostatic_constraint_s42                         2                         1      finetune            2.0        27859.0          87647.0                41.47             True             True
+  train_climax_no_advection_constraint_s42                         2                         1      finetune            2.0        27859.0          87647.0                41.47             True             True
+train_climax_no_hydrostatic_constraint_s44                         2                         1      finetune            2.0        27649.0          87647.0                41.44             True             True
+  train_climax_no_advection_constraint_s44                         2                         1      finetune            2.0        27649.0          87647.0                41.44             True             True
+ train_climax_equal_constraint_weights_s43                         2                         1      finetune            2.0        27479.0          87647.0                41.42             True             True
+     train_climax_manual_tuned_weights_s43                         2                         1      finetune            2.0        27479.0          87647.0                41.42             True             True
+ train_climax_equal_constraint_weights_s44                         2                         1      finetune            2.0        27299.0          87647.0                41.39             True             True
+     train_climax_manual_tuned_weights_s44                         2                         1      finetune            2.0        27299.0          87647.0                41.39             True             True
+train_climax_no_hydrostatic_constraint_s43                         2                         1      finetune            2.0        26799.0          87647.0                41.32             True             True
+  train_climax_no_advection_constraint_s43                         2                         1      finetune            2.0        26799.0          87647.0                41.32             True             True
+          train_climax_conservefm_full_s43                         2                         1      finetune            2.0        19759.0          87647.0                40.32             True             True
+  train_climax_no_constraint_type_head_s42                         2                         1      finetune            2.0         1519.0          87647.0                37.72             True             True
+train_climax_no_hydrostatic_corruption_s42                         2                         1      finetune            2.0         1299.0          87647.0                37.69             True             True
+     train_climax_no_localization_head_s42                         2                         1      finetune            2.0          809.0          87647.0                37.62             True             True
+  train_climax_no_constraint_type_head_s44                         2                         1      finetune            2.0          369.0          87647.0                37.55             True             True
+train_climax_no_hydrostatic_corruption_s44                         2                         1      finetune            2.0          299.0          87647.0                37.54             True             True
+  train_climax_no_constraint_type_head_s43                         2                         1      finetune            2.0          169.0          87647.0                37.52             True             True
+          train_climax_conservefm_full_s42                         2                         1      finetune            2.0           60.0          87647.0                37.51             True             True
+  train_climax_direct_state_prediction_s42                         2                         1      finetune            2.0           60.0          87647.0                37.51             True             True
+  train_climax_direct_state_prediction_s43                         2                         1      finetune            2.0           30.0          87647.0                 37.5             True             True
+          train_climax_conservefm_full_s44                         2                         1      finetune            2.0           20.0          87647.0                 37.5             True             True
+  train_climax_direct_state_prediction_s44                         2                         1      finetune            2.0           20.0          87647.0                 37.5             True             True
+
+PROGRESS BY METHOD
+   backbone                      method  seeds  ckpt  best  completed_epochs mean_progress_pct max_progress_pct
+     climax      no_corruption_pretrain      3     3     3                 9         58.316667            58.64
+     climax     no_advection_corruption      3     3     3                 9             43.74            43.98
+     climax    equal_constraint_weights      3     3     3                 9             41.43            41.48
+     climax        manual_tuned_weights      3     3     3                 9             41.43            41.48
+     climax     no_advection_constraint      3     3     3                 9             41.41            41.47
+     climax   no_hydrostatic_constraint      3     3     3                 9             41.41            41.47
+     climax             conservefm_full      3     3     3                 9         38.443333            40.32
+     climax     no_constraint_type_head      3     3     3                 9         37.596667            37.72
+     climax   no_hydrostatic_corruption      3     3     3                 8             37.55            37.69
+     climax     direct_state_prediction      3     3     3                 9         37.503333            37.51
+     climax        no_localization_head      3     1     1                 3         12.563333            37.62
+     climax      no_moisture_constraint      3     0     0                 0              0.03             0.03
+     climax             residual_repair      3     0     0                 0              0.03             0.03
+     climax         static_physics_loss      3     0     0                 0              0.03             0.03
+     climax      no_spectral_constraint      3     0     0                 0              0.01             0.03
+     climax      static_learned_weights      3     0     0                 0              0.01             0.03
+     climax           no_minimal_change      3     0     0                 0               0.0              0.0
+     climax      no_moisture_corruption      3     0     0                 0               0.0              0.0
+     climax no_range_extreme_corruption      3     0     0                 0               0.0              0.0
+     climax      no_spectral_corruption      3     0     0                 0               0.0              0.0
+fourcastnet             conservefm_full      3     0     0                 0              0.02             0.03
+prithvi_wxc             conservefm_full      3     0     0                 0          0.783333             0.81
+
+EVALUATION ARTIFACTS
+eval rows              : 72
+with result artifacts  : 6
+total result artifacts : 12
+                              run_id    backbone          method seed  result_artifacts                                                                                                         example_result_files
+              eval_climax_raw_fm_det      climax          raw_fm  det                 2                             runs/eval_climax_raw_fm_det/metrics_stress.json | runs/eval_climax_raw_fm_det/metrics_clean.json
+     eval_climax_hard_projection_det      climax hard_projection  det                 2           runs/eval_climax_hard_projection_det/metrics_stress.json | runs/eval_climax_hard_projection_det/metrics_clean.json
+         eval_fourcastnet_raw_fm_det fourcastnet          raw_fm  det                 2                   runs/eval_fourcastnet_raw_fm_det/metrics_stress.json | runs/eval_fourcastnet_raw_fm_det/metrics_clean.json
+eval_fourcastnet_hard_projection_det fourcastnet hard_projection  det                 2 runs/eval_fourcastnet_hard_projection_det/metrics_stress.json | runs/eval_fourcastnet_hard_projection_det/metrics_clean.json
+         eval_prithvi_wxc_raw_fm_det prithvi_wxc          raw_fm  det                 2                   runs/eval_prithvi_wxc_raw_fm_det/metrics_stress.json | runs/eval_prithvi_wxc_raw_fm_det/metrics_clean.json
+eval_prithvi_wxc_hard_projection_det prithvi_wxc hard_projection  det                 2 runs/eval_prithvi_wxc_hard_projection_det/metrics_stress.json | runs/eval_prithvi_wxc_hard_projection_det/metrics_clean.json
+
+LIKELY PAPER-SALVAGE SET
+Methods with all 3 ClimaX seeds having some checkpoint/progress:
+                   method  seeds  progressed mean_progress_pct min_progress_pct max_progress_pct
+   no_corruption_pretrain      3           3         58.316667             57.7            58.64
+  no_advection_corruption      3           3             43.74            43.28            43.98
+ equal_constraint_weights      3           3             41.43            41.39            41.48
+     manual_tuned_weights      3           3             41.43            41.39            41.48
+  no_advection_constraint      3           3             41.41            41.32            41.47
+no_hydrostatic_constraint      3           3             41.41            41.32            41.47
+          conservefm_full      3           3         38.443333             37.5            40.32
+  no_constraint_type_head      3           3         37.596667            37.52            37.72
+no_hydrostatic_corruption      3           3             37.55            37.42            37.69
+  direct_state_prediction      3           3         37.503333             37.5            37.51
+     no_localization_head      3           3         12.563333             0.03            37.62
+   no_moisture_constraint      3           3              0.03             0.03             0.03
+          residual_repair      3           3              0.03             0.03             0.03
+      static_physics_loss      3           3              0.03             0.03             0.03

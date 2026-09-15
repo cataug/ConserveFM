@@ -1,0 +1,190 @@
+{
+  "run_id": "train_climax_no_moisture_constraint_s42",
+  "backbone": "climax",
+  "family": "constraint",
+  "seed": 42,
+  "method_config": {
+    "method": "no_moisture_constraint",
+    "corruption_pretrain": true,
+    "enabled_corruptions": [
+      "moisture",
+      "hydrostatic",
+      "advection",
+      "spectral",
+      "range_extreme"
+    ],
+    "enabled_constraints": [
+      "hydrostatic",
+      "advection",
+      "spectral"
+    ],
+    "router_mode": "adaptive",
+    "localization_head": true,
+    "constraint_type_head": true,
+    "minimal_change": true,
+    "prediction_mode": "residual",
+    "use_physics_losses": true,
+    "lambda_repair": 1.0,
+    "lambda_physics": 0.05,
+    "lambda_localization": 0.1,
+    "lambda_type": 0.1,
+    "lambda_minimal": 0.01,
+    "manual_constraint_weights": {
+      "moisture": 1.0,
+      "hydrostatic": 1.0,
+      "advection": 1.0,
+      "spectral": 1.0
+    }
+  },
+  "forecast_provider": "zarr_frozen_fm",
+  "forecast_store": "/home/tahiti/ConserveFM/forecasts/climax.zarr",
+  "era5_zarr": "/home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022",
+  "research_manifest": "/home/tahiti/ConserveFM/manifests/research_v1",
+  "stats_path": "/home/tahiti/ConserveFM/manifests/research_v1/era5_channel_stats.npz",
+  "channels": {
+    "levels_hpa": [
+      50.0,
+      100.0,
+      150.0,
+      200.0,
+      250.0,
+      300.0,
+      400.0,
+      500.0,
+      600.0,
+      700.0,
+      850.0,
+      925.0,
+      1000.0
+    ],
+    "names": [
+      "geopotential@50hPa",
+      "geopotential@100hPa",
+      "geopotential@150hPa",
+      "geopotential@200hPa",
+      "geopotential@250hPa",
+      "geopotential@300hPa",
+      "geopotential@400hPa",
+      "geopotential@500hPa",
+      "geopotential@600hPa",
+      "geopotential@700hPa",
+      "geopotential@850hPa",
+      "geopotential@925hPa",
+      "geopotential@1000hPa",
+      "temperature@50hPa",
+      "temperature@100hPa",
+      "temperature@150hPa",
+      "temperature@200hPa",
+      "temperature@250hPa",
+      "temperature@300hPa",
+      "temperature@400hPa",
+      "temperature@500hPa",
+      "temperature@600hPa",
+      "temperature@700hPa",
+      "temperature@850hPa",
+      "temperature@925hPa",
+      "temperature@1000hPa",
+      "specific_humidity@50hPa",
+      "specific_humidity@100hPa",
+      "specific_humidity@150hPa",
+      "specific_humidity@200hPa",
+      "specific_humidity@250hPa",
+      "specific_humidity@300hPa",
+      "specific_humidity@400hPa",
+      "specific_humidity@500hPa",
+      "specific_humidity@600hPa",
+      "specific_humidity@700hPa",
+      "specific_humidity@850hPa",
+      "specific_humidity@925hPa",
+      "specific_humidity@1000hPa",
+      "u_component_of_wind@50hPa",
+      "u_component_of_wind@100hPa",
+      "u_component_of_wind@150hPa",
+      "u_component_of_wind@200hPa",
+      "u_component_of_wind@250hPa",
+      "u_component_of_wind@300hPa",
+      "u_component_of_wind@400hPa",
+      "u_component_of_wind@500hPa",
+      "u_component_of_wind@600hPa",
+      "u_component_of_wind@700hPa",
+      "u_component_of_wind@850hPa",
+      "u_component_of_wind@925hPa",
+      "u_component_of_wind@1000hPa",
+      "v_component_of_wind@50hPa",
+      "v_component_of_wind@100hPa",
+      "v_component_of_wind@150hPa",
+      "v_component_of_wind@200hPa",
+      "v_component_of_wind@250hPa",
+      "v_component_of_wind@300hPa",
+      "v_component_of_wind@400hPa",
+      "v_component_of_wind@500hPa",
+      "v_component_of_wind@600hPa",
+      "v_component_of_wind@700hPa",
+      "v_component_of_wind@850hPa",
+      "v_component_of_wind@925hPa",
+      "v_component_of_wind@1000hPa",
+      "2m_temperature",
+      "10m_u_component_of_wind",
+      "10m_v_component_of_wind",
+      "mean_sea_level_pressure",
+      "surface_pressure",
+      "total_precipitation_6hr"
+    ],
+    "variable_slices": {
+      "geopotential": [
+        0,
+        13
+      ],
+      "temperature": [
+        13,
+        26
+      ],
+      "specific_humidity": [
+        26,
+        39
+      ],
+      "u_component_of_wind": [
+        39,
+        52
+      ],
+      "v_component_of_wind": [
+        52,
+        65
+      ],
+      "2m_temperature": [
+        65,
+        66
+      ],
+      "10m_u_component_of_wind": [
+        66,
+        67
+      ],
+      "10m_v_component_of_wind": [
+        67,
+        68
+      ],
+      "mean_sea_level_pressure": [
+        68,
+        69
+      ],
+      "surface_pressure": [
+        69,
+        70
+      ],
+      "total_precipitation_6hr": [
+        70,
+        71
+      ]
+    }
+  },
+  "training": {
+    "batch_size": 2,
+    "width": 64,
+    "depth": 4,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "pretrain_epochs": 2,
+    "finetune_epochs": 6,
+    "smoke": false
+  }
+}

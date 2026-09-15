@@ -1,0 +1,13 @@
+{
+  "run_id": "prelim20_train_climax_static_learned_weights_s42",
+  "status": "completed",
+  "method": "static_learned_weights",
+  "backbone": "climax",
+  "seed": 42,
+  "forecast_provider": "zarr_frozen_fm",
+  "best_val_repair_mse": 0.11567551060579717,
+  "global_step": 6000,
+  "elapsed_seconds": 3675.81,
+  "checkpoint_best": "/home/tahiti/ConserveFM/runs/prelim20_train/train_climax_static_learned_weights_s42/checkpoint_best.pt",
+  "checkpoint_last": "/home/tahiti/ConserveFM/runs/prelim20_train/train_climax_static_learned_weights_s42/checkpoint_last.pt"
+}

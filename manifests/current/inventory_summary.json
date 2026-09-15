@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-08-11T19:36:54",
+  "project_root": "/home/tahiti/ConserveFM",
+  "data_root": "/home/tahiti/ConserveFM/data",
+  "datasets": {
+    "ERA5_WeatherBench2_1979_2022": {
+      "path": "/home/tahiti/ConserveFM/data/ERA5_WeatherBench2_1979_2022",
+      "disk_size_bytes": 404527561244,
+      "disk_size_human": "376.75 GiB",
+      "expected_chunks": 88396,
+      "present_chunks": 88396,
+      "missing_chunks": 0,
+      "coverage_percent": 100.0,
+      "variables": 11
+    },
+    "GHCN_Daily_by_year": {
+      "path": "/home/tahiti/ConserveFM/data/GHCN_Daily_by_year",
+      "disk_size_bytes": 7304636540,
+      "disk_size_human": "6.80 GiB",
+      "years_expected": 45,
+      "years_present": 45
+    },
+    "ISD_2023_stations": {
+      "path": "/home/tahiti/ConserveFM/data/ISD_2023_stations",
+      "disk_size_bytes": 51911285850,
+      "disk_size_human": "48.35 GiB",
+      "station_files_present": 13398
+    }
+  },
+  "total_data_size_bytes": 464283565515,
+  "total_data_size_human": "432.40 GiB"
+}

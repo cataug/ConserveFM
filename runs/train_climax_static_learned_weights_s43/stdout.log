@@ -1,0 +1,4 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_static_learned_weights_s43 method=static_learned_weights backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] pretrain epochs=2 start_epoch=0

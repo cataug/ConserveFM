@@ -1,0 +1,713 @@
+==============================================================================
+ConserveFM unified parallel scheduler
+==============================================================================
+plan rows       : 10
+train rows      : 5
+eval rows       : 5
+max parallel    : 1
+GPU             : 0
+smoke           : False
+==============================================================================
+
+[LAUNCH] eval_climax_conservefm_full_s42
+         type=eval backbone=climax method=conservefm_full seed=42
+[STATUS 2026-09-12 06:37:47] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.0/40.0GiB util=0% RAMavail=60.6/62.8GiB uEMA=0% next≈2.0GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [EVAL] device=cuda method=conservefm_full backbone=climax
+[eval_climax_conservefm_full_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STATUS 2026-09-12 06:37:50] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.4/40.0GiB util=0% RAMavail=60.2/62.8GiB uEMA=0% next≈2.0GiB admission=warmup,parallel-cap    [STATUS 2026-09-12 06:37:53] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=8% RAMavail=59.4/62.8GiB uEMA=2% next≈2.0GiB admission=warmup,parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 50 examples
+[STATUS 2026-09-12 06:37:56] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=11% RAMavail=59.4/62.8GiB uEMA=4% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 100 examples
+[STATUS 2026-09-12 06:37:59] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=6% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 150 examples
+[STATUS 2026-09-12 06:38:02] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=8% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 200 examples
+[STATUS 2026-09-12 06:38:05] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=13% RAMavail=59.4/62.8GiB uEMA=9% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 250 examples
+[STATUS 2026-09-12 06:38:08] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=10% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 300 examples
+[STATUS 2026-09-12 06:38:11] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=10% next≈0.8GiB admission=parallel-cap    [STATUS 2026-09-12 06:38:14] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=11% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 350 examples
+[STATUS 2026-09-12 06:38:17] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=11% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 400 examples
+[STATUS 2026-09-12 06:38:21] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=15% RAMavail=59.3/62.8GiB uEMA=12% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 450 examples
+[STATUS 2026-09-12 06:38:24] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.3/62.8GiB uEMA=12% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 500 examples
+[STATUS 2026-09-12 06:38:27] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=15% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 550 examples
+[STATUS 2026-09-12 06:38:30] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 600 examples
+[STATUS 2026-09-12 06:38:33] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=14% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 650 examples
+[STATUS 2026-09-12 06:38:36] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 700 examples
+[STATUS 2026-09-12 06:38:39] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=15% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 750 examples
+[STATUS 2026-09-12 06:38:42] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 800 examples
+[STATUS 2026-09-12 06:38:45] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 850 examples
+[STATUS 2026-09-12 06:38:48] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 900 examples
+[STATUS 2026-09-12 06:38:51] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=15% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    [eval_climax_conservefm_full_s42] [CLEAN] 950 examples
+[STATUS 2026-09-12 06:38:54] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.4/62.8GiB uEMA=13% next≈0.8GiB admission=parallel-cap    ==============================================================================
+ConserveFM unified parallel scheduler
+==============================================================================
+plan rows       : 10
+train rows      : 5
+eval rows       : 5
+max parallel    : 5
+GPU             : 0
+smoke           : False
+==============================================================================
+
+[LAUNCH] eval_climax_conservefm_full_s42
+         type=eval backbone=climax method=conservefm_full seed=42
+[STATUS 2026-09-12 06:38:58] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.0/40.0GiB util=0% RAMavail=60.6/62.8GiB uEMA=0% next≈1.0GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [EVAL] device=cuda method=conservefm_full backbone=climax
+[STATUS 2026-09-12 06:39:00] running=1 | planned=4 | completed=5/10 | failed=0 | GPU=0.0/40.0GiB util=0% RAMavail=60.3/62.8GiB uEMA=0% next≈1.0GiB admission=warmup    [eval_climax_conservefm_full_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+
+[LAUNCH] eval_climax_direct_state_prediction_s42
+         type=eval backbone=climax method=direct_state_prediction seed=42
+[STATUS 2026-09-12 06:39:02] running=2 | planned=3 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=9% RAMavail=59.4/62.8GiB uEMA=2% next≈0.7GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [EVAL] device=cuda method=direct_state_prediction backbone=climax
+[STATUS 2026-09-12 06:39:05] running=2 | planned=3 | completed=5/10 | failed=0 | GPU=0.7/40.0GiB util=12% RAMavail=59.0/62.8GiB uEMA=5% next≈0.7GiB admission=warmup    [eval_climax_direct_state_prediction_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[eval_climax_conservefm_full_s42] [CLEAN] 50 examples
+
+[LAUNCH] eval_climax_equal_constraint_weights_s42
+         type=eval backbone=climax method=equal_constraint_weights seed=42
+[STATUS 2026-09-12 06:39:07] running=3 | planned=2 | completed=5/10 | failed=0 | GPU=1.3/40.0GiB util=19% RAMavail=58.2/62.8GiB uEMA=8% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [EVAL] device=cuda method=equal_constraint_weights backbone=climax
+[eval_climax_conservefm_full_s42] [CLEAN] 100 examples
+[STATUS 2026-09-12 06:39:09] running=3 | planned=2 | completed=5/10 | failed=0 | GPU=1.3/40.0GiB util=32% RAMavail=58.0/62.8GiB uEMA=14% next≈0.6GiB admission=warmup    [eval_climax_equal_constraint_weights_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[eval_climax_direct_state_prediction_s42] [CLEAN] 50 examples
+
+[LAUNCH] eval_climax_no_advection_constraint_s42
+         type=eval backbone=climax method=no_advection_constraint seed=42
+[STATUS 2026-09-12 06:39:11] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=1.9/40.0GiB util=21% RAMavail=57.2/62.8GiB uEMA=16% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 150 examples
+[eval_climax_no_advection_constraint_s42] [EVAL] device=cuda method=no_advection_constraint backbone=climax
+[STATUS 2026-09-12 06:39:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.0/40.0GiB util=40% RAMavail=56.8/62.8GiB uEMA=22% next≈0.6GiB admission=warmup    [eval_climax_direct_state_prediction_s42] [CLEAN] 100 examples
+[eval_climax_no_advection_constraint_s42] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 50 examples
+[STATUS 2026-09-12 06:39:15] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.2/62.8GiB uEMA=25% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 150 examples
+[STATUS 2026-09-12 06:39:17] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.4/62.8GiB uEMA=27% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 100 examples
+[STATUS 2026-09-12 06:39:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.3/62.8GiB uEMA=29% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 50 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 250 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 200 examples
+[STATUS 2026-09-12 06:39:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.4/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 150 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 300 examples
+[STATUS 2026-09-12 06:39:23] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.4/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 250 examples
+[STATUS 2026-09-12 06:39:25] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 150 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 350 examples
+[STATUS 2026-09-12 06:39:27] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 300 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 250 examples
+[STATUS 2026-09-12 06:39:29] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 200 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 400 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 350 examples
+[STATUS 2026-09-12 06:39:31] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 300 examples
+[STATUS 2026-09-12 06:39:33] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=55.3/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 400 examples
+[STATUS 2026-09-12 06:39:35] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 350 examples
+[STATUS 2026-09-12 06:39:37] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 300 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 500 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 450 examples
+[STATUS 2026-09-12 06:39:39] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.3/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 400 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 350 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 550 examples
+[STATUS 2026-09-12 06:39:41] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.4/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 500 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 450 examples
+[STATUS 2026-09-12 06:39:43] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 550 examples
+[STATUS 2026-09-12 06:39:45] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 500 examples
+[STATUS 2026-09-12 06:39:47] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.5/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 450 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 650 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 600 examples
+[STATUS 2026-09-12 06:39:49] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.4/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 550 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 500 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 700 examples
+[STATUS 2026-09-12 06:39:51] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.5/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 650 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 600 examples
+[STATUS 2026-09-12 06:39:53] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.4/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 750 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 550 examples
+[STATUS 2026-09-12 06:39:55] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 700 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 650 examples
+[STATUS 2026-09-12 06:39:57] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=55.4/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 600 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 750 examples
+[STATUS 2026-09-12 06:39:59] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=45% RAMavail=55.3/62.8GiB uEMA=39% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 700 examples
+[STATUS 2026-09-12 06:40:01] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.5/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 800 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 750 examples
+[STATUS 2026-09-12 06:40:03] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.5/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 700 examples
+[STATUS 2026-09-12 06:40:05] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=55.6/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 900 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 850 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 800 examples
+[STATUS 2026-09-12 06:40:08] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.6/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 950 examples
+[STATUS 2026-09-12 06:40:10] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.6/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 850 examples
+[STATUS 2026-09-12 06:40:12] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.4/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1000 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 950 examples
+[STATUS 2026-09-12 06:40:14] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.3/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 900 examples
+[STATUS 2026-09-12 06:40:16] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1050 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 950 examples
+[STATUS 2026-09-12 06:40:18] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 900 examples
+[STATUS 2026-09-12 06:40:20] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1050 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1000 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1100 examples
+[STATUS 2026-09-12 06:40:22] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 950 examples
+[STATUS 2026-09-12 06:40:24] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1150 examples
+[STATUS 2026-09-12 06:40:26] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1000 examples
+[STATUS 2026-09-12 06:40:28] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.2/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1150 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1050 examples
+[STATUS 2026-09-12 06:40:30] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1200 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1150 examples
+[STATUS 2026-09-12 06:40:32] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1250 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1100 examples
+[STATUS 2026-09-12 06:40:34] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1250 examples
+[STATUS 2026-09-12 06:40:36] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=55.5/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1300 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1150 examples
+[STATUS 2026-09-12 06:40:38] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1250 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1300 examples
+[STATUS 2026-09-12 06:40:40] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=55.6/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1200 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1350 examples
+[STATUS 2026-09-12 06:40:42] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1300 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1350 examples
+[STATUS 2026-09-12 06:40:44] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=55.4/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1400 examples
+[STATUS 2026-09-12 06:40:46] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.6/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1400 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1300 examples
+[STATUS 2026-09-12 06:40:48] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1450 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1400 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1450 examples
+[STATUS 2026-09-12 06:40:50] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1350 examples
+[STATUS 2026-09-12 06:40:52] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1500 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1500 examples
+[STATUS 2026-09-12 06:40:54] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1400 examples
+[STATUS 2026-09-12 06:40:56] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=27% RAMavail=55.5/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1550 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1500 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1550 examples
+[STATUS 2026-09-12 06:40:58] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1450 examples
+[STATUS 2026-09-12 06:41:00] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1550 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1600 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1500 examples
+[STATUS 2026-09-12 06:41:02] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1600 examples
+[STATUS 2026-09-12 06:41:04] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=55.5/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1650 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1550 examples
+[STATUS 2026-09-12 06:41:06] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1650 examples
+[STATUS 2026-09-12 06:41:08] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1700 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1600 examples
+[STATUS 2026-09-12 06:41:10] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.6/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1700 examples
+[STATUS 2026-09-12 06:41:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.5/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 1750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1750 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1650 examples
+[STATUS 2026-09-12 06:41:15] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.2/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1750 examples
+[STATUS 2026-09-12 06:41:17] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 1800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1800 examples
+[STATUS 2026-09-12 06:41:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 1800 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1750 examples
+[STATUS 2026-09-12 06:41:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1850 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1850 examples
+[STATUS 2026-09-12 06:41:23] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1800 examples
+[STATUS 2026-09-12 06:41:25] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1900 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1900 examples
+[STATUS 2026-09-12 06:41:27] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.7/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1850 examples
+[STATUS 2026-09-12 06:41:29] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.6/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 1950 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 1950 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 1950 examples
+[STATUS 2026-09-12 06:41:31] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.6/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 1900 examples
+[STATUS 2026-09-12 06:41:33] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.5/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2000 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2000 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 1950 examples
+[STATUS 2026-09-12 06:41:35] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:41:37] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=55.4/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2050 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2050 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2000 examples
+[STATUS 2026-09-12 06:41:39] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=27% RAMavail=55.6/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:41:41] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=20% RAMavail=55.5/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2100 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2050 examples
+[STATUS 2026-09-12 06:41:43] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=18% RAMavail=55.5/62.8GiB uEMA=27% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:41:45] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=28% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 2150 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2150 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2150 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2100 examples
+[STATUS 2026-09-12 06:41:47] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.7/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:41:49] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.7/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 2200 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2150 examples
+[STATUS 2026-09-12 06:41:51] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:41:53] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2200 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2250 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2250 examples
+[STATUS 2026-09-12 06:41:55] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.6/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2250 examples
+[STATUS 2026-09-12 06:41:57] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.8/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2300 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2300 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2300 examples
+[STATUS 2026-09-12 06:41:59] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.5/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2300 examples
+[STATUS 2026-09-12 06:42:01] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 2350 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2350 examples
+[STATUS 2026-09-12 06:42:03] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.4/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2350 examples
+[STATUS 2026-09-12 06:42:05] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.7/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2400 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2400 examples
+[STATUS 2026-09-12 06:42:07] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.7/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2400 examples
+[STATUS 2026-09-12 06:42:09] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.6/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2450 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2450 examples
+[STATUS 2026-09-12 06:42:11] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2450 examples
+[STATUS 2026-09-12 06:42:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2500 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2500 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2500 examples
+[STATUS 2026-09-12 06:42:16] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.3/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2500 examples
+[STATUS 2026-09-12 06:42:18] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2550 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2550 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2550 examples
+[STATUS 2026-09-12 06:42:20] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2550 examples
+[STATUS 2026-09-12 06:42:22] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2600 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2600 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2600 examples
+[STATUS 2026-09-12 06:42:24] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:26] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.7/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2650 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2650 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2650 examples
+[STATUS 2026-09-12 06:42:28] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.6/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 2700 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2700 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2700 examples
+[STATUS 2026-09-12 06:42:30] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.5/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 2700 examples
+[STATUS 2026-09-12 06:42:32] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.4/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:34] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.7/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2750 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2750 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2750 examples
+[STATUS 2026-09-12 06:42:36] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.7/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:38] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=55.6/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2800 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2800 examples
+[STATUS 2026-09-12 06:42:40] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:42] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 2850 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 2850 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2850 examples
+[STATUS 2026-09-12 06:42:44] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:46] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=55.5/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2900 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2900 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2900 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2900 examples
+[STATUS 2026-09-12 06:42:48] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.6/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:50] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 2950 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 2950 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 2950 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 2950 examples
+[STATUS 2026-09-12 06:42:52] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:54] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3000 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3000 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3000 examples
+[STATUS 2026-09-12 06:42:56] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:42:58] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 3050 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3050 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3050 examples
+[STATUS 2026-09-12 06:43:00] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:02] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.6/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3100 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3100 examples
+[STATUS 2026-09-12 06:43:04] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.7/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:06] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.6/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 3150 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3150 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3150 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3150 examples
+[STATUS 2026-09-12 06:43:08] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.7/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:10] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=27% RAMavail=55.6/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 3200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3200 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3200 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3200 examples
+[STATUS 2026-09-12 06:43:12] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=44% RAMavail=55.7/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:14] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 3250 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3250 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3250 examples
+[STATUS 2026-09-12 06:43:16] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.6/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.5/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 3300 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3300 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3300 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3300 examples
+[STATUS 2026-09-12 06:43:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.3/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:23] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 3350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3350 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3350 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3350 examples
+[STATUS 2026-09-12 06:43:25] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:27] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.7/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 3400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3400 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3400 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3400 examples
+[STATUS 2026-09-12 06:43:29] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.7/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:31] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.7/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 3450 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3450 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3450 examples
+[STATUS 2026-09-12 06:43:33] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.6/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:35] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3500 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3500 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3500 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3500 examples
+[STATUS 2026-09-12 06:43:37] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.4/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:39] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.5/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 3550 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3550 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3550 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3550 examples
+[STATUS 2026-09-12 06:43:41] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.6/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:43] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=55.7/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 3600 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3600 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3600 examples
+[STATUS 2026-09-12 06:43:45] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=55.7/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:47] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.7/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3650 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3650 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3650 examples
+[STATUS 2026-09-12 06:43:49] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=55.9/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:51] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=56.0/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3700 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3700 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3700 examples
+[STATUS 2026-09-12 06:43:53] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=56.1/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:55] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 3750 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3750 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3750 examples
+[STATUS 2026-09-12 06:43:57] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=44% RAMavail=56.3/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:43:59] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.3/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 3800 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3800 examples
+[STATUS 2026-09-12 06:44:01] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.3/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:03] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.3/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3850 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3850 examples
+[STATUS 2026-09-12 06:44:05] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:07] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 3900 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3900 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 3900 examples
+[STATUS 2026-09-12 06:44:09] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=56.3/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:11] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 3950 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 3950 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 3950 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 3950 examples
+[STATUS 2026-09-12 06:44:15] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.2/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:17] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 4000 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4000 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4000 examples
+[STATUS 2026-09-12 06:44:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=56.3/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=56.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 4050 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4050 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4050 examples
+[STATUS 2026-09-12 06:44:24] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=18% RAMavail=56.3/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:26] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=26% RAMavail=56.3/62.8GiB uEMA=29% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 4100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4100 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4100 examples
+[STATUS 2026-09-12 06:44:28] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=56.2/62.8GiB uEMA=29% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:30] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=56.2/62.8GiB uEMA=29% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 4150 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4150 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4150 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4150 examples
+[STATUS 2026-09-12 06:44:32] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.2/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:34] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=48% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 4200 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4200 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4200 examples
+[STATUS 2026-09-12 06:44:36] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:38] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=17% RAMavail=56.1/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4250 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4250 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4250 examples
+[STATUS 2026-09-12 06:44:40] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.0/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:42] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 4300 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4300 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4300 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4300 examples
+[STATUS 2026-09-12 06:44:44] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:46] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 4350 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4350 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4350 examples
+[STATUS 2026-09-12 06:44:48] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=22% RAMavail=56.2/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:50] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 4400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4400 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4400 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4400 examples
+[STATUS 2026-09-12 06:44:52] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:54] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=46% RAMavail=56.2/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4450 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4450 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4450 examples
+[STATUS 2026-09-12 06:44:56] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:44:58] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=56.2/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 4500 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4500 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4500 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4500 examples
+[STATUS 2026-09-12 06:45:00] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:02] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.2/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 4550 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4550 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4550 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4550 examples
+[STATUS 2026-09-12 06:45:04] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:06] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 4600 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4600 examples
+[STATUS 2026-09-12 06:45:08] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.3/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4600 examples
+[STATUS 2026-09-12 06:45:10] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4650 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4650 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4650 examples
+[STATUS 2026-09-12 06:45:12] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 4650 examples
+[STATUS 2026-09-12 06:45:14] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=56.0/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4700 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4700 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4700 examples
+[STATUS 2026-09-12 06:45:16] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:18] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 4750 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4750 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4750 examples
+[STATUS 2026-09-12 06:45:20] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.2/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:22] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:24] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 4800 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4800 examples
+[STATUS 2026-09-12 06:45:26] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:29] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4850 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4850 examples
+[STATUS 2026-09-12 06:45:31] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:33] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 4900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 4900 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4900 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4900 examples
+[STATUS 2026-09-12 06:45:35] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:37] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 4950 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 4950 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 4950 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 4950 examples
+[STATUS 2026-09-12 06:45:39] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.2/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:41] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=44% RAMavail=56.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5000 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5000 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5000 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5000 examples
+[STATUS 2026-09-12 06:45:43] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:45] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5050 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5050 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5050 examples
+[STATUS 2026-09-12 06:45:47] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:49] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5100 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5100 examples
+[STATUS 2026-09-12 06:45:51] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:53] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5150 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5150 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5150 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5150 examples
+[STATUS 2026-09-12 06:45:55] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:45:57] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=56.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 5200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5200 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5200 examples
+[STATUS 2026-09-12 06:45:59] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:01] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5250 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5250 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5250 examples
+[STATUS 2026-09-12 06:46:03] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:05] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=56.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5300 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5300 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5300 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5300 examples
+[STATUS 2026-09-12 06:46:07] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:09] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5350 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5350 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5350 examples
+[STATUS 2026-09-12 06:46:11] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:15] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 5400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5400 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5400 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5400 examples
+[STATUS 2026-09-12 06:46:17] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5450 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5450 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5450 examples
+[STATUS 2026-09-12 06:46:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:23] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5500 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5500 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5500 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5500 examples
+[STATUS 2026-09-12 06:46:25] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.9/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:27] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=55.9/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5550 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5550 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5550 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5550 examples
+[STATUS 2026-09-12 06:46:30] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:32] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=26% RAMavail=56.1/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 5600 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5600 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5600 examples
+[STATUS 2026-09-12 06:46:34] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.0/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:36] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=42% RAMavail=55.9/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 5650 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5650 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5650 examples
+[STATUS 2026-09-12 06:46:38] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=44% RAMavail=56.0/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:40] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=56.0/62.8GiB uEMA=39% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5700 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5700 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5700 examples
+[STATUS 2026-09-12 06:46:42] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:44] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5750 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5750 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5750 examples
+[STATUS 2026-09-12 06:46:46] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.2/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:48] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=25% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5800 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5800 examples
+[STATUS 2026-09-12 06:46:50] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:52] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=26% RAMavail=56.1/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5850 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5850 examples
+[STATUS 2026-09-12 06:46:54] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=56.0/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:46:56] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.2/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 5900 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5900 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 5900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5900 examples
+[STATUS 2026-09-12 06:46:58] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:00] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.2/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 5950 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 5950 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 5950 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 5950 examples
+[STATUS 2026-09-12 06:47:02] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=22% RAMavail=56.2/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:04] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=14% RAMavail=56.1/62.8GiB uEMA=26% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 6000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6000 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6000 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6000 examples
+[STATUS 2026-09-12 06:47:06] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.0/62.8GiB uEMA=27% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:08] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.1/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6050 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6050 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6050 examples
+[STATUS 2026-09-12 06:47:10] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.3/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:12] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=56.1/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:14] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=56.2/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6100 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6100 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6100 examples
+[STATUS 2026-09-12 06:47:16] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:18] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=56.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6150 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6150 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6150 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6150 examples
+[STATUS 2026-09-12 06:47:20] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:22] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6200 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6200 examples
+[STATUS 2026-09-12 06:47:24] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=56.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:26] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=20% RAMavail=56.0/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:29] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 6250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6250 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6250 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6250 examples
+[STATUS 2026-09-12 06:47:31] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:33] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6300 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6300 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6300 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6300 examples
+[STATUS 2026-09-12 06:47:35] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.9/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:37] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=56.0/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:39] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.1/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6350 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6350 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6350 examples
+[STATUS 2026-09-12 06:47:41] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=54.7/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:43] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=54.5/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 6400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6400 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6400 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6400 examples
+[STATUS 2026-09-12 06:47:45] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=54.4/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:47] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=54.4/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:49] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=54.3/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6450 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6450 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6450 examples
+[STATUS 2026-09-12 06:47:51] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=54.6/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:53] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=52% RAMavail=54.9/62.8GiB uEMA=40% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6500 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6500 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6500 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6500 examples
+[STATUS 2026-09-12 06:47:55] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=21% RAMavail=55.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:47:57] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6550 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6550 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6550 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6550 examples
+[STATUS 2026-09-12 06:47:59] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.5/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:01] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=23% RAMavail=55.7/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6600 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6600 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6600 examples
+[STATUS 2026-09-12 06:48:03] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.6/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:05] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=55.9/62.8GiB uEMA=30% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6650 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6650 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6650 examples
+[STATUS 2026-09-12 06:48:07] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.9/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:09] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.0/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:11] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.8/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6700 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6700 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6700 examples
+[STATUS 2026-09-12 06:48:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:15] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6750 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6750 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6750 examples
+[STATUS 2026-09-12 06:48:17] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.9/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 6800 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6800 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6800 examples
+[STATUS 2026-09-12 06:48:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:23] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=54.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:25] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=53.9/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 6850 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6850 examples
+[STATUS 2026-09-12 06:48:28] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=26% RAMavail=54.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:30] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=53.9/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:32] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=54.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 6900 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 6900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6900 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6900 examples
+[STATUS 2026-09-12 06:48:34] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=54.8/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:36] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 6950 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 6950 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 6950 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 6950 examples
+[STATUS 2026-09-12 06:48:38] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:40] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.3/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7000 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7000 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7000 examples
+[STATUS 2026-09-12 06:48:42] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=55.4/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:44] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.4/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 7050 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7050 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7050 examples
+[STATUS 2026-09-12 06:48:46] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=44% RAMavail=55.5/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:48] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.6/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7100 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7100 examples
+[STATUS 2026-09-12 06:48:50] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=55.6/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:52] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=25% RAMavail=55.6/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 7150 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7150 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7150 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7150 examples
+[STATUS 2026-09-12 06:48:54] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=55.4/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:56] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=55.3/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:48:58] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.5/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 7200 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7200 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7200 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7200 examples
+[STATUS 2026-09-12 06:49:00] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=47% RAMavail=55.5/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:02] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=34% RAMavail=55.7/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 7250 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7250 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7250 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7250 examples
+[STATUS 2026-09-12 06:49:04] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.6/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:06] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=55.8/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 7300 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7300 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7300 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7300 examples
+[STATUS 2026-09-12 06:49:08] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=40% RAMavail=56.0/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:10] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=24% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:12] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 7350 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7350 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7350 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7350 examples
+[STATUS 2026-09-12 06:49:14] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=25% RAMavail=56.1/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:16] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7400 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7400 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7400 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7400 examples
+[STATUS 2026-09-12 06:49:18] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=31% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:20] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=28% RAMavail=56.1/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7450 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7450 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7450 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7450 examples
+[STATUS 2026-09-12 06:49:22] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=56.1/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:24] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=55.9/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 7500 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7500 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7500 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7500 examples
+[STATUS 2026-09-12 06:49:26] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.9/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:29] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7550 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7550 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7550 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7550 examples
+[STATUS 2026-09-12 06:49:31] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.8/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:33] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:35] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=46% RAMavail=56.0/62.8GiB uEMA=38% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7600 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7600 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7600 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7600 examples
+[STATUS 2026-09-12 06:49:37] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.0/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:39] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.1/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7650 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7650 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7650 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7650 examples
+[STATUS 2026-09-12 06:49:41] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=56.1/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:43] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=23% RAMavail=55.9/62.8GiB uEMA=32% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7700 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7700 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7700 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7700 examples
+[STATUS 2026-09-12 06:49:45] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.1/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:47] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.2/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 7750 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7750 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7750 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7750 examples
+[STATUS 2026-09-12 06:49:49] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:51] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.2/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:53] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=41% RAMavail=56.1/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 7800 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7800 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7800 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7800 examples
+[STATUS 2026-09-12 06:49:55] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=36% RAMavail=56.1/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:49:57] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.9/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 7850 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7850 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7850 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7850 examples
+[STATUS 2026-09-12 06:49:59] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=38% RAMavail=56.2/62.8GiB uEMA=37% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:01] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=33% RAMavail=56.1/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_direct_state_prediction_s42] [CLEAN] 7900 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7900 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 7900 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7900 examples
+[STATUS 2026-09-12 06:50:03] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=30% RAMavail=55.9/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:05] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=39% RAMavail=56.0/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_equal_constraint_weights_s42] [CLEAN] 7950 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 7950 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 7950 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 7950 examples
+[STATUS 2026-09-12 06:50:07] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=35% RAMavail=56.0/62.8GiB uEMA=35% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:09] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=19% RAMavail=56.0/62.8GiB uEMA=31% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:11] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=55.9/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_conservefm_full_s42] [CLEAN] 8000 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 8000 examples
+[eval_climax_no_advection_constraint_s42] [CLEAN] 8000 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 8000 examples
+[STATUS 2026-09-12 06:50:13] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.1/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:15] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=43% RAMavail=55.9/62.8GiB uEMA=36% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 8050 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 8050 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 8050 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 8050 examples
+[STATUS 2026-09-12 06:50:17] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.9/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:19] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=29% RAMavail=55.9/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [eval_climax_no_advection_constraint_s42] [CLEAN] 8100 examples
+[eval_climax_equal_constraint_weights_s42] [CLEAN] 8100 examples
+[eval_climax_conservefm_full_s42] [CLEAN] 8100 examples
+[eval_climax_direct_state_prediction_s42] [CLEAN] 8100 examples
+[STATUS 2026-09-12 06:50:21] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=32% RAMavail=55.9/62.8GiB uEMA=33% next≈0.6GiB admission=ADMIT    [STATUS 2026-09-12 06:50:23] running=4 | planned=1 | completed=5/10 | failed=0 | GPU=2.6/40.0GiB util=37% RAMavail=56.0/62.8GiB uEMA=34% next≈0.6GiB admission=ADMIT    

@@ -1,0 +1,46 @@
+[WATCHDOG] waiting for complete climax.zarr
+[WATCHDOG] ClimaX COMPLETE
+
+[WATCHDOG] RUN: /home/tahiti/Malashin_Projects/.venv_a100/bin/python -X faulthandler -u /home/tahiti/ConserveFM/tools/generate_fourcastnet_forecasts.py --output /home/tahiti/ConserveFM/forecasts/fourcastnet_smoke.zarr --max-contexts 2 --log-every 1 --overwrite
+[DATA] contexts=2 remaining=2
+[MODEL] constructing FCNv2-small
+[MODEL] missing: []
+[MODEL] unexpected: []
+/home/tahiti/ConserveFM/external/ai-models-fourcastnetv2/ai_models_fourcastnetv2/fourcastnetv2/layers.py:623: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(enabled=False):
+/home/tahiti/ConserveFM/external/ai-models-fourcastnetv2/ai_models_fourcastnetv2/fourcastnetv2/layers.py:632: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(enabled=False):
+[FCN] 1/2 50.00% rate=0.283 contexts/s ETA=0.00h GPU_peak=9.25GiB
+[FCN] 2/2 100.00% rate=0.377 contexts/s ETA=0.00h GPU_peak=9.25GiB
+[COMPLETE] {
+  "status": "completed",
+  "backbone": "fourcastnetv2-small",
+  "adapter": "era5_1p5_to_native_0p25",
+  "contexts": 2,
+  "missing": {
+    "6": 0,
+    "24": 0,
+    "72": 0
+  },
+  "approximations": [
+    "relative humidity derived from ERA5 q,T,p",
+    "TCWV pressure-integrated from q",
+    "100m winds approximated from 10m winds",
+    "total_precipitation_6hr persisted"
+  ]
+}
+[WATCHDOG] FourCastNet smoke OK
+
+[WATCHDOG] RUN: /home/tahiti/Malashin_Projects/.venv_a100/bin/python -X faulthandler -u /home/tahiti/ConserveFM/tools/generate_fourcastnet_forecasts.py --output /home/tahiti/ConserveFM/forecasts/fourcastnet.zarr --log-every 25
+[DATA] contexts=64,272 remaining=64,272
+[MODEL] constructing FCNv2-small
+[MODEL] missing: []
+[MODEL] unexpected: []
+/home/tahiti/ConserveFM/external/ai-models-fourcastnetv2/ai_models_fourcastnetv2/fourcastnetv2/layers.py:623: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(enabled=False):
+/home/tahiti/ConserveFM/external/ai-models-fourcastnetv2/ai_models_fourcastnetv2/fourcastnetv2/layers.py:632: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(enabled=False):
+[FCN] 1/64,272 0.00% rate=0.362 contexts/s ETA=49.35h GPU_peak=9.25GiB
+[FCN] 25/64,272 0.04% rate=0.548 contexts/s ETA=32.57h GPU_peak=9.25GiB
+[FCN] 50/64,272 0.08% rate=0.552 contexts/s ETA=32.34h GPU_peak=9.25GiB
+[FCN] 75/64,272 0.12% rate=0.552 contexts/s ETA=32.28h GPU_peak=9.25GiB

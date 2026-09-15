@@ -1,0 +1,86 @@
+[SETUP] cartopy=False
+============================================================================================
+BUILD WEATHER ATLAS CACHE
+============================================================================================
+[EVAL] device=cuda method=no_corruption_pretrain backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[ATLAS] resolved channels:
+    t850 ['2m_temperature'] -> [65]
+    wind850 ['10m_u_component_of_wind', '10m_v_component_of_wind'] -> [66, 67]
+[ATLAS acc] lead=6 cases=32
+[ATLAS acc] lead=6: 8/32
+[ATLAS acc] lead=6: 16/32
+[ATLAS acc] lead=6: 24/32
+[ATLAS acc] lead=6: 32/32
+[ATLAS acc] lead=24 cases=32
+[ATLAS acc] lead=24: 8/32
+[ATLAS acc] lead=24: 16/32
+[ATLAS acc] lead=24: 24/32
+[ATLAS acc] lead=24: 32/32
+[ATLAS acc] lead=72 cases=32
+[ATLAS acc] lead=72: 8/32
+[ATLAS acc] lead=72: 16/32
+[ATLAS acc] lead=72: 24/32
+[ATLAS acc] lead=72: 32/32
+[EVAL COMPLETE] {
+  "run_id": "weather_atlas_acc",
+  "backbone": "climax",
+  "method": "no_corruption_pretrain",
+  "forecast_provider": "zarr_frozen_fm",
+  "lead_hours": [
+    6,
+    24,
+    72
+  ],
+  "clean": {
+    "atlas/acc/cases": 96
+  },
+  "stress": null,
+  "ghcn": null
+}
+[EVAL] device=cuda method=conservefm_full backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[ATLAS phys] lead=6 cases=32
+[ATLAS phys] lead=6: 8/32
+[ATLAS phys] lead=6: 16/32
+[ATLAS phys] lead=6: 24/32
+[ATLAS phys] lead=6: 32/32
+[ATLAS phys] lead=24 cases=32
+[ATLAS phys] lead=24: 8/32
+[ATLAS phys] lead=24: 16/32
+[ATLAS phys] lead=24: 24/32
+[ATLAS phys] lead=24: 32/32
+[ATLAS phys] lead=72 cases=32
+[ATLAS phys] lead=72: 8/32
+[ATLAS phys] lead=72: 16/32
+[ATLAS phys] lead=72: 24/32
+[ATLAS phys] lead=72: 32/32
+[EVAL COMPLETE] {
+  "run_id": "weather_atlas_phys",
+  "backbone": "climax",
+  "method": "conservefm_full",
+  "forecast_provider": "zarr_frozen_fm",
+  "lead_hours": [
+    6,
+    24,
+    72
+  ],
+  "clean": {
+    "atlas/phys/cases": 96
+  },
+  "stress": null,
+  "ghcn": null
+}
+[CASE representative +72h] L72_C91711_T91723 2021-10-12T18:00:00.000000000 {'raw_nrmse': 0.40930747985839844, 'acc_nrmse': 0.39223843812942505, 'phys_nrmse': 0.3983194828033447}
+[CASE strong Phys +72h] L72_C93210_T93222 2022-10-22T12:00:00.000000000 {'raw_nrmse': 0.4205344021320343, 'acc_nrmse': 0.40028390288352966, 'phys_nrmse': 0.405875027179718}
+
+============================================================================================
+WEATHER ATLAS COMPLETE
+============================================================================================
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig13_synoptic_weather_atlas_representative.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig13b_synoptic_weather_atlas_strong_repair.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig14_geographic_repair_frequency.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig15_geographic_mean_error_reduction.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig16_geographic_repair_magnitude.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig17_lead_time_weather_atlas.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/weather_atlas_case_scores.csv

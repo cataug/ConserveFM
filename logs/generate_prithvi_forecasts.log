@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/tahiti/ConserveFM/tools/generate_prithvi_forecasts.py", line 37, in <module>
+    from PrithviWxC.dataloaders.merra2 import (
+  File "/home/tahiti/ConserveFM/external/Prithvi-WxC/PrithviWxC/dataloaders/merra2.py", line 9, in <module>
+    import h5py
+ModuleNotFoundError: No module named 'h5py'
+[MODEL] loading 2.3B checkpoint with mmap
+[MODEL] representative pressures Pa: [5201.599609375, 11825.0048828125, 16366.1845703125, 22592.69921875, 26494.021484375, 30981.673828125, 42374.9375, 53139.765625, 60300.76953125, 69242.0390625, 83056.890625, 90197.8046875, 94481.265625, 95919.8828125]
+[DATA] contexts=64,272 remaining=64,272
+[PRITHVI] 1/64,272 0.00% rate=0.0511 contexts/s ETA=349.16h GPU_peak=11.34GiB
+[PRITHVI] 10/64,272 0.02% rate=0.0544 contexts/s ETA=328.29h GPU_peak=11.34GiB
+[MODEL] loading 2.3B checkpoint with mmap
+[MODEL] representative pressures Pa: [5201.599609375, 11825.0048828125, 16366.1845703125, 22592.69921875, 26494.021484375, 30981.673828125, 42374.9375, 53139.765625, 60300.76953125, 69242.0390625, 83056.890625, 90197.8046875, 94481.265625, 95919.8828125]
+[DATA] contexts=64,272 remaining=64,260
+[PRITHVI] 4/64,260 0.01% batch=4 rate=0.0527 contexts/s ETA=338.38h GPU_peak=31.78GiB
+[PRITHVI] 20/64,260 0.03% batch=4 rate=0.0540 contexts/s ETA=330.70h GPU_peak=31.78GiB
+[PRITHVI] 40/64,260 0.06% batch=4 rate=0.0542 contexts/s ETA=329.16h GPU_peak=31.78GiB

@@ -1,0 +1,180 @@
+from __future__ import annotations
+
+from copy import deepcopy
+from dataclasses import asdict, dataclass, field
+from typing import Dict, List
+
+
+CORRUPTION_TYPES = [
+    "moisture",
+    "hydrostatic",
+    "advection",
+    "spectral",
+    "range_extreme",
+]
+
+CONSTRAINT_TYPES = [
+    "moisture",
+    "hydrostatic",
+    "advection",
+    "spectral",
+]
+
+
+@dataclass
+class MethodConfig:
+    method: str
+    corruption_pretrain: bool = True
+    enabled_corruptions: List[str] = field(default_factory=lambda: list(CORRUPTION_TYPES))
+    enabled_constraints: List[str] = field(default_factory=lambda: list(CONSTRAINT_TYPES))
+    router_mode: str = "adaptive"  # adaptive | equal | learned_static | manual | off
+    localization_head: bool = True
+    constraint_type_head: bool = True
+    minimal_change: bool = True
+    prediction_mode: str = "residual"  # residual | direct
+    use_physics_losses: bool = True
+    lambda_repair: float = 1.0
+    lambda_physics: float = 0.05
+    lambda_localization: float = 0.1
+    lambda_type: float = 0.1
+    lambda_router: float = 0.1
+    lambda_minimal: float = 0.01
+    manual_constraint_weights: Dict[str, float] = field(
+        default_factory=lambda: {
+            "moisture": 1.0,
+            "hydrostatic": 1.0,
+            "advection": 1.0,
+            "spectral": 1.0,
+        }
+    )
+
+    def to_dict(self):
+        return asdict(self)
+
+
+def _full(method: str) -> MethodConfig:
+    return MethodConfig(method=method)
+
+
+def resolve_method(method: str) -> MethodConfig:
+    cfg = _full(method)
+
+    if method == "conservefm_full":
+        return cfg
+
+    if method == "static_physics_loss":
+        cfg.corruption_pretrain = False
+        cfg.router_mode = "equal"
+        cfg.localization_head = False
+        cfg.constraint_type_head = False
+        cfg.minimal_change = False
+        return cfg
+
+    if method == "residual_repair":
+        cfg.corruption_pretrain = False
+        cfg.enabled_constraints = []
+        cfg.router_mode = "off"
+        cfg.localization_head = False
+        cfg.constraint_type_head = False
+        cfg.use_physics_losses = False
+        cfg.lambda_physics = 0.0
+        return cfg
+
+    if method == "no_corruption_pretrain":
+        cfg.corruption_pretrain = False
+        return cfg
+
+    corruption_ablation = {
+        "no_moisture_corruption": "moisture",
+        "no_hydrostatic_corruption": "hydrostatic",
+        "no_advection_corruption": "advection",
+        "no_spectral_corruption": "spectral",
+        "no_range_extreme_corruption": "range_extreme",
+    }
+    if method in corruption_ablation:
+        cfg.enabled_corruptions.remove(corruption_ablation[method])
+        return cfg
+
+    if method == "equal_constraint_weights":
+        cfg.router_mode = "equal"
+        return cfg
+
+    if method == "static_learned_weights":
+        cfg.router_mode = "learned_static"
+        return cfg
+
+    if method == "manual_tuned_weights":
+        cfg.router_mode = "manual"
+        cfg.manual_constraint_weights = {
+            "moisture": 1.0,
+            "hydrostatic": 0.5,
+            "advection": 0.75,
+            "spectral": 0.25,
+        }
+        return cfg
+
+    if method == "no_localization_head":
+        cfg.localization_head = False
+        return cfg
+
+    if method == "no_constraint_type_head":
+        cfg.constraint_type_head = False
+        return cfg
+
+    if method == "no_minimal_change":
+        cfg.minimal_change = False
+        cfg.lambda_minimal = 0.0
+        return cfg
+
+    if method == "direct_state_prediction":
+        cfg.prediction_mode = "direct"
+        cfg.minimal_change = False
+        cfg.lambda_minimal = 0.0
+        return cfg
+
+    constraint_ablation = {
+        "no_moisture_constraint": "moisture",
+        "no_hydrostatic_constraint": "hydrostatic",
+        "no_advection_constraint": "advection",
+        "no_spectral_constraint": "spectral",
+    }
+    if method in constraint_ablation:
+        cfg.enabled_constraints.remove(constraint_ablation[method])
+        return cfg
+
+    raise KeyError(f"Unknown ConserveFM method: {method}")
+
+
+SUPPORTED_METHODS = [
+    "static_physics_loss",
+    "residual_repair",
+    "conservefm_full",
+    "no_corruption_pretrain",
+    "no_moisture_corruption",
+    "no_hydrostatic_corruption",
+    "no_advection_corruption",
+    "no_spectral_corruption",
+    "no_range_extreme_corruption",
+    "equal_constraint_weights",
+    "static_learned_weights",
+    "manual_tuned_weights",
+    "no_localization_head",
+    "no_constraint_type_head",
+    "no_minimal_change",
+    "direct_state_prediction",
+    "no_moisture_constraint",
+    "no_hydrostatic_constraint",
+    "no_advection_constraint",
+    "no_spectral_constraint",
+]
+
+
+def validate_registry() -> None:
+    assert len(SUPPORTED_METHODS) == len(set(SUPPORTED_METHODS))
+    for method in SUPPORTED_METHODS:
+        cfg = resolve_method(method)
+        assert cfg.method == method
+        for c in cfg.enabled_corruptions:
+            assert c in CORRUPTION_TYPES
+        for c in cfg.enabled_constraints:
+            assert c in CONSTRAINT_TYPES

@@ -1,0 +1,13 @@
+{
+  "run_id": "train_climax_conservefm_smartfinal_s42",
+  "status": "completed",
+  "method": "conservefm_full",
+  "backbone": "climax",
+  "seed": 42,
+  "forecast_provider": "zarr_frozen_fm",
+  "best_val_repair_mse": 0.10127901216037571,
+  "global_step": 6000,
+  "elapsed_seconds": 790.75,
+  "checkpoint_best": "/home/tahiti/ConserveFM/runs/train_climax_conservefm_smartfinal_s42/checkpoint_best.pt",
+  "checkpoint_last": "/home/tahiti/ConserveFM/runs/train_climax_conservefm_smartfinal_s42/checkpoint_last.pt"
+}

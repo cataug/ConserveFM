@@ -1,0 +1,28 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_no_moisture_constraint_s42 method=no_moisture_constraint backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] pretrain epochs=2 start_epoch=0
+[TRAIN] stage=pretrain epoch=1/2 batch=10/87647 step=10 repair=0.0404 localization=0.4439 type=3.912 minimal=0.151 physics=0.1023 total=0.4826
+[TRAIN] stage=pretrain epoch=1/2 batch=20/87647 step=20 repair=0.02273 localization=0.2194 type=2.354 minimal=0.1161 physics=0.0598 total=0.2842
+[TRAIN] stage=pretrain epoch=1/2 batch=30/87647 step=30 repair=0.01589 localization=0.3444 type=1.523 minimal=0.09644 physics=0.03338 total=0.2053
+[TRAIN] stage=pretrain epoch=1/2 batch=40/87647 step=40 repair=0.02722 localization=0.2959 type=1.306 minimal=0.08429 physics=0.0244 total=0.1895
+[TRAIN] stage=pretrain epoch=1/2 batch=50/87647 step=50 repair=0.0107 localization=0.3312 type=2.829 minimal=0.07745 physics=0.01733 total=0.3284
+[TRAIN] stage=pretrain epoch=1/2 batch=60/87647 step=60 repair=0.008807 localization=0.2351 type=2.356 minimal=0.06519 physics=0.005812 total=0.2689
+[TRAIN] stage=pretrain epoch=1/2 batch=70/87647 step=70 repair=0.009333 localization=0.2681 type=1.788 minimal=0.05002 physics=0.0276 total=0.2168
+[TRAIN] stage=pretrain epoch=1/2 batch=80/87647 step=80 repair=0.01004 localization=0.2682 type=1.978 minimal=0.05963 physics=0.02559 total=0.2365
+[TRAIN] stage=pretrain epoch=1/2 batch=90/87647 step=90 repair=0.005833 localization=0.3031 type=1.319 minimal=0.04993 physics=0.01357 total=0.1693
+[TRAIN] stage=pretrain epoch=1/2 batch=100/87647 step=100 repair=0.006609 localization=0.25 type=2.65 minimal=0.05481 physics=0.01188 total=0.2978
+[TRAIN] stage=pretrain epoch=1/2 batch=110/87647 step=110 repair=0.009506 localization=0.2147 type=1.094 minimal=0.04242 physics=0.01366 total=0.1415
+[TRAIN] stage=pretrain epoch=1/2 batch=120/87647 step=120 repair=0.006134 localization=0.2688 type=2.138 minimal=0.04593 physics=0.02058 total=0.2483
+[TRAIN] stage=pretrain epoch=1/2 batch=130/87647 step=130 repair=0.002785 localization=0.2791 type=1.578 minimal=0.04007 physics=0.01701 total=0.1897
+[TRAIN] stage=pretrain epoch=1/2 batch=140/87647 step=140 repair=0.0151 localization=0.2054 type=3.338 minimal=0.04385 physics=0.01558 total=0.3706
+[TRAIN] stage=pretrain epoch=1/2 batch=150/87647 step=150 repair=0.004435 localization=0.3009 type=1.473 minimal=0.04788 physics=0.01735 total=0.1831
+[TRAIN] stage=pretrain epoch=1/2 batch=160/87647 step=160 repair=0.004751 localization=0.2925 type=0.9973 minimal=0.04242 physics=0.02872 total=0.1356
+[TRAIN] stage=pretrain epoch=1/2 batch=170/87647 step=170 repair=0.0032 localization=0.2971 type=1.147 minimal=0.04297 physics=0.0139 total=0.1488
+[TRAIN] stage=pretrain epoch=1/2 batch=180/87647 step=180 repair=0.003157 localization=0.2679 type=3.081 minimal=0.03976 physics=0.02667 total=0.3398
+[TRAIN] stage=pretrain epoch=1/2 batch=190/87647 step=190 repair=0.005059 localization=0.2886 type=1.799 minimal=0.03888 physics=0.003539 total=0.2144
+[TRAIN] stage=pretrain epoch=1/2 batch=200/87647 step=200 repair=0.006693 localization=0.3044 type=2.298 minimal=0.03967 physics=0.01139 total=0.2679
+[TRAIN] stage=pretrain epoch=1/2 batch=210/87647 step=210 repair=0.002608 localization=0.3232 type=1.088 minimal=0.034 physics=0.009151 total=0.1445
+[TRAIN] stage=pretrain epoch=1/2 batch=220/87647 step=220 repair=0.004321 localization=0.2821 type=2.322 minimal=0.0408 physics=0.009868 total=0.2657
+[TRAIN] stage=pretrain epoch=1/2 batch=230/87647 step=230 repair=0.004125 localization=0.2896 type=2.345 minimal=0.03836 physics=0.02256 total=0.2691
+[TRAIN] stage=pretrain epoch=1/2 batch=240/87647 step=240 repair=0.003043 localization=0.3025 type=1.507 minimal=0.04074 physics=0.03038 total=0.1859

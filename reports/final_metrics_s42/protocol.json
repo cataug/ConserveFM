@@ -1,0 +1,48 @@
+{
+  "backbone": "climax",
+  "seed": 42,
+  "test_manifest": "/home/tahiti/ConserveFM/manifests/research_v1/era5_examples.csv",
+  "batch_size": 32,
+  "stress_examples_per_condition": 64,
+  "leads": [
+    6,
+    24,
+    72
+  ],
+  "stress_types": [
+    "moisture",
+    "hydrostatic",
+    "advection",
+    "spectral",
+    "range_extreme"
+  ],
+  "severities": [
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "stress_conditions": 60,
+  "normalized_metric_definition": "z-score using existing training-set channel mean/std",
+  "spatial_weighting": "cos(latitude)",
+  "stress_aggregation": "macro mean over 3 leads x 5 corruptions x 4 severities",
+  "physical_mixed_rmse_warning": "rmse_phys_mixed combines channels with different physical units; use normalized and per-channel metrics as primary results",
+  "models": {
+    "OLD_Full": {
+      "method": "conservefm_full",
+      "checkpoint_dir": "/home/tahiti/ConserveFM/runs/train_climax_conservefm_full_s42"
+    },
+    "No_Pretrain": {
+      "method": "no_corruption_pretrain",
+      "checkpoint_dir": "/home/tahiti/ConserveFM/runs/train_climax_no_corruption_pretrain_s42"
+    },
+    "Direct_State": {
+      "method": "direct_state_prediction",
+      "checkpoint_dir": "/home/tahiti/ConserveFM/runs/train_climax_direct_state_prediction_s42"
+    },
+    "Smart_Final": {
+      "method": "conservefm_full",
+      "checkpoint_dir": "/home/tahiti/ConserveFM/runs/train_climax_conservefm_smartfinal_s42"
+    }
+  }
+}

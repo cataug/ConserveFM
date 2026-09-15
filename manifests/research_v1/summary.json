@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-08-11T20:06:22",
+  "era5_timestamps": {
+    "train": 58440,
+    "val": 2924,
+    "test": 2920
+  },
+  "era5_examples": {
+    "train": 175294,
+    "val": 8746,
+    "test": 8734
+  },
+  "ghcn_mapped_stations": 102207,
+  "ghcn_val_test_observations": 91539175,
+  "isd2023_matched_stations": 13357,
+  "isd2023_unmatched_stations": 41
+}

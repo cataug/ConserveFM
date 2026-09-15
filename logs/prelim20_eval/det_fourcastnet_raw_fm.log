@@ -1,0 +1,395 @@
+[DET det_fourcastnet_raw_fm] [EVAL] device=cuda method=raw_fm backbone=fourcastnet
+[DET det_fourcastnet_raw_fm] [FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/fourcastnet.zarr
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_moisture_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_moisture_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_moisture_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_moisture_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_hydrostatic_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_hydrostatic_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_hydrostatic_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_hydrostatic_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_advection_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_advection_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_advection_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_advection_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_spectral_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_spectral_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_spectral_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_spectral_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_range_extreme_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_range_extreme_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_range_extreme_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead6_range_extreme_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_moisture_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_moisture_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_moisture_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_moisture_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_hydrostatic_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_hydrostatic_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_hydrostatic_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_hydrostatic_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_advection_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_advection_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_advection_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_advection_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_spectral_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_spectral_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_spectral_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_spectral_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_range_extreme_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_range_extreme_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_range_extreme_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead24_range_extreme_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_moisture_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_moisture_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_moisture_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_moisture_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_hydrostatic_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_hydrostatic_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_hydrostatic_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_hydrostatic_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_advection_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_advection_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_advection_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_advection_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_spectral_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_spectral_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_spectral_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_spectral_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_range_extreme_sev0.25 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_range_extreme_sev0.5 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_range_extreme_sev1 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [STRESS] lead72_range_extreme_sev2 done n=16 batch=32
+[DET det_fourcastnet_raw_fm] [EVAL COMPLETE] {
+[DET det_fourcastnet_raw_fm]   "run_id": "prelim20_eval_det_fourcastnet_raw_fm",
+[DET det_fourcastnet_raw_fm]   "backbone": "fourcastnet",
+[DET det_fourcastnet_raw_fm]   "method": "raw_fm",
+[DET det_fourcastnet_raw_fm]   "forecast_provider": "zarr_frozen_fm",
+[DET det_fourcastnet_raw_fm]   "lead_hours": [
+[DET det_fourcastnet_raw_fm]     6,
+[DET det_fourcastnet_raw_fm]     24,
+[DET det_fourcastnet_raw_fm]     72
+[DET det_fourcastnet_raw_fm]   ],
+[DET det_fourcastnet_raw_fm]   "clean": null,
+[DET det_fourcastnet_raw_fm]   "stress": {
+[DET det_fourcastnet_raw_fm]     "lead6_moisture_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308185577392578,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007676504319533706,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22424925863742828,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_moisture_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308186531066895,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.000924000923987478,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22424925863742828,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_moisture_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308187484741211,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0006412607035599649,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22424925863742828,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_moisture_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308196067810059,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0037311066407710314,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22424925863742828,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_hydrostatic_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 13.997017860412598,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.298693915596232e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174360798671842,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.2354629933834076,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 66.49494934082031,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_hydrostatic_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 17.019676208496094,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.849082274129614e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174360798671842,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.268370658159256,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 81.94309997558594,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_hydrostatic_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 22.90566635131836,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 9.268965368391946e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174360798671842,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.4012798070907593,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 124.44802856445312,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_hydrostatic_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 32.862281799316406,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 0.00017752780695445836,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174360798671842,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.796824038028717,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 212.6881866455078,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_advection_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.319183349609375,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.318282127380371,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.495026900665835e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007108643767423928,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22296665608882904,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.774349212646484,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_advection_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.317155838012695,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.435154438018799,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.432343070628121e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.000756522174924612,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22309541702270508,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.774295806884766,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_advection_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.32219123840332,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.341331481933594,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.607508839806542e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.000711867876816541,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22232860326766968,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77448272705078,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_advection_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.3410062789917,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.198873043060303,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 7.548046414740384e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0006620616768486798,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22027534246444702,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.775550842285156,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_spectral_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308184623718262,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.000717436196282506,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22424925863742828,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_spectral_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308184623718262,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174357306212187,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.2242492437362671,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_spectral_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308183670043945,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174364291131496,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.2242492437362671,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_spectral_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 11.308184623718262,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.533298015594482,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.254634354263544e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007174365455284715,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 0.22424928843975067,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 59.77403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_range_extreme_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 12.152425765991211,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.573337554931641,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 0.00011712370906025171,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.000723582343198359,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.505089521408081,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 73.18989562988281,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_range_extreme_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 12.95797061920166,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 4.999355792999268,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 0.00027090575895272195,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007384683121927083,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 3.0112764835357666,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 101.58402252197266,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_range_extreme_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 14.253522872924805,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 6.914475917816162,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 0.0008073202334344387,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0007737098494544625,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 5.503859996795654,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 165.10354614257812,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead6_range_extreme_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 16.679664611816406,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 10.801630020141602,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 0.0026969409082084894,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0008626177441328764,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 9.740342140197754,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 299.8339538574219,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_moisture_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8873291015625,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015486350748687983,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.145542860031128,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_moisture_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8873291015625,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.001324854209087789,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.145542860031128,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_moisture_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.887332916259766,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0023026191629469395,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.145542860031128,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_moisture_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.887338638305664,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.003191893920302391,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.145542860031128,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_hydrostatic_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 23.770553588867188,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.8155765145784244e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463762683793902,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.151603102684021,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 125.33157348632812,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_hydrostatic_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 27.396902084350586,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.405028398148715e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463762683793902,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.1715425252914429,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 135.65623474121094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_hydrostatic_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 33.050567626953125,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 8.574139792472124e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463762683793902,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.24846613407135,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 164.65362548828125,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_hydrostatic_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 41.70243835449219,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 0.0001586682046763599,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463762683793902,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.486266016960144,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 234.27403259277344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_advection_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.895214080810547,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 21.727170944213867,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.932597196078859e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015059240395203233,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.1447681188583374,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40977478027344,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_advection_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8935604095459,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 27.325551986694336,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.9322079323465005e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.001408367301337421,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.144551396369934,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40975189208984,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_advection_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.899730682373047,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 25.682201385498047,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.17495461483486e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015533905243501067,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.1444214582443237,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40989685058594,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_advection_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.913124084472656,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 20.612350463867188,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 6.876021507196128e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015567474765703082,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.1425597667694092,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.41033172607422,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_spectral_sev0.25": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8873291015625,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251352310180664,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463767340406775,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.145542860031128,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_spectral_sev0.5": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8873291015625,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463762683793902,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.1455427408218384,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_spectral_sev1": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8873291015625,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.251354217529297,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.001546376384794712,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 1.1455427408218384,
+[DET det_fourcastnet_raw_fm]       "rmse_phys": 122.40965270996094,
+[DET det_fourcastnet_raw_fm]       "examples": 16
+[DET det_fourcastnet_raw_fm]     },
+[DET det_fourcastnet_raw_fm]     "lead24_spectral_sev2": {
+[DET det_fourcastnet_raw_fm]       "mae_phys": 21.8873291015625,
+[DET det_fourcastnet_raw_fm]       "physics_advection": 23.25135612487793,
+[DET det_fourcastnet_raw_fm]       "physics_hydrostatic": 5.7289576943730935e-05,
+[DET det_fourcastnet_raw_fm]       "physics_moisture": 0.0015463760355487466,
+[DET det_fourcastnet_raw_fm]       "physics_spectral": 

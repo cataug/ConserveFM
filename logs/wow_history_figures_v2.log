@@ -1,0 +1,21 @@
+============================================================================================
+WOW HISTORY FIGURES V2
+============================================================================================
+plan rows       : 138
+train histories : 34
+physics table   : OK
+pareto table    : OK
+
+============================================================================================
+GENERATED
+============================================================================================
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig01_preliminary_138_job_campaign.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig02_training_depth.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig03_preliminary_validation_landscape.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig04_final_metric_dashboard.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig05_stress_anatomy.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig06_accuracy_physics_pareto.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig07_physics_violation_ratios.png
+/home/tahiti/ConserveFM/reports/wow_history_figures_v2/fig08_learning_trajectories.png
+
+OUTPUT: /home/tahiti/ConserveFM/reports/wow_history_figures_v2

@@ -1,0 +1,325 @@
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[SETUP] device=cuda
+[SETUP] channels=71
+[SETUP] provider=zarr_frozen_fm
+[SETUP] test rows=8734
+[SETUP] first channels: ['geopotential@50hPa', 'geopotential@100hPa', 'geopotential@150hPa', 'geopotential@200hPa', 'geopotential@250hPa', 'geopotential@300hPa', 'geopotential@400hPa', 'geopotential@500hPa', 'geopotential@600hPa', 'geopotential@700hPa']
+[STRESS SET] lead=6 n=64
+[STRESS SET] lead=24 n=64
+[STRESS SET] lead=72 n=64
+
+==============================================================================================================
+MODEL: OLD_Full
+==============================================================================================================
+[CLEAN] OLD_Full lead=6 n=2916
+[CLEAN] OLD_Full lead=6 1024/2916
+[CLEAN] OLD_Full lead=6 2048/2916
+[CLEAN] OLD_Full lead=6 2916/2916
+[CLEAN] OLD_Full lead=24 n=2913
+[CLEAN] OLD_Full lead=24 1024/2913
+[CLEAN] OLD_Full lead=24 2048/2913
+[CLEAN] OLD_Full lead=24 2913/2913
+[CLEAN] OLD_Full lead=72 n=2905
+[CLEAN] OLD_Full lead=72 1024/2905
+[CLEAN] OLD_Full lead=72 2048/2905
+[CLEAN] OLD_Full lead=72 2905/2905
+[STRESS] OLD_Full     lead= 6 moisture       sev=0.25 NRMSE=0.2152 type=0.000 iou=0.078
+[STRESS] OLD_Full     lead= 6 moisture       sev=0.5  NRMSE=0.2153 type=0.000 iou=0.096
+[STRESS] OLD_Full     lead= 6 moisture       sev=1.0  NRMSE=0.2171 type=0.000 iou=0.036
+[STRESS] OLD_Full     lead= 6 moisture       sev=2.0  NRMSE=0.2293 type=0.000 iou=0.158
+[STRESS] OLD_Full     lead= 6 hydrostatic    sev=0.25 NRMSE=0.2179 type=0.000 iou=0.209
+[STRESS] OLD_Full     lead= 6 hydrostatic    sev=0.5  NRMSE=0.2253 type=0.000 iou=0.352
+[STRESS] OLD_Full     lead= 6 hydrostatic    sev=1.0  NRMSE=0.2545 type=0.000 iou=0.412
+[STRESS] OLD_Full     lead= 6 hydrostatic    sev=2.0  NRMSE=0.8262 type=0.000 iou=0.363
+[STRESS] OLD_Full     lead= 6 advection      sev=0.25 NRMSE=0.2162 type=0.000 iou=0.078
+[STRESS] OLD_Full     lead= 6 advection      sev=0.5  NRMSE=0.2162 type=0.000 iou=0.086
+[STRESS] OLD_Full     lead= 6 advection      sev=1.0  NRMSE=0.2165 type=0.000 iou=0.082
+[STRESS] OLD_Full     lead= 6 advection      sev=2.0  NRMSE=0.2209 type=0.000 iou=0.081
+[STRESS] OLD_Full     lead= 6 spectral       sev=0.25 NRMSE=0.2151 type=0.000 iou=0.071
+[STRESS] OLD_Full     lead= 6 spectral       sev=0.5  NRMSE=0.2151 type=0.000 iou=0.080
+[STRESS] OLD_Full     lead= 6 spectral       sev=1.0  NRMSE=0.2151 type=0.000 iou=0.075
+[STRESS] OLD_Full     lead= 6 spectral       sev=2.0  NRMSE=0.2151 type=0.000 iou=0.075
+[STRESS] OLD_Full     lead= 6 range_extreme  sev=0.25 NRMSE=0.2160 type=1.000 iou=0.077
+[STRESS] OLD_Full     lead= 6 range_extreme  sev=0.5  NRMSE=0.2188 type=1.000 iou=0.096
+[STRESS] OLD_Full     lead= 6 range_extreme  sev=1.0  NRMSE=0.2318 type=1.000 iou=0.136
+[STRESS] OLD_Full     lead= 6 range_extreme  sev=2.0  NRMSE=0.2801 type=1.000 iou=0.158
+[STRESS] OLD_Full     lead=24 moisture       sev=0.25 NRMSE=0.3006 type=0.000 iou=0.001
+[STRESS] OLD_Full     lead=24 moisture       sev=0.5  NRMSE=0.3008 type=0.000 iou=0.002
+[STRESS] OLD_Full     lead=24 moisture       sev=1.0  NRMSE=0.3019 type=0.000 iou=0.002
+[STRESS] OLD_Full     lead=24 moisture       sev=2.0  NRMSE=0.3070 type=0.000 iou=0.016
+[STRESS] OLD_Full     lead=24 hydrostatic    sev=0.25 NRMSE=0.3015 type=0.000 iou=0.012
+[STRESS] OLD_Full     lead=24 hydrostatic    sev=0.5  NRMSE=0.3050 type=0.000 iou=0.192
+[STRESS] OLD_Full     lead=24 hydrostatic    sev=1.0  NRMSE=0.3148 type=0.000 iou=0.918
+[STRESS] OLD_Full     lead=24 hydrostatic    sev=2.0  NRMSE=0.6947 type=0.000 iou=0.917
+[STRESS] OLD_Full     lead=24 advection      sev=0.25 NRMSE=0.3019 type=0.000 iou=0.001
+[STRESS] OLD_Full     lead=24 advection      sev=0.5  NRMSE=0.3017 type=0.000 iou=0.004
+[STRESS] OLD_Full     lead=24 advection      sev=1.0  NRMSE=0.3030 type=0.000 iou=0.003
+[STRESS] OLD_Full     lead=24 advection      sev=2.0  NRMSE=0.3083 type=0.000 iou=0.010
+[STRESS] OLD_Full     lead=24 spectral       sev=0.25 NRMSE=0.3005 type=0.000 iou=0.002
+[STRESS] OLD_Full     lead=24 spectral       sev=0.5  NRMSE=0.3005 type=0.000 iou=0.002
+[STRESS] OLD_Full     lead=24 spectral       sev=1.0  NRMSE=0.3005 type=0.000 iou=0.002
+[STRESS] OLD_Full     lead=24 spectral       sev=2.0  NRMSE=0.3005 type=0.000 iou=0.002
+[STRESS] OLD_Full     lead=24 range_extreme  sev=0.25 NRMSE=0.3011 type=1.000 iou=0.002
+[STRESS] OLD_Full     lead=24 range_extreme  sev=0.5  NRMSE=0.3031 type=1.000 iou=0.004
+[STRESS] OLD_Full     lead=24 range_extreme  sev=1.0  NRMSE=0.3104 type=1.000 iou=0.021
+[STRESS] OLD_Full     lead=24 range_extreme  sev=2.0  NRMSE=0.3441 type=1.000 iou=0.120
+[STRESS] OLD_Full     lead=72 moisture       sev=0.25 NRMSE=0.4040 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 moisture       sev=0.5  NRMSE=0.4043 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 moisture       sev=1.0  NRMSE=0.4052 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 moisture       sev=2.0  NRMSE=0.4102 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 hydrostatic    sev=0.25 NRMSE=0.4043 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 hydrostatic    sev=0.5  NRMSE=0.4063 type=0.000 iou=0.003
+[STRESS] OLD_Full     lead=72 hydrostatic    sev=1.0  NRMSE=0.4137 type=0.000 iou=0.779
+[STRESS] OLD_Full     lead=72 hydrostatic    sev=2.0  NRMSE=0.7180 type=0.000 iou=0.965
+[STRESS] OLD_Full     lead=72 advection      sev=0.25 NRMSE=0.4047 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 advection      sev=0.5  NRMSE=0.4047 type=0.000 iou=0.001
+[STRESS] OLD_Full     lead=72 advection      sev=1.0  NRMSE=0.4054 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 advection      sev=2.0  NRMSE=0.4088 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 spectral       sev=0.25 NRMSE=0.4038 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 spectral       sev=0.5  NRMSE=0.4038 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 spectral       sev=1.0  NRMSE=0.4038 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 spectral       sev=2.0  NRMSE=0.4038 type=0.000 iou=0.000
+[STRESS] OLD_Full     lead=72 range_extreme  sev=0.25 NRMSE=0.4042 type=1.000 iou=0.000
+[STRESS] OLD_Full     lead=72 range_extreme  sev=0.5  NRMSE=0.4056 type=1.000 iou=0.000
+[STRESS] OLD_Full     lead=72 range_extreme  sev=1.0  NRMSE=0.4110 type=1.000 iou=0.000
+[STRESS] OLD_Full     lead=72 range_extreme  sev=2.0  NRMSE=0.4315 type=1.000 iou=0.028
+
+==============================================================================================================
+MODEL: No_Pretrain
+==============================================================================================================
+[CLEAN] No_Pretrain lead=6 n=2916
+[CLEAN] No_Pretrain lead=6 1024/2916
+[CLEAN] No_Pretrain lead=6 2048/2916
+[CLEAN] No_Pretrain lead=6 2916/2916
+[CLEAN] No_Pretrain lead=24 n=2913
+[CLEAN] No_Pretrain lead=24 1024/2913
+[CLEAN] No_Pretrain lead=24 2048/2913
+[CLEAN] No_Pretrain lead=24 2913/2913
+[CLEAN] No_Pretrain lead=72 n=2905
+[CLEAN] No_Pretrain lead=72 1024/2905
+[CLEAN] No_Pretrain lead=72 2048/2905
+[CLEAN] No_Pretrain lead=72 2905/2905
+[STRESS] No_Pretrain  lead= 6 moisture       sev=0.25 NRMSE=0.1957 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead= 6 moisture       sev=0.5  NRMSE=0.1958 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead= 6 moisture       sev=1.0  NRMSE=0.1970 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead= 6 moisture       sev=2.0  NRMSE=0.2022 type=0.000 iou=0.090
+[STRESS] No_Pretrain  lead= 6 hydrostatic    sev=0.25 NRMSE=0.1966 type=0.000 iou=0.092
+[STRESS] No_Pretrain  lead= 6 hydrostatic    sev=0.5  NRMSE=0.1987 type=0.000 iou=0.086
+[STRESS] No_Pretrain  lead= 6 hydrostatic    sev=1.0  NRMSE=0.2078 type=0.000 iou=0.088
+[STRESS] No_Pretrain  lead= 6 hydrostatic    sev=2.0  NRMSE=0.2545 type=0.000 iou=0.088
+[STRESS] No_Pretrain  lead= 6 advection      sev=0.25 NRMSE=0.1962 type=0.000 iou=0.092
+[STRESS] No_Pretrain  lead= 6 advection      sev=0.5  NRMSE=0.1962 type=0.000 iou=0.092
+[STRESS] No_Pretrain  lead= 6 advection      sev=1.0  NRMSE=0.1964 type=0.000 iou=0.084
+[STRESS] No_Pretrain  lead= 6 advection      sev=2.0  NRMSE=0.1988 type=0.000 iou=0.085
+[STRESS] No_Pretrain  lead= 6 spectral       sev=0.25 NRMSE=0.1956 type=1.000 iou=0.090
+[STRESS] No_Pretrain  lead= 6 spectral       sev=0.5  NRMSE=0.1956 type=1.000 iou=0.093
+[STRESS] No_Pretrain  lead= 6 spectral       sev=1.0  NRMSE=0.1956 type=1.000 iou=0.090
+[STRESS] No_Pretrain  lead= 6 spectral       sev=2.0  NRMSE=0.1956 type=1.000 iou=0.087
+[STRESS] No_Pretrain  lead= 6 range_extreme  sev=0.25 NRMSE=0.1964 type=0.000 iou=0.089
+[STRESS] No_Pretrain  lead= 6 range_extreme  sev=0.5  NRMSE=0.1987 type=0.000 iou=0.092
+[STRESS] No_Pretrain  lead= 6 range_extreme  sev=1.0  NRMSE=0.2098 type=0.000 iou=0.097
+[STRESS] No_Pretrain  lead= 6 range_extreme  sev=2.0  NRMSE=0.2466 type=0.000 iou=0.080
+[STRESS] No_Pretrain  lead=24 moisture       sev=0.25 NRMSE=0.2891 type=0.000 iou=0.081
+[STRESS] No_Pretrain  lead=24 moisture       sev=0.5  NRMSE=0.2893 type=0.000 iou=0.089
+[STRESS] No_Pretrain  lead=24 moisture       sev=1.0  NRMSE=0.2902 type=0.000 iou=0.084
+[STRESS] No_Pretrain  lead=24 moisture       sev=2.0  NRMSE=0.2948 type=0.000 iou=0.090
+[STRESS] No_Pretrain  lead=24 hydrostatic    sev=0.25 NRMSE=0.2895 type=0.000 iou=0.084
+[STRESS] No_Pretrain  lead=24 hydrostatic    sev=0.5  NRMSE=0.2912 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead=24 hydrostatic    sev=1.0  NRMSE=0.2964 type=0.000 iou=0.080
+[STRESS] No_Pretrain  lead=24 hydrostatic    sev=2.0  NRMSE=0.3229 type=0.000 iou=0.089
+[STRESS] No_Pretrain  lead=24 advection      sev=0.25 NRMSE=0.2902 type=0.000 iou=0.097
+[STRESS] No_Pretrain  lead=24 advection      sev=0.5  NRMSE=0.2900 type=0.000 iou=0.085
+[STRESS] No_Pretrain  lead=24 advection      sev=1.0  NRMSE=0.2909 type=0.000 iou=0.101
+[STRESS] No_Pretrain  lead=24 advection      sev=2.0  NRMSE=0.2950 type=0.000 iou=0.086
+[STRESS] No_Pretrain  lead=24 spectral       sev=0.25 NRMSE=0.2890 type=1.000 iou=0.099
+[STRESS] No_Pretrain  lead=24 spectral       sev=0.5  NRMSE=0.2890 type=1.000 iou=0.087
+[STRESS] No_Pretrain  lead=24 spectral       sev=1.0  NRMSE=0.2890 type=1.000 iou=0.085
+[STRESS] No_Pretrain  lead=24 spectral       sev=2.0  NRMSE=0.2890 type=1.000 iou=0.092
+[STRESS] No_Pretrain  lead=24 range_extreme  sev=0.25 NRMSE=0.2896 type=0.000 iou=0.090
+[STRESS] No_Pretrain  lead=24 range_extreme  sev=0.5  NRMSE=0.2912 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead=24 range_extreme  sev=1.0  NRMSE=0.2974 type=0.000 iou=0.084
+[STRESS] No_Pretrain  lead=24 range_extreme  sev=2.0  NRMSE=0.3245 type=0.000 iou=0.087
+[STRESS] No_Pretrain  lead=72 moisture       sev=0.25 NRMSE=0.4007 type=0.000 iou=0.089
+[STRESS] No_Pretrain  lead=72 moisture       sev=0.5  NRMSE=0.4011 type=0.000 iou=0.092
+[STRESS] No_Pretrain  lead=72 moisture       sev=1.0  NRMSE=0.4020 type=0.000 iou=0.085
+[STRESS] No_Pretrain  lead=72 moisture       sev=2.0  NRMSE=0.4066 type=0.000 iou=0.081
+[STRESS] No_Pretrain  lead=72 hydrostatic    sev=0.25 NRMSE=0.4008 type=0.000 iou=0.081
+[STRESS] No_Pretrain  lead=72 hydrostatic    sev=0.5  NRMSE=0.4020 type=0.000 iou=0.089
+[STRESS] No_Pretrain  lead=72 hydrostatic    sev=1.0  NRMSE=0.4066 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead=72 hydrostatic    sev=2.0  NRMSE=0.4224 type=0.000 iou=0.094
+[STRESS] No_Pretrain  lead=72 advection      sev=0.25 NRMSE=0.4014 type=0.000 iou=0.087
+[STRESS] No_Pretrain  lead=72 advection      sev=0.5  NRMSE=0.4014 type=0.000 iou=0.092
+[STRESS] No_Pretrain  lead=72 advection      sev=1.0  NRMSE=0.4021 type=0.000 iou=0.094
+[STRESS] No_Pretrain  lead=72 advection      sev=2.0  NRMSE=0.4052 type=0.000 iou=0.093
+[STRESS] No_Pretrain  lead=72 spectral       sev=0.25 NRMSE=0.4006 type=1.000 iou=0.090
+[STRESS] No_Pretrain  lead=72 spectral       sev=0.5  NRMSE=0.4006 type=1.000 iou=0.099
+[STRESS] No_Pretrain  lead=72 spectral       sev=1.0  NRMSE=0.4006 type=1.000 iou=0.088
+[STRESS] No_Pretrain  lead=72 spectral       sev=2.0  NRMSE=0.4006 type=1.000 iou=0.086
+[STRESS] No_Pretrain  lead=72 range_extreme  sev=0.25 NRMSE=0.4009 type=0.000 iou=0.088
+[STRESS] No_Pretrain  lead=72 range_extreme  sev=0.5  NRMSE=0.4020 type=0.000 iou=0.091
+[STRESS] No_Pretrain  lead=72 range_extreme  sev=1.0  NRMSE=0.4066 type=0.000 iou=0.094
+[STRESS] No_Pretrain  lead=72 range_extreme  sev=2.0  NRMSE=0.4231 type=0.000 iou=0.084
+
+==============================================================================================================
+MODEL: Direct_State
+==============================================================================================================
+[CLEAN] Direct_State lead=6 n=2916
+[CLEAN] Direct_State lead=6 1024/2916
+[CLEAN] Direct_State lead=6 2048/2916
+[CLEAN] Direct_State lead=6 2916/2916
+[CLEAN] Direct_State lead=24 n=2913
+[CLEAN] Direct_State lead=24 1024/2913
+[CLEAN] Direct_State lead=24 2048/2913
+[CLEAN] Direct_State lead=24 2913/2913
+[CLEAN] Direct_State lead=72 n=2905
+[CLEAN] Direct_State lead=72 1024/2905
+[CLEAN] Direct_State lead=72 2048/2905
+[CLEAN] Direct_State lead=72 2905/2905
+[STRESS] Direct_State lead= 6 moisture       sev=0.25 NRMSE=0.2074 type=1.000 iou=0.000
+[STRESS] Direct_State lead= 6 moisture       sev=0.5  NRMSE=0.2076 type=1.000 iou=0.000
+[STRESS] Direct_State lead= 6 moisture       sev=1.0  NRMSE=0.2086 type=1.000 iou=0.000
+[STRESS] Direct_State lead= 6 moisture       sev=2.0  NRMSE=0.2145 type=1.000 iou=0.000
+[STRESS] Direct_State lead= 6 hydrostatic    sev=0.25 NRMSE=0.2094 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 hydrostatic    sev=0.5  NRMSE=0.2143 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 hydrostatic    sev=1.0  NRMSE=0.2331 type=0.000 iou=0.038
+[STRESS] Direct_State lead= 6 hydrostatic    sev=2.0  NRMSE=0.2950 type=0.000 iou=0.940
+[STRESS] Direct_State lead= 6 advection      sev=0.25 NRMSE=0.2079 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 advection      sev=0.5  NRMSE=0.2079 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 advection      sev=1.0  NRMSE=0.2081 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 advection      sev=2.0  NRMSE=0.2102 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 spectral       sev=0.25 NRMSE=0.2073 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 spectral       sev=0.5  NRMSE=0.2073 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 spectral       sev=1.0  NRMSE=0.2073 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 spectral       sev=2.0  NRMSE=0.2073 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 range_extreme  sev=0.25 NRMSE=0.2075 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 range_extreme  sev=0.5  NRMSE=0.2080 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 range_extreme  sev=1.0  NRMSE=0.2105 type=0.000 iou=0.000
+[STRESS] Direct_State lead= 6 range_extreme  sev=2.0  NRMSE=0.2168 type=0.000 iou=0.006
+[STRESS] Direct_State lead=24 moisture       sev=0.25 NRMSE=0.2967 type=1.000 iou=0.075
+[STRESS] Direct_State lead=24 moisture       sev=0.5  NRMSE=0.2969 type=1.000 iou=0.090
+[STRESS] Direct_State lead=24 moisture       sev=1.0  NRMSE=0.2978 type=1.000 iou=0.063
+[STRESS] Direct_State lead=24 moisture       sev=2.0  NRMSE=0.3040 type=1.000 iou=0.161
+[STRESS] Direct_State lead=24 hydrostatic    sev=0.25 NRMSE=0.2972 type=0.000 iou=0.138
+[STRESS] Direct_State lead=24 hydrostatic    sev=0.5  NRMSE=0.2992 type=0.000 iou=0.218
+[STRESS] Direct_State lead=24 hydrostatic    sev=1.0  NRMSE=0.3056 type=0.000 iou=0.283
+[STRESS] Direct_State lead=24 hydrostatic    sev=2.0  NRMSE=0.3409 type=0.000 iou=0.467
+[STRESS] Direct_State lead=24 advection      sev=0.25 NRMSE=0.2978 type=0.000 iou=0.108
+[STRESS] Direct_State lead=24 advection      sev=0.5  NRMSE=0.2976 type=0.000 iou=0.079
+[STRESS] Direct_State lead=24 advection      sev=1.0  NRMSE=0.2986 type=0.000 iou=0.113
+[STRESS] Direct_State lead=24 advection      sev=2.0  NRMSE=0.3029 type=0.000 iou=0.099
+[STRESS] Direct_State lead=24 spectral       sev=0.25 NRMSE=0.2966 type=0.000 iou=0.088
+[STRESS] Direct_State lead=24 spectral       sev=0.5  NRMSE=0.2966 type=0.000 iou=0.088
+[STRESS] Direct_State lead=24 spectral       sev=1.0  NRMSE=0.2966 type=0.000 iou=0.079
+[STRESS] Direct_State lead=24 spectral       sev=2.0  NRMSE=0.2966 type=0.000 iou=0.092
+[STRESS] Direct_State lead=24 range_extreme  sev=0.25 NRMSE=0.2967 type=0.000 iou=0.094
+[STRESS] Direct_State lead=24 range_extreme  sev=0.5  NRMSE=0.2970 type=0.000 iou=0.099
+[STRESS] Direct_State lead=24 range_extreme  sev=1.0  NRMSE=0.2980 type=0.000 iou=0.117
+[STRESS] Direct_State lead=24 range_extreme  sev=2.0  NRMSE=0.3017 type=0.000 iou=0.142
+[STRESS] Direct_State lead=72 moisture       sev=0.25 NRMSE=0.4030 type=0.000 iou=0.114
+[STRESS] Direct_State lead=72 moisture       sev=0.5  NRMSE=0.4033 type=0.000 iou=0.120
+[STRESS] Direct_State lead=72 moisture       sev=1.0  NRMSE=0.4040 type=0.000 iou=0.102
+[STRESS] Direct_State lead=72 moisture       sev=2.0  NRMSE=0.4081 type=0.000 iou=0.091
+[STRESS] Direct_State lead=72 hydrostatic    sev=0.25 NRMSE=0.4032 type=0.000 iou=0.116
+[STRESS] Direct_State lead=72 hydrostatic    sev=0.5  NRMSE=0.4047 type=0.000 iou=0.152
+[STRESS] Direct_State lead=72 hydrostatic    sev=1.0  NRMSE=0.4104 type=0.000 iou=0.177
+[STRESS] Direct_State lead=72 hydrostatic    sev=2.0  NRMSE=0.4318 type=0.000 iou=0.247
+[STRESS] Direct_State lead=72 advection      sev=0.25 NRMSE=0.4036 type=1.000 iou=0.116
+[STRESS] Direct_State lead=72 advection      sev=0.5  NRMSE=0.4035 type=1.000 iou=0.110
+[STRESS] Direct_State lead=72 advection      sev=1.0  NRMSE=0.4042 type=1.000 iou=0.119
+[STRESS] Direct_State lead=72 advection      sev=2.0  NRMSE=0.4070 type=1.000 iou=0.119
+[STRESS] Direct_State lead=72 spectral       sev=0.25 NRMSE=0.4028 type=0.000 iou=0.114
+[STRESS] Direct_State lead=72 spectral       sev=0.5  NRMSE=0.4028 type=0.000 iou=0.126
+[STRESS] Direct_State lead=72 spectral       sev=1.0  NRMSE=0.4028 type=0.000 iou=0.117
+[STRESS] Direct_State lead=72 spectral       sev=2.0  NRMSE=0.4028 type=0.000 iou=0.107
+[STRESS] Direct_State lead=72 range_extreme  sev=0.25 NRMSE=0.4028 type=0.000 iou=0.107
+[STRESS] Direct_State lead=72 range_extreme  sev=0.5  NRMSE=0.4030 type=0.000 iou=0.112
+[STRESS] Direct_State lead=72 range_extreme  sev=1.0  NRMSE=0.4036 type=0.000 iou=0.114
+[STRESS] Direct_State lead=72 range_extreme  sev=2.0  NRMSE=0.4056 type=0.000 iou=0.101
+
+==============================================================================================================
+MODEL: Smart_Final
+==============================================================================================================
+[CLEAN] Smart_Final lead=6 n=2916
+[CLEAN] Smart_Final lead=6 1024/2916
+[CLEAN] Smart_Final lead=6 2048/2916
+[CLEAN] Smart_Final lead=6 2916/2916
+[CLEAN] Smart_Final lead=24 n=2913
+[CLEAN] Smart_Final lead=24 1024/2913
+[CLEAN] Smart_Final lead=24 2048/2913
+[CLEAN] Smart_Final lead=24 2913/2913
+[CLEAN] Smart_Final lead=72 n=2905
+[CLEAN] Smart_Final lead=72 1024/2905
+[CLEAN] Smart_Final lead=72 2048/2905
+[CLEAN] Smart_Final lead=72 2905/2905
+[STRESS] Smart_Final  lead= 6 moisture       sev=0.25 NRMSE=0.2208 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 moisture       sev=0.5  NRMSE=0.2211 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 moisture       sev=1.0  NRMSE=0.2242 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 moisture       sev=2.0  NRMSE=0.2355 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 hydrostatic    sev=0.25 NRMSE=0.2216 type=0.672 iou=0.000
+[STRESS] Smart_Final  lead= 6 hydrostatic    sev=0.5  NRMSE=0.2239 type=0.703 iou=0.018
+[STRESS] Smart_Final  lead= 6 hydrostatic    sev=1.0  NRMSE=0.2332 type=0.781 iou=0.503
+[STRESS] Smart_Final  lead= 6 hydrostatic    sev=2.0  NRMSE=0.2728 type=0.859 iou=0.945
+[STRESS] Smart_Final  lead= 6 advection      sev=0.25 NRMSE=0.2218 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 advection      sev=0.5  NRMSE=0.2218 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 advection      sev=1.0  NRMSE=0.2221 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 advection      sev=2.0  NRMSE=0.2265 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 spectral       sev=0.25 NRMSE=0.2206 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 spectral       sev=0.5  NRMSE=0.2206 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 spectral       sev=1.0  NRMSE=0.2206 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 spectral       sev=2.0  NRMSE=0.2206 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead= 6 range_extreme  sev=0.25 NRMSE=0.2214 type=0.344 iou=0.000
+[STRESS] Smart_Final  lead= 6 range_extreme  sev=0.5  NRMSE=0.2240 type=0.344 iou=0.000
+[STRESS] Smart_Final  lead= 6 range_extreme  sev=1.0  NRMSE=0.2361 type=0.344 iou=0.000
+[STRESS] Smart_Final  lead= 6 range_extreme  sev=2.0  NRMSE=0.2737 type=0.344 iou=0.002
+[STRESS] Smart_Final  lead=24 moisture       sev=0.25 NRMSE=0.3014 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 moisture       sev=0.5  NRMSE=0.3017 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 moisture       sev=1.0  NRMSE=0.3031 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 moisture       sev=2.0  NRMSE=0.3102 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 hydrostatic    sev=0.25 NRMSE=0.3019 type=0.875 iou=0.000
+[STRESS] Smart_Final  lead=24 hydrostatic    sev=0.5  NRMSE=0.3037 type=0.906 iou=0.024
+[STRESS] Smart_Final  lead=24 hydrostatic    sev=1.0  NRMSE=0.3093 type=0.906 iou=0.532
+[STRESS] Smart_Final  lead=24 hydrostatic    sev=2.0  NRMSE=0.3377 type=0.984 iou=0.941
+[STRESS] Smart_Final  lead=24 advection      sev=0.25 NRMSE=0.3026 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 advection      sev=0.5  NRMSE=0.3024 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 advection      sev=1.0  NRMSE=0.3035 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 advection      sev=2.0  NRMSE=0.3082 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 spectral       sev=0.25 NRMSE=0.3013 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 spectral       sev=0.5  NRMSE=0.3013 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 spectral       sev=1.0  NRMSE=0.3013 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 spectral       sev=2.0  NRMSE=0.3013 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=24 range_extreme  sev=0.25 NRMSE=0.3019 type=0.125 iou=0.000
+[STRESS] Smart_Final  lead=24 range_extreme  sev=0.5  NRMSE=0.3037 type=0.125 iou=0.000
+[STRESS] Smart_Final  lead=24 range_extreme  sev=1.0  NRMSE=0.3107 type=0.125 iou=0.000
+[STRESS] Smart_Final  lead=24 range_extreme  sev=2.0  NRMSE=0.3412 type=0.125 iou=0.001
+[STRESS] Smart_Final  lead=72 moisture       sev=0.25 NRMSE=0.4073 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 moisture       sev=0.5  NRMSE=0.4076 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 moisture       sev=1.0  NRMSE=0.4086 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 moisture       sev=2.0  NRMSE=0.4135 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 hydrostatic    sev=0.25 NRMSE=0.4074 type=0.766 iou=0.000
+[STRESS] Smart_Final  lead=72 hydrostatic    sev=0.5  NRMSE=0.4085 type=0.781 iou=0.012
+[STRESS] Smart_Final  lead=72 hydrostatic    sev=1.0  NRMSE=0.4135 type=0.859 iou=0.602
+[STRESS] Smart_Final  lead=72 hydrostatic    sev=2.0  NRMSE=0.4309 type=0.938 iou=0.931
+[STRESS] Smart_Final  lead=72 advection      sev=0.25 NRMSE=0.4079 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 advection      sev=0.5  NRMSE=0.4079 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 advection      sev=1.0  NRMSE=0.4086 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 advection      sev=2.0  NRMSE=0.4116 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 spectral       sev=0.25 NRMSE=0.4071 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 spectral       sev=0.5  NRMSE=0.4071 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 spectral       sev=1.0  NRMSE=0.4071 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 spectral       sev=2.0  NRMSE=0.4071 type=0.000 iou=0.000
+[STRESS] Smart_Final  lead=72 range_extreme  sev=0.25 NRMSE=0.4075 type=0.234 iou=0.000
+[STRESS] Smart_Final  lead=72 range_extreme  sev=0.5  NRMSE=0.4087 type=0.234 iou=0.000
+[STRESS] Smart_Final  lead=72 range_extreme  sev=1.0  NRMSE=0.4138 type=0.234 iou=0.000
+[STRESS] Smart_Final  lead=72 range_extreme  sev=2.0  NRMSE=0.4328 type=0.234 iou=0.001
+
+========================================================================================================================
+FINAL COMPARABLE METRICS
+========================================================================================================================
+       model  clean_nrmse  clean_acc  macro_stress_nrmse  macro_stress_acc  macro_localization_iou  macro_type_accuracy  macro_repair_l1_norm
+ No_Pretrain      0.30703    0.95296             0.30076           0.95031                 0.08931              0.20000               0.10306
+Direct_State      0.31302    0.95105             0.30707           0.94872                 0.10267              0.20000               0.11218
+ Smart_Final      0.31931    0.94870             0.31593           0.94580                 0.07523              0.21406               0.10362
+    OLD_Full      0.31639    0.94975             0.33394           0.94012                 0.11351              0.20000               0.09860
+
+Saved to:
+/home/tahiti/ConserveFM/reports/final_metrics_s42

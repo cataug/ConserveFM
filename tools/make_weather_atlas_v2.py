@@ -1,0 +1,2855 @@
+from __future__ import annotations
+
+import os
+import sys
+import json
+import math
+import importlib.util
+from pathlib import Path
+from collections import defaultdict
+
+import numpy as np
+import torch
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
+from matplotlib.patches import Rectangle
+
+
+# ======================================================================
+# PATHS
+# ======================================================================
+
+ROOT = Path.home() / "ConserveFM"
+
+OUT = ROOT / "reports/wow_history_figures_v2"
+OUT.mkdir(parents=True, exist_ok=True)
+
+CACHE = OUT / "weather_atlas_cache_v2.npz"
+META_CACHE = OUT / "weather_atlas_cache_v2.json"
+
+TMP = OUT / "_atlas_eval_tmp"
+TMP.mkdir(parents=True, exist_ok=True)
+
+EVAL_FILE = ROOT / "tools/eval_conservefm.py"
+
+ACC_CK = ROOT / "runs/train_climax_no_corruption_pretrain_s42"
+PHYS_CK = ROOT / "runs/train_climax_conservefm_smartfinal_s42"
+
+MANIFEST = ROOT / "manifests/research_v1"
+ERA5 = ROOT / "data/ERA5_WeatherBench2_1979_2022"
+FORECASTS = ROOT / "forecasts"
+STATS = ROOT / "manifests/research_v1/era5_channel_stats.npz"
+
+LEADS = [6, 24, 72]
+
+# 32 × 3 leads × 2 models.
+# Enough for geographical frequency maps without a huge rerun.
+N_PER_LEAD = int(
+    os.environ.get(
+        "ATLAS_CASES_PER_LEAD",
+        "32",
+    )
+)
+
+REBUILD = (
+    os.environ.get(
+        "ATLAS_REBUILD",
+        "0",
+    ) == "1"
+)
+
+
+# ======================================================================
+# STYLE
+# ======================================================================
+
+WHITE = "#FFFFFF"
+BLACK = "#111111"
+RED = "#B52132"
+GRID = "#C9CDD5"
+
+mpl.rcParams.update({
+    "figure.facecolor": WHITE,
+    "savefig.facecolor": WHITE,
+    "axes.facecolor": WHITE,
+
+    "font.family": "DejaVu Sans",
+    "font.size": 20,
+
+    "axes.titlesize": 24,
+    "axes.labelsize": 19,
+
+    "xtick.labelsize": 15,
+    "ytick.labelsize": 15,
+
+    "pdf.fonttype": 42,
+    "ps.fonttype": 42,
+})
+
+
+# ======================================================================
+# OPTIONAL CARTOPY
+# ======================================================================
+
+try:
+    import cartopy.crs as ccrs
+    import cartopy.feature as cfeature
+
+    HAVE_CARTOPY = True
+
+except Exception:
+    HAVE_CARTOPY = False
+
+
+print(
+    f"[SETUP] cartopy={HAVE_CARTOPY}"
+)
+
+
+
+# ======================================================================
+# GEOGRAPHY BACKENDS
+# ======================================================================
+
+HAVE_BASEMAP = False
+HAVE_GEOPANDAS = False
+BASEMAP_CLS = None
+WORLD_GDF = None
+
+if not HAVE_CARTOPY:
+    try:
+        from mpl_toolkits.basemap import Basemap
+        BASEMAP_CLS = Basemap
+        HAVE_BASEMAP = True
+        print("[SETUP] geographic fallback=Basemap")
+    except Exception:
+        pass
+
+if not HAVE_CARTOPY and not HAVE_BASEMAP:
+    try:
+        import geopandas as gpd
+        try:
+            shp = gpd.datasets.get_path("naturalearth_lowres")
+            WORLD_GDF = gpd.read_file(shp)
+            HAVE_GEOPANDAS = True
+            print("[SETUP] geographic fallback=GeoPandas/NaturalEarth")
+        except Exception:
+            pass
+    except Exception:
+        pass
+
+print(
+    f"[SETUP] geo backends: "
+    f"cartopy={HAVE_CARTOPY} "
+    f"basemap={HAVE_BASEMAP} "
+    f"geopandas={HAVE_GEOPANDAS}"
+)
+
+# ======================================================================
+# IMPORT EXISTING EVALUATOR
+#
+# Important trick:
+# we reuse evaluator's OWN setup / provider / reader / normalizer /
+# checkpoint loading, and monkeypatch only evaluate_clean().
+#
+# Therefore we do not reimplement project internals.
+# ======================================================================
+
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+spec = importlib.util.spec_from_file_location(
+    "atlas_eval_conservefm",
+    EVAL_FILE,
+)
+
+ev = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(ev)
+
+
+# ======================================================================
+# CAPTURE STATE
+# ======================================================================
+
+CAP = {
+    "longitude": None,
+    "latitude": None,
+    "channel_info": None,
+
+    # method -> lead -> scalar maps
+    "gain_sum": defaultdict(dict),
+    "help_sum": defaultdict(dict),
+    "delta_sum": defaultdict(dict),
+    "count": defaultdict(dict),
+
+    # case_key -> fields
+    "cases": {},
+
+    # case_key -> metrics
+    "scores": {},
+}
+
+
+# ======================================================================
+# CHANNEL RESOLUTION
+# ======================================================================
+
+VARIABLES = [
+    {
+        "key": "z500",
+        "label": "Z500",
+        "unit": "dam",
+        "channels": [
+            "geopotential@500hPa",
+        ],
+        "cmap": "viridis",
+    },
+
+    {
+        "key": "t850",
+        "label": "T850",
+        "unit": "°C",
+        "channels": [
+            "temperature@850hPa",
+        ],
+        "cmap": "coolwarm",
+    },
+
+    {
+        "key": "q700",
+        "label": "q700",
+        "unit": "g kg⁻¹",
+        "channels": [
+            "specific_humidity@700hPa",
+        ],
+        "cmap": "YlGnBu",
+    },
+
+    {
+        "key": "wind850",
+        "label": "Wind850",
+        "unit": "m s⁻¹",
+        "channels": [
+            "u_component_of_wind@850hPa",
+            "v_component_of_wind@850hPa",
+        ],
+        "cmap": "magma",
+    },
+]
+
+
+def resolve_index(layout, name):
+
+    try:
+        idx = layout.one(name)
+
+        if isinstance(
+            idx,
+            (list, tuple, np.ndarray),
+        ):
+            idx = idx[0]
+
+        return int(idx)
+
+    except Exception:
+        return None
+
+
+def resolve_channels(layout):
+
+    out = {}
+
+    for v in VARIABLES:
+
+        indices = [
+            resolve_index(
+                layout,
+                x,
+            )
+            for x in v["channels"]
+        ]
+
+        if all(
+            x is not None
+            for x in indices
+        ):
+            out[v["key"]] = {
+                **v,
+                "indices": indices,
+            }
+
+    # Surface fallback if pressure channels somehow differ.
+    if "t850" not in out:
+        idx = resolve_index(
+            layout,
+            "2m_temperature",
+        )
+
+        if idx is not None:
+            out["t850"] = {
+                "key": "t850",
+                "label": "T2m",
+                "unit": "°C",
+                "channels": [
+                    "2m_temperature",
+                ],
+                "indices": [idx],
+                "cmap": "coolwarm",
+            }
+
+    if "wind850" not in out:
+
+        u = resolve_index(
+            layout,
+            "10m_u_component_of_wind",
+        )
+
+        v = resolve_index(
+            layout,
+            "10m_v_component_of_wind",
+        )
+
+        if (
+            u is not None
+            and v is not None
+        ):
+            out["wind850"] = {
+                "key": "wind850",
+                "label": "Wind10m",
+                "unit": "m s⁻¹",
+                "channels": [
+                    "10m_u_component_of_wind",
+                    "10m_v_component_of_wind",
+                ],
+                "indices": [u, v],
+                "cmap": "magma",
+            }
+
+    return out
+
+
+# ======================================================================
+# FIELD HELPERS
+# ======================================================================
+
+def convert_field(
+    x,
+    info,
+):
+    """
+    x:
+      [C,H,W] tensor or ndarray.
+
+    returns [H,W].
+    """
+
+    if torch.is_tensor(x):
+        x = (
+            x.detach()
+            .float()
+            .cpu()
+            .numpy()
+        )
+
+    idx = info["indices"]
+
+    if len(idx) == 2:
+        u = x[idx[0]]
+        v = x[idx[1]]
+
+        return np.sqrt(
+            u ** 2
+            + v ** 2
+        ).astype(np.float32)
+
+    a = x[idx[0]].astype(
+        np.float32
+    )
+
+    key = info["key"]
+
+    if key == "z500":
+        # ERA5 geopotential m²/s²
+        # -> geopotential height decameters.
+        a = a / 9.80665 / 10.0
+
+    elif key == "t850":
+        # Kelvin -> Celsius.
+        a = a - 273.15
+
+    elif key == "q700":
+        # kg/kg -> g/kg.
+        a = a * 1000.0
+
+    return a.astype(
+        np.float32
+    )
+
+
+def case_key(
+    row,
+    lead,
+):
+    return (
+        f"L{lead}_"
+        f"C{int(row['context_end_idx'])}_"
+        f"T{int(row['target_idx'])}"
+    )
+
+
+def case_time(
+    reader,
+    row,
+):
+    idx = int(
+        row["target_idx"]
+    )
+
+    try:
+        return str(
+            reader.times[idx]
+        )
+
+    except Exception:
+        return f"ERA5 index {idx}"
+
+
+def pick_evenly(
+    rows,
+    n,
+):
+    if len(rows) <= n:
+        return list(rows)
+
+    ii = np.linspace(
+        0,
+        len(rows) - 1,
+        n,
+    )
+
+    ii = np.unique(
+        np.round(ii)
+        .astype(int)
+    )
+
+    return [
+        rows[i]
+        for i in ii
+    ]
+
+
+# ======================================================================
+# GEOGRAPHIC ORIENTATION
+# ======================================================================
+
+def geo_prepare(
+    field,
+    lat,
+    lon,
+):
+
+    field = np.asarray(field)
+    lat = np.asarray(lat)
+    lon = np.asarray(lon)
+
+    # Ensure [lat, lon].
+    if field.shape == (
+        len(lon),
+        len(lat),
+    ):
+        field = field.T
+
+    if field.shape != (
+        len(lat),
+        len(lon),
+    ):
+        raise RuntimeError(
+            f"Unexpected map shape {field.shape}; "
+            f"lat={len(lat)}, lon={len(lon)}"
+        )
+
+    # Longitude -> [-180,180).
+    lon2 = (
+        (lon + 180.0)
+        % 360.0
+    ) - 180.0
+
+    oi = np.argsort(lon2)
+    lon2 = lon2[oi]
+    field = field[:, oi]
+
+    # Latitude south -> north.
+    ai = np.argsort(lat)
+    lat2 = lat[ai]
+    field = field[ai, :]
+
+    return (
+        field,
+        lat2,
+        lon2,
+    )
+
+
+# ======================================================================
+# CAPTURE CALLBACK
+# ======================================================================
+
+CURRENT_NAME = None
+
+
+def atlas_evaluate_clean(
+    args,
+    rows,
+    reader,
+    provider,
+    model,
+    cfg,
+    normalizer,
+    device,
+    leads,
+):
+    global CURRENT_NAME
+
+    method_name = CURRENT_NAME
+
+    if CAP["longitude"] is None:
+        CAP["longitude"] = np.asarray(
+            reader.longitude,
+            dtype=np.float32,
+        )
+
+        CAP["latitude"] = np.asarray(
+            reader.latitude,
+            dtype=np.float32,
+        )
+
+        CAP["channel_info"] = (
+            resolve_channels(
+                reader.layout
+            )
+        )
+
+        print(
+            "[ATLAS] resolved channels:"
+        )
+
+        for k, v in (
+            CAP["channel_info"]
+            .items()
+        ):
+            print(
+                "   ",
+                k,
+                v["channels"],
+                "->",
+                v["indices"],
+            )
+
+    channel_info = CAP[
+        "channel_info"
+    ]
+
+    for lead in leads:
+
+        lead_rows = [
+            r
+            for r in rows
+            if int(
+                r["lead_hours"]
+            ) == int(lead)
+        ]
+
+        chosen = pick_evenly(
+            lead_rows,
+            N_PER_LEAD,
+        )
+
+        print(
+            f"[ATLAS {method_name}] "
+            f"lead={lead} "
+            f"cases={len(chosen)}"
+        )
+
+        gain_sum = None
+        help_sum = None
+        delta_sum = None
+        n_done = 0
+
+        batch_size = 8
+
+        for off in range(
+            0,
+            len(chosen),
+            batch_size,
+        ):
+
+            chunk = chosen[
+                off:
+                off + batch_size
+            ]
+
+            previous = torch.stack([
+                torch.from_numpy(
+                    reader.read_state(
+                        int(
+                            r[
+                                "context_end_idx"
+                            ]
+                        )
+                    )
+                )
+                for r in chunk
+            ]).to(device)
+
+            target = torch.stack([
+                torch.from_numpy(
+                    reader.read_state(
+                        int(
+                            r[
+                                "target_idx"
+                            ]
+                        )
+                    )
+                )
+                for r in chunk
+            ]).to(device)
+
+            raw = torch.stack([
+                torch.from_numpy(
+                    provider.get(
+                        int(
+                            r[
+                                "context_end_idx"
+                            ]
+                        ),
+                        int(lead),
+                    )
+                )
+                for r in chunk
+            ]).to(device)
+
+            with torch.inference_mode():
+
+                pred, out = ev.predict(
+                    raw,
+                    previous,
+                    lead,
+                    model,
+                    cfg,
+                    args.method,
+                    normalizer,
+                    reader.layout,
+                    device,
+                )
+
+                raw_n = (
+                    normalizer
+                    .normalize_torch(raw)
+                    .float()
+                )
+
+                pred_n = (
+                    normalizer
+                    .normalize_torch(pred)
+                    .float()
+                )
+
+                target_n = (
+                    normalizer
+                    .normalize_torch(target)
+                    .float()
+                )
+
+                # Per-grid mean standardized absolute errors.
+                raw_abs = (
+                    raw_n
+                    - target_n
+                ).abs().mean(
+                    dim=1
+                )
+
+                pred_abs = (
+                    pred_n
+                    - target_n
+                ).abs().mean(
+                    dim=1
+                )
+
+                gain = (
+                    raw_abs
+                    - pred_abs
+                )
+
+                helped = (
+                    pred_abs
+                    < raw_abs
+                ).float()
+
+                delta = (
+                    pred_n
+                    - raw_n
+                ).abs().mean(
+                    dim=1
+                )
+
+                if gain_sum is None:
+                    gain_sum = (
+                        gain.sum(
+                            dim=0
+                        )
+                    )
+                    help_sum = (
+                        helped.sum(
+                            dim=0
+                        )
+                    )
+                    delta_sum = (
+                        delta.sum(
+                            dim=0
+                        )
+                    )
+
+                else:
+                    gain_sum += (
+                        gain.sum(
+                            dim=0
+                        )
+                    )
+                    help_sum += (
+                        helped.sum(
+                            dim=0
+                        )
+                    )
+                    delta_sum += (
+                        delta.sum(
+                            dim=0
+                        )
+                    )
+
+                # --------------------------------------------------
+                # Scalar per-case standardized RMSE.
+                # --------------------------------------------------
+
+                raw_rmse = torch.sqrt(
+                    (
+                        raw_n
+                        - target_n
+                    )
+                    .square()
+                    .mean(
+                        dim=(
+                            1,
+                            2,
+                            3,
+                        )
+                    )
+                )
+
+                pred_rmse = torch.sqrt(
+                    (
+                        pred_n
+                        - target_n
+                    )
+                    .square()
+                    .mean(
+                        dim=(
+                            1,
+                            2,
+                            3,
+                        )
+                    )
+                )
+
+                for bi, row in enumerate(
+                    chunk
+                ):
+
+                    key = case_key(
+                        row,
+                        lead,
+                    )
+
+                    if key not in CAP[
+                        "cases"
+                    ]:
+
+                        CAP["cases"][
+                            key
+                        ] = {
+                            "lead":
+                                int(lead),
+
+                            "context_end_idx":
+                                int(
+                                    row[
+                                        "context_end_idx"
+                                    ]
+                                ),
+
+                            "target_idx":
+                                int(
+                                    row[
+                                        "target_idx"
+                                    ]
+                                ),
+
+                            "time":
+                                case_time(
+                                    reader,
+                                    row,
+                                ),
+
+                            "fields": {},
+                        }
+
+                    case = CAP[
+                        "cases"
+                    ][key]
+
+                    # Raw / target only need to be written once.
+                    if (
+                        "target"
+                        not in case[
+                            "fields"
+                        ]
+                    ):
+
+                        case[
+                            "fields"
+                        ][
+                            "target"
+                        ] = {}
+
+                        case[
+                            "fields"
+                        ][
+                            "raw"
+                        ] = {}
+
+                        for vk, info in (
+                            channel_info.items()
+                        ):
+
+                            case[
+                                "fields"
+                            ][
+                                "target"
+                            ][vk] = (
+                                convert_field(
+                                    target[bi],
+                                    info,
+                                )
+                            )
+
+                            case[
+                                "fields"
+                            ][
+                                "raw"
+                            ][vk] = (
+                                convert_field(
+                                    raw[bi],
+                                    info,
+                                )
+                            )
+
+                    case[
+                        "fields"
+                    ].setdefault(
+                        method_name,
+                        {},
+                    )
+
+                    for vk, info in (
+                        channel_info.items()
+                    ):
+                        case[
+                            "fields"
+                        ][
+                            method_name
+                        ][vk] = (
+                            convert_field(
+                                pred[bi],
+                                info,
+                            )
+                        )
+
+                    CAP[
+                        "scores"
+                    ].setdefault(
+                        key,
+                        {},
+                    )
+
+                    CAP[
+                        "scores"
+                    ][key][
+                        "raw_nrmse"
+                    ] = float(
+                        raw_rmse[
+                            bi
+                        ].item()
+                    )
+
+                    CAP[
+                        "scores"
+                    ][key][
+                        f"{method_name}_nrmse"
+                    ] = float(
+                        pred_rmse[
+                            bi
+                        ].item()
+                    )
+
+                n_done += len(
+                    chunk
+                )
+
+            print(
+                f"[ATLAS {method_name}] "
+                f"lead={lead}: "
+                f"{n_done}/{len(chosen)}",
+                flush=True,
+            )
+
+        CAP["gain_sum"][
+            method_name
+        ][lead] = (
+            gain_sum
+            .detach()
+            .cpu()
+            .numpy()
+        )
+
+        CAP["help_sum"][
+            method_name
+        ][lead] = (
+            help_sum
+            .detach()
+            .cpu()
+            .numpy()
+        )
+
+        CAP["delta_sum"][
+            method_name
+        ][lead] = (
+            delta_sum
+            .detach()
+            .cpu()
+            .numpy()
+        )
+
+        CAP["count"][
+            method_name
+        ][lead] = int(n_done)
+
+    return {
+        f"atlas/{method_name}/cases":
+            sum(
+                CAP["count"][
+                    method_name
+                ].values()
+            )
+    }
+
+
+# ======================================================================
+# RUN EXISTING EVALUATOR TWICE
+# ======================================================================
+
+ev.evaluate_clean = (
+    atlas_evaluate_clean
+)
+
+
+def run_method(
+    name,
+    method,
+    checkpoint,
+):
+    global CURRENT_NAME
+
+    CURRENT_NAME = name
+
+    outdir = (
+        TMP
+        / name
+    )
+
+    outdir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    argv = [
+        "eval_conservefm.py",
+
+        "--run-id",
+        f"weather_atlas_{name}",
+
+        "--backbone",
+        "climax",
+
+        "--family",
+        "main",
+
+        "--method",
+        method,
+
+        "--seed",
+        "42",
+
+        "--research-manifest",
+        str(MANIFEST),
+
+        "--era5-zarr",
+        str(ERA5),
+
+        "--forecast-root",
+        str(FORECASTS),
+
+        "--stats-path",
+        str(STATS),
+
+        "--output-dir",
+        str(outdir),
+
+        "--checkpoint-dir",
+        str(checkpoint),
+
+        "--lead-hours",
+        "6,24,72",
+
+        "--eval-clean",
+    ]
+
+    old_argv = sys.argv[:]
+
+    try:
+        sys.argv = argv
+
+        try:
+            ev.main()
+
+        except SystemExit as e:
+            if e.code not in (
+                None,
+                0,
+            ):
+                raise
+
+    finally:
+        sys.argv = old_argv
+
+
+# ======================================================================
+# SERIALIZE CACHE
+# ======================================================================
+
+def save_cache():
+
+    arrays = {}
+
+    arrays["longitude"] = (
+        CAP["longitude"]
+    )
+
+    arrays["latitude"] = (
+        CAP["latitude"]
+    )
+
+    # Geography aggregate maps.
+    for method in [
+        "acc",
+        "phys",
+    ]:
+        for lead in LEADS:
+
+            n = CAP[
+                "count"
+            ][method][lead]
+
+            arrays[
+                f"{method}_gain_L{lead}"
+            ] = (
+                CAP[
+                    "gain_sum"
+                ][method][lead]
+                / max(n, 1)
+            )
+
+            arrays[
+                f"{method}_help_L{lead}"
+            ] = (
+                CAP[
+                    "help_sum"
+                ][method][lead]
+                / max(n, 1)
+            )
+
+            arrays[
+                f"{method}_delta_L{lead}"
+            ] = (
+                CAP[
+                    "delta_sum"
+                ][method][lead]
+                / max(n, 1)
+            )
+
+    # Case fields.
+    case_meta = {}
+
+    for key, case in (
+        CAP["cases"].items()
+    ):
+
+        case_meta[key] = {
+            k: v
+            for k, v
+            in case.items()
+            if k != "fields"
+        }
+
+        for source, fields in (
+            case["fields"].items()
+        ):
+            for var, field in (
+                fields.items()
+            ):
+                arrays[
+                    f"case::{key}::{source}::{var}"
+                ] = field
+
+    np.savez_compressed(
+        CACHE,
+        **arrays,
+    )
+
+    meta = {
+        "n_per_lead":
+            N_PER_LEAD,
+
+        "channel_info":
+            CAP[
+                "channel_info"
+            ],
+
+        "cases":
+            case_meta,
+
+        "scores":
+            CAP[
+                "scores"
+            ],
+    }
+
+    META_CACHE.write_text(
+        json.dumps(
+            meta,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+
+# ======================================================================
+# LOAD CACHE FOR PLOTTING
+# ======================================================================
+
+def load_cache():
+
+    data = np.load(
+        CACHE,
+        allow_pickle=False,
+    )
+
+    meta = json.loads(
+        META_CACHE
+        .read_text(
+            encoding="utf-8"
+        )
+    )
+
+    return data, meta
+
+
+# ======================================================================
+# INFERENCE
+# ======================================================================
+
+if (
+    REBUILD
+    or not CACHE.exists()
+    or not META_CACHE.exists()
+):
+
+    print("=" * 92)
+    print("BUILD WEATHER ATLAS CACHE")
+    print("=" * 92)
+
+    os.environ[
+        "CONSERVEFM_EVAL_BATCH_SIZE"
+    ] = "8"
+
+    run_method(
+        "acc",
+        "no_corruption_pretrain",
+        ACC_CK,
+    )
+
+    run_method(
+        "phys",
+        "conservefm_full",
+        PHYS_CK,
+    )
+
+    save_cache()
+
+else:
+
+    print(
+        f"[CACHE] reusing {CACHE}"
+    )
+
+
+data, meta = load_cache()
+
+
+# ======================================================================
+# PLOTTING HELPERS
+# ======================================================================
+
+LAT = data["latitude"]
+LON = data["longitude"]
+
+
+
+def new_map_ax(fig, spec):
+
+    if HAVE_CARTOPY:
+
+        ax = fig.add_subplot(
+            spec,
+            projection=ccrs.PlateCarree(),
+        )
+
+        ax.set_global()
+
+        ax.gridlines(
+            draw_labels=False,
+            linewidth=0.38,
+            color="#555555",
+            alpha=0.25,
+            linestyle=":",
+            zorder=18,
+        )
+
+    else:
+
+        ax = fig.add_subplot(spec)
+
+        ax.set_xlim(-180, 180)
+        ax.set_ylim(-90, 90)
+
+        ax.set_xticks(
+            [-180, -120, -60, 0, 60, 120, 180]
+        )
+
+        ax.set_yticks(
+            [-90, -60, -30, 0, 30, 60, 90]
+        )
+
+        ax.grid(
+            color="#555555",
+            linewidth=0.38,
+            linestyle=":",
+            alpha=0.28,
+            zorder=18,
+        )
+
+    ax.tick_params(
+        labelsize=14,
+        pad=2,
+    )
+
+    for spine in ax.spines.values():
+        spine.set_visible(True)
+        spine.set_color(RED)
+        spine.set_linewidth(1.15)
+
+    return ax
+
+
+
+def overlay_geography(ax):
+    """
+    Real Natural Earth country/coast outlines drawn AFTER pcolormesh.
+
+    Does not require cartopy / basemap / geopandas.
+    Uses the project-local Natural Earth GeoJSON.
+    """
+
+    from matplotlib.collections import LineCollection
+
+    geo_path = (
+        ROOT
+        / "assets"
+        / "geography"
+        / "ne_110m_admin_0_countries.geojson"
+    )
+
+    if not geo_path.exists():
+        raise FileNotFoundError(
+            f"Missing geography file: {geo_path}"
+        )
+
+    # Load once only.
+    if not hasattr(
+        overlay_geography,
+        "_segments",
+    ):
+
+        obj = json.loads(
+            geo_path.read_text(
+                encoding="utf-8"
+            )
+        )
+
+        segments = []
+
+        def add_ring(ring):
+            if not ring:
+                return
+
+            arr = np.asarray(
+                ring,
+                dtype=float,
+            )
+
+            if (
+                arr.ndim == 2
+                and arr.shape[1] >= 2
+                and len(arr) >= 2
+            ):
+                segments.append(
+                    arr[:, :2]
+                )
+
+        for feature in obj.get(
+            "features",
+            []
+        ):
+
+            geom = (
+                feature.get("geometry")
+                or {}
+            )
+
+            typ = geom.get("type")
+            coords = geom.get("coordinates")
+
+            if not coords:
+                continue
+
+            if typ == "Polygon":
+
+                for ring in coords:
+                    add_ring(ring)
+
+            elif typ == "MultiPolygon":
+
+                for polygon in coords:
+                    for ring in polygon:
+                        add_ring(ring)
+
+            elif typ == "LineString":
+
+                add_ring(coords)
+
+            elif typ == "MultiLineString":
+
+                for line in coords:
+                    add_ring(line)
+
+        overlay_geography._segments = segments
+
+        print(
+            f"[GEO] loaded Natural Earth boundaries: "
+            f"{len(segments)} line segments"
+        )
+
+    segments = (
+        overlay_geography._segments
+    )
+
+    # White halo first:
+    # keeps borders visible over BOTH dark and bright weather fields.
+    halo = LineCollection(
+        segments,
+        colors=WHITE,
+        linewidths=1.85,
+        alpha=0.72,
+        zorder=48,
+        clip_on=True,
+    )
+
+    ax.add_collection(halo)
+
+    # Actual black geography.
+    borders = LineCollection(
+        segments,
+        colors=BLACK,
+        linewidths=0.82,
+        alpha=0.96,
+        zorder=49,
+        clip_on=True,
+    )
+
+    ax.add_collection(borders)
+
+    # Stronger coastline if Cartopy happens to exist.
+    if HAVE_CARTOPY:
+        try:
+            ax.coastlines(
+                resolution="110m",
+                linewidth=1.28,
+                color=BLACK,
+                alpha=1.0,
+                zorder=52,
+            )
+        except Exception:
+            pass
+
+
+
+
+def plot_geo(
+    ax,
+    field,
+    cmap,
+    vmin=None,
+    vmax=None,
+    norm=None,
+):
+
+    f, lat, lon = geo_prepare(
+        field,
+        LAT,
+        LON,
+    )
+
+    kwargs = dict(
+        cmap=cmap,
+        shading="auto",
+        rasterized=True,
+        zorder=2,
+    )
+
+    if norm is not None:
+        kwargs["norm"] = norm
+    else:
+        kwargs["vmin"] = vmin
+        kwargs["vmax"] = vmax
+
+    if HAVE_CARTOPY:
+
+        im = ax.pcolormesh(
+            lon,
+            lat,
+            f,
+            transform=ccrs.PlateCarree(),
+            **kwargs,
+        )
+
+    else:
+
+        im = ax.pcolormesh(
+            lon,
+            lat,
+            f,
+            **kwargs,
+        )
+
+    # ALWAYS last.
+    overlay_geography(ax)
+
+    return im
+
+
+def robust_limits(
+    fields,
+    lo=1.0,
+    hi=99.0,
+):
+    x = np.concatenate([
+        np.asarray(f)
+        .ravel()
+        for f in fields
+    ])
+
+    x = x[
+        np.isfinite(x)
+    ]
+
+    return (
+        float(
+            np.percentile(
+                x,
+                lo,
+            )
+        ),
+        float(
+            np.percentile(
+                x,
+                hi,
+            )
+        ),
+    )
+
+
+def symmetric_limit(
+    fields,
+    pct=98.0,
+):
+
+    x = np.concatenate([
+        np.abs(
+            np.asarray(f)
+        ).ravel()
+        for f in fields
+    ])
+
+    x = x[
+        np.isfinite(x)
+    ]
+
+    return max(
+        float(
+            np.percentile(
+                x,
+                pct,
+            )
+        ),
+        1e-8,
+    )
+
+
+def case_array(
+    key,
+    source,
+    var,
+):
+    return data[
+        f"case::{key}::{source}::{var}"
+    ]
+
+
+def savefig(
+    fig,
+    stem,
+):
+
+    for ext in [
+        "png",
+        "pdf",
+        "svg",
+    ]:
+
+        fig.savefig(
+            OUT / f"{stem}.{ext}",
+            dpi=300
+            if ext == "png"
+            else None,
+            bbox_inches="tight",
+            pad_inches=0.12,
+            facecolor=WHITE,
+        )
+
+    plt.close(fig)
+
+
+# ======================================================================
+# CASE SELECTION
+# ======================================================================
+
+scores = meta["scores"]
+cases_meta = meta["cases"]
+
+
+def keys_for_lead(
+    lead,
+):
+
+    return [
+        k
+        for k, v
+        in cases_meta.items()
+        if int(
+            v["lead"]
+        ) == int(lead)
+    ]
+
+
+def representative_key(
+    lead,
+):
+    """
+    Strictly representative:
+    select the case whose RAW normalized RMSE
+    is closest to the median for that lead.
+
+    No repair-gain cherry picking.
+    """
+
+    keys = keys_for_lead(
+        lead
+    )
+
+    vals = np.asarray([
+        scores[k][
+            "raw_nrmse"
+        ]
+        for k in keys
+    ])
+
+    med = np.median(vals)
+
+    idx = np.argmin(
+        np.abs(
+            vals - med
+        )
+    )
+
+    return keys[int(idx)]
+
+
+def strong_phys_key(
+    lead,
+):
+    """
+    Supplementary illustrative case:
+    among middle-to-high raw difficulty cases,
+    select strongest Phys improvement.
+    """
+
+    keys = keys_for_lead(
+        lead
+    )
+
+    raw = np.asarray([
+        scores[k][
+            "raw_nrmse"
+        ]
+        for k in keys
+    ])
+
+    phys = np.asarray([
+        scores[k][
+            "phys_nrmse"
+        ]
+        for k in keys
+    ])
+
+    lo = np.quantile(
+        raw,
+        0.50,
+    )
+
+    hi = np.quantile(
+        raw,
+        0.90,
+    )
+
+    mask = (
+        (raw >= lo)
+        & (raw <= hi)
+    )
+
+    gain = raw - phys
+
+    gain[
+        ~mask
+    ] = -np.inf
+
+    return keys[
+        int(
+            np.argmax(
+                gain
+            )
+        )
+    ]
+
+
+REP72 = representative_key(
+    72
+)
+
+STRONG72 = strong_phys_key(
+    72
+)
+
+print(
+    "[CASE representative +72h]",
+    REP72,
+    cases_meta[REP72]["time"],
+    scores[REP72],
+)
+
+print(
+    "[CASE strong Phys +72h]",
+    STRONG72,
+    cases_meta[STRONG72]["time"],
+    scores[STRONG72],
+)
+
+
+# ======================================================================
+# FIG 13 — SYNOPTIC WEATHER ATLAS
+# ======================================================================
+
+
+
+def make_synoptic_atlas(
+    key,
+    stem,
+    subtitle,
+):
+
+    channel_info = meta[
+        "channel_info"
+    ]
+
+    vars_present = [
+        k
+        for k in [
+            "z500",
+            "t850",
+            "q700",
+            "wind850",
+        ]
+        if k in channel_info
+    ]
+
+    if not vars_present:
+        raise RuntimeError(
+            "No weather variables resolved"
+        )
+
+    #
+    # EACH VARIABLE = TWO ROWS:
+    #
+    # ERA5 TARGET        RAW CLIMAX           CONSERVEFM-ACC
+    # CONSERVEFM-PHYS    ACC ERROR REDUCTION  PHYS ERROR REDUCTION
+    #
+    # => exactly THREE maps maximum per row.
+    #
+
+    nvars = len(
+        vars_present
+    )
+
+    nrows = 2 * nvars
+
+    fig = plt.figure(
+        figsize=(
+            19.5,
+            4.65 * nrows,
+        ),
+        facecolor=WHITE,
+    )
+
+    gs = fig.add_gridspec(
+        nrows,
+        3,
+        left=0.055,
+        right=0.985,
+        top=0.945,
+        bottom=0.045,
+        wspace=0.075,
+        hspace=0.24,
+    )
+
+    for vi, var in enumerate(
+        vars_present
+    ):
+
+        info = channel_info[var]
+
+        target = case_array(
+            key,
+            "target",
+            var,
+        )
+
+        raw = case_array(
+            key,
+            "raw",
+            var,
+        )
+
+        acc = case_array(
+            key,
+            "acc",
+            var,
+        )
+
+        phys = case_array(
+            key,
+            "phys",
+            var,
+        )
+
+        acc_gain = (
+            np.abs(
+                raw - target
+            )
+            -
+            np.abs(
+                acc - target
+            )
+        )
+
+        phys_gain = (
+            np.abs(
+                raw - target
+            )
+            -
+            np.abs(
+                phys - target
+            )
+        )
+
+        state_fields = [
+            target,
+            raw,
+            acc,
+            phys,
+        ]
+
+        vmin, vmax = robust_limits(
+            state_fields,
+            1,
+            99,
+        )
+
+        glim = symmetric_limit(
+            [
+                acc_gain,
+                phys_gain,
+            ],
+            98,
+        )
+
+        gain_norm = TwoSlopeNorm(
+            vmin=-glim,
+            vcenter=0,
+            vmax=glim,
+        )
+
+        panels = [
+            (
+                target,
+                "ERA5 target",
+                False,
+            ),
+            (
+                raw,
+                "Raw ClimaX",
+                False,
+            ),
+            (
+                acc,
+                "ConserveFM-Acc",
+                False,
+            ),
+
+            (
+                phys,
+                "ConserveFM-Phys",
+                False,
+            ),
+            (
+                acc_gain,
+                "Acc error reduction",
+                True,
+            ),
+            (
+                phys_gain,
+                "Phys error reduction",
+                True,
+            ),
+        ]
+
+        base_row = 2 * vi
+
+        state_im = None
+        gain_im = None
+
+        for pi, (
+            field,
+            title,
+            is_gain,
+        ) in enumerate(panels):
+
+            rr = (
+                base_row
+                + pi // 3
+            )
+
+            cc = pi % 3
+
+            ax = new_map_ax(
+                fig,
+                gs[rr, cc],
+            )
+
+            if is_gain:
+
+                im = plot_geo(
+                    ax,
+                    field,
+                    "RdBu",
+                    norm=gain_norm,
+                )
+
+                gain_im = im
+
+            else:
+
+                im = plot_geo(
+                    ax,
+                    field,
+                    info["cmap"],
+                    vmin=vmin,
+                    vmax=vmax,
+                )
+
+                state_im = im
+
+                # Real meteorological geopotential isolines.
+                if var == "z500":
+
+                    ff, lat, lon = (
+                        geo_prepare(
+                            field,
+                            LAT,
+                            LON,
+                        )
+                    )
+
+                    lo = (
+                        math.floor(
+                            np.nanpercentile(
+                                ff,
+                                2,
+                            ) / 6
+                        )
+                        * 6
+                    )
+
+                    hi = (
+                        math.ceil(
+                            np.nanpercentile(
+                                ff,
+                                98,
+                            ) / 6
+                        )
+                        * 6
+                    )
+
+                    levels = np.arange(
+                        lo,
+                        hi + 6,
+                        6,
+                    )
+
+                    try:
+
+                        if HAVE_CARTOPY:
+
+                            ax.contour(
+                                lon,
+                                lat,
+                                ff,
+                                levels=levels,
+                                colors=BLACK,
+                                linewidths=0.42,
+                                alpha=0.46,
+                                transform=ccrs.PlateCarree(),
+                                zorder=24,
+                            )
+
+                        else:
+
+                            ax.contour(
+                                lon,
+                                lat,
+                                ff,
+                                levels=levels,
+                                colors=BLACK,
+                                linewidths=0.42,
+                                alpha=0.46,
+                                zorder=24,
+                            )
+
+                        # Coastline again above contours.
+                        overlay_geography(
+                            ax
+                        )
+
+                    except Exception:
+                        pass
+
+            ax.set_title(
+                title,
+                fontsize=22,
+                fontweight="bold",
+                pad=9,
+                bbox=dict(
+                    facecolor=WHITE,
+                    edgecolor=RED,
+                    linewidth=1.05,
+                    boxstyle="round,pad=0.25",
+                ),
+            )
+
+            # Variable label.
+            if pi == 0:
+
+                ax.text(
+                    0.01,
+                    1.025,
+                    (
+                        f"{info['label']} "
+                        f"[{info['unit']}]"
+                    ),
+                    transform=ax.transAxes,
+                    ha="left",
+                    va="bottom",
+                    fontsize=20,
+                    fontweight="bold",
+                    bbox=dict(
+                        facecolor=WHITE,
+                        edgecolor=RED,
+                        linewidth=1.0,
+                        boxstyle="round,pad=0.22",
+                    ),
+                    zorder=60,
+                )
+
+        # Colorbars: one for state, one for reduction.
+        # Put them inside the variable block, below row 2.
+        last_row_ax_0 = fig.add_subplot(
+            gs[
+                base_row + 1,
+                0,
+            ],
+            frame_on=False,
+        )
+
+        last_row_ax_2 = fig.add_subplot(
+            gs[
+                base_row + 1,
+                2,
+            ],
+            frame_on=False,
+        )
+
+        p0 = (
+            last_row_ax_0
+            .get_position()
+        )
+
+        p2 = (
+            last_row_ax_2
+            .get_position()
+        )
+
+        last_row_ax_0.remove()
+        last_row_ax_2.remove()
+
+        ycb = (
+            p0.y0 - 0.010
+        )
+
+        cax1 = fig.add_axes([
+            p0.x0,
+            ycb,
+            p0.width * 1.55,
+            0.006,
+        ])
+
+        cb1 = fig.colorbar(
+            state_im,
+            cax=cax1,
+            orientation="horizontal",
+        )
+
+        cb1.ax.tick_params(
+            labelsize=11
+        )
+
+        cax2 = fig.add_axes([
+            p2.x0 - p2.width * 0.55,
+            ycb,
+            p2.width * 1.55,
+            0.006,
+        ])
+
+        cb2 = fig.colorbar(
+            gain_im,
+            cax=cax2,
+            orientation="horizontal",
+        )
+
+        cb2.ax.tick_params(
+            labelsize=11
+        )
+
+    cm = cases_meta[key]
+
+    fig.suptitle(
+        (
+            f"Synoptic weather-repair atlas · "
+            f"+{cm['lead']} h\n"
+            f"{cm['time']} · {subtitle}"
+        ),
+        fontsize=29,
+        fontweight="bold",
+        y=0.992,
+    )
+
+    fig.text(
+        0.5,
+        0.006,
+        (
+            "Error reduction = |Raw − ERA5| − |Repair − ERA5| · "
+            "blue = local improvement · red = local degradation"
+        ),
+        ha="center",
+        fontsize=17,
+        bbox=dict(
+            facecolor=WHITE,
+            edgecolor=RED,
+            linewidth=1.05,
+            boxstyle="round,pad=0.28",
+        ),
+    )
+
+    savefig(
+        fig,
+        stem,
+    )
+
+
+def fig14_help_frequency():
+
+    methods = [
+        (
+            "acc",
+            "ConserveFM-Acc",
+        ),
+        (
+            "phys",
+            "ConserveFM-Phys",
+        ),
+    ]
+
+    fig = plt.figure(
+        figsize=(20, 10.5)
+    )
+
+    gs = fig.add_gridspec(
+        2,
+        3,
+        wspace=0.07,
+        hspace=0.14,
+    )
+
+    last_im = None
+
+    for ri, (
+        method,
+        label,
+    ) in enumerate(methods):
+
+        for ci, lead in enumerate(
+            LEADS
+        ):
+
+            field = (
+                data[
+                    f"{method}_help_L{lead}"
+                ]
+                * 100.0
+            )
+
+            ax = new_map_ax(
+                fig,
+                gs[
+                    ri,
+                    ci,
+                ],
+            )
+
+            last_im = plot_geo(
+                ax,
+                field,
+                "RdYlBu",
+                vmin=0,
+                vmax=100,
+            )
+
+            if ri == 0:
+                ax.set_title(
+                    f"+{lead} h",
+                    fontsize=23,
+                    fontweight="bold",
+                    bbox=dict(
+                        facecolor=WHITE,
+                        edgecolor=RED,
+                        linewidth=1,
+                        boxstyle="round,pad=0.25",
+                    ),
+                )
+
+            if ci == 0:
+                ax.text(
+                    -0.08,
+                    0.5,
+                    label,
+                    rotation=90,
+                    transform=ax.transAxes,
+                    ha="right",
+                    va="center",
+                    fontsize=21,
+                    fontweight="bold",
+                )
+
+    fig.suptitle(
+        "Where does repair help? · frequency of locally reduced standardized forecast error",
+        fontsize=27,
+        fontweight="bold",
+        y=0.985,
+    )
+
+    cax = fig.add_axes([
+        0.20,
+        0.045,
+        0.60,
+        0.024,
+    ])
+
+    cb = fig.colorbar(
+        last_im,
+        cax=cax,
+        orientation="horizontal",
+    )
+
+    cb.set_label(
+        "Fraction of evaluated dates where repair reduces local error [%]",
+        fontsize=18,
+        fontweight="bold",
+    )
+
+    cb.ax.tick_params(
+        labelsize=15
+    )
+
+    savefig(
+        fig,
+        "fig14_geographic_repair_frequency",
+    )
+
+
+fig14_help_frequency()
+
+
+# ======================================================================
+# FIG 15 — MEAN STANDARDIZED ERROR REDUCTION
+# ======================================================================
+
+def fig15_mean_gain():
+
+    methods = [
+        (
+            "acc",
+            "ConserveFM-Acc",
+        ),
+        (
+            "phys",
+            "ConserveFM-Phys",
+        ),
+    ]
+
+    fields = [
+        data[
+            f"{m}_gain_L{lead}"
+        ]
+        for m, _
+        in methods
+        for lead
+        in LEADS
+    ]
+
+    lim = symmetric_limit(
+        fields,
+        99.0,
+    )
+
+    norm = TwoSlopeNorm(
+        vmin=-lim,
+        vcenter=0,
+        vmax=lim,
+    )
+
+    fig = plt.figure(
+        figsize=(20, 10.5)
+    )
+
+    gs = fig.add_gridspec(
+        2,
+        3,
+        wspace=0.07,
+        hspace=0.14,
+    )
+
+    last_im = None
+
+    for ri, (
+        method,
+        label,
+    ) in enumerate(methods):
+
+        for ci, lead in enumerate(
+            LEADS
+        ):
+
+            field = data[
+                f"{method}_gain_L{lead}"
+            ]
+
+            ax = new_map_ax(
+                fig,
+                gs[
+                    ri,
+                    ci,
+                ],
+            )
+
+            last_im = plot_geo(
+                ax,
+                field,
+                "RdBu",
+                norm=norm,
+            )
+
+            if ri == 0:
+                ax.set_title(
+                    f"+{lead} h",
+                    fontsize=23,
+                    fontweight="bold",
+                    bbox=dict(
+                        facecolor=WHITE,
+                        edgecolor=RED,
+                        linewidth=1,
+                        boxstyle="round,pad=0.25",
+                    ),
+                )
+
+            if ci == 0:
+                ax.text(
+                    -0.08,
+                    0.5,
+                    label,
+                    rotation=90,
+                    transform=ax.transAxes,
+                    ha="right",
+                    va="center",
+                    fontsize=21,
+                    fontweight="bold",
+                )
+
+    fig.suptitle(
+        "Geographic repair atlas · mean local standardized-error reduction",
+        fontsize=27,
+        fontweight="bold",
+        y=0.985,
+    )
+
+    cax = fig.add_axes([
+        0.20,
+        0.045,
+        0.60,
+        0.024,
+    ])
+
+    cb = fig.colorbar(
+        last_im,
+        cax=cax,
+        orientation="horizontal",
+    )
+
+    cb.set_label(
+        "Mean |Raw−ERA5| − |Repair−ERA5| in standardized channel space  (blue = better)",
+        fontsize=17,
+        fontweight="bold",
+    )
+
+    cb.ax.tick_params(
+        labelsize=15
+    )
+
+    savefig(
+        fig,
+        "fig15_geographic_mean_error_reduction",
+    )
+
+
+fig15_mean_gain()
+
+
+# ======================================================================
+# FIG 16 — GEOGRAPHY OF MODEL INTERVENTION
+# ======================================================================
+
+def fig16_repair_magnitude():
+
+    methods = [
+        (
+            "acc",
+            "ConserveFM-Acc",
+        ),
+        (
+            "phys",
+            "ConserveFM-Phys",
+        ),
+    ]
+
+    all_fields = [
+        data[
+            f"{m}_delta_L{lead}"
+        ]
+        for m, _
+        in methods
+        for lead
+        in LEADS
+    ]
+
+    vmax = robust_limits(
+        all_fields,
+        0,
+        99.0,
+    )[1]
+
+    fig = plt.figure(
+        figsize=(20, 10.5)
+    )
+
+    gs = fig.add_gridspec(
+        2,
+        3,
+        wspace=0.07,
+        hspace=0.14,
+    )
+
+    last_im = None
+
+    for ri, (
+        method,
+        label,
+    ) in enumerate(methods):
+
+        for ci, lead in enumerate(
+            LEADS
+        ):
+
+            field = data[
+                f"{method}_delta_L{lead}"
+            ]
+
+            ax = new_map_ax(
+                fig,
+                gs[
+                    ri,
+                    ci,
+                ],
+            )
+
+            last_im = plot_geo(
+                ax,
+                field,
+                "magma",
+                vmin=0,
+                vmax=vmax,
+            )
+
+            if ri == 0:
+                ax.set_title(
+                    f"+{lead} h",
+                    fontsize=23,
+                    fontweight="bold",
+                    bbox=dict(
+                        facecolor=WHITE,
+                        edgecolor=RED,
+                        linewidth=1,
+                        boxstyle="round,pad=0.25",
+                    ),
+                )
+
+            if ci == 0:
+                ax.text(
+                    -0.08,
+                    0.5,
+                    label,
+                    rotation=90,
+                    transform=ax.transAxes,
+                    ha="right",
+                    va="center",
+                    fontsize=21,
+                    fontweight="bold",
+                )
+
+    fig.suptitle(
+        "Geography of intervention · where does ConserveFM modify the frozen forecast?",
+        fontsize=27,
+        fontweight="bold",
+        y=0.985,
+    )
+
+    cax = fig.add_axes([
+        0.20,
+        0.045,
+        0.60,
+        0.024,
+    ])
+
+    cb = fig.colorbar(
+        last_im,
+        cax=cax,
+        orientation="horizontal",
+    )
+
+    cb.set_label(
+        "Mean |repaired − raw| in standardized channel space",
+        fontsize=18,
+        fontweight="bold",
+    )
+
+    cb.ax.tick_params(
+        labelsize=15
+    )
+
+    savefig(
+        fig,
+        "fig16_geographic_repair_magnitude",
+    )
+
+
+fig16_repair_magnitude()
+
+
+# ======================================================================
+# FIG 17 — LEAD-TIME SYNOPTIC ATLAS
+# representative case at every lead, T/Z field
+# ======================================================================
+
+
+
+def fig17_lead_atlas():
+
+    channel_info = meta[
+        "channel_info"
+    ]
+
+    var = (
+        "z500"
+        if "z500" in channel_info
+        else list(
+            channel_info.keys()
+        )[0]
+    )
+
+    info = channel_info[var]
+
+    keys = [
+        representative_key(
+            lead
+        )
+        for lead in LEADS
+    ]
+
+    sources = [
+        (
+            "target",
+            "ERA5 target",
+        ),
+        (
+            "raw",
+            "Raw ClimaX",
+        ),
+        (
+            "acc",
+            "ConserveFM-Acc",
+        ),
+        (
+            "phys",
+            "ConserveFM-Phys",
+        ),
+    ]
+
+    all_fields = []
+
+    for key in keys:
+        for src_name, _ in sources:
+
+            all_fields.append(
+                case_array(
+                    key,
+                    src_name,
+                    var,
+                )
+            )
+
+    vmin, vmax = robust_limits(
+        all_fields,
+        1,
+        99,
+    )
+
+    #
+    #             +6h        +24h       +72h
+    #
+    # ERA5
+    # RAW
+    # ACC
+    # PHYS
+    #
+    # => THREE maps per row.
+    #
+
+    fig = plt.figure(
+        figsize=(
+            19.5,
+            16.5,
+        ),
+        facecolor=WHITE,
+    )
+
+    gs = fig.add_gridspec(
+        4,
+        3,
+        left=0.065,
+        right=0.985,
+        top=0.91,
+        bottom=0.075,
+        wspace=0.07,
+        hspace=0.16,
+    )
+
+    last_im = None
+
+    for ri, (
+        src_name,
+        row_label,
+    ) in enumerate(
+        sources
+    ):
+
+        for ci, (
+            lead,
+            key,
+        ) in enumerate(
+            zip(
+                LEADS,
+                keys,
+            )
+        ):
+
+            field = case_array(
+                key,
+                src_name,
+                var,
+            )
+
+            ax = new_map_ax(
+                fig,
+                gs[
+                    ri,
+                    ci,
+                ],
+            )
+
+            last_im = plot_geo(
+                ax,
+                field,
+                info["cmap"],
+                vmin=vmin,
+                vmax=vmax,
+            )
+
+            if var == "z500":
+
+                ff, lat, lon = (
+                    geo_prepare(
+                        field,
+                        LAT,
+                        LON,
+                    )
+                )
+
+                lo = (
+                    math.floor(
+                        np.nanpercentile(
+                            ff,
+                            2,
+                        ) / 6
+                    )
+                    * 6
+                )
+
+                hi = (
+                    math.ceil(
+                        np.nanpercentile(
+                            ff,
+                            98,
+                        ) / 6
+                    )
+                    * 6
+                )
+
+                levels = np.arange(
+                    lo,
+                    hi + 6,
+                    6,
+                )
+
+                try:
+
+                    if HAVE_CARTOPY:
+
+                        ax.contour(
+                            lon,
+                            lat,
+                            ff,
+                            levels=levels,
+                            colors=BLACK,
+                            linewidths=0.42,
+                            alpha=0.46,
+                            transform=ccrs.PlateCarree(),
+                            zorder=24,
+                        )
+
+                    else:
+
+                        ax.contour(
+                            lon,
+                            lat,
+                            ff,
+                            levels=levels,
+                            colors=BLACK,
+                            linewidths=0.42,
+                            alpha=0.46,
+                            zorder=24,
+                        )
+
+                    overlay_geography(
+                        ax
+                    )
+
+                except Exception:
+                    pass
+
+            if ri == 0:
+
+                ax.set_title(
+                    (
+                        f"+{lead} h\n"
+                        f"{cases_meta[key]['time']}"
+                    ),
+                    fontsize=20,
+                    fontweight="bold",
+                    pad=9,
+                    bbox=dict(
+                        facecolor=WHITE,
+                        edgecolor=RED,
+                        linewidth=1.0,
+                        boxstyle="round,pad=0.25",
+                    ),
+                )
+
+            if ci == 0:
+
+                ax.text(
+                    -0.080,
+                    0.5,
+                    row_label,
+                    rotation=90,
+                    transform=ax.transAxes,
+                    ha="right",
+                    va="center",
+                    fontsize=22,
+                    fontweight="bold",
+                )
+
+    fig.suptitle(
+        (
+            f"Lead-time weather atlas · "
+            f"{info['label']} [{info['unit']}]"
+        ),
+        fontsize=29,
+        fontweight="bold",
+        y=0.965,
+    )
+
+    cax = fig.add_axes([
+        0.20,
+        0.035,
+        0.60,
+        0.018,
+    ])
+
+    cb = fig.colorbar(
+        last_im,
+        cax=cax,
+        orientation="horizontal",
+    )
+
+    cb.ax.tick_params(
+        labelsize=15
+    )
+
+    savefig(
+        fig,
+        "fig17_lead_time_weather_atlas",
+    )
+
+
+# ======================================================================
+# FORCED FINAL ATLAS REDRAW
+# Added by fix_weather_atlas_for_real.py
+# ======================================================================
+
+print("[FINAL REDRAW] drawing all geographical atlas figures")
+
+make_synoptic_atlas(
+    REP72,
+    "fig13_synoptic_weather_atlas_representative",
+    "representative case selected by median raw normalized error",
+)
+
+make_synoptic_atlas(
+    STRONG72,
+    "fig13b_synoptic_weather_atlas_strong_repair",
+    "supplementary middle–high difficulty case with strong Phys recovery",
+)
+
+fig14_help_frequency()
+fig15_mean_gain()
+fig16_repair_magnitude()
+fig17_lead_atlas()
+
+print("[FINAL REDRAW] complete")
+

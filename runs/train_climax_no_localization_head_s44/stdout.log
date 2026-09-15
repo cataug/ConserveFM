@@ -1,0 +1,78 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_no_localization_head_s44 method=no_localization_head backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] pretrain epochs=2 start_epoch=0
+[TRAIN] stage=pretrain epoch=1/2 batch=10/87647 step=10 repair=0.03911 localization=0 type=1.622 minimal=0.1396 physics=0.1748 total=0.2114
+[TRAIN] stage=pretrain epoch=1/2 batch=20/87647 step=20 repair=0.02045 localization=0 type=2.42 minimal=0.104 physics=0.06058 total=0.2665
+[TRAIN] stage=pretrain epoch=1/2 batch=30/87647 step=30 repair=0.02934 localization=0 type=1.347 minimal=0.07428 physics=0.05512 total=0.1676
+[TRAIN] stage=pretrain epoch=1/2 batch=40/87647 step=40 repair=0.01577 localization=0 type=2.269 minimal=0.06616 physics=0.02084 total=0.2443
+[TRAIN] stage=pretrain epoch=1/2 batch=50/87647 step=50 repair=0.01027 localization=0 type=2.192 minimal=0.06046 physics=0.02802 total=0.2315
+[TRAIN] stage=pretrain epoch=1/2 batch=60/87647 step=60 repair=0.02687 localization=0 type=1.308 minimal=0.06506 physics=0.07659 total=0.1621
+[TRAIN] stage=pretrain epoch=1/2 batch=70/87647 step=70 repair=0.006974 localization=0 type=1.142 minimal=0.05887 physics=0.04268 total=0.1239
+[TRAIN] stage=pretrain epoch=1/2 batch=80/87647 step=80 repair=0.003321 localization=0 type=1.503 minimal=0.04199 physics=0.0138 total=0.1548
+[TRAIN] stage=pretrain epoch=1/2 batch=90/87647 step=90 repair=0.01788 localization=0 type=3.291 minimal=0.05038 physics=0.6686 total=0.3809
+[TRAIN] stage=pretrain epoch=1/2 batch=100/87647 step=100 repair=0.01538 localization=0 type=1.205 minimal=0.05774 physics=0.01368 total=0.1371
+[TRAIN] stage=pretrain epoch=1/2 batch=110/87647 step=110 repair=0.01563 localization=0 type=2.772 minimal=0.04898 physics=0.03425 total=0.2951
+[TRAIN] stage=pretrain epoch=1/2 batch=120/87647 step=120 repair=0.02477 localization=0 type=1.922 minimal=0.04196 physics=0.1023 total=0.2225
+[TRAIN] stage=pretrain epoch=1/2 batch=130/87647 step=130 repair=0.009818 localization=0 type=2.037 minimal=0.03906 physics=0.06655 total=0.2172
+[TRAIN] stage=pretrain epoch=1/2 batch=140/87647 step=140 repair=0.002358 localization=0 type=2.07 minimal=0.03311 physics=0.007988 total=0.2101
+[TRAIN] stage=pretrain epoch=1/2 batch=150/87647 step=150 repair=0.004481 localization=0 type=0.845 minimal=0.02946 physics=0.02085 total=0.09032
+[TRAIN] stage=pretrain epoch=1/2 batch=160/87647 step=160 repair=0.01886 localization=0 type=1.489 minimal=0.02843 physics=0.008108 total=0.1685
+[TRAIN] stage=pretrain epoch=1/2 batch=170/87647 step=170 repair=0.002222 localization=0 type=1.635 minimal=0.03314 physics=0.02679 total=0.1674
+[TRAIN] stage=pretrain epoch=1/2 batch=180/87647 step=180 repair=0.006741 localization=0 type=1.706 minimal=0.03653 physics=0.00876 total=0.1781
+[TRAIN] stage=pretrain epoch=1/2 batch=190/87647 step=190 repair=0.02162 localization=0 type=0.7913 minimal=0.03503 physics=0.04916 total=0.1036
+[TRAIN] stage=pretrain epoch=1/2 batch=200/87647 step=200 repair=0.002473 localization=0 type=2.881 minimal=0.03537 physics=0.01635 total=0.2917
+[TRAIN] stage=pretrain epoch=1/2 batch=210/87647 step=210 repair=0.006102 localization=0 type=2.222 minimal=0.03256 physics=0.01064 total=0.2291
+[TRAIN] stage=pretrain epoch=1/2 batch=220/87647 step=220 repair=0.01129 localization=0 type=2.145 minimal=0.02971 physics=0.01855 total=0.227
+[TRAIN] stage=pretrain epoch=1/2 batch=230/87647 step=230 repair=0.001957 localization=0 type=0.7876 minimal=0.0314 physics=0.04311 total=0.08319
+[TRAIN] stage=pretrain epoch=1/2 batch=240/87647 step=240 repair=0.002723 localization=0 type=0.8391 minimal=0.03448 physics=0.03319 total=0.08864
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_no_localization_head_s44 method=no_localization_head backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] pretrain epochs=2 start_epoch=0
+Traceback (most recent call last):
+  File "/home/tahiti/ConserveFM/tools/train_conservefm.py", line 396, in <module>
+    main()
+  File "/home/tahiti/ConserveFM/tools/train_conservefm.py", line 293, in main
+    out = model(raw_norm, batch["previous"], lead)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/ConserveFM/conservefm/model.py", line 116, in forward
+    h = self.blocks(h)
+        ^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/ConserveFM/conservefm/model.py", line 22, in forward
+    h = self.conv1(F.gelu(self.norm1(x)))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/Malashin_Projects/.venv_a100/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 39.38 GiB of which 17.88 MiB is free. Process 4805 has 1.20 GiB memory in use. Process 4934 has 1.26 GiB memory in use. Process 5060 has 1.26 GiB memory in use. Process 5186 has 1.26 GiB memory in use. Process 5312 has 1.20 GiB memory in use. Process 5438 has 1.20 GiB memory in use. Process 5563 has 1.20 GiB memory in use. Process 5689 has 1.20 GiB memory in use. Process 5815 has 1.20 GiB memory in use. Process 5942 has 1.20 GiB memory in use. Process 6028 has 1.16 GiB memory in use. Process 6123 has 1.16 GiB memory in use. Process 6248 has 1.20 GiB memory in use. Process 6374 has 1.19 GiB memory in use. Process 6500 has 1.16 GiB memory in use. Process 6626 has 1.20 GiB memory in use. Process 6744 has 1.20 GiB memory in use. Process 6878 has 1.20 GiB memory in use. Process 6933 has 1.20 GiB memory in use. Process 7043 has 1.20 GiB memory in use. Process 7169 has 1.20 GiB memory in use. Process 7315 has 1.20 GiB memory in use. Process 7510 has 1.20 GiB memory in use. Process 7548 has 1.20 GiB memory in use. Process 7693 has 1.20 GiB memory in use. Process 7888 has 1.20 GiB memory in use. Process 7926 has 1.20 GiB memory in use. Process 8052 has 1.20 GiB memory in use. Process 8106 has 1.20 GiB memory in use. Process 8249 has 1.19 GiB memory in use. Process 8358 has 1.20 GiB memory in use. Process 8571 has 1.20 GiB memory in use. Including non-PyTorch memory, this process has 764.00 MiB memory in use. Of the allocated memory 242.94 MiB is allocated by PyTorch, and 13.06 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,5 @@
+[SETUP] device=cuda
+[SETUP] run_id=train_climax_no_range_extreme_corruption_s44 method=no_range_extreme_corruption backbone=climax
+[FORECAST] using frozen forecast cache: /home/tahiti/ConserveFM/forecasts/climax.zarr
+[STAGE] pretrain epochs=2 start_epoch=0
+[TRAIN] stage=pretrain epoch=1/2 batch=10/87647 step=10 repair=0.04204 localization=0.3487 type=0.5669 minimal=0.1498 physics=0.2231 total=0.1463
