@@ -295,9 +295,7 @@ The final stress benchmark contains:
 
 This produces
 
-$$
-3 \times 5 \times 4 = 60
-$$
+$3 \times 5 \times 4 = 60$
 
 matched stress conditions.
 
@@ -339,9 +337,7 @@ This is deliberately not presented as multi-seed uncertainty.
 
 Difference is defined as:
 
-$$
-\mathrm{ConserveFM\text{-}Acc} - \mathrm{competitor}.
-$$
+$\mathrm{ConserveFM\text{-}Acc} - \mathrm{competitor}.$
 
 Negative values favor ConserveFM-Acc.
 
@@ -365,19 +361,11 @@ ConserveFM receives:
 
 The repair network predicts a normalized state correction
 
-$$
-\Delta x
-$$
+$\Delta x$
 
 and outputs
 
-$$
-\hat{x}^{*}
-=
-\hat{x}
-+
-\Delta x.
-$$
+$\hat{x}^{*}=\hat{x}+\Delta x.$
 
 The training objective combines forecast repair with physical consistency and intervention regularization.
 
